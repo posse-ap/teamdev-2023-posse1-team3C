@@ -4,11 +4,18 @@
 [macにdockerをインストール](https://matsuand.github.io/docs.docker.jp.onthefly/desktop/mac/install/)
 
 上の記事を参考にdockerをインストール
+
+## 環境構築事前準備
+
+1. .envファイルを作成
+- .env.exampleの内容をコピーして貼り付ける
+- ファイルは.env.exampleと同じ階層
 ## tailwind環境構築
 
 1. 以下のコマンドをターミナルで打つ
 ```
 docker compose build 
+docker compose up -d 
 ```
 
 2. 以下のコマンドをターミナルで打つ
