@@ -10,6 +10,8 @@
 1. .envファイルを作成
 - .env.exampleの内容をコピーして貼り付ける
 - ファイルは.env.exampleと同じ階層
+
+![参考画像](./img/Screen%20Shot%202023-04-18%20at%209.54.28.png)
 ## tailwind環境構築
 
 1. 以下のコマンドをターミナルで打つ
@@ -47,7 +49,7 @@ npm install -D tailwindcss
 npx tailwindcss init
 ```
 
-6. tailwind.config.jsというファイルを以下のものに書き換える
+6. tailwind.config.jsが自動で作られるので、その中の内容をを以下のものに書き換える
 ```
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -72,18 +74,52 @@ module.exports = {
 ```
 npx tailwindcss -i ./input.css -o ./dist/output.css --watch
 ```
+
 ```
 Ok to proceed? (y) y
 ```
 がもしでたら、yをしてEnter
-このコマンドは毎回作業開始時に
-```
-docker compose exec php bash 
-```
-と一緒に打つ。
+
 
 9. tailwindを使う際には...
 ```
   <link rel="stylesheet" href="./dist/output.css">
 ```
 これをhead部分に書く
+
+
+## 作業開始時
+
+1. 以下のコマンドを下のターミナルで打つ
+```
+docker compose up -d 
+```
+
+2. 上のdockerのアイコンをクリック、dashbordを押して開く
+
+3. 以下のような状態になってることを確認
+
+![dockerdesktop](./img/Screen%20Shot%202023-04-18%20at%209.42.20.png)
+
+- このようにrunning(5/5)になってればok
+
+4. 以下のコマンドを下のターミナルで打つ
+```
+docker compose exec php bash 
+```
+
+5. tailwindを使うために以下のコマンドを打つ。
+```
+npx tailwindcss -i ./input.css -o ./dist/output.css --watch
+```
+![tailwind実行](./img/Screen%20Shot%202023-04-18%20at%209.52.31.png)
+
+以下のようになってればok
+
+## 作業終了時
+1. 以下のコマンドをターミナルで打つ。
+```
+docker compose down
+```
+
+
