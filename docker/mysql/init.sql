@@ -125,6 +125,14 @@ insert into GoodPoints (
   company_id, GoodPoint
 ) values 
 (1, "豊富な求人数"),
-(1, "土曜対応！")
+(1, "土曜対応！");
+
+DROP TABLE IF EXISTS Areas;
+CREATE TABLE Areas (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  area VARCHAR(255) COMMENT "対応エリア"
+); 
+
+insert into Areas (area) values ("北海道"), ("東北"), ("関東");
 
 
