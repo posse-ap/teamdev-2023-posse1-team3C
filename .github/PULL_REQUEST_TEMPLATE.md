@@ -2,12 +2,11 @@
 * https://localhost:8080
 - (変更がある場合は変えてね)
 ## 確認
-  - [ ] developにプルリクを出した？？
+  - [ ] developにプルリクを出していますか？？
   - [ ] Reviewerは設定した？
   - [ ] Assignに自分を選びました？？
-  - [ ] Labelに使用言語、admin/user/client、L/M/S、must/more/wantto、を選んだ？？？
+  - [ ] 適切なlabelを選択しましたか？
   - [ ] Projects選択した？
-  - [ ] MIlestoneは？選んだ？？？
 ## やったこと
 
 * このプルリクで何をしたのか？(スクショほしい)
