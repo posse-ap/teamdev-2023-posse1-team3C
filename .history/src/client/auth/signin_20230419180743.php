@@ -15,7 +15,7 @@
 <body>
   <div class="wrapper">
     <section class="form login">
-      <header>CLIENT ログイン画面</header>
+      <header>ログイン画面</header>
       <form action="#">
         <div class="error-text"></div>
           <div class="field input">
