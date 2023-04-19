@@ -8,6 +8,6 @@
   <link rel="stylesheet" href="./dist/output.css">
 </head>
 <body>
-  <h1 class="underline font-thin ">Kazu</h1>
+  <h1 class="underline font-thin f">Kazu</h1>
 </body>
 </html>

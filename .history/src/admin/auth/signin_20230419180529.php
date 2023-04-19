@@ -6,16 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/styles/login-signup.css">
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <!-- fontawesome読み込み -->
-  <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous" defer></script>
-  <!-- jquery読み込み -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
-  <title>client画面ログインページ</title>
+<!-- fontawesome読み込み -->
+<script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous" defer></script>
+<!-- jquery読み込み -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
+  <title>admin画面ログインページ</title>
 </head>
 <body>
   <div class="wrapper">
     <section class="form login">
-      <header>CLIENT ログイン画面</header>
+      <header>ログイン画面</header>
       <form action="#">
         <div class="error-text"></div>
           <div class="field input">
