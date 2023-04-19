@@ -173,6 +173,7 @@ CREATE TABLE Stories (
   id INT AUTO_INCREMENT PRIMARY KEY,
   company_id INT,
   time VARCHAR(255) COMMENT "かかった時間",
+  title VARCHAR(255) COMMENT "見出し",
   university VARCHAR(255) COMMENT "大学名",
   name VARCHAR(255) COMMENT "名前",
   story VARCHAR(255) COMMENT "ストーリー内容",
@@ -180,7 +181,7 @@ CREATE TABLE Stories (
   FOREIGN KEY (company_id) REFERENCES Companies(id)
 ) CHARSET=utf8;
 
-insert into Stories (company_id, time, university, name, story, photo) values (1, "約２ヶ月", "慶応大学", "岩城和輝", "test", "test");
+insert into Stories (company_id, time, title, university, name, story, photo) values (1, "約２ヶ月", "最短合格！", "慶応大学", "岩城和輝", "test", "test");
 
 DROP TABLE IF EXISTS Ratings;
 CREATE TABLE Ratings (
@@ -228,9 +229,27 @@ CREATE TABLE CompaniesStudentsLink (
   id INT AUTO_INCREMENT PRIMARY KEY,
   company_id INT,
   student_id INT,
-  status_id INT
+  status_id INT,
+  FOREIGN KEY (company_id) REFERENCES Companies(id),
+  FOREIGN KEY (student_id) REFERENCES Students(id),
+  FOREIGN KEY (status_id) REFERENCES Statuses(id)
 ) CHARSET=utf8;
 
 insert into CompaniesStudentsLink (company_id, student_id, status_id) values (1,1,2), (1,1,1);
+
+DROP TABLE IF EXISTS Invalids;
+CREATE TABLE Invalids (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  link_id INT COMMENT "中間テーブルid",
+  reason VARCHAR(255) COMMENT "無効理由",
+  reasonDetail VARCHAR(255) COMMENT "無効詳細理由",
+  FOREIGN KEY (link_id) REFERENCES CompaniesStudentsLink(id)
+) CHARSET=utf8;
+
+insert into Invalids (
+  link_id, reason
+) values (
+  1, "名前がふざけてる"
+);
 
 
