@@ -111,8 +111,20 @@ insert into CompaniesDetails (
   photo, achievement, people, scale,search, ES, practice, seminor, community, type, specialChoose, supportType, Date, formtype, description
 ) values (
   "test", "総合商社", "約1000社", "ベンチャー多め", "就職活動を本格的に始める前に、アドバイザー相談を行うことができます", "あり", "あり", "あり", "なし", "特化型", "あり", "オンラインのみ", "平日 9-18時 土9-15時 日定休", "本登録の前に対面でお話しすることができます。", "てすと"
-)
+);
 
+DROP TABLE IF EXISTS GoodPoints;
+CREATE TABLE GoodPoints (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  company_id INT,
+  GoodPoint VARCHAR(255) COMMENT "推しポイント",
+  FOREIGN KEY (company_id) REFERENCES Companies(id)
+) CHARSET=utf8;
 
+insert into GoodPoints (
+  company_id, GoodPoint
+) values 
+(1, "豊富な求人数"),
+(1, "土曜対応！")
 
 
