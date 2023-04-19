@@ -214,3 +214,11 @@ CREATE TABLE Students (
 insert into Students (
   name, furigana, sex, graduated_year, university, facaulty, department, prefecture, phoneNumber, mail
 ) values ("岩城和輝", "いわぎかずき", "男", "26卒", "慶應", "経済", "経済", "東京都", "000-0009-000", "kazuki@gmail.com");
+
+DROP TABLE IF EXISTS Statuses;
+CREATE TABLE Statuses (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  status VARCHAR(255) COMMENT "学生ステータス"
+) CHARSET=utf8;
+
+insert into Statuses (status) VALUES ("請求予定"), ("請求済み");
