@@ -222,3 +222,15 @@ CREATE TABLE Statuses (
 ) CHARSET=utf8;
 
 insert into Statuses (status) VALUES ("請求予定"), ("請求済み");
+
+DROP TABLE IF EXISTS CompaniesStudentsLink;
+CREATE TABLE CompaniesStudentsLink (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  company_id INT,
+  student_id INT,
+  status_id INT
+) CHARSET=utf8;
+
+insert into CompaniesStudentsLink (company_id, student_id, status_id) values (1,1,2), (1,1,1);
+
+
