@@ -152,7 +152,18 @@ CREATE TABLE AreasCompaniesLink (
   area_id INT COMMENT "対応エリアのid",
   FOREIGN KEY (company_id) REFERENCES Companies(id),
   FOREIGN KEY (area_id) REFERENCES Areas(id)
-);
+) CHARSET=utf8;
 
 insert into AreasCompaniesLink (company_id, area_id) values (1,2), (1,3);
 
+DROP TABLE IF EXISTS CompaniesGraduatedLink;
+
+CREATE TABLE CompaniesGraduatedLink (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  company_id INT,
+  graduated_id INT,
+  FOREIGN KEY (company_id) REFERENCES Companies(id),
+  FOREIGN KEY (graduated_id) REFERENCES Graduated_years(id)
+) CHARSET=utf8;
+
+insert into CompaniesGraduatedLink (company_id, graduated_id) values (1,1), (1,2);
