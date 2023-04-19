@@ -41,3 +41,26 @@ CREATE TABLE user_invitations (
 ) CHARSET=utf8;
 
 insert into user_invitations (user_id, invited_at, activated_at, token) values (1, DATE_SUB(CURRENT_DATE, INTERVAL 1 DAY), CURRENT_DATE, "token");
+DROP DATABASE IF EXISTS TEAMDEV;
+
+CREATE DATABASE TEAMDEV;
+
+USE TEAMDEV;
+
+DROP TABLE IF EXISTS AdminUsers;
+CREATE TABLE AdminUsers (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  mail VARCHAR(255),
+  password VARCHAR(255)
+) CHARSET=utf8;
+insert into AdminUsers (mail, password) 
+values ("admin@example.com", "$2y$10$csAFREneXMq1sdnuvOrFWe.ZW0kDM3Qigy1S0bhFJ3hhc6fgpMEIy");
+
+DROP TABLE IF EXISTS ClientUsers;
+CREATE TABLE ClientUsers (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  mail VARCHAR(255),
+  password VARCHAR(255),
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT "発行日時"
+);
+insert into ClientUsers (mail, password, created_at) values ("client@example.com", "$2y$10$csAFREneXMq1sdnuvOrFWe.ZW0kDM3Qigy1S0bhFJ3hhc6fgpMEIy", "2023-04-19 18:00:00");
