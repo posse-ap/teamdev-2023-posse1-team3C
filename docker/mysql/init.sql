@@ -144,4 +144,15 @@ CREATE TABLE Graduated_years (
 
 insert into Graduated_years (Graduated_year) values ("24卒"), ("25卒"), ("26卒"), ("27卒");
 
+DROP TABLE IF EXISTS AreasCompaniesLink;
+
+CREATE TABLE AreasCompaniesLink (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  company_id INT,
+  area_id INT COMMENT "対応エリアのid",
+  FOREIGN KEY (company_id) REFERENCES Companies(id),
+  FOREIGN KEY (area_id) REFERENCES Areas(id)
+);
+
+insert into AreasCompaniesLink (company_id, area_id) values (1,2), (1,3);
 
