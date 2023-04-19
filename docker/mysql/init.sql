@@ -194,3 +194,23 @@ CREATE TABLE Ratings (
 );
 
 insert into Ratings (people,support, achievement, speed, amount) values (3,3.5, 2, 4, 5);
+
+DROP TABLE IF EXISTS Students;
+
+CREATE TABLE Students (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) COMMENT "名前",
+  furigana VARCHAR(255) COMMENT "ふりがな",
+  sex VARCHAR(255) COMMENT "性別",
+  graduated_year VARCHAR(255) COMMENT "卒業年度",
+  university VARCHAR(255) COMMENT "出身大学",
+  facaulty VARCHAR(255) COMMENT "学部",
+  department VARCHAR(255) COMMENT "学科",
+  prefecture VARCHAR(255) COMMENT "都道府県",
+  phoneNumber VARCHAR(255) COMMENT "電話番号",
+  mail VARCHAR(255) COMMENT "メールアドレス"
+) CHARSET=utf8;
+
+insert into Students (
+  name, furigana, sex, graduated_year, university, facaulty, department, prefecture, phoneNumber, mail
+) values ("岩城和輝", "いわぎかずき", "男", "26卒", "慶應", "経済", "経済", "東京都", "000-0009-000", "kazuki@gmail.com");
