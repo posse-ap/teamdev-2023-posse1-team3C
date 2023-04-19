@@ -135,4 +135,13 @@ CREATE TABLE Areas (
 
 insert into Areas (area) values ("北海道"), ("東北"), ("関東");
 
+DROP TABLE IF EXISTS Graduated_years;
+
+CREATE TABLE Graduated_years (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  Graduated_year VARCHAR(255) COMMENT "卒業年度"
+);
+
+insert into Graduated_years (Graduated_year) values ("24卒"), ("25卒"), ("26卒"), ("27卒");
+
 
