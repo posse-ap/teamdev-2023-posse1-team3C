@@ -85,3 +85,34 @@ CREATE TABLE Companies (
 
 insert into Companies (company, service, URL, mail, postcode, address, phoneNumber, contactType, Date, started_at, finished_at, online) values ("Test", "Testservice", "keio.jp", "li12569@keio.jp", "108-8345", "東京都港区三田２丁目１５−４５", "03-5427-1517", "オンライン", "平日 9-18時 土9-15時 日定休", "2023-05-01", "2023-06-30", "終日対応可");
 
+
+DROP TABLE IF EXISTS CompaniesDetails;
+CREATE TABLE CompaniesDetails (
+  detail_id INT AUTO_INCREMENT PRIMARY KEY,
+  photo VARCHAR(255) COMMENT "掲載写真",
+  achievement VARCHAR(255) COMMENT "内定獲得実績",
+  people VARCHAR(255) COMMENT "求人数",
+  scale VARCHAR(255) COMMENT "対応企業の規模",
+  search VARCHAR(255) COMMENT "業界研究",
+  ES VARCHAR(255) COMMENT "ES添削",
+  practice VARCHAR(255) COMMENT "面接練習",
+  seminor VARCHAR(255) COMMENT "セミナー、説明会",
+  community VARCHAR(255) COMMENT "就活コミュニティー",
+  type VARCHAR(255) COMMENT "総合型/特化型",
+  specialChoose VARCHAR(255) COMMENT "特別選考",
+  supportType VARCHAR(255) COMMENT "サポート形態",
+  Date VARCHAR(255) COMMENT "対応可能日時",
+  formType VARCHAR(255) COMMENT "問い合わせ形態",
+  description VARCHAR(255) COMMENT "詳細説明",
+  FOREIGN KEY (detail_id) REFERENCES Companies(id)
+) CHARSET=utf8;
+
+insert into CompaniesDetails (
+  photo, achievement, people, scale,search, ES, practice, seminor, community, type, specialChoose, supportType, Date, formtype, description
+) values (
+  "test", "総合商社", "約1000社", "ベンチャー多め", "就職活動を本格的に始める前に、アドバイザー相談を行うことができます", "あり", "あり", "あり", "なし", "特化型", "あり", "オンラインのみ", "平日 9-18時 土9-15時 日定休", "本登録の前に対面でお話しすることができます。", "てすと"
+)
+
+
+
+
