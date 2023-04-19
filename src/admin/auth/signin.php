@@ -34,5 +34,6 @@
     </section>
   </div>
   <script src="../assets/scripts/auth/pass-show-hide.js"></script>
+  <script src="../assets/scripts/auth/signin.js"></script>
 </body>
 </html>
