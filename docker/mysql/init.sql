@@ -181,3 +181,16 @@ CREATE TABLE Stories (
 ) CHARSET=utf8;
 
 insert into Stories (company_id, time, university, name, story, photo) values (1, "約２ヶ月", "慶応大学", "岩城和輝", "test", "test");
+
+DROP TABLE IF EXISTS Ratings;
+CREATE TABLE Ratings (
+  rating_id INT AUTO_INCREMENT PRIMARY KEY,
+  people INT,
+  support INT,
+  achievement INT,
+  speed INT,
+  amount INT,
+  FOREIGN KEY (rating_id) REFERENCES Companies(id)
+);
+
+insert into Ratings (people,support, achievement, speed, amount) values (3,3.5, 2, 4, 5);
