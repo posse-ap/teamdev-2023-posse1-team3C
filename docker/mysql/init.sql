@@ -167,3 +167,17 @@ CREATE TABLE CompaniesGraduatedLink (
 ) CHARSET=utf8;
 
 insert into CompaniesGraduatedLink (company_id, graduated_id) values (1,1), (1,2);
+DROP TABLE IF EXISTS Stories;
+
+CREATE TABLE Stories (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  company_id INT,
+  time VARCHAR(255) COMMENT "かかった時間",
+  university VARCHAR(255) COMMENT "大学名",
+  name VARCHAR(255) COMMENT "名前",
+  story VARCHAR(255) COMMENT "ストーリー内容",
+  photo VARCHAR(255) COMMENT "掲載写真",
+  FOREIGN KEY (company_id) REFERENCES Companies(id)
+) CHARSET=utf8;
+
+insert into Stories (company_id, time, university, name, story, photo) values (1, "約２ヶ月", "慶応大学", "岩城和輝", "test", "test");
