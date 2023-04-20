@@ -1,5 +1,5 @@
-  <header class=" fixed w-screen">
-    <div class="flex bg-gray-300 text-center align-middle h-20 relative">
+  <header class=" fixed w-screen z-30">
+    <div class="flex bg-white text-center align-middle h-20 relative">
       <div class="text-center align-middle pr-5 flex absolute top-7 header-title">
         <div class="mt-auto mb-auto">CRAFT管理者画面</div>
       </div>
