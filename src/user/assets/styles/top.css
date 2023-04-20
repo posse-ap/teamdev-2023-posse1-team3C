@@ -1,0 +1,169 @@
+/* ヘッダー */
+header {
+  height: 60px;
+  width: 100%;
+  background-color: #2E79BA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+/* メイン */
+main {
+  margin-top: 60px;
+}
+.header-title {
+  font-size: 1.5em;
+  color: #fff;
+  padding-left: calc(50% - 44.726px);
+}
+.header-boozer-logo {
+  width: 100px;
+  height: auto;
+  padding-right: 20px;
+}
+.header-boozer-logo img {
+  width: 100%;
+  height: 100%;
+}
+/* ヒーロー */
+.toppage-hero {
+  width: 100%;
+  height: 640px;
+  background-color: rgb(2, 255, 154);
+  position: relative;
+}
+.toppage-hero-comment h2 {
+  color: #fff;
+  margin: 0;
+  position: absolute;
+  bottom: 140px;
+  right: 60px;
+  font-size: 2.5em;
+  transform: rotate(-15deg);
+}
+/* エージェントを探すボタン */
+.btn-search-for-agent {
+  height: 140px;
+}
+.btn-search-for-agent button {
+  width: 40%;
+  height: 60px;
+  margin-left: 30%;
+  border: 0;
+  border-radius: 10px;
+  margin-top: 40px;
+  background-color: #FAE17E;
+  color: #2E79BA;
+  font-weight: 600;
+  font-size: 20px;
+  position: relative;
+}
+.btn-search-for-agent button i {
+  position: absolute;
+  font-size: 20px;
+  top: 20px;
+  right: 20px;
+}
+/* 申し込みするための３ステップ */
+.step-explanation-contents h3 {
+  font-size: 32px;
+  text-align: center;
+  color: #FBA82C;
+  margin-top: 100px;
+}
+.step-explanation-contents p {
+  font-size: 16px;
+  text-align: center;
+  color: #7a7a7a;
+  margin-top: 20px;
+}
+.step-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 80px;
+}
+.step {
+  height: 460px;
+  width: 360px;
+  background-color: #FCC066;
+  border-radius: 15px;
+}
+/* エージェント一覧ページボタン */
+.btn-agent-list {
+  height: 140px;
+}
+.btn-agent-list button {
+  width: 40%;
+  height: 60px;
+  margin-left: 30%;
+  border: 0;
+  border-radius: 10px;
+  margin-top: 40px;
+  background-color: #FCC066;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  position: relative;
+}
+.btn-agent-list button i {
+  position: absolute;
+  font-size: 20px;
+  top: 20px;
+  right: 20px;
+}
+/* 利用者の声 */
+.user-voice-contents {
+  height: 780px;
+  background-color: #FEEDC3;
+}
+.user-voice-contents h3 {
+  font-size: 32px;
+  text-align: center;
+  color: #2E79BA;
+  padding-top: 60px;
+}
+/* よくあるご質問 */
+.common-question-contents {
+  height: 1000px;
+}
+.common-question-contents h3 {
+  font-size: 32px;
+  text-align: center;
+  color: #81766E;
+  padding-top: 60px;
+}
+/* フッター */
+footer {
+  height: 240px;
+  background-color: #2E79BA;
+}
+.footer-boozer-logo {
+  width: 200px;
+  height: auto;
+  margin: auto;
+  padding-top: 20px
+}
+.footer-boozer-logo img {
+  width: 100%;
+  height: 100%;
+}
+.footer-link-list {
+  display: flex;
+  gap: 20px;
+  color: #fff;
+  list-style: none;
+  width: fit-content;
+  padding-left: calc(50% - 221.367px);
+  margin-top: 40px;
+}
+.footer-craft {
+  font-size: 20px;
+  color: #B8BABA;
+  font-weight: 600;
+  margin-top: 40px;
+  text-align: center;
+}
