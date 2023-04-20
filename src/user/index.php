@@ -12,7 +12,7 @@
       CRAFT
     </h1>
     <div class="header-boozer-logo">
-      <img src="../../../img/boozer_logo_white.png" alt="boozer">
+      <img src="./assets/img/boozer_logo_white.png" alt="boozer">
     </div>
   </header>
   <main>
@@ -31,7 +31,7 @@
   </main>
   <footer>
     <div class="footer-boozer-logo">
-      <img src="../../img/boozer-logo-white.png" alt="boozer">
+      <img src="./assets/img/boozer_logo_white.png" alt="boozer">
     </div>
     <ul class="footer-link-list">
       <li>
