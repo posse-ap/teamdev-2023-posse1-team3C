@@ -1,0 +1,10 @@
+  <header class=" fixed w-screen">
+    <div class="flex bg-gray-300 text-center align-middle h-20 relative">
+      <div class="text-center align-middle pr-5 flex absolute top-7 header-title">
+        <div class="mt-auto mb-auto">CRAFT管理者画面</div>
+      </div>
+      <div class="mt-4 mb-4 ml-auto">
+        <button type="button" class="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">ログアウト</button>
+      </div>
+    </div>
+  </header>
