@@ -24,7 +24,7 @@
           </div>
           <div class="field input">
             <label for="">Password</label>
-            <input type="password" name="password"placeholder="Enter your password">
+            <input type="password" name="password" placeholder="Enter your password">
             <i class="fa-solid fa-eye"></i>
           </div>
           <div class="field button">
@@ -35,5 +35,7 @@
   </div>
   <script src="../assets/scripts/auth/pass-show-hide.js"></script>
   <script src="../assets/scripts/auth/signin.js"></script>
+
 </body>
 </html>
+

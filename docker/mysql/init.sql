@@ -12,7 +12,7 @@ CREATE TABLE AdminUsers (
   password VARCHAR(255)
 ) CHARSET=utf8;
 insert into AdminUsers (mail, password) 
-values ("admin@example.com", "$2y$10$csAFREneXMq1sdnuvOrFWe.ZW0kDM3Qigy1S0bhFJ3hhc6fgpMEIy");
+values ("admin@example.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW");
 
 DROP TABLE IF EXISTS ClientUsers;
 CREATE TABLE ClientUsers (
@@ -21,7 +21,7 @@ CREATE TABLE ClientUsers (
   password VARCHAR(255),
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT "発行日時"
 ) CHARSET=utf8;
-insert into ClientUsers (mail, password) values ("client@example.com", "$2y$10$csAFREneXMq1sdnuvOrFWe.ZW0kDM3Qigy1S0bhFJ3hhc6fgpMEIy");
+insert into ClientUsers (mail, password) values ("client@example.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW");
 
 DROP TABLE IF EXISTS Companies;
 CREATE TABLE Companies (
@@ -41,7 +41,7 @@ CREATE TABLE Companies (
   online VARCHAR(255) COMMENT "オンライン対応可"
 ) CHARSET=utf8;
 
-insert into Companies (company, service, URL, mail, postcode, address, phoneNumber, contactType, Date, started_at, finished_at, online) values ("Test", "Testservice", "keio.jp", "li12569@keio.jp", "108-8345", "東京都港区三田２丁目１５−４５", "03-5427-1517", "オンライン", "平日 9-18時 土9-15時 日定休", "2023-05-01", "2023-06-30", "終日対応可");
+insert into Companies (company, service, URL, mail, postcode, address, phoneNumber, contactType, Date, started_at, finished_at, online) values ("Test", "Testservice", "keio.jp", "li12569@keio.jp", "108-8345", "東京都港区三田２丁目１５−４５", "03-5427-1517", "オンライン", "平日 9-18時 土9-15時 日定休", "2023-05-01", "2023-06-30", "終日対応可"), ("Test2", "Testservice", "keio.jp", "li12569@keio.jp", "108-8345", "東京都港区三田２丁目１５−４５", "03-5427-1517", "オンライン", "平日 9-18時 土9-15時 日定休", "2023-05-01", "2023-06-30", "終日対応可");
 
 
 DROP TABLE IF EXISTS CompaniesDetails;
@@ -167,7 +167,8 @@ CREATE TABLE Students (
   department VARCHAR(255) COMMENT "学科",
   prefecture VARCHAR(255) COMMENT "都道府県",
   phoneNumber VARCHAR(255) COMMENT "電話番号",
-  mail VARCHAR(255) COMMENT "メールアドレス"
+  mail VARCHAR(255) COMMENT "メールアドレス",
+  registered_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT "登録日"
 ) CHARSET=utf8;
 
 insert into Students (
@@ -193,7 +194,7 @@ CREATE TABLE CompaniesStudentsLink (
   FOREIGN KEY (status_id) REFERENCES Statuses(id)
 ) CHARSET=utf8;
 
-insert into CompaniesStudentsLink (company_id, student_id, status_id) values (1,1,2), (1,1,1);
+insert into CompaniesStudentsLink (company_id, student_id, status_id) values (1,1,2), (1,1,1), (2,1,2);
 
 DROP TABLE IF EXISTS Invalids;
 CREATE TABLE Invalids (
