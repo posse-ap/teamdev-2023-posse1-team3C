@@ -45,25 +45,39 @@
       \ 申し込みするための３ステップ /
       </h3>
       <p>
-        
+      選んだ企業に申し込んで、会社が自分にあっているか話してみよう！
       </p>
       <div class="step-container">
-        <div class="step-1">
+        <div class="step step-1">
 
         </div>
-        <div class="step-2">
+        <div class="step step-2">
 
         </div>
-        <div class="step-3">
+        <div class="step step-3">
 
         </div>
       </div>
+      <div class="btn-agent-list">
+        <a href="./clientList.php">
+          <button>
+            エージェント一覧ページ
+            <i class="fa-solid fa-caret-right"></i>
+          </button>
+        </a>
+      </div>
     </div>
+    <!-- 利用者の声 -->
     <div class="user-voice-contents">
-
+      <h3>
+      \ 利用者の声 /
+      </h3>
     </div>
+    <!-- よくあるご質問 -->
     <div class="common-question-contents">
-
+      <h3>
+      よくあるご質問
+      </h3>
     </div>
   </main>
   <footer>
