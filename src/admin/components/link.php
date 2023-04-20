@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="../assets/styles/normalize.css">
+<link rel="stylesheet" href="../admin/assets/styles/normalize.css">
 <link rel="stylesheet" href="../../dist/output.css">
-<link rel="stylesheet" href="">
+<link rel="stylesheet" href="../admin/assets/styles/top.css">
 <link rel="stylesheet" href="">
 
 <!-- swiper読み込み、スライダー作成用
