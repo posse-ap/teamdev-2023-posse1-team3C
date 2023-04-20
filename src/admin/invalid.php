@@ -1,3 +1,4 @@
+<?php include('../dbconnect.php')?>
 <!-- head読み込み -->
 <?php
 include(dirname(__FILE__) . '/components/head.php');
