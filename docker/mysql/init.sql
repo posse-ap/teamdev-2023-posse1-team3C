@@ -12,7 +12,7 @@ CREATE TABLE AdminUsers (
   password VARCHAR(255)
 ) CHARSET=utf8;
 insert into AdminUsers (mail, password) 
-values ("admin@example.com", "$2y$10$csAFREneXMq1sdnuvOrFWe.ZW0kDM3Qigy1S0bhFJ3hhc6fgpMEIy");
+values ("admin@example.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW");
 
 DROP TABLE IF EXISTS ClientUsers;
 CREATE TABLE ClientUsers (
@@ -21,7 +21,7 @@ CREATE TABLE ClientUsers (
   password VARCHAR(255),
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT "発行日時"
 ) CHARSET=utf8;
-insert into ClientUsers (mail, password) values ("client@example.com", "$2y$10$csAFREneXMq1sdnuvOrFWe.ZW0kDM3Qigy1S0bhFJ3hhc6fgpMEIy");
+insert into ClientUsers (mail, password) values ("client@example.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW");
 
 DROP TABLE IF EXISTS Companies;
 CREATE TABLE Companies (
