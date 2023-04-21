@@ -126,6 +126,45 @@ main {
   color: #2E79BA;
   padding-top: 60px;
 }
+.swiper {
+  height: 600px;
+  background-color: #FEEDC3;
+}
+.swiper-wrapper {
+  height: 600px;
+}
+.swiper-slide {
+  height: 600px;
+  width: 80%;
+  background-color: #FEEDC3;
+}
+.user-1-contents {
+  width: 60%;
+  height: 500px;
+  margin-top: 50px;
+  margin-left: 20%;
+  background-color: #fff;
+}
+.user-2-contents {
+  width: 60%;
+  height: 500px;
+  margin-top: 50px;
+  margin-left: 20%;
+  background-color: #fff;
+}
+.user-3-contents {
+  width: 60%;
+  height: 500px;
+  margin-top: 50px;
+  margin-left: 20%;
+  background-color: #fff;
+}
+.swiper-button-prev {
+  margin-left: 40px;
+}
+.swiper-button-next {
+  margin-right: 40px;
+}
 /* よくあるご質問 */
 .common-question-contents {
   height: 1000px;
@@ -136,6 +175,7 @@ main {
   color: #81766E;
   padding-top: 60px;
 }
+
 /* フッター */
 footer {
   height: 240px;
