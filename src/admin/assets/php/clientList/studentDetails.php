@@ -5,15 +5,10 @@ join Companies on Companies.id = CompaniesStudentsLink.company_id
 join Statuses on Statuses.id = status_id
 where Students.id = :id and CompaniesStudentsLink.company_id = :company_id and Statuses.id = :status_id";
 
-
 $studentDetail = $dbh->prepare($sql_studentDetail);
-$id = $_GET["id"];
-$company_id = $_GET["company_id"];
-$status_id = $_GET["status_id"];
-
-$studentDetail->bindValue(":id", $id, PDO::PARAM_INT);
-$studentDetail->bindValue(":company_id", $company_id, PDO::PARAM_INT);
-$studentDetail->bindValue(":status_id", $status_id, PDO::PARAM_INT);
+$studentDetail->bindValue(":id", $_GET["id"], PDO::PARAM_INT);
+$studentDetail->bindValue(":company_id",  $_GET["company_id"], PDO::PARAM_INT);
+$studentDetail->bindValue(":status_id", $_GET["status_id"], PDO::PARAM_INT);
 $studentDetail->execute();
 $resultStudentDetails = $studentDetail->fetch();
 
