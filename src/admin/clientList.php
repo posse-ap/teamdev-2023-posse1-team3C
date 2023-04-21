@@ -15,7 +15,8 @@ include(dirname(__FILE__) . '/components/head.php');
     <?php include(dirname(__FILE__) . '/components/sidebar.php'); ?>
     <main class="pt-20">
       <!-- 掲載期間中の企業表 -->
-      <div class="relative overflow-x-auto shadow-md sm:rounded-lg mb-5">
+      <div class="relative overflow-x-auto shadow-md sm:rounded-lg mb-5 text-center">
+        <h3 class="text-center">掲載中</h3>
         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead class="text-xs text-gray-700 uppercase dark:text-gray-400">
             <tr>
@@ -51,6 +52,7 @@ include(dirname(__FILE__) . '/components/head.php');
       </div>
       <!-- 掲載期間終了した企業表 -->
       <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <h3 class="text-center">掲載終了企業</h3>
         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead class="text-xs text-gray-700 uppercase dark:text-gray-400">
             <tr>
