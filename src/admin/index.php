@@ -17,7 +17,7 @@ include(dirname(__FILE__) . '/components/head.php');
       <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
+            <tr class="text-center">
               <th scope="col" class="px-6 py-3">
                 登録学生氏名
               </th>
@@ -57,7 +57,7 @@ include(dirname(__FILE__) . '/components/head.php');
               <?php echo $list["status"]?>
               </td>
               <td class="px-6 py-4">
-                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                <a href="http://localhost:8080/admin/studentDetails.php?id=<?php echo $list["id"]?>&company_id=<?php echo $list["company_id"];?>&status_id=<?php echo $list["status_id"]?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                 <?php echo $list["id"]?>
                 </a>
               </td>
