@@ -10,4 +10,3 @@ $CompaniesStudentsLink = $dbh->query($sql_CompaniesStudentsLink)->fetchAll(PDO::
 // print_r($CompaniesStudentsLink);
 // echo "</pre>";
 
-
