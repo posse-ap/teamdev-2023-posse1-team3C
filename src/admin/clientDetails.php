@@ -1,3 +1,5 @@
+<?php include('../dbconnect.php') ?>
+<?php include('./assets/php/clientList/clientDetails.php') ?>
 <!-- head読み込み -->
 <?php
 include(dirname(__FILE__) . '/components/head.php');
@@ -23,61 +25,70 @@ include(dirname(__FILE__) . '/components/head.php');
       </section>
       <section>
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg mb-5 text-center">
-          <h3 class="text-center">企業詳細情報</h3>
+          <h3 class="text-center">企業基本情報</h3>
           <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <tbody>
                 <tr class="border-b border-gray-200 dark:border-gray-700">
                   <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">企業名
                   </th>
                   <td class="px-6 py-4">
+                    <?php echo $resultcompany["company"]?>
                   </td>
                 </tr>
                 <tr class="border-b border-gray-200 dark:border-gray-700">
                   <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">エージェントサービス名
                   </th>
                   <td class="px-6 py-4">
+                  <?php echo $resultcompany["service"]?>
                   </td>
                 </tr>
                 <tr class="border-b border-gray-200 dark:border-gray-700">
                   <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">所在地
                   </th>
                   <td class="px-6 py-4">
+                  <?php echo $resultcompany["address"]?>
                   </td>
                 </tr>
                 <tr class="border-b border-gray-200 dark:border-gray-700">
                   <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">連絡用電話番号
                   </th>
                   <td class="px-6 py-4">
+                  <?php echo $resultcompany["phoneNumber"]?>
                   </td>
                 </tr>
                 <tr class="border-b border-gray-200 dark:border-gray-700">
                   <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">連絡用メールアドレス
                   </th>
                   <td class="px-6 py-4">
+                  <?php echo $resultcompany["mail"]?>
                   </td>
                 </tr>
                 <tr class="border-b border-gray-200 dark:border-gray-700">
                   <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">営業時間
                   </th>
                   <td class="px-6 py-4">
+                  <?php echo $resultcompany["Date"]?>
                   </td>
                 </tr>
                 <tr class="border-b border-gray-200 dark:border-gray-700">
                   <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">公式サイトURL
                   </th>
                   <td class="px-6 py-4">
+                  <?php echo $resultcompany["URL"]?>
                   </td>
                 </tr>
                 <tr class="border-b border-gray-200 dark:border-gray-700">
                   <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">登録学生とのコンタクト形態
                   </th>
                   <td class="px-6 py-4">
+                  <?php echo $resultcompany["contactType"]?>
                   </td>
                 </tr>
                 <tr class="border-b border-gray-200 dark:border-gray-700">
                   <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">オンライン対応の可否
                   </th>
                   <td class="px-6 py-4">
+                  <?php echo $resultcompany["online"]?>
                   </td>
                 </tr>
             </tbody>
