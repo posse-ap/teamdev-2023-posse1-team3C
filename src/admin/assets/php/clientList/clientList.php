@@ -1,4 +1,8 @@
 <?php
+$dsn = 'mysql:dbname=TEAMDEV;host=db';
+$user = 'root';
+$password = 'root';
+$dbh = new PDO($dsn, $user, $password);
 // まだ掲載期間が終わってない企業を取得
 $sql_companiesUnfinish = "
 select id, Company, finished_at from Companies 
@@ -12,3 +16,6 @@ select id, Company, finished_at from Companies
 where finished_at < now()
 ";
 $companiesFinish = $dbh->query($sql_companiesFinish)->fetchAll(PDO::FETCH_ASSOC);
+
+
+
