@@ -175,7 +175,54 @@ main {
   color: #81766E;
   padding-top: 60px;
 }
-
+.question-1-title {
+  width: 60%;
+  margin-top: 60px;
+  margin-left: 20%;
+  background-color: #E2DFDD;
+  position: relative;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.question-icon {
+  position: absolute;
+  font-size: 30px;
+  font-weight: 600;
+  top: 15px;
+  left: 20px;
+  color: #FBA82C;
+}
+.question-1-contents {
+  font-size: 16px;
+  line-height: 60px;
+  color: #81766E;
+  margin-left: 80px;
+  margin-bottom: 0;
+}
+.question-1-answer {
+  width: 60%;
+  margin-top: 0;
+  margin-left: 20%;
+  background-color: #E2DFDD;
+  position: relative;
+  border-radius: 5px;
+}
+.answer-icon {
+  position: absolute;
+  font-size: 30px;
+  font-weight: 600;
+  top: 15px;
+  left: 20px;
+  color: #FBA82C;
+}
+.answer-1-contents {
+  font-size: 16px;
+  line-height: 60px;
+  color: #81766E;
+  margin-top: 0;
+  margin-left: 80px;
+  padding-right: 20px;
+}
 /* フッター */
 footer {
   height: 240px;

@@ -43,7 +43,9 @@ CREATE TABLE Companies (
 
 insert into Companies (company, service, URL, mail, postcode, address, phoneNumber, contactType, Date, started_at, finished_at, online) values 
 ("Test", "Testservice", "keio.jp", "li12569@keio.jp", "108-8345", "東京都港区三田２丁目１５−４５", "03-5427-1517", "オンライン", "平日 9-18時 土9-15時 日定休", "2023-05-01", "2023-06-30", "終日対応可"), 
-("Test2", "Testservice", "keio.jp", "li12569@keio.jp", "108-8345", "東京都港区三田２丁目１５−４５", "03-5427-1517", "オンライン", "平日 9-18時 土9-15時 日定休", "2023-05-01", "2023-06-30", "終日対応可");
+("Test2", "Testservice", "keio.jp", "li12569@keio.jp", "108-8345", "東京都港区三田２丁目１５−４５", "03-5427-1517", "オンライン", "平日 9-18時 土9-15時 日定休", "2023-05-01", "2023-06-30", "終日対応可"),
+("BTBK", "TOAサービス", "https://www.btbk.com", "info@btbk.com", "102-0076", "東京都千代田区五番町12-7　ドミール五番町　102", "02-3398-62917", "対面・オンライン", "年中無休", "2023/04/01", "2023-06-30", "終日対応可"), 
+("SSS", "SSSService", "https://www.sss-service.jp", "sss@sssservice.jp", "011-333-9444", "北海道札幌市中央区3条西4-1-1　日本生命札幌ビル　5階", "011-333-9444", "オンライン", "平日土祝　9:00-19:30", "2023/02/01", "2023-03-30", "終日対応可");
 
 
 DROP TABLE IF EXISTS CompaniesDetails;
@@ -68,9 +70,13 @@ CREATE TABLE CompaniesDetails (
 ) CHARSET=utf8;
 
 insert into CompaniesDetails (
-  photo, achievement, people, scale,search, ES, practice, seminor, community, type, specialChoose, supportType, Date, formtype, description
+  detail_id, photo, achievement, people, scale,search, ES, practice, seminor, community, type, specialChoose, supportType, Date, formtype, description
 ) values (
-  "test", "総合商社", "約1000社", "ベンチャー多め", "就職活動を本格的に始める前に、アドバイザー相談を行うことができます", "あり", "あり", "あり", "なし", "特化型", "あり", "オンラインのみ", "平日 9-18時 土9-15時 日定休", "本登録の前に対面でお話しすることができます。", "てすと"
+  1, "test", "総合商社", "約1000社", "ベンチャー多め", "就職活動を本格的に始める前に、アドバイザー相談を行うことができます", "あり", "あり", "あり", "なし", "特化型", "あり", "オンラインのみ", "平日 9-18時 土9-15時 日定休", "本登録の前に対面でお話しすることができます。", "てすと"
+),(
+  4, "image", "建設、教育など多数", "38000", "中小企業多め", "なし", "あり", "あり", "なし", "あり", "総合型", "あり", "本登録の前にオンラインでお話しすることができます。", "平日土祝　9:00-19:30", "本登録の前に対面でお話しすることができます。", "オンラインで全国どこからでも応募可"
+),(
+  3, "test", "総合商社、外資など多数", "210000", "中小から大企業まで", "あり", "あり", "あり", "あり", "なし", "総合型", "あり", "本登録の前にオンラインでお話しすることができます。", "平日土祝　9:00-19:30", "本登録の前に対面でお話しすることができます。", "業界No.1の求人数！"
 );
 
 DROP TABLE IF EXISTS GoodPoints;
