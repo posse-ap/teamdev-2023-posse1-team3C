@@ -8,6 +8,13 @@
   <link rel="stylesheet" href="./assets/styles/normalize.css">
   <link rel="stylesheet" href="./assets/styles/top.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
+  <script src="./assets/scripts/index.js" defer></script>
 </head>
 <body>
   <!-- ヘッダー -->
@@ -72,13 +79,56 @@
       <h3>
       \ 利用者の声 /
       </h3>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="user-1-contents">
+
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="user-2-contents">
+              
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="user-3-contents">
+              
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
     </div>
     <!-- よくあるご質問 -->
     <div class="common-question-contents">
       <h3>
       よくあるご質問
       </h3>
+      <div class="question-1">
+        <div class="question-1-title">
+          <span class="question-icon">
+            Q.
+          </span>
+          <p class="question-1-contents">
+            申し込みをするとエージェントに登録ができるのでしょうか？
+          </p>
+          
+        </div>
+        <div class="question-1-answer">
+          <span class="answer-icon">
+            A.
+          </span>
+          <p class="answer-1-contents">
+            いいえ、申し込みをするとエージェントに登録されるわけではありません。申し込みをすると、エージェントと対話するためのコンタクトをとることができます。
+          </p>
+        </div>
+      </div>
     </div>
+    <!-- ポップ(モーダル) -->
+
   </main>
   <footer>
     <div class="footer-boozer-logo">
