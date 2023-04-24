@@ -17,21 +17,21 @@ include(dirname(__FILE__) . '/components/head.php');
     <?php include(dirname(__FILE__) . '/components/sidebar.php'); ?>
     <main class="pt-20">
       <section class="text-center">
-        <h2 class="underline">企業詳細情報</h2>
+        <h2 class="underline mb-4 ">企業詳細情報</h2>
       </section>
-      <section class="">
-        <h3>掲載状況</h3>
+      <section class="flex justify-center gap-9 align-middle">
+        <h3 class="">掲載状況</h3>
         <!-- 今日の日付と比較して、終了日を過ぎていないなら -->
         <?php if (strtotime(date("Y/m/d")) < strtotime($resultcompany["finished_at"])) { ?>
-          <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">掲載中</span>
+          <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 h-6">掲載中</span>
         <?php } else { ?>
           <!-- 今日の日付と比較して、終了日を過ぎているなら -->
-          <span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">掲載停止中</span>
+          <span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300 h-5">掲載停止中</span>
         <?php } ?>
         <form action="./assets/php/clientList/changeFinished_at.php" method="post">
-        <input type="hidden" name="company_id" value="<?php echo $resultcompany["id"]?>">
-        <input type="date" name="selected_at">
-        <button type="submit" name="submit" class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">変更</button>
+          <input type="hidden" name="company_id" value="<?php echo $resultcompany["id"] ?>">
+          <input type="date" name="selected_at">
+          <button type="submit" name="submit" class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">変更</button>
         </form>
       </section>
       <!-- 企業基本情報テーブル -->

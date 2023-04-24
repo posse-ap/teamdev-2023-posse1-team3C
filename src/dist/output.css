@@ -637,6 +637,10 @@ video {
   height: 1.25rem;
 }
 
+.h-9 {
+  height: 2.25rem;
+}
+
 .w-3 {
   width: 0.75rem;
 }
@@ -696,6 +700,10 @@ video {
 
 .gap-16 {
   gap: 4rem;
+}
+
+.gap-9 {
+  gap: 2.25rem;
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
