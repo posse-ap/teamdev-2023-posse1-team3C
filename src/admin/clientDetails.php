@@ -1,12 +1,19 @@
 <?php include('../dbconnect.php') ?>
 <?php include('./assets/php/clientList/clientDetails.php') ?>
 
+
+
+
 <!-- head読み込み -->
 <?php
 include(dirname(__FILE__) . '/components/head.php');
 ?>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/datepicker.min.js"></script>
+<?php if (isset($passwordAlert)) { ?>
 
+  <script>
+    <?php echo $passwordAlert ?>
+  </script>
+<?php } ?>
 </head>
 
 <body class="bg-gray-300">
@@ -107,13 +114,31 @@ include(dirname(__FILE__) . '/components/head.php');
           </table>
         </div>
       </section>
+      <!-- パスワード再設定 -->
+      <section class="flex justify-center gap-8 align-middle">
+        <h2>パスワード再設定</h2>
+        <form action="./assets/php/clientList/resetClientPassword.php" method="POST">
+          <input type="hidden" name="company_id" value="<?php echo $resultcompany["id"] ?>">
+          <input type="hidden" name="company_mail" value="<?php echo $resultcompany["mail"] ?>">
+          <button type="submit" name="resetSubmit" id="resetButton" class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">生成・再設定</button>
+        </form>
+      </section>
+      <!-- 登録学生情報 -->
       <section></section>
+      <!-- 学生情報テーブル -->
       <section></section>
-      <section></section>
-      <button></button>
+      <section class="text-center">
+        <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 " onclick="goback()">企業一覧へ</button>
+      </section>
 
     </main>
   </div>
+  <script>
+    function goback() {
+      window.location.href = "http://localhost:8080/admin/clientList.php";
+      // 企業一覧ページを指定
+    }
+  </script>
 </body>
 
 
