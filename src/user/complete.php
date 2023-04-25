@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CRAFT 申し込み完了ページ</title>
   <link rel="stylesheet" href="./assets/styles/normalize.css">
-  <link rel="stylesheet" href="./assets/styles/complete.css">
+  <link rel="stylesheet" href="./assets/styles/common.css">
+  <link rel="stylesheet" href="./assets/styles/.css">
 </head>
 <body>
   <!-- ヘッダー -->
@@ -19,7 +20,20 @@
     </div>
   </header>
   <main>
-
+    <h2>
+      COMPLETE!
+    </h2>
+    <div class="complete-mark">
+    <i class="fa-solid fa-circle-check"></i>
+    </div>
+    <h3>
+      申し込みが完了しました
+    </h3>
+    <button>
+      <p>
+        トップページに戻る
+      </p>
+    </button>
   </main>
   <!-- フッター -->
   <footer>

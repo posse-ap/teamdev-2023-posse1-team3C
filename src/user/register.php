@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CRAFT 申し込みページ</title>
   <link rel="stylesheet" href="./assets/styles/normalize.css">
+  <link rel="stylesheet" href="./assets/styles/common.css">
   <link rel="stylesheet" href="./assets/styles/register.css">
 </head>
 <body>
