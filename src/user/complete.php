@@ -7,7 +7,8 @@
   <title>CRAFT 申し込み完了ページ</title>
   <link rel="stylesheet" href="./assets/styles/normalize.css">
   <link rel="stylesheet" href="./assets/styles/common.css">
-  <link rel="stylesheet" href="./assets/styles/.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/styles/complete.css">
 </head>
 <body>
   <!-- ヘッダー -->
@@ -20,20 +21,24 @@
     </div>
   </header>
   <main>
-    <h2>
-      COMPLETE!
-    </h2>
-    <div class="complete-mark">
-    <i class="fa-solid fa-circle-check"></i>
+    <div class="complete">
+      <h2>
+        COMPLETE!
+      </h2>
+      <div class="complete-mark">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <h3>
+        申し込みが完了しました
+      </h3>
+      <a href="./index.php">
+        <button>
+          <p>
+            トップページに戻る
+          </p>
+        </button>
+      </a>
     </div>
-    <h3>
-      申し込みが完了しました
-    </h3>
-    <button>
-      <p>
-        トップページに戻る
-      </p>
-    </button>
   </main>
   <!-- フッター -->
   <footer>

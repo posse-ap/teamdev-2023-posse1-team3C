@@ -2,3 +2,44 @@
 main {
   margin-top: 60px;
 }
+.complete {
+  height: calc(100vh - 300px);
+}
+.complete h2 {
+  font-size: 20px;
+  color: #699BF7;
+  text-align: center;
+  padding-top: 100px;
+}
+.complete-mark {
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+}
+.complete-mark i {
+  font-size: 100px;
+  color: #699BF7;
+  margin-left: calc(50% - 50px);
+}
+.complete h3 {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 40px;
+}
+.complete button {
+  width: 200px;
+  height: 40px;
+  background-color: #fff;
+  margin-left: calc(50% - 100px);
+  margin-top: 60px;
+  border-radius: 5px;
+  border-color: #2b7aba;
+}
+.complete button p {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: calc(50% - 7.5px);
+  color: #2b7aba;
+  text-align: center;
+  margin: 0;
+}
