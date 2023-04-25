@@ -3,18 +3,18 @@ main {
   margin-top: 60px;
 }
 .complete {
-  height: calc(100vh - 300px);
+  height: calc(100vh - 60px);
 }
 .complete h2 {
   font-size: 20px;
   color: #699BF7;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 160px;
 }
 .complete-mark {
   width: 100%;
   height: auto;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 .complete-mark i {
   font-size: 100px;
@@ -24,7 +24,7 @@ main {
 .complete h3 {
   font-size: 15px;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 .complete button {
   width: 200px;
