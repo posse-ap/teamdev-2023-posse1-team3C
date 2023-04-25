@@ -9,40 +9,12 @@
   <link rel="stylesheet" href="./assets/styles/complete.css">
 </head>
 <body>
-  <!-- ヘッダー -->
-  <header>
-    <h1 class="header-title">
-      CRAFT
-    </h1>
-    <div class="header-boozer-logo">
-      <img src="./assets/img/boozer_logo_white.png" alt="boozer">
-    </div>
-  </header>
+    <!-- ヘッダー -->
+    <?php include_once('components/header.php')?>
   <main>
-
+    
   </main>
   <!-- フッター -->
-  <footer>
-    <div class="footer-boozer-logo">
-      <img src="./assets/img/boozer_logo_white.png" alt="boozer">
-    </div>
-    <ul class="footer-link-list">
-      <li>
-        お問い合わせ
-      </li>
-      <li>
-        運営会社
-      </li>
-      <li>
-        利用規約
-      </li>
-      <li>
-        プライバシーポリシー
-      </li>
-    </ul>
-    <div class="footer-craft">
-      © 2023 CRAFT
-    </div>
-  </footer>
+  <?php include_once('components/footer.php')?>
 </body>
 </html>

@@ -57,7 +57,7 @@ include(dirname(__FILE__) . '/components/head.php');
               <?php echo $list["status"]?>
               </td>
               <td class="px-6 py-4">
-                <a href="http://localhost:8080/admin/studentDetails.php?id=<?php echo $list["id"]?>&company_id=<?php echo $list["company_id"];?>&status_id=<?php echo $list["status_id"]?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                <a href="studentDetails.php?id=<?php echo $list["id"]?>&company_id=<?php echo $list["company_id"];?>&status_id=<?php echo $list["status_id"]?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                 <?php echo $list["id"]?>
                 </a>
               </td>
