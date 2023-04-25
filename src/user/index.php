@@ -12,6 +12,7 @@
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
 />
+  <link rel="stylesheet" href="./dist/output.css">
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
   <script src="./assets/scripts/index.js" defer></script>
@@ -115,7 +116,7 @@
           <p class="question-1-contents">
             申し込みをするとエージェントに登録ができるのでしょうか？
           </p>
-          
+
         </div>
         <div class="question-1-answer">
           <span class="answer-icon">
