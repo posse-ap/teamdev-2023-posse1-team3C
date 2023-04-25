@@ -1,0 +1,63 @@
+/* ヘッダー */
+header {
+  height: 60px;
+  width: 100%;
+  background-color: #2E79BA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.header-title {
+  font-size: 1.5em;
+  color: #fff;
+  padding-left: calc(50% - 44.726px);
+}
+.header-boozer-logo {
+  width: 100px;
+  height: auto;
+  padding-right: 20px;
+}
+.header-boozer-logo img {
+  width: 100%;
+  height: 100%;
+}
+/* メイン */
+main {
+  margin-top: 60px;
+  height: 1000px;
+  background-color: pink;
+}
+/* フッター */
+footer {
+  height: 240px;
+  background-color: #2E79BA;
+}
+.footer-boozer-logo {
+  width: 200px;
+  height: auto;
+  margin: auto;
+  padding-top: 20px
+}
+.footer-boozer-logo img {
+  width: 100%;
+  height: 100%;
+}
+.footer-link-list {
+  display: flex;
+  gap: 20px;
+  color: #fff;
+  list-style: none;
+  width: fit-content;
+  padding-left: calc(50% - 221.367px);
+  margin-top: 40px;
+}
+.footer-craft {
+  font-size: 20px;
+  color: #B8BABA;
+  font-weight: 600;
+  margin-top: 40px;
+  text-align: center;
+}
