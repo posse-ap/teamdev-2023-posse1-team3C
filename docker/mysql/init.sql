@@ -180,16 +180,20 @@ CREATE TABLE Students (
 ) CHARSET=utf8;
 
 insert into Students (
-  name, furigana, sex, graduated_year, university, faculty, department, prefecture, phoneNumber, mail
-) values ("岩城和輝", "いわぎかずき", "男", "26卒", "慶應", "経済", "経済", "東京都", "000-0009-000", "kazuki@gmail.com");
-
+  name, furigana, sex, graduated_year, university, faculty, department, prefecture, phoneNumber, mail, registered_at
+) values ("岩城和輝", "いわぎかずき", "男", "26卒", "慶應", "経済", "経済", "東京都", "000-0009-000", "kazuki@gmail.com", "2023/04/03 2:33:33"),
+("辻健世","つじけんせい","男","26卒","早稲田","商学","商学","商学","090-3242-5464","kensei0514@icloud.com","2023/02/02 1:39:44"),
+("上野侑紗","うえのありさ","女","25卒","東京","理科三類","","東京","090-5521-0993","arisaueno@gmail.com","2022/11/28 3:43:11"),
+("井上学","いのうえがく","男","24卒","西南学院","神学","神学","福岡","090-3424-0011","gakkun@icloud.com","2023/01/19 12:30:04"),
+("森はるか","もりはるか","女","25卒","大妻女子","家政","ライフデザイン","東京","090-4248-4821","moriharumaru@icloud.com","2023/02/03 9:43:00"),
+("塚越雄真","つかこしゆうま","男","25卒","富山","経済","経済","富山","090-2211-0909","tsukakyun@gmail.com","2022/08/30 14:43:09");
 DROP TABLE IF EXISTS Statuses;
 CREATE TABLE Statuses (
   id INT AUTO_INCREMENT PRIMARY KEY,
   status VARCHAR(255) COMMENT "学生ステータス"
 ) CHARSET=utf8;
 
-insert into Statuses (status) VALUES ("請求予定"), ("請求済み");
+insert into Statuses (status) VALUES ("請求予定"), ("請求済み"), ("無効");
 
 DROP TABLE IF EXISTS CompaniesStudentsLink;
 CREATE TABLE CompaniesStudentsLink (
@@ -202,7 +206,7 @@ CREATE TABLE CompaniesStudentsLink (
   FOREIGN KEY (status_id) REFERENCES Statuses(id)
 ) CHARSET=utf8;
 
-insert into CompaniesStudentsLink (company_id, student_id, status_id) values (1,1,2), (1,1,1), (2,1,2);
+insert into CompaniesStudentsLink (company_id, student_id, status_id) values (1,1,2), (1,3,1),(1,4,1),(2,2,1),(3,1,1),(3,2,1),(3,3,3),(3,4,1),(4,1,1);
 
 DROP TABLE IF EXISTS Invalids;
 CREATE TABLE Invalids (
