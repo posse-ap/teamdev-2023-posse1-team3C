@@ -26,14 +26,14 @@ header {
 }
 /* フッター */
 footer {
-  height: 240px;
+  height: 180px;
   background-color: #2E79BA;
 }
 .footer-boozer-logo {
-  width: 200px;
+  width: 100px;
   height: auto;
   margin: auto;
-  padding-top: 20px
+  padding-top: 10px
 }
 .footer-boozer-logo img {
   width: 100%;
@@ -45,14 +45,18 @@ footer {
   color: #fff;
   list-style: none;
   width: fit-content;
-  padding-left: calc(50% - 221.367px);
-  margin-top: 40px;
+  padding-left: calc(50% - 149.6015px);
+  margin-top: 10px;
+}
+.footer-link-list li {
+  font-size: 8px;
+  font-weight: 600;
 }
 .footer-craft {
-  font-size: 20px;
+  font-size: 10px;
   color: #B8BABA;
   font-weight: 600;
-  margin-top: 40px;
+  margin-top: 20px;
   text-align: center;
 }
 /* レスポンシブ */
