@@ -1,63 +1,45 @@
-/* ヘッダー */
-header {
-  height: 60px;
-  width: 100%;
-  background-color: #2E79BA;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  z-index: 100;
-}
-.header-title {
-  font-size: 1.5em;
-  color: #fff;
-  padding-left: calc(50% - 44.726px);
-}
-.header-boozer-logo {
-  width: 100px;
-  height: auto;
-  padding-right: 20px;
-}
-.header-boozer-logo img {
-  width: 100%;
-  height: 100%;
-}
 /* メイン */
 main {
   margin-top: 60px;
-  height: 1000px;
-  background-color: gray;
 }
-/* フッター */
-footer {
-  height: 240px;
-  background-color: #2E79BA;
+.complete {
+  height: calc(100vh - 60px);
 }
-.footer-boozer-logo {
-  width: 200px;
-  height: auto;
-  margin: auto;
-  padding-top: 20px
-}
-.footer-boozer-logo img {
-  width: 100%;
-  height: 100%;
-}
-.footer-link-list {
-  display: flex;
-  gap: 20px;
-  color: #fff;
-  list-style: none;
-  width: fit-content;
-  padding-left: calc(50% - 221.367px);
-  margin-top: 40px;
-}
-.footer-craft {
+.complete h2 {
   font-size: 20px;
-  color: #B8BABA;
-  font-weight: 600;
-  margin-top: 40px;
+  color: #699BF7;
   text-align: center;
+  padding-top: 140px;
+}
+.complete-mark {
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+}
+.complete-mark i {
+  font-size: 100px;
+  color: #699BF7;
+  margin-left: calc(50% - 50px);
+}
+.complete h3 {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 40px;
+}
+.complete button {
+  width: 200px;
+  height: 40px;
+  background-color: #fff;
+  margin-left: calc(50% - 100px);
+  margin-top: 100px;
+  border-radius: 5px;
+  border-color: #2b7aba;
+}
+.complete button p {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: calc(50% - 7.5px);
+  color: #2b7aba;
+  text-align: center;
+  margin: 0;
 }
