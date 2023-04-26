@@ -58,5 +58,9 @@ footer {
 /* レスポンシブ */
 @media screen and (max-width: 768px) {
   /* ヘッダー */
-  
+  .header-boozer-logo {
+    width: 80px;
+    height: auto;
+    padding-right: 20px;
+  }
 }
