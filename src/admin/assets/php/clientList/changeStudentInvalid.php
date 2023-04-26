@@ -9,6 +9,6 @@ if (isset($_POST["invalidSubmit"])) {
   $changeStudentInvalid->execute();
 
   // 企業詳細画面にリダイレクト
-  $studentDetailsPageURL = "http://localhost:8080/admin/clientDetails.php?id=" . $_POST["id"];
+  $studentDetailsPageURL = "http://localhost:8080/admin/clientDetails.php?id=" . $_POST["company_id"];
   header("Location: $studentDetailsPageURL");
 }

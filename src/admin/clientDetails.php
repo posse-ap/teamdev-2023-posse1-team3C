@@ -1,10 +1,6 @@
 <?php include('../dbconnect.php') ?>
 <?php include('./assets/php/clientList/clientDetails.php') ?>
 
-
-
-
-
 <!-- head読み込み -->
 <?php
 include(dirname(__FILE__) . '/components/head.php');
@@ -32,7 +28,7 @@ include(dirname(__FILE__) . '/components/head.php');
         <!-- 今日の日付と比較して、終了日を過ぎていないなら -->
         <?php if (strtotime(date("Y/m/d")) < strtotime($resultcompany["finished_at"])) { ?>
           <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 h-6">掲載中</span>
-        <?php } else if (strtotime(date("Y/m/d")) < strtotime($resultcompany["finished_at"])){ ?>
+        <?php } else { ?>
           <!-- 今日の日付と比較して、終了日を過ぎているなら -->
           <span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300 h-5">掲載停止中</span>
         <?php } ?>
@@ -187,7 +183,7 @@ include(dirname(__FILE__) . '/components/head.php');
                     <?php echo $list["Name"] ?>
                   </th>
                   <td class="px-6 py-4">
-                    <?php echo $list["id"] ?>
+                    <?php echo $list["student_id"] ?>
                   </td>
                   <td class="px-6 py-4">
                     <?php echo $list["registered_at"] ?>
@@ -196,8 +192,8 @@ include(dirname(__FILE__) . '/components/head.php');
                     <?php echo $list["status"] ?>
                   </td>
                   <td class="px-6 py-4">
-                    <a href="http://localhost:8080/admin/studentDetails.php?id=<?php echo $list["id"] ?>&company_id=<?php echo $list["company_id"]; ?>&status_id=<?php echo $list["status_id"] ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                      <?php echo $list["id"] ?>
+                    <a href="http://localhost:8080/admin/studentDetails.php?id=<?php echo $list["id"]?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                      <?php echo $list["student_id"] ?>
                     </a>
                   </td>
                 </tr>
