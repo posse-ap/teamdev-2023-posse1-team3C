@@ -1,6 +1,27 @@
 /* メイン */
 main {
   margin-top: 60px;
-  height: 1000px;
-  background-color: pink;
+  height: calc(100vh - 60px);
+}
+.register-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 80px;
+  text-align: center;
+}
+.register-title-decoration {
+  width: 80px;
+  height: 1px;
+  background-color: #000;
+  margin-left: calc(50% - 40px);
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+#name-input {
+  width: 50%;
+  margin-left: 25%;
+}
+.sex {
+  width: 20%;
+  margin-left: 25%;
 }
