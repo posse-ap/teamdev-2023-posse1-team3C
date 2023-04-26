@@ -9,12 +9,12 @@ main {
   font-size: 20px;
   color: #699BF7;
   text-align: center;
-  padding-top: 160px;
+  padding-top: 100px;
 }
 .complete-mark {
   width: 100%;
   height: auto;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 .complete-mark i {
   font-size: 100px;
@@ -24,7 +24,7 @@ main {
 .complete h3 {
   font-size: 15px;
   text-align: center;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 .complete button {
   width: 200px;
