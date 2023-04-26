@@ -11,10 +11,7 @@
   <link rel="stylesheet" href="./assets/styles/complete.css">
 </head>
 <body>
-    <!-- ヘッダー -->
-    <?php include_once('components/header.php')?>
   <main>
-<<<<<<< HEAD
     <div class="complete">
       <h2>
         COMPLETE!
@@ -34,11 +31,5 @@
       </a>
     </div>
   </main>
-=======
-    
-  </main>
-  <!-- フッター -->
-  <?php include_once('components/footer.php')?>
->>>>>>> e86376d8e5f36202b8d9498776bfc49e1bf64734
 </body>
 </html>
