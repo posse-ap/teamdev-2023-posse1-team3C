@@ -26,14 +26,14 @@ header {
 }
 /* フッター */
 footer {
-  height: 180px;
+  height: 200px;
   background-color: #2E79BA;
 }
 .footer-boozer-logo {
-  width: 100px;
+  width: 200px;
   height: auto;
   margin: auto;
-  padding-top: 10px
+  padding-top: 20px
 }
 .footer-boozer-logo img {
   width: 100%;
@@ -45,18 +45,18 @@ footer {
   color: #fff;
   list-style: none;
   width: fit-content;
-  padding-left: calc(50% - 149.6015px);
-  margin-top: 10px;
+  padding-left: calc(50% - 197.4455px);
+  margin-top: 40px;
 }
 .footer-link-list li {
-  font-size: 8px;
+  font-size: 14px;
   font-weight: 600;
 }
 .footer-craft {
-  font-size: 10px;
+  font-size: 12px;
   color: #B8BABA;
   font-weight: 600;
-  margin-top: 20px;
+  margin-top: 40px;
   text-align: center;
 }
 /* レスポンシブ */
@@ -66,5 +66,25 @@ footer {
     width: 80px;
     height: auto;
     padding-right: 20px;
+  }
+  /* フッター */
+  footer {
+    height: 100px;
+  }
+  .footer-boozer-logo {
+    width: 100px;
+    padding-top: 10px
+  }
+  .footer-link-list {
+    gap: 10px;
+    margin-top: 10px;
+    padding-left: calc(50% - 134.6015px);
+  }
+  .footer-link-list li {
+    font-size: 8px;
+  }
+  .footer-craft {
+    font-size: 8px;
+    margin-top: 10px;
   }
 }
