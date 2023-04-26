@@ -11,16 +11,11 @@
 </head>
 <body>
   <!-- ヘッダー -->
-  <header>
-    <h1 class="header-title">
-      CRAFT
-    </h1>
-    <div class="header-boozer-logo">
-      <img src="./assets/img/boozer_logo_white.png" alt="boozer">
-    </div>
-  </header>
+  <?php include_once('components/header.php')?>
   <main>
-
+    
   </main>
+  <!-- フッター -->
+  <?php include_once('components/footer.php')?>
 </body>
 </html>

@@ -41,7 +41,7 @@ include(dirname(__FILE__) . '/components/head.php');
                   <?php echo $company["finished_at"]; ?>
                 </td>
                 <td class="px-6 py-4">
-                  <a href="http://localhost:8080/admin/clientDetails.php?id=<?php echo $company["id"] ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                  <a href="clientDetails.php?id=<?php echo $company["id"] ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                     <?php echo $company["id"] ?>
                   </a>
                 </td>
