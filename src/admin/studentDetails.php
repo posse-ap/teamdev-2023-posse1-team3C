@@ -120,7 +120,7 @@ include(dirname(__FILE__) . '/components/head.php');
                 学生ID番号
               </th>
               <td class="px-6 py-4">
-                <?php echo $resultStudentDetails["id"]; ?>
+                <?php echo $resultStudentDetails["student_id"]; ?>
               </td>
             </tr>
             <tr class="border-b border-gray-200 dark:border-gray-700">
@@ -138,8 +138,9 @@ include(dirname(__FILE__) . '/components/head.php');
           <!-- 無効ボタン -->
           <div>
             <form action="./assets/php/clientList/changeStudentInvalid.php" method="POST">
+              <input type="hidden" name="id" value="<?php echo $resultStudentDetails["id"] ?>">
               <input type="hidden" name="company_id" value="<?php echo $resultStudentDetails["company_id"] ?>">
-              <input type="hidden" name="student_id" value="<?php echo $resultStudentDetails["Students.id"] ?>">
+              <input type="hidden" name="student_id" value="<?php echo $resultStudentDetails["student_id"] ?>">
               <button type="submit" name="invalidSubmit" id="invalidButton" class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">無効</button>
             </form>
           </div>
