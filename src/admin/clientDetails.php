@@ -1,10 +1,6 @@
 <?php include('../dbconnect.php') ?>
 <?php include('./assets/php/clientList/clientDetails.php') ?>
 
-
-
-
-
 <!-- head読み込み -->
 <?php
 include(dirname(__FILE__) . '/components/head.php');
@@ -159,7 +155,7 @@ include(dirname(__FILE__) . '/components/head.php');
       <!-- 学生情報テーブル -->
       <section>
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg mb-5 text-center">
-          <h3 class="text-center">企業基本情報</h3>
+          <h3 class="text-center">学生情報</h3>
           <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase dark:text-gray-400">
               <tr>
@@ -187,7 +183,7 @@ include(dirname(__FILE__) . '/components/head.php');
                     <?php echo $list["Name"] ?>
                   </th>
                   <td class="px-6 py-4">
-                    <?php echo $list["id"] ?>
+                    <?php echo $list["student_id"] ?>
                   </td>
                   <td class="px-6 py-4">
                     <?php echo $list["registered_at"] ?>
@@ -196,8 +192,8 @@ include(dirname(__FILE__) . '/components/head.php');
                     <?php echo $list["status"] ?>
                   </td>
                   <td class="px-6 py-4">
-                    <a href="http://localhost:8080/admin/studentDetails.php?id=<?php echo $list["id"] ?>&company_id=<?php echo $list["company_id"]; ?>&status_id=<?php echo $list["status_id"] ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                      <?php echo $list["id"] ?>
+                    <a href="http://localhost:8080/admin/studentDetails.php?id=<?php echo $list["id"]?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                      <?php echo $list["student_id"] ?>
                     </a>
                   </td>
                 </tr>
@@ -206,16 +202,17 @@ include(dirname(__FILE__) . '/components/head.php');
           </table>
         </div>
       </section>
+      <!-- 企業一覧に戻る -->
       <section class="text-center">
-        <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 " onclick="goback()">企業一覧へ</button>
+        <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 " onclick="redirectToClientList()">企業一覧へ</button>
       </section>
 
     </main>
   </div>
   <script>
-    function goback() {
+    // 企業一覧ページに戻る
+    function redirectToClientList() {
       window.location.href = "http://localhost:8080/admin/clientList.php";
-      // 企業一覧ページを指定
     }
   </script>
 </body>
