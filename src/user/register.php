@@ -118,7 +118,7 @@
           <option value="長崎">長崎</option>
           <option value="大分">大分</option>
           <option value="熊本">熊本</option>
-          <option value="宮本">宮崎</option>
+          <option value="宮崎">宮崎</option>
           <option value="鹿児島">鹿児島</option>
           <option value="沖縄">沖縄</option>
         </select>
