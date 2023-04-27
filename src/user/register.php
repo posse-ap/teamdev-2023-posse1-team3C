@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../dist/output.css">
   <link rel="stylesheet" href="./assets/styles/common.css">
   <link rel="stylesheet" href="./assets/styles/register.css">
+  <script src="./assets/scripts/register/register.js" defer></script>
 </head>
 <body>
   <!-- ヘッダー -->
@@ -21,25 +22,25 @@
     <form>
       <div class="grid gap-6 mb-6 md:grid-cols-2 name-input">
         <div>
-          <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">姓</label>
-          <input type="text" id="last_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="田中" required>
+          <label for="last-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">姓</label>
+          <input type="text" id="last-name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="田中" required>
         </div>
         <div>
-          <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">名</label>
-          <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="太郎" required>
+          <label for="first-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">名</label>
+          <input type="text" id="first-name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="太郎" required>
         </div>
         <div>
-          <label for="last_name_kana" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">姓(カタカナ)</label>
-          <input type="text" id="last_name_kana" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="タナカ" required>
+          <label for="last-name-kana" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">姓(カタカナ)</label>
+          <input type="text" id="last-name-kana" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="タナカ" required>
         </div>  
         <div>
-          <label for="first_name_kana" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">名(カタカナ)</label>
-          <input type="text" id="first_name_kana" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="タロウ" required>
+          <label for="first-name-kana" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">名(カタカナ)</label>
+          <input type="text" id="first-name-kana" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="タロウ" required>
         </div>
       </div>
       <div class="sex mb-6">
         <label for="sex" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">性別</label>
-        <select id="sex" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        <select id="sex" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
           <option selected></option>
           <option value="man">男性</option>
           <option value="woman">女性</option>
@@ -48,7 +49,7 @@
       </div>
       <div class="graduate mb-6">
         <label for="graduate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">卒業年度</label>
-        <select id="graduate" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        <select id="graduate" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
           <option selected></option>
           <option value="25">25卒</option>
           <option value="26">26卒</option>
@@ -71,7 +72,7 @@
       </div>
       <div class="prefecture mb-6">
         <label for="prefecture" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">お住まいの都道府県</label>
-        <select id="prefecture" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        <select id="prefecture" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
           <option selected></option>
           <option value="hokkaido">北海道</option>
           <option value="aomori">青森</option>
