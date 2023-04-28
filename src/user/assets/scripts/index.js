@@ -11,3 +11,5 @@ let mySwiper = new Swiper ('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+// Dropdownでよくあるご質問の回答を表示
