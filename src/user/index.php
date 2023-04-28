@@ -102,20 +102,20 @@
       よくあるご質問
       </h3>
       <div class="question-1">
-        <div class="question-1-title">
+        <div class="question-title">
           <span class="question-icon">
             Q.
           </span>
-          <p class="question-1-contents">
+          <p class="question-contents">
             申し込みをするとエージェントに登録ができるのでしょうか？
           </p>
-
+          <i class="fa-solid fa-caret-down"></i>
         </div>
-        <div class="question-1-answer">
+        <div class="question-answer">
           <span class="answer-icon">
             A.
           </span>
-          <p class="answer-1-contents">
+          <p class="answer-contents">
             いいえ、申し込みをするとエージェントに登録されるわけではありません。申し込みをすると、エージェントと対話するためのコンタクトをとることができます。
           </p>
         </div>
