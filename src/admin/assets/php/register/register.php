@@ -30,23 +30,60 @@ if(isset($_POST["registerButton"])) {
     $image_path
   );
 
-  $sql_register_details = "INSERT INTO CompaniesDetails (detail_id,photo) values (:detail_id, :photo)";
+  // 企業詳細情報をcompaniesDetailsに格納
+  $sql_register_details = "INSERT INTO CompaniesDetails (detail_id, photo, formType, type, achievement, people, scale, search, ES, practice, seminor, community, supportType, Date, description) values (:detail_id, :photo, :formType, :type, :achievement, :people, :scale, :search, :ES, :practice, :seminor, :community, :supportType, :Date, :description)";
   $register_details = $dbh->prepare($sql_register_details);
   $register_details->execute([
     ":detail_id" => $dbh->lastInsertId(),
-    ":photo" => $image_name
+    ":photo" => $image_name,
+    ":formType" => $_POST["formType"],
+    ":type" => $_POST["type"],
+    ":achievement" => $_POST["achievement"],
+    ":people" => $_POST["people"],
+    ":scale" => $_POST["scale"],
+    ":search" => $_POST["search"],
+    ":ES" => $_POST["ES"],
+    ":practice" => $_POST["practice"],
+    ":seminor" => $_POST["seminor"],
+    ":community" => $_POST["community"],
+    ":supportType" => $_POST["supportType"],
+    ":Date" => $_POST["Date"],
+    ":description" => $_POST["description"]
   ]);
-  
+
+  // 対応地域をAreasCompaniesLinkに格納
+  $company_id = $dbh->lastInsertId();
+  $sql_register_area = "INSERT INTO AreasCompaniesLink (company_id, area_id) value (:company_id, :area_id)";
+  $register_area = $dbh->prepare($sql_register_area);
+  $areas = $_POST["Areas"];
+  foreach($areas as $area) {
+    $register_area->execute([
+      ":company_id" => $company_id,
+      ":area_id" => $area
+    ]);
+  };
+
+  // 対応卒業年度をCompaniesGraduatedLinkに格納
+  $sql_register_graduate = "INSERT INTO CompaniesGraduatedLink (company_id, graduated_id) value (:company_id, :graduated_id)";
+  $register_graduate = $dbh->prepare($sql_register_graduate);
+  $graduated_years = $_POST["graduated_years"];
+  foreach($graduated_years as $graduated_year) {
+    $register_graduate->execute([
+      ":company_id" => $company_id,
+      ":graduated_id" => $graduated_year
+    ]);
+  };
+
   // 星評価をRatingsテーブルに格納
-  $sql_register_ratings = "INSERT INTO Ratings (rating_id, people, support, achievement, speed, amount) values (:rating, :people, :support, :achievement, :speed, :amount)";
+  $sql_register_ratings = "INSERT INTO Ratings (rating_id, people, support, achievement, speed, amount) values (:rating_id, :people, :support, :achievement, :speed, :amount)";
   $register_ratings = $dbh->prepare($sql_register_ratings);
   $register_ratings->execute([
-    ":rating" => $dbh->lastInsertId(),
-    ":people" => $_POST["people"],
-    ":support" => $_POST["support"],
-    ":achievement" => $_POST["achievement"],
-    ":speed" => $_POST["speed"],
-    ":amount" => $_POST["amount"]
+    ":rating_id" => $company_id,
+    ":people" => $_POST["peopleRate"],
+    ":support" => $_POST["supportRate"],
+    ":achievement" => $_POST["achievementRate"],
+    ":speed" => $_POST["speedRate"],
+    ":amount" => $_POST["amountRate"]
   ]);
 
   // 企業一覧ページに戻る
