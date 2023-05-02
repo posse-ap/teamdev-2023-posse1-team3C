@@ -2,7 +2,7 @@
 if(isset($_POST["registerButton"])) {
   // 入力サれた企業基本情報をcompaniesテーブルに格納
   include("../../../../dbconnect.php");
-  $sql_register_basic = "INSERT INTO Companies (company, mail, service, address, phoneNumber, registered_at, date, url, contactType, online) VALUES (:company, :mail, :address, :service, :phoneNumber, :registered_at ,:date, :url, :contactType, :online)";
+  $sql_register_basic = "INSERT INTO Companies (company, mail, service, address, phoneNumber, registered_at, date, url, contactType, online, started_at, finished_at) VALUES (:company, :mail, :address, :service, :phoneNumber, :registered_at ,:date, :url, :contactType, :online, :started_at, :finished_at)";
   $register = $dbh->prepare($sql_register_basic);
   $register->bindValue(":company", $_POST["company"], PDO::PARAM_STR);
   $register->bindValue(":service", $_POST["service"], PDO::PARAM_STR);
@@ -14,6 +14,8 @@ if(isset($_POST["registerButton"])) {
   $register->bindValue(":online", $_POST["online"], PDO::PARAM_STR);
   $register->bindValue(":contactType", $_POST["contactType"], PDO::PARAM_STR);
   $register->bindValue(":registered_at", date("Y-m-d H:i:s"), PDO::PARAM_STR);
+  $register->bindValue(":started_at", date_format(date_create_from_format('m/d/Y', $_POST["start"]),'Y-m-d 0:0:0'));
+  $register->bindValue(":finished_at",date_format(date_create_from_format('m/d/Y', $_POST["end"]),'Y-m-d 23:59:59'));
   $register->execute();
 
   // 掲載情報をCompaniesDetailsテーブルに格納
@@ -31,7 +33,7 @@ if(isset($_POST["registerButton"])) {
   );
 
   // 企業詳細情報をcompaniesDetailsに格納
-  $sql_register_details = "INSERT INTO CompaniesDetails (detail_id, photo, formType, type, achievement, people, scale, search, ES, practice, seminor, community, supportType, Date, description) values (:detail_id, :photo, :formType, :type, :achievement, :people, :scale, :search, :ES, :practice, :seminor, :community, :supportType, :Date, :description)";
+  $sql_register_details = "INSERT INTO CompaniesDetails (detail_id, photo, formType, type, achievement, people, scale, search, ES, practice, seminor, community, supportType, Date, description, specialChoose) values (:detail_id, :photo, :formType, :type, :achievement, :people, :scale, :search, :ES, :practice, :seminor, :community, :supportType, :Date, :description, :specialChoose)";
   $register_details = $dbh->prepare($sql_register_details);
   $register_details->execute([
     ":detail_id" => $dbh->lastInsertId(),
@@ -48,7 +50,8 @@ if(isset($_POST["registerButton"])) {
     ":community" => $_POST["community"],
     ":supportType" => $_POST["supportType"],
     ":Date" => $_POST["Date"],
-    ":description" => $_POST["description"]
+    ":description" => $_POST["description"],
+    ":specialChoose" => $_POST["specialChoose"]
   ]);
 
   // 対応地域をAreasCompaniesLinkに格納

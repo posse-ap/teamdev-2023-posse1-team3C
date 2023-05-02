@@ -25,7 +25,11 @@ include(dirname(__FILE__) . '/components/head.php');
             <input type="text" id="service" name="service" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
           </div>
           <div class="mb-6">
-            <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">本社所在地郵便番号(ハイフン無し)</label>
+            <label for="postcode" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">本社所在地郵便番号</label>
+            <input type="text" id="postcode" name="postcode" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          </div>
+          <div class="mb-6">
+            <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">本社所在地住所</label>
             <input type="text" id="address" name="address" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
           </div>
           <div class="mb-6">
@@ -61,6 +65,25 @@ include(dirname(__FILE__) . '/components/head.php');
               <option value="平日のみ">平日のみ</option>
             </select>
           </div>
+          <div date-rangepicker class="flex items-center">
+              <div class="relative">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                  <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <input name="start" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="掲載開始日">
+              </div>
+              <span class="mx-4 text-gray-500">to</span>
+              <div class="relative">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                  <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <input name="end" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="掲載終了日">
+              </div>
+            </div>
         </section>
         <!-- 掲載情報登録 -->
         <section>
@@ -166,9 +189,13 @@ include(dirname(__FILE__) . '/components/head.php');
                 <option value="なし">なし</option>
               </select>
             </div>
-            <div class="mb-6">
+            <div class="flex gap-5 justify-end">
               <label for="practice" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">面接練習</label>
-              <input type="text" id="practice" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="practice">
+              <select id="practice" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="practice">
+                <option selected></option>
+                <option value="あり">あり</option>
+                <option value="なし">なし</option>
+              </select>
             </div>
             <div class="flex gap-5 justify-end">
               <label for="seminor" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">セミナー・企業説明会</label>
@@ -186,6 +213,14 @@ include(dirname(__FILE__) . '/components/head.php');
                 <option value="なし">なし</option>
               </select>
             </div>
+            <div class="flex gap-5 justify-end">
+              <label for="specialChoose" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">特別選考</label>
+              <select id="specialChoose" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="specialChoose">
+                <option selected></option>
+                <option value="あり">あり</option>
+                <option value="なし">なし</option>
+              </select>
+            </div>
             <div class="mb-6">
               <label for="supportType" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">サポート形態</label>
               <input type="text" id="supportType" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="supportType">
@@ -195,50 +230,50 @@ include(dirname(__FILE__) . '/components/head.php');
               <ul class="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
                 <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                   <div class="flex items-center pl-3">
-                    <input id="hokkaidou" type="checkbox"  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500 " value="1" name="Areas[]">
-                    <label for="hokkaidou" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300" >北海道</label>
+                    <input id="hokkaidou" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500 " value="1" name="Areas[]">
+                    <label for="hokkaidou" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">北海道</label>
                   </div>
                 </li>
                 <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                   <div class="flex items-center pl-3">
-                    <input id="touhoku" type="checkbox"  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="2" name="Areas[]">
-                    <label for="touhoku" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300" >東北</label>
+                    <input id="touhoku" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="2" name="Areas[]">
+                    <label for="touhoku" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">東北</label>
                   </div>
                 </li>
                 <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                   <div class="flex items-center pl-3">
-                    <input id="kantou" type="checkbox"  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="3" name="Areas[]">
-                    <label for="kantou" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300" >関東</label>
+                    <input id="kantou" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="3" name="Areas[]">
+                    <label for="kantou" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">関東</label>
                   </div>
                 </li>
                 <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                   <div class="flex items-center pl-3">
-                    <input id="chuubu" type="checkbox"  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="4" name="Areas[]">
+                    <input id="chuubu" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="4" name="Areas[]">
                     <label for="chuubu" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">中部</label>
                   </div>
                 </li>
                 <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                   <div class="flex items-center pl-3">
-                    <input id="kinki" type="checkbox"  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="5" name="Areas[]" >
-                    <label for="kinki" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300" >近畿</label>
+                    <input id="kinki" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="5" name="Areas[]">
+                    <label for="kinki" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">近畿</label>
                   </div>
                 </li>
                 <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                   <div class="flex items-center pl-3">
-                    <input id="chuugoku" type="checkbox"  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="6" name="Areas[]">
-                    <label for="chuugoku" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300" >中国</label>
+                    <input id="chuugoku" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="6" name="Areas[]">
+                    <label for="chuugoku" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">中国</label>
                   </div>
                 </li>
                 <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                   <div class="flex items-center pl-3">
-                    <input id="sikoku" type="checkbox"  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="7" name="Areas[]">
-                    <label for="sikoku" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300" >四国</label>
+                    <input id="sikoku" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="7" name="Areas[]">
+                    <label for="sikoku" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">四国</label>
                   </div>
                 </li>
                 <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                   <div class="flex items-center pl-3">
-                    <input id="kyuusyuu" type="checkbox"  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="8" name="Areas[]">
-                    <label for="kyuusyuu" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300" >九州</label>
+                    <input id="kyuusyuu" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="8" name="Areas[]">
+                    <label for="kyuusyuu" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">九州</label>
                   </div>
                 </li>
               </ul>
@@ -250,28 +285,28 @@ include(dirname(__FILE__) . '/components/head.php');
             <div>
               対応卒業年度
               <ul class="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-              <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                   <div class="flex items-center pl-3">
-                    <input id="24" type="checkbox"  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="1" name="graduated_years[]">
-                    <label for="24" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300" >24卒</label>
+                    <input id="24" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="1" name="graduated_years[]">
+                    <label for="24" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">24卒</label>
                   </div>
                 </li>
                 <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                   <div class="flex items-center pl-3">
-                    <input id="25" type="checkbox"  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="2" name="graduated_years[]">
-                    <label for="25" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300" >25卒</label>
+                    <input id="25" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="2" name="graduated_years[]">
+                    <label for="25" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">25卒</label>
                   </div>
                 </li>
                 <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                   <div class="flex items-center pl-3">
-                    <input id="26" type="checkbox"  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="3" name="graduated_years[]">
-                    <label for="26" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300" >26卒</label>
+                    <input id="26" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="3" name="graduated_years[]">
+                    <label for="26" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">26卒</label>
                   </div>
                 </li>
                 <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                   <div class="flex items-center pl-3">
-                    <input id="27" type="checkbox"  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="4" name="graduated_years[]">
-                    <label for="27" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300" >27卒</label>
+                    <input id="27" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="4" name="graduated_years[]">
+                    <label for="27" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">27卒</label>
                   </div>
                 </li>
               </ul>
@@ -286,7 +321,7 @@ include(dirname(__FILE__) . '/components/head.php');
         <section class="mx-4">
           <div class="flex items-start mb-6">
             <div class="flex items-center h-5">
-              <input id="remember" type="checkbox"  class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required>
+              <input id="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required>
             </div>
             <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">誤りが無いことを確認しました。</label>
           </div>
