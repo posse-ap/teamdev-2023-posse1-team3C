@@ -199,9 +199,11 @@ main {
 }
 .answer-contents {
   font-size: 16px;
-  line-height: 60px;
+  line-height: 1.4;
   color: #81766E;
   margin-top: 0;
   margin-left: 80px;
-  padding-right: 20px;
+  padding-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
