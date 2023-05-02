@@ -99,7 +99,7 @@ CREATE TABLE Areas (
   area VARCHAR(255) COMMENT "対応エリア"
 ); 
 
-insert into Areas (area) values ("北海道"), ("東北"), ("関東");
+insert into Areas (area) values ("北海道"), ("東北"), ("関東"), ("中部"), ("近畿"), ("中国"), ("四国"), ("九州");
 
 DROP TABLE IF EXISTS Graduated_years;
 
@@ -116,7 +116,6 @@ CREATE TABLE AreasCompaniesLink (
   id INT AUTO_INCREMENT PRIMARY KEY,
   company_id INT,
   area_id INT COMMENT "対応エリアのid",
-  FOREIGN KEY (company_id) REFERENCES Companies(id),
   FOREIGN KEY (area_id) REFERENCES Areas(id)
 ) CHARSET=utf8;
 
@@ -128,7 +127,6 @@ CREATE TABLE CompaniesGraduatedLink (
   id INT AUTO_INCREMENT PRIMARY KEY,
   company_id INT,
   graduated_id INT,
-  FOREIGN KEY (company_id) REFERENCES Companies(id),
   FOREIGN KEY (graduated_id) REFERENCES Graduated_years(id)
 ) CHARSET=utf8;
 
@@ -156,8 +154,7 @@ CREATE TABLE Ratings (
   support INT,
   achievement INT,
   speed INT,
-  amount INT,
-  FOREIGN KEY (rating_id) REFERENCES Companies(id)
+  amount INT
 );
 
 insert into Ratings (people,support, achievement, speed, amount) values (3,3.5, 2, 4, 5);
