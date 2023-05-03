@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST["registerButton"])) {
+if (isset($_POST["registerButton"])) {
   // 入力サれた企業基本情報をcompaniesテーブルに格納
   include("../../../../dbconnect.php");
   $sql_register_basic = "INSERT INTO Companies (company, mail, service, address, phoneNumber, registered_at, date, url, contactType, online, started_at, finished_at) VALUES (:company, :mail, :address, :service, :phoneNumber, :registered_at ,:date, :url, :contactType, :online, :started_at, :finished_at)";
@@ -14,14 +14,13 @@ if(isset($_POST["registerButton"])) {
   $register->bindValue(":online", $_POST["online"], PDO::PARAM_STR);
   $register->bindValue(":contactType", $_POST["contactType"], PDO::PARAM_STR);
   $register->bindValue(":registered_at", date("Y-m-d H:i:s"), PDO::PARAM_STR);
-  $register->bindValue(":started_at", date_format(date_create_from_format('m/d/Y', $_POST["start"]),'Y-m-d 0:0:0'));
-  $register->bindValue(":finished_at",date_format(date_create_from_format('m/d/Y', $_POST["end"]),'Y-m-d 23:59:59'));
+  $register->bindValue(":started_at", date_format(date_create_from_format('m/d/Y', $_POST["start"]), 'Y-m-d 0:0:0'));
+  $register->bindValue(":finished_at", date_format(date_create_from_format('m/d/Y', $_POST["end"]), 'Y-m-d 23:59:59'));
   $register->execute();
 
   // 掲載情報をCompaniesDetailsテーブルに格納
   // 画像をアップロード
-  $dir_path_hero = dirname(__FILE__) . "/../../img/heroes" . "/" . $_POST
-  ["company"] . "/";
+  $dir_path_hero = dirname(__FILE__) . "/../../img/heroes" . "/" . $_POST["company"] . "/";
   if (!is_dir($dir_path_hero)) {
     mkdir($dir_path_hero, 0777);
   }
@@ -59,7 +58,7 @@ if(isset($_POST["registerButton"])) {
   $sql_register_area = "INSERT INTO AreasCompaniesLink (company_id, area_id) value (:company_id, :area_id)";
   $register_area = $dbh->prepare($sql_register_area);
   $areas = $_POST["Areas"];
-  foreach($areas as $area) {
+  foreach ($areas as $area) {
     $register_area->execute([
       ":company_id" => $company_id,
       ":area_id" => $area
@@ -70,7 +69,7 @@ if(isset($_POST["registerButton"])) {
   $sql_register_graduate = "INSERT INTO CompaniesGraduatedLink (company_id, graduated_id) value (:company_id, :graduated_id)";
   $register_graduate = $dbh->prepare($sql_register_graduate);
   $graduated_years = $_POST["graduated_years"];
-  foreach($graduated_years as $graduated_year) {
+  foreach ($graduated_years as $graduated_year) {
     $register_graduate->execute([
       ":company_id" => $company_id,
       ":graduated_id" => $graduated_year
@@ -92,8 +91,7 @@ if(isset($_POST["registerButton"])) {
   // サクセスストーリーをStoriesテーブルに格納
   $sql_register_story = "INSERT INTO Stories (company_id, title, time, university, name, story, photo) values (:company_id, :title, :time, :university, :name, :story, :photo)";
   $register_story = $dbh->prepare($sql_register_story);
-  $dir_path = dirname(__FILE__) . "/../../img/stories" . "/" . $_POST
-  ["company"] . "/";
+  $dir_path = dirname(__FILE__) . "/../../img/stories" . "/" . $_POST["company"] . "/";
   if (!is_dir($dir_path)) {
     mkdir($dir_path, 0777);
   }
@@ -149,12 +147,34 @@ if(isset($_POST["registerButton"])) {
   $sql_register_goodPoint = "INSERT INTO GoodPoints (company_id, GoodPoint) values (:company_id, :GoodPoint)";
   $register_goodPoint = $dbh->prepare($sql_register_goodPoint);
   $goodPoints = $_POST["goodPoints"];
-  foreach($goodPoints as $goodPoint) {
+  foreach ($goodPoints as $goodPoint) {
     $register_goodPoint->execute([
       ":company_id" => $company_id,
       ":GoodPoint" => $goodPoint
     ]);
   };
+
+  // パスワードを生成してClintUsersテーブルに格納
+  $sql_register_user = "INSERT INTO ClientUsers (company_id, mail, password) values (:company_id, :mail, :password)";
+  $register_user = $dbh->prepare($sql_register_user);
+  // ランダムな文字列を出力し、それをパスワードとする
+  $password = substr(str_shuffle('1234567890abcdefghijklmnopqrstuvwxyz'), 0, 8);
+  $register_user->execute([
+    ":company_id" => $company_id,
+    ":mail" => $_POST["mail"],
+    ":password" => password_hash($password, PASSWORD_DEFAULT)
+  ]);
+
+  // 生成したパスワードをメールで送信
+  $to = $_POST["mail"];
+  $subject = "パスワード設定のお知らせ";
+  $from = "admin@example.com";
+  $message = "<html><body><p>パスワードを設定しました。</p><p>設定したのパスワードは <b>" . $password . "</b> です。</p></body></html>";
+  $headers = "MIME-Version: 1.0\r\n";
+  $headers .= "From: $from  \r\n";
+  $headers .= "Content-Type: text/html; charset=UTF-8" . "\r\n" . "Content-Transfer-Encoding: base64\r\n";
+  // メール送信
+  mb_send_mail($to, $subject, $message, $headers);
 
   // 企業一覧ページに戻る
   header("Location: ../../../../admin/clientList.php");

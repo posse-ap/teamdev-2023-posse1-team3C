@@ -17,11 +17,12 @@ values ("admin@example.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJL
 DROP TABLE IF EXISTS ClientUsers;
 CREATE TABLE ClientUsers (
   id INT AUTO_INCREMENT PRIMARY KEY,
+  company_id INT,
   mail VARCHAR(255),
   password VARCHAR(255),
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT "発行日時"
 ) CHARSET=utf8;
-insert into ClientUsers (mail, password) values ("client@example.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW");
+insert into ClientUsers (company_id, mail, password) values (1, "client@example.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW");
 
 DROP TABLE IF EXISTS Companies;
 CREATE TABLE Companies (
