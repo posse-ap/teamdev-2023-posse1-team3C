@@ -51,7 +51,7 @@ include(dirname(__FILE__) . '/components/head.php');
         </table>
       </div>
       <!-- 掲載期間終了した企業表 -->
-      <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <div class="relative overflow-x-auto shadow-md sm:rounded-lg mb-5 text-center">
         <h3 class="text-center">掲載終了企業</h3>
         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead class="text-xs text-gray-700 uppercase dark:text-gray-400">
