@@ -2,4 +2,3 @@ node_modules
 .env
 .history
 .dist/output.css
-```
