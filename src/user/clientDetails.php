@@ -113,7 +113,7 @@
     <div class="ticket-explain">キャリアチケットは、新卒の就活のための就活エージェントです。<br>
 何十社もの選考を受け続ける従来の就職活動とは違い、本当にマッチした平均5社の選考だけで就活生を内定に導いています。<br>
 週に何度かオンラインの就活イベントも開催中。そこで企業とマッチングして内定を獲得できる可能性もあります。<br>
-イベントでは、複数企業との交流ができるだけでなく、選考の練習ができたり参加企業とのマッチングをお願いすることも。イベント後は一人ひとりの就活をリクルーターがサポートしてくれ、イベントでマッチングした企業以外にも希望にあった企業を紹介してくれます。<br>
+イベントでは、複数企業との交流ができるだけでなく、選考の練習ができたり、参加企業とのマッチングをお願いすることも。イベント後は一人ひとりの就活をリクルーターがサポートしてくれ、イベントでマッチングした企業以外にも希望にあった企業を紹介してくれます。<br>
 参加した方限定の特別選考ルートも用意されているため、はやめに就活を終えたい方におすすめです。
 </div>
 
@@ -122,25 +122,30 @@
 
       <div class="success-story-container">
         <div class="success-story-name
-        ">キャリアチケットのサクセスストーリー</div>
-        <div class="all-success-story">
-        <div class="success-story-img-around">
-          <img src="./assets/img/サクセスストーリー.avif" class="success-story-img" alt="success-story-img">
-        <div class="achive">約２ヶ月で内定獲得</div>
+        ">🔑&emsp;キャリアチケットのサクセスストーリー</div>
+        <div class="three-stories">
+          <div class="other-story">◀︎</div>
+          <div class="all-success-story">
+
+            <div class="success-story-img-around">
+              <img src="./assets/img/success-story.png" class="success-story-img"   alt="success-story-img">
+              <div class="achive">約２ヶ月で内定獲得！</div>
+            </div>
+
+            <div class="comment">アドバイザーさんのおかげで自信を持てました!</div>
+            <div class="self-introduce">慶應義塾大学&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;上野侑紗</div>
+            <div class="story-detail">
+            地元の企業で内定をもらっていたけど、関東で働きたいという思いが強くなり、就活を続行。一方で内定をもらう友人も増えはじめ、焦りが生まれた際に、キャリアスタートへ相談し、親身に話を聞いてもらえて、もう一度就活に取り組む自信を持つことができたので、本当に良かったです。以前から人と関わることが得意だったので、その長所を生かして、株式会社ヒトノエの営業職にエントリーしたところ、社員の皆さんの人柄に惹かれ、入社を決意しました</div>
+            
+          </div>
+          <div class="other-story">▶︎</div>
         </div>
-        <div class="comment">アドバイザーさんのおかげで自信を持てました!</div>
-        <div class="self-introduce">慶應義塾大学&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;上野侑紗</div>
-        <div class="story-detail">
-        地元の企業で内定をもらっていたけど、関東で働きたいという思いが強くなり、就活を続行。一方で内定をもらう友人も増えはじめ、焦りが生まれた際に、キャリアスタートへ相談し、親身に話を聞いてもらえて、もう一度就活に取り組む自信を持つことができたので、本当に良かったです。以前から人と関わることが得意だったので、その長所を生かして、株式会社ヒトノエの営業職にエントリーしたところ、社員の皆さんの人柄に惹かれ、入社を決意しました
-        </div>
-      </div>
 
       </div>
-
 
       <!-- リンク -->
 
-      <div class="access">お問合せする&emsp;▶︎
+      <div class="access">お問い合わせする&emsp;▶︎
       </div>
       <div class="official-site">
         公式サイトへ  ◉

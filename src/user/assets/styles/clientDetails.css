@@ -29,6 +29,7 @@ main {
   padding-top: 20px;
   height: 300px;
 }
+
 .feature-background{
   background-color: white;
   display: block;
@@ -40,8 +41,15 @@ main {
   
 }
 
+@media screen and (max-width:700px){
+  .feature-background{
+    width: 300px;
+  }
+  
+}
+
 .carrier-ticket-feature{
-  color: rgb(36, 120, 255);
+  color: #2E79BA;
   text-align: center;
   font-weight: 700;
   font-size: 25px;
@@ -115,46 +123,78 @@ main {
 }
 
 
-.all-success-story{
-  height: 500px;
-  background-color: white;
-  width: 600px;
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 100px;
-}
-
-
-.success-story-img-around{
-  position: relative;
-  display: inline-block;
-  justify-content: center;
-  margin: 0 auto;
-  text-align: center;
-}
-
 .success-story-name{
   background-color: white;
   z-index: 100;
   color: rgb(0, 106, 255);
-  margin-top: 100px;
+  width: 450px;
+  height: 60px;
+  font-family:  Toppan Bunkyu Gothic;
+  font-size: 22px;
+  font-weight: 900;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+
+}
+
+.three-stories{
+  display: flex;
+  justify-content: space-between;
+}
+
+.other-story{
+  margin-top: 80px;
+  font-size: 80px;
+  color: #2E79BA;
+  background-color: white;
+  width: 150px;
+  height: 400px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
 
+
+.all-success-story{
+  height: 450px;
+  background-color: white;
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+.success-story-img-around{
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center; 
+  position: relative;
+  display: inline-block;
+
+}
 .success-story-img{
-  width: 600px;
+  width: 500px;
+  display: block;
 }
 
 .achive{
   background-color: rgb(255, 193, 50);
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  width: 200px;
   padding: 10px;
   font-family: Toppan Bunkyu Gothic;
   font-weight: 900;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
+
 
 .comment{
   color: rgb(43, 146, 255);
@@ -162,6 +202,8 @@ main {
   font-weight: 900;  
   background-color: white;
   width: 500px;
+  margin: auto;
+  padding-top: 10px;
 
 }
 
@@ -170,23 +212,47 @@ main {
   font-family: Toppan Bunkyu Gothic;
   font-weight: 900;  
   width: 500px;
+  margin: auto;
+  padding-top: 10px;
+
 }
 
 .story-detail{
-  backg
   font-family: 游ゴシック体;
   width: 500px;
   font-family: Toppan Bunkyu Gothic;
   font-weight: 900;  
+  margin: auto;
+  padding-top: 10px;
+  font-size: 15px;
 }
 
 /* リンク */
 
 .access{
-  background-color: rgb(47, 89, 255);
+  background-color: rgb(76, 130, 255);
   color: white;
+  margin: 100px auto 0 auto;
+  width: 200px;
+  height: 60px;
+  font-family: Toppan Bunkyu Gothic;
+  border-radius: 8px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .official-site{
-  background-color: rgb(63, 130, 255);
+  background-color: rgb(105, 158, 255);
   color: white;
+  margin: 30px auto 100px auto;
+  width: 200px;
+  height: 60px;
+  font-family: Toppan Bunkyu Gothic;
+  border-radius: 8px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
