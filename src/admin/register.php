@@ -92,7 +92,7 @@ include(dirname(__FILE__) . '/components/head.php');
           <div>
             <h4>企業宣材写真</h4>
             <div>
-              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Upload file</label>
+              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">写真を選択してください</label>
               <input name="heroImage" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file">
             </div>
           </div>
@@ -317,17 +317,50 @@ include(dirname(__FILE__) . '/components/head.php');
             </div>
           </div>
           <!-- サクセスストーリー -->
-          <div class="flex items-center justify-center w-full">
-            <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
-              <div class="flex flex-col items-center justify-center pt-5 pb-6">
-                <svg aria-hidden="true" class="w-10 h-10 mb-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
-                </svg>
-                <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
-                <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
-              </div>
-              <input id="dropzone-file" type="file" class="hidden" />
-            </label>
+          <div>
+            <h4>サクセスストーリ</h4>
+            <div class="mb-8">
+              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="successFirst">写真を選択してください</label>
+              <input name="successFirst" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="successFirst" type="file">
+              <label for="successFirstTime" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">内定までにかかった時間</label>
+              <input type="text" id="successFirstTime" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successFirstTime">
+              <label for="successFirstUniversity" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">大学名</label>
+              <input type="text" id="successFirstUniversity" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successFirstUniversity">
+              <label for="successFirstName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">名前</label>
+              <input type="text" id="successFirstName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successFirstName">
+              <label for="successFirstTitle" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">見出し</label>
+              <input type="text" id="successFirstTitle" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successFirstTitle">
+              <label for="successFirstdescription" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">詳細説明</label>
+              <textarea id="successFirstdescription" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..." name="successFirstdescription"></textarea>
+            </div>
+            <div class="mb-8">
+              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="successSecond">写真を選択してください</label>
+              <input name="successSecond" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="successSecond" type="file">
+              <label for="successSecondTime" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">内定までにかかった時間</label>
+              <input type="text" id="successSecondTime" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successSecondTime">
+              <label for="successSecondUniversity" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">大学名</label>
+              <input type="text" id="successSecondUniversity" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successSecondUniversity">
+              <label for="successSecondName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">名前</label>
+              <input type="text" id="successSecondName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successSecondName">
+              <label for="successSecondTitle" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">見出し</label>
+              <input type="text" id="successSecondTitle" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successSecondTitle">
+              <label for="successSecondDescription" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">詳細説明</label>
+              <textarea id="successSecondDescription" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..." name="successSecondDescription"></textarea>
+            </div>
+            <div class="mb-8">
+              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="successThird">写真を選択してください</label>
+              <input name="successThird" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="successThird" type="file">
+              <label for="successThirdTime" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">内定までにかかった時間</label>
+              <input type="text" id="successThirdTime" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successThirdTime">
+              <label for="successThirdUniversity" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">大学名</label>
+              <input type="text" id="successThirdUniversity" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successThirdUniversity">
+              <label for="successThirdName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">名前</label>
+              <input type="text" id="successThirdName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successThirdName">
+              <label for="successThirdTitle" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">見出し</label>
+              <input type="text" id="successThirdTitle" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successThirdTitle">
+              <label for="successThirdDescription" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">詳細説明</label>
+              <textarea id="successThirdDescription" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..." name="successThirdDescription"></textarea>
+            </div>
           </div>
         </section>
         <!-- 登録ボタン -->
