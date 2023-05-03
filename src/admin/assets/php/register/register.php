@@ -89,6 +89,73 @@ if(isset($_POST["registerButton"])) {
     ":amount" => $_POST["amountRate"]
   ]);
 
+  // サクセスストーリーをStoriesテーブルに格納
+  $sql_register_story = "INSERT INTO Stories (company_id, title, time, university, name, story, photo) values (:company_id, :title, :time, :university, :name, :story, :photo)";
+  $register_story = $dbh->prepare($sql_register_story);
+  $dir_path = dirname(__FILE__) . "/../../img/stories" . "/" . $_POST
+  ["company"] . "/";
+  if (!is_dir($dir_path)) {
+    mkdir($dir_path, 0777);
+  }
+  $image_name_first = uniqid(mt_rand(), true) . "." . substr(strrchr($_FILES["successFirstImage"]["name"], "."), 1);
+  $image_path_first = $dir_path . $image_name;
+  move_uploaded_file(
+    $_FILES["successFirstImage"]["tmp_name"],
+    $image_path_first
+  );
+  $register_story->execute([
+    ":company_id" => $company_id,
+    ":title" => $_POST["successFirstTitle"],
+    ":time" => $_POST["successFirstTime"],
+    ":university" => $_POST["successFirstUniversity"],
+    ":name" => $_POST["successFirstName"],
+    ":story" => $_POST["successFirstStory"],
+    ":photo" => $image_name_first
+  ]);
+
+  $image_name_second = uniqid(mt_rand(), true) . "." . substr(strrchr($_FILES["successSecondImage"]["name"], "."), 1);
+  $image_path_second = $dir_path . $image_name;
+  move_uploaded_file(
+    $_FILES["successSecondImage"]["tmp_name"],
+    $image_path_second
+  );
+  $register_story->execute([
+    ":company_id" => $company_id,
+    ":title" => $_POST["successSecondTitle"],
+    ":time" => $_POST["successSecondTime"],
+    ":university" => $_POST["successSecondUniversity"],
+    ":name" => $_POST["successSecondName"],
+    ":story" => $_POST["successSecondStory"],
+    ":photo" => $image_name_second
+  ]);
+
+  $image_name_third = uniqid(mt_rand(), true) . "." . substr(strrchr($_FILES["successThirdImage"]["name"], "."), 1);
+  $image_path_third = $dir_path . $image_name;
+  move_uploaded_file(
+    $_FILES["successThirdImage"]["tmp_name"],
+    $image_path_third
+  );
+  $register_story->execute([
+    ":company_id" => $company_id,
+    ":title" => $_POST["successThirdTitle"],
+    ":time" => $_POST["successThirdTime"],
+    ":university" => $_POST["successThirdUniversity"],
+    ":name" => $_POST["successThirdName"],
+    ":story" => $_POST["successThirdStory"],
+    ":photo" => $image_name_third
+  ]);
+
+  // 推しポイントをGoodPointsテーブルに格納
+  $sql_register_goodPoint = "INSERT INTO GoodPoints (company_id, GoodPoint) values (:company_id, :GoodPoint)";
+  $register_goodPoint = $dbh->prepare($sql_register_goodPoint);
+  $goodPoints = $_POST["goodPoints"];
+  foreach($goodPoints as $goodPoint) {
+    $register_goodPoint->execute([
+      ":company_id" => $company_id,
+      ":GoodPoint" => $goodPoint
+    ]);
+  };
+
   // 企業一覧ページに戻る
   header("Location: ../../../../admin/clientList.php");
 }

@@ -321,7 +321,7 @@ include(dirname(__FILE__) . '/components/head.php');
             <h3>サクセスストーリ</h3>
             <div class="mb-8">
               <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="successFirst">写真を選択してください</label>
-              <input name="successFirst" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="successFirst" type="file">
+              <input name="successFirstImage" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="successFirst" type="file">
               <label for="successFirstTime" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">内定までにかかった時間</label>
               <input type="text" id="successFirstTime" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successFirstTime">
               <label for="successFirstUniversity" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">大学名</label>
@@ -331,11 +331,11 @@ include(dirname(__FILE__) . '/components/head.php');
               <label for="successFirstTitle" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">見出し</label>
               <input type="text" id="successFirstTitle" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successFirstTitle">
               <label for="successFirstdescription" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">詳細説明</label>
-              <textarea id="successFirstdescription" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..." name="successFirstdescription"></textarea>
+              <textarea id="successFirstStory" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..." name="successFirstStory"></textarea>
             </div>
             <div class="mb-8">
               <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="successSecond">写真を選択してください</label>
-              <input name="successSecond" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="successSecond" type="file">
+              <input name="successSecondImage" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="successSecond" type="file">
               <label for="successSecondTime" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">内定までにかかった時間</label>
               <input type="text" id="successSecondTime" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successSecondTime">
               <label for="successSecondUniversity" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">大学名</label>
@@ -344,12 +344,12 @@ include(dirname(__FILE__) . '/components/head.php');
               <input type="text" id="successSecondName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successSecondName">
               <label for="successSecondTitle" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">見出し</label>
               <input type="text" id="successSecondTitle" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successSecondTitle">
-              <label for="successSecondDescription" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">詳細説明</label>
-              <textarea id="successSecondDescription" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..." name="successSecondDescription"></textarea>
+              <label for="successSecondStory" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">詳細説明</label>
+              <textarea id="successSecondStory" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..." name="successSecondStory"></textarea>
             </div>
             <div class="mb-8">
               <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="successThird">写真を選択してください</label>
-              <input name="successThird" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="successThird" type="file">
+              <input name="successThirdImage" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="successThird" type="file">
               <label for="successThirdTime" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">内定までにかかった時間</label>
               <input type="text" id="successThirdTime" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successThirdTime">
               <label for="successThirdUniversity" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">大学名</label>
@@ -358,8 +358,8 @@ include(dirname(__FILE__) . '/components/head.php');
               <input type="text" id="successThirdName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successThirdName">
               <label for="successThirdTitle" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">見出し</label>
               <input type="text" id="successThirdTitle" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successThirdTitle">
-              <label for="successThirdDescription" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">詳細説明</label>
-              <textarea id="successThirdDescription" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..." name="successThirdDescription"></textarea>
+              <label for="successThirdStory" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">詳細説明</label>
+              <textarea id="successThirdStory" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..." name="successThirdStory"></textarea>
             </div>
           </div>
           <!-- 推しポイント -->
@@ -367,15 +367,15 @@ include(dirname(__FILE__) . '/components/head.php');
             <h3>推しポイント</h3>
             <div class="mb-6">
               <label for="goodPointFirst" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">推しポイント1</label>
-              <input type="text" id="goodPointFirst" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="goodPointFirst">
+              <input type="text" id="goodPointFirst" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="goodPoints[]">
             </div>
             <div class="mb-6">
               <label for="goodPointSecond" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">推しポイント2</label>
-              <input type="text" id="goodPointSecond" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="goodPointSecond">
+              <input type="text" id="goodPointSecond" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="goodPoints[]">
             </div>
             <div class="mb-6">
               <label for="goodPointThird" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">推しポイント3</label>
-              <input type="text" id="goodPointThird" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="goodPointThird">
+              <input type="text" id="goodPointThird" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="goodPoints[]">
             </div>
           </div>
         </section>
