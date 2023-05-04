@@ -1,3 +1,6 @@
+body {
+  position: relative;
+}
 /* メイン */
 main {
   margin-top: 60px;
@@ -190,9 +193,13 @@ main {
   margin-left: 20%;
   background-color: #E2DFDD;
   position: relative;
-  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
   /* クリック前 */
   display: none;
+}
+.question-title.active {
+  /* クリック後 */
+  border-radius: 5px 5px 0 0;
 }
 .question-title.active i {
   /* クリック後 */
@@ -219,4 +226,295 @@ main {
   padding-right: 40px;
   padding-top: 20px;
   padding-bottom: 40px;
+}
+/* ポップ(モーダル) */
+/* ポップ(1ページ目) */
+.pop-1 {
+  display: none;
+  position: absolute;
+  inset: -60px 0 0 0;
+}
+.pop-1::before {
+  content: "";
+  display: block;
+  background-color: rgba(0, 0, 0, .6);
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+}
+.pop-area-1 {
+  position: fixed;
+  top: calc(50% - 250px);
+  left: 20%;
+  width: 60%;
+  height: 500px;
+  border-radius: 10px;
+  background-color: #FAE17E;
+  z-index: 200;
+}
+.pop-1-number {
+  font-size: 16px;
+  margin-left: 80px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #FF0C0C;
+}
+.pop-1-title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  text-align: center;
+  color: #2E79BA;
+}
+.pop-1-img {
+  width: 100%;
+  height: 200px;
+  margin-top: 10px;
+}
+.pop-1-img img {
+  height: 200px;
+  width: 200px;
+  margin-left: calc(50% - 100px);
+
+}
+.pop-1-content {
+  width: 60%;
+  background-color: #fff;
+  padding: 20px 40px 20px 40px;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #000000;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: calc(20% - 40px);
+  border-radius: 10px;
+}
+.pop-1-content span {
+  color: #FF0C0C;
+  font-weight: 600;
+}
+.pop-1-btn {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  gap: 20px;
+  justify-content: center;
+}
+.pop-1-btn button {
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+.pop-1-skip-btn button {
+  width: 180px;
+  background-color: #7b7b7b;
+  color: #fff;
+}
+.pop-1-btn button i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.pop-1-next-btn button {
+  width: 100px;
+  background-color: #2E79BA;
+  color: #fff;
+}
+/* ポップ(2ページ目) */
+.pop-2 {
+  display: none;
+  position: absolute;
+  inset: -60px 0 0 0;
+}
+.pop-2::before {
+  content: "";
+  display: block;
+  background-color: rgba(0, 0, 0, .6);
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+}
+.pop-area-2 {
+  position: fixed;
+  top: calc(50% - 250px);
+  left: 20%;
+  width: 60%;
+  height: 500px;
+  border-radius: 10px;
+  background-color: #FAE17E;
+  z-index: 200;
+}
+.pop-2-number {
+  font-size: 16px;
+  margin-left: 80px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #FF0C0C;
+}
+.pop-2-title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  text-align: center;
+  color: #2E79BA;
+}
+.pop-2-img {
+  width: 100%;
+  height: 200px;
+  margin-top: 10px;
+}
+.pop-2-img img {
+  height: 200px;
+  width: 200px;
+  margin-left: calc(50% - 100px);
+
+}
+.pop-2-content {
+  width: 60%;
+  background-color: #fff;
+  padding: 20px 40px 20px 40px;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #000000;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: calc(20% - 40px);
+  border-radius: 10px;
+}
+.pop-2-content span {
+  color: #FF0C0C;
+  font-weight: 600;
+}
+.pop-2-btn {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  gap: 20px;
+  justify-content: center;
+}
+.pop-2-btn button {
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+.pop-2-skip-btn button {
+  width: 180px;
+  background-color: #7b7b7b;
+  color: #fff;
+}
+.pop-2-btn button i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.pop-2-next-btn button {
+  width: 100px;
+  background-color: #2E79BA;
+  color: #fff;
+}
+/* ポップ(3ページ目) */
+.pop-3 {
+  display: none;
+  position: absolute;
+  inset: -60px 0 0 0;
+}
+.pop-3::before {
+  content: "";
+  display: block;
+  background-color: rgba(0, 0, 0, .6);
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+}
+.pop-area-3 {
+  position: fixed;
+  top: calc(50% - 250px);
+  left: 20%;
+  width: 60%;
+  height: 500px;
+  border-radius: 10px;
+  background-color: #FAE17E;
+  z-index: 200;
+}
+.pop-3-number {
+  font-size: 16px;
+  margin-left: 80px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #FF0C0C;
+}
+.pop-3-title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  text-align: center;
+  color: #2E79BA;
+}
+.pop-3-img {
+  width: 100%;
+  height: 250px;
+  margin-top: 20px;
+}
+.pop-3-img img {
+  height: auto;
+  width: 400px;
+  margin-left: calc(50% - 200px);
+  border-radius: 5px;
+
+}
+.pop-3-content {
+  width: 60%;
+  background-color: #fff;
+  padding: 20px 40px 20px 40px;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #000000;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: calc(20% - 40px);
+  border-radius: 10px;
+}
+.pop-3-content span {
+  color: #FF0C0C;
+  font-weight: 600;
+}
+.pop-3-btn {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+}
+.pop-3-btn button {
+  margin-left: calc(50% - 120px);
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  width: 240px;
+  background-color: #2E79BA;
+  color: #fff;
+}
+.pop-3-btn button i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }

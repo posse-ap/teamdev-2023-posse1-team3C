@@ -1,3 +1,5 @@
+// モーダルを表示
+
 // 利用者の声のスライドショー
 let mySwiper = new Swiper ('.swiper', {
   loop: true,

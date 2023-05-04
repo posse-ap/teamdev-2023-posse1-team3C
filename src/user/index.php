@@ -160,7 +160,81 @@
       </div>
     </div>
     <!-- ポップ(モーダル) -->
-
+    <!-- ポップ(1ページ目) -->
+    <div class="pop-1">
+      <div class="pop-area-1">
+        <h3 class="pop-1-number">1/3</h3>
+        <h2 class="pop-1-title">就活エージェントとは...？</h2>
+        <div class="pop-1-img">
+          <img src="./assets/img/580.png" alt="">
+        </div>
+        <div class="pop-1-content">
+          就活のプロフェッショナルであるアドバイザーが担当につき、就職活動を一貫してサポートしてくれるサービスのこと。
+          <br>
+          ほとんどの企業が<span>無料</span>で利用できる。
+        </div>
+        <div class="pop-1-btn">
+          <div class="pop-1-skip-btn">
+            <button>
+              スキップする
+              <i class="fa-solid fa-caret-right"></i>
+            </button>
+          </div>
+          <div class="pop-1-next-btn">
+            <button>
+              次へ
+              <i class="fa-solid fa-caret-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ポップ(2ページ目) -->
+    <div class="pop-2">
+      <div class="pop-area-2">
+        <h3 class="pop-2-number">2/3</h3>
+        <h2 class="pop-2-title">でも...重要なのはサポートが本当にあなたに合うかどうか！</h2>
+        <div class="pop-2-img">
+          <img src="./assets/img/1126.png" alt="">
+        </div>
+        <div class="pop-2-content">
+        エージェントによって特徴が違うため、<span>自分にあった</span>就活エージェント選びが非常に重要です。
+        </div>
+        <div class="pop-2-btn">
+          <div class="pop-2-skip-btn">
+            <button>
+              スキップする
+              <i class="fa-solid fa-caret-right"></i>
+            </button>
+          </div>
+          <div class="pop-2-next-btn">
+            <button>
+              次へ
+              <i class="fa-solid fa-caret-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ポップ(3ページ目) -->
+    <div class="pop-3">
+      <div class="pop-area-3">
+        <h3 class="pop-3-number">3/3</h3>
+        <h2 class="pop-3-title">就活エージェントを利用する前に一度話してみよう！</h2>
+        <div class="pop-3-img">
+          <img src="./assets/img/approach.png" alt="">
+        </div>
+        <div class="pop-3-content">
+        CRAFTで登録後に、エージェントから連絡がきて話をすることができます。
+        </div>
+        <div class="pop-3-btn">
+          <button>
+            エージェントを探す
+            <i class="fa-solid fa-caret-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
   </main>
   <!-- フッター -->
   <?php include_once('components/footer.php')?>
