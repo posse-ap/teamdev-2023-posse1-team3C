@@ -160,7 +160,34 @@
       </div>
     </div>
     <!-- ポップ(モーダル) -->
-
+    <div class="pop-1">
+      <div class="pop-area-1">
+        <h3 class="pop-1-number">1/3</h3>
+        <h2 class="pop-1-title">就活エージェントとは...？</h2>
+        <div class="pop-1-img">
+          <img src="./assets/img/580.png" alt="">
+        </div>
+        <div class="pop-1-content">
+          就活のプロフェッショナルであるアドバイザーが担当につき、就職活動を一貫してサポートしてくれるサービスのこと。
+          <br>
+          ほとんどの企業が<span>無料</span>で利用できる。
+        </div>
+        <div class="pop-1-btn">
+          <div class="pop-1-skip-btn">
+            <button>
+              スキップする
+              <i class="fa-solid fa-caret-right"></i>
+            </button>
+          </div>
+          <div class="pop-1-next-btn">
+            <button>
+              次へ
+              <i class="fa-solid fa-caret-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   <!-- フッター -->
   <?php include_once('components/footer.php')?>
