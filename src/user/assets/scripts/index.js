@@ -13,3 +13,8 @@ let mySwiper = new Swiper ('.swiper', {
 });
 
 // Dropdownでよくあるご質問の回答を表示
+const q1Question = document.getElementById('q1-question');
+const q1Answer = document.getElementById('q1-answer');
+q1Question.addEventListener('click', () => {
+  q1Answer.classList.toggle('open');
+})

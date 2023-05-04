@@ -4,3 +4,20 @@
 main {
   padding-left: 223px;
 }
+
+form {
+  width: 95%;
+}
+
+
+
+.inactive {
+  cursor: pointer;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+#remember:checked ~ .registerButton {
+  pointer-events: auto;
+  opacity: 1;
+}
