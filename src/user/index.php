@@ -102,21 +102,59 @@
       よくあるご質問
       </h3>
       <div class="question-1">
-        <div class="question-1-title">
+        <div class="question-title" id="q1-question">
           <span class="question-icon">
             Q.
           </span>
-          <p class="question-1-contents">
+          <p class="question-contents">
             申し込みをするとエージェントに登録ができるのでしょうか？
           </p>
-
+          <i class="fa-solid fa-caret-down"></i>
         </div>
-        <div class="question-1-answer">
+        <div class="question-answer" id="q1-answer">
           <span class="answer-icon">
             A.
           </span>
-          <p class="answer-1-contents">
+          <p class="answer-contents">
             いいえ、申し込みをするとエージェントに登録されるわけではありません。申し込みをすると、エージェントと対話するためのコンタクトをとることができます。
+          </p>
+        </div>
+      </div>
+      <div class="question-2">
+        <div class="question-title" id="q2-question">
+          <span class="question-icon">
+            Q.
+          </span>
+          <p class="question-contents">
+          履歴を見るにはどうしたら良いですか？？
+          </p>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <div class="question-answer" id="q2-answer">
+          <span class="answer-icon">
+            A.
+          </span>
+          <p class="answer-contents">
+            画面下部(PC版の場合は画面上部)のメニューバーにある「HISTORY」をクリックすると、企業詳細ページを閲覧した企業の履歴一覧を見ることができます。
+          </p>
+        </div>
+      </div>
+      <div class="question-3">
+        <div class="question-title" id="q3-question">
+          <span class="question-icon">
+            Q.
+          </span>
+          <p class="question-contents">
+          内定速度のはやい就職エージェントを探したいです。どうしたらいいですか？
+          </p>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <div class="question-answer" id="q3-answer">
+          <span class="answer-icon">
+            A.
+          </span>
+          <p class="answer-contents">
+          画面下の右端の検索マークをタップして、検索から内定速度早い順に並べるをタップすると内定速度の早い順に並べ替えることができます。
           </p>
         </div>
       </div>
