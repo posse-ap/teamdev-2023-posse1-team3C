@@ -40,6 +40,7 @@
               <!-- 画像登録してどういう名前で登録されるかわからなかったので修正必要 -->
               <div class="list-img" style="background-image: url(../img/<?= $company['id'] .'png' ?>);">
               </div>
+              <!-- 星の生成 -->
               <div class="list-star">
                 <table class="list-star-table">
                   <tr>
@@ -65,23 +66,27 @@
                 </table>
               </div>
             </div>
+            <!-- 推しポイントのデータ取得 -->
             <?php include('assets/php/clientList/clientlist-point.php') ?>
             <div class="clientlist-sub">
               <div class="list-sub-point">
                 <h4 class="list-sub-point-h3">ポイント</h4>
                 <ul>
+                  <!-- それぞれ個数が違うためforeachで出力 -->
                   <?php foreach ($points_data as $goodpoint){ ?>
                     <li><?= $goodpoint['GoodPoint'] ?></li>
                   <?php } ?>
                 </ul>
               </div>
               <div class="link-button">
+                <!-- データベースのURLが正しくないから飛べないけど正しければ飛べるはず -->
                 <a href="<?= $company['URL']?>">
                   <div class="button official-link">
                     <p class="button-p">公式サイト</p>
                     <i class="fa-solid fa-arrow-up-right-from-square button-i"></i>
                   </div>
                 </a>
+                <!-- 詳細に飛ぶ -->
                 <a href="clientDetails.php?id='<?= $company_id ?>'">
                   <div class="button detail-page">
                     <p class="button-p">詳細ページ</p>

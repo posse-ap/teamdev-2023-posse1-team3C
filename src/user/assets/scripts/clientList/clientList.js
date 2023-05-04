@@ -1,4 +1,5 @@
 
+// 星をvalueの値に応じて出力
 let counts = document.querySelectorAll('.list-star-value')
 counts.forEach(count => {
   let cnt = count.getAttribute("value");
