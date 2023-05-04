@@ -190,9 +190,13 @@ main {
   margin-left: 20%;
   background-color: #E2DFDD;
   position: relative;
-  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
   /* クリック前 */
   display: none;
+}
+.question-title.active {
+  /* クリック後 */
+  border-radius: 5px 5px 0 0;
 }
 .question-title.active i {
   /* クリック後 */
