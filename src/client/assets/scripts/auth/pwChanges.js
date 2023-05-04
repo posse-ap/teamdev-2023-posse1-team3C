@@ -19,7 +19,6 @@ continueBtn.onclick = ()=>{
     if(xhr.readyState === XMLHttpRequest.DONE){
       if(xhr.status === 200){
         let data = xhr.response;
-        console.log(data);
         if(data.trim() === "success"){
           location.href = '../index.php';
         }else{
