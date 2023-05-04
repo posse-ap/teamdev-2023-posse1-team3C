@@ -11,8 +11,6 @@
   <link rel="stylesheet" href="./assets/styles/complete.css">
 </head>
 <body>
-    <!-- ヘッダー -->
-    <?php include_once('components/header.php')?>
   <main>
     <div class="complete">
       <h2>
