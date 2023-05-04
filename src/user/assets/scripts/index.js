@@ -17,6 +17,23 @@ const pop1SkipBtn = document.querySelector('.pop-1-skip-btn button');
 pop1SkipBtn.addEventListener('click', () => {
   pop1.classList.remove('active');
 });
+// ポップ2ページ目→(次へ)→ポップ3ページ目
+const pop2NextBtn = document.querySelector('.pop-2-next-btn button');
+const pop3 = document.querySelector('.pop-3');
+pop2NextBtn.addEventListener('click', () => {
+  pop2.classList.remove('active');
+  pop3.classList.add('active');
+});
+// ポップ2ページ目→(スキップする)→ポップを閉じる
+const pop2SkipBtn = document.querySelector('.pop-2-skip-btn button');
+pop2SkipBtn.addEventListener('click', () => {
+  pop2.classList.remove('active');
+});
+// ポップ3ページ目→(エージェントを探す)→ポップを閉じる
+const pop3btn = document.querySelector('.pop-3-btn button');
+pop3btn.addEventListener('click', () => {
+  pop3.classList.remove('active');
+});
 // 利用者の声のスライドショー
 let mySwiper = new Swiper ('.swiper', {
   loop: true,

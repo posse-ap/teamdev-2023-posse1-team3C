@@ -255,7 +255,7 @@ main {
   background-color: #FAE17E;
   z-index: 200;
   opacity: 0;
-  transition: opacity 1.5s ease-in-out;
+  transition: opacity 1.2s ease-in-out;
 }
 .pop-1-number {
   font-size: 16px;
@@ -439,6 +439,9 @@ main {
   display: none;
   position: absolute;
   inset: -60px 0 0 0;
+}
+.pop-3.active {
+  display: block;
 }
 .pop-3::before {
   content: "";
