@@ -121,7 +121,7 @@
         </div>
       </div>
       <div class="question-2">
-        <div class="question-title">
+        <div class="question-title" id="q2-question">
           <span class="question-icon">
             Q.
           </span>
@@ -130,7 +130,7 @@
           </p>
           <i class="fa-solid fa-caret-down"></i>
         </div>
-        <div class="question-answer">
+        <div class="question-answer" id="q2-answer">
           <span class="answer-icon">
             A.
           </span>
@@ -140,7 +140,7 @@
         </div>
       </div>
       <div class="question-3">
-        <div class="question-title">
+        <div class="question-title" id="q3-question">
           <span class="question-icon">
             Q.
           </span>
@@ -149,7 +149,7 @@
           </p>
           <i class="fa-solid fa-caret-down"></i>
         </div>
-        <div class="question-answer">
+        <div class="question-answer" id="q3-answer">
           <span class="answer-icon">
             A.
           </span>
