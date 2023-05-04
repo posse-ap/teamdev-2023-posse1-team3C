@@ -7,7 +7,7 @@ $company->execute();
 $resultcompany=  $company->fetch();
 
 // 企業ごとの学生情報を取得
-$sql_CompaniesStudentsLink = "SELECT Name, Students.id, Students.registered_at, CompaniesStudentsLink.company_id, status, company, Statuses.id as status_id FROM `CompaniesStudentsLink` join Students on CompaniesStudentsLink.Student_id = Students.id 
+$sql_CompaniesStudentsLink = "SELECT Name, Students.id as student_id, Students.registered_at, CompaniesStudentsLink.company_id, status, company, Statuses.id as status_id, CompaniesStudentsLink.id FROM `CompaniesStudentsLink` join Students on CompaniesStudentsLink.Student_id = Students.id 
 join Companies on Companies.id = CompaniesStudentsLink.company_id 
 join Statuses on Statuses.id = status_id
 where CompaniesStudentsLink.company_id = :id

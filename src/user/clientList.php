@@ -28,7 +28,7 @@
     </div>
   </div>
 
-  <h2>企業一覧</h2>
+  <h2>エージェント一覧</h2>
   <div class="clientlist-wrapper">
     <!-- 企業ごとに情報出力 -->
     <?php foreach ($companies as $company){ ?>

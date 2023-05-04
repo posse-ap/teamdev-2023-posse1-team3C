@@ -1,5 +1,5 @@
 <?php include('../dbconnect.php') ?>
-<?php include('./assets/php/index.php')?>
+<?php include('./assets/php/index.php') ?>
 <!-- head読み込み -->
 <?php
 include(dirname(__FILE__) . '/components/head.php');
@@ -39,30 +39,34 @@ include(dirname(__FILE__) . '/components/head.php');
             </tr>
           </thead>
           <tbody>
-            <?php foreach($CompaniesStudentsLink as $list) { ?>　
+            <?php foreach ($CompaniesStudentsLink as $list) { ?>　
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 text-center">
               <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                <?php echo $list["Name"]?>
+                <?php echo $list["Name"] ?>
               </th>
               <td class="px-6 py-4 al">
-              <?php echo $list["company"]?>
+                <?php echo $list["company"] ?>
               </td>
               <td class="px-6 py-4">
-              <?php echo $list["id"]?>
+                <?php echo $list["student_id"] ?>
               </td>
               <td class="px-6 py-4">
-              <?php echo $list["registered_at"]?>
+                <?php echo $list["registered_at"] ?>
               </td>
               <td class="px-6 py-4">
-              <?php echo $list["status"]?>
+                <?php echo $list["status"] ?>
               </td>
               <td class="px-6 py-4">
-                <a href="studentDetails.php?id=<?php echo $list["id"]?>&company_id=<?php echo $list["company_id"];?>&status_id=<?php echo $list["status_id"]?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                <?php echo $list["id"]?>
-                </a>
+                <form action="./assets/php/index.php" method="POST">
+                  <input type="hidden" name="student_id" value="<?php echo $list["student_id"] ?>">
+                  <input type="hidden" name="company_id" value="<?php echo $list["company_id"]; ?>">
+                  <input type="hidden" name="status_id" value="<?php echo $list["status_id"] ?>">
+                  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 " name="studentDetailsButton">学生詳細へ
+                  </button>
+                </form>
               </td>
             </tr>
-            <?php }?>
+          <?php } ?>
           </tbody>
         </table>
       </div>
