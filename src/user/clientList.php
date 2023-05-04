@@ -10,12 +10,101 @@
   <link rel="stylesheet" href="./assets/styles/clientList.css">
 </head>
 <body>
-  <!-- ヘッダー -->
+  <!-- ヘッダー読み込み -->
   <?php include_once('components/header.php')?>
+
   <main>
+    <!-- データ持ってくるphpの読み込み -->
   <?php include_once('assets/php/clientList/clientList.php')?>
+
+  <div class="cl-mainvisual">
+    <div class="cl-mainvisual-contents">
+        <div class="title">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <h3 class="cl-h3">あなたにぴったりのエージェントを探す</h3>
+        </div>
+        <p class="cl-p">自分に合った企業を探してみよう！</p>
+        <p class="cl-p">ポイントや評価を見て気になったら詳細ページに飛んでみよう</p>
+    </div>
+  </div>
+
+  <h2>企業一覧</h2>
+  <div class="clientlist-wrapper">
+    <!-- 企業ごとに情報出力 -->
+    <?php foreach ($companies as $company){ ?>
+      <?php $company_id = $company['id']; ?>
+      <div class="clientlist">
+        <h3 class="clientlist-name"><?= $company['company'] ?></h3>
+        <div class="clientlist-contents">
+            <div class="clientlist-main">
+              <!-- 画像登録してどういう名前で登録されるかわからなかったので修正必要 -->
+              <div class="list-img" style="background-image: url(../img/<?= $company['id'] .'png' ?>);">
+              </div>
+              <div class="list-star">
+                <table class="list-star-table">
+                  <tr>
+                    <th>求人数</th>
+                    <td class="list-star-value" value="<?= $company['people'] ?>"></td>
+                  </tr>
+                  <tr>
+                    <th>サポート力</th>
+                    <td class="list-star-value" value="<?= $company['support'] ?>"></td>
+                  </tr>
+                  <tr>
+                    <th>内定獲得実績</th>
+                    <td class="list-star-value" value="<?= $company['achievement'] ?>"> </td>
+                  </tr>
+                  <tr>
+                    <th>内定速度</th>
+                    <td class="list-star-value" value='<?= $company['speed'] ?>'></td>
+                  </tr>
+                  <tr>
+                    <th>取り扱い業界</th>
+                    <td class="list-star-value" value="<?= $company['amount'] ?>"></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <?php include('assets/php/clientList/clientlist-point.php') ?>
+            <div class="clientlist-sub">
+              <div class="list-sub-point">
+                <h4 class="list-sub-point-h3">ポイント</h4>
+                <ul>
+                  <?php foreach ($points_data as $goodpoint){ ?>
+                    <li><?= $goodpoint['GoodPoint'] ?></li>
+                  <?php } ?>
+                </ul>
+              </div>
+              <div class="link-button">
+                <a href="<?= $company['URL']?>">
+                  <div class="button official-link">
+                    <p class="button-p">公式サイト</p>
+                    <i class="fa-solid fa-arrow-up-right-from-square button-i"></i>
+                  </div>
+                </a>
+                <a href="clientDetails.php?id='<?= $company_id ?>'">
+                  <div class="button detail-page">
+                    <p class="button-p">詳細ページ</p>
+                    <i class="fa-solid fa-caret-right button-i"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+      </div>
+      </div>
+
+    <?php } ?>
+
+  
+    </div>
+
+  </h3>
   </main>
   <!-- フッター -->
   <?php include_once('components/footer.php')?>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous"></script>
+  <script src="./assets/scripts/clientList/clientList.js"></script>
+
 </body>
 </html>
