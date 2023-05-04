@@ -234,6 +234,9 @@ main {
   position: absolute;
   inset: -60px 0 0 0;
 }
+.pop-1.active {
+  display: block;
+}
 .pop-1::before {
   content: "";
   display: block;
