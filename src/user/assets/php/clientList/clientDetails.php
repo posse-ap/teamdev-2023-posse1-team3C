@@ -24,3 +24,11 @@ $stmt->execute([
 ]);
 $stories = $stmt->fetch(PDO::FETCH_ASSOC);
 
+// 星評価をRatingsテーブルから取得
+$sql_ratings = "SELECT * FROM Ratings WHERE rating_id = :company_id";
+$stmt = $dbh->prepare($sql_ratings);
+$stmt->execute([
+  ':company_id' => $company_id
+]);
+$ratings = $stmt->fetch(PDO::FETCH_ASSOC);
+

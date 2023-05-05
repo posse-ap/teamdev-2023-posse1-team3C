@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./assets/styles/normalize.css">
   <link rel="stylesheet" href="./assets/styles/common.css">
   <link rel="stylesheet" href="./assets/styles/clientDetails.css">
+  <link rel="stylesheet" href="./assets/styles/clientList.css">
 </head>
 
 <body>
@@ -26,7 +27,7 @@
     </div>
 
     <div>
-      <img src="./assets/img/heroes/<?php echo $company_details["company"]?>/<?php echo $company_details["photo"]?>" class="carrier-img" alt="carrier-img">
+      <img src="./assets/img/heroes/<?php echo $company_details["company"] ?>/<?php echo $company_details["photo"] ?>" class="carrier-img" alt="carrier-img">
     </div>
 
     <!-- キャリアチケットの特徴 -->
@@ -34,14 +35,30 @@
       <div class="carrier-ticket-feature">
         <?php echo $company_details["company"] ?>の特徴
       </div>
-      <ul class="feature-background">
-        <div class="features">
-          <li class="feature">求人数：</li>
-          <li class="feature">サポート力：</li>
-          <li class="feature">内定獲得実績：</li>
-          <li class="feature">内定速度：</li>
-          <li class="feature">扱っている業界の多さ：</li>
-      </ul>
+      <table class="feature-background">
+        <tbody>
+          <tr>
+            <th>求人数</th>
+            <td class="feature list-star-value" value="<?= $ratings['people'] ?>"></td>
+          </tr>
+          <tr>
+            <th>サポート力</th>
+            <td class="feature list-star-value" value="<?= $ratings['support'] ?>"></td>
+          </tr>
+          <tr>
+            <th>内定獲得実績</th>
+            <td class="feature list-star-value" value="<?= $ratings['achievement'] ?>"></td>
+          </tr>
+          <tr>
+            <th>内定速度</th>
+            <td class="feature list-star-value" value="<?= $ratings['speed'] ?>"></td>
+          </tr>
+          <tr>
+            <th>扱っている業界の多さ</th>
+            <td class="feature list-star-value" value="<?= $ratings['amount'] ?>"></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <!-- 詳細情報 -->
@@ -161,16 +178,16 @@
           <div class="success-story-img-around">
             <img src="./assets/img/success-story.png" class="success-story-img" alt="success-story-img">
             <div class="achive">
-              <?php echo $stories["time"]?>で内定獲得！
+              <?php echo $stories["time"] ?>で内定獲得！
             </div>
           </div>
 
           <div class="comment">
-            <?php echo $stories["title"]?>
+            <?php echo $stories["title"] ?>
           </div>
-          <div class="self-introduce"><?php echo $stories["university"]?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<?php echo $stories["name"]?></div>
+          <div class="self-introduce"><?php echo $stories["university"] ?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<?php echo $stories["name"] ?></div>
           <div class="story-detail">
-            <?php echo $stories["story"]?>
+            <?php echo $stories["story"] ?>
           </div>
 
         </div>
@@ -191,6 +208,8 @@
 
   <!-- フッター -->
   <?php include_once('components/footer.php') ?>
+  <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous"></script>
+  <script src="./assets/scripts/clientList/clientList.js"></script>
 </body>
 
 </html>

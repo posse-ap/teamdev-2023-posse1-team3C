@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./assets/styles/normalize.css">
   <link rel="stylesheet" href="./assets/styles/common.css">
   <link rel="stylesheet" href="./assets/styles/clientList.css">
+
 </head>
 <body>
   <!-- ヘッダー読み込み -->
@@ -38,7 +39,7 @@
         <div class="clientlist-contents">
             <div class="clientlist-main">
               <!-- 画像登録してどういう名前で登録されるかわからなかったので修正必要 -->
-              <div class="list-img" style="background-image: url(../img/<?= $company['id'] .'png' ?>);">
+              <div class="list-img" style="background-image: url(../user/assets/img/heroes/<?php echo $company["company"]?>/<?php echo $company["photo"]?>);">
               </div>
               <!-- 星の生成 -->
               <div class="list-star">
