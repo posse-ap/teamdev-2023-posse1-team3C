@@ -34,7 +34,7 @@
     </div>
 
     <div>
-      <img src="./assets/img/キャリア.jpeg" class="carrier-img" alt="carrier-img">
+      <img src="./assets/img/heroes/<?php echo $company_details["company"] ?>/<?php echo $company_details["photo"] ?>" class="carrier-img" alt="carrier-img">
     </div>
 
     <!-- キャリアチケットの特徴 -->
@@ -42,14 +42,30 @@
       <div class="carrier-ticket-feature">
         <?php echo $company_details["company"] ?>の特徴
       </div>
-      <ul class="feature-background">
-        <div class="features">
-          <li class="feature">求人数：</li>
-          <li class="feature">サポート力：</li>
-          <li class="feature">内定獲得実績：</li>
-          <li class="feature">内定速度：</li>
-          <li class="feature">扱っている業界の多さ：</li>
-      </ul>
+      <table class="feature-background">
+        <tbody>
+          <tr>
+            <th>求人数</th>
+            <td class="feature list-star-value" value="<?= $ratings['people'] ?>"></td>
+          </tr>
+          <tr>
+            <th>サポート力</th>
+            <td class="feature list-star-value" value="<?= $ratings['support'] ?>"></td>
+          </tr>
+          <tr>
+            <th>内定獲得実績</th>
+            <td class="feature list-star-value" value="<?= $ratings['achievement'] ?>"></td>
+          </tr>
+          <tr>
+            <th>内定速度</th>
+            <td class="feature list-star-value" value="<?= $ratings['speed'] ?>"></td>
+          </tr>
+          <tr>
+            <th>扱っている業界の多さ</th>
+            <td class="feature list-star-value" value="<?= $ratings['amount'] ?>"></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <!-- 詳細情報 -->
@@ -168,84 +184,34 @@
       </div>
       <div class="swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
+          <?php foreach ($stories as $story) {?>
+            <div class="swiper-slide">
             <div class="user-1-contents">
               <div class="user-1-img">
-                <img src="./assets/img/S__354672649.jpg" alt="">
+                <img src="./assets/img/stories/<?php echo $company_details["company"] ?>/<?php echo $story["photo"]?>" alt="">
                 <div class="user-1-speed">
-                  <?php echo $stories["time"]?>で内定獲得！
+                  <?php echo $story["time"]?>で内定獲得！
                 </div>
               </div>
               <div class="user-1-comment">
                 <h4>
-                アドバイザーさんのおかげで自信を持てました!
+                  <?php echo $story["title"]?>
                 </h4>
                 <div class="user-1-info">
                   <div class="user-1-info-univ">
-                    慶應義塾大学
+                    <?php echo $story["university"]?>
                   </div>
                   <div class="user-1-info-name">
-                    上野侑紗さん
+                    <?php echo $story["name"]?>
                   </div>
                 </div>
                 <div class="user-1-comments">
-                地元の企業で内定をもらっていたけど、関東で働きたいという思いが強くなり、就活を続行。一方で内定をもらう友人も増えはじめ、焦りが生まれた際に、キャリアスタートへ相談し、親身に話を聞いてもらえて、もう一度就活に取り組む自信を持つことができたので、本当に良かったです。以前から人と関わることが得意だったので、その長所を生かして、株式会社testの営業職にエントリーしたところ、社員の皆さんの人柄に惹かれ、入社を決意しました
+                  <?php echo $story["story"]?>
                 </div>
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div class="user-2-contents">
-              <div class="user-2-img">
-                <img src="./assets/img/S__354672649.jpg" alt="">
-                <div class="user-2-speed">
-                  <?php echo $stories["time"]?>で内定獲得！
-                </div>
-              </div>
-              <div class="user-2-comment">
-                <h4>
-                アドバイザーさんのおかげで自信を持てました!
-                </h4>
-                <div class="user-2-info">
-                  <div class="user-2-info-univ">
-                    慶應義塾大学
-                  </div>
-                  <div class="user-2-info-name">
-                    上野侑紗さん
-                  </div>
-                </div>
-                <div class="user-2-comments">
-                地元の企業で内定をもらっていたけど、関東で働きたいという思いが強くなり、就活を続行。一方で内定をもらう友人も増えはじめ、焦りが生まれた際に、キャリアスタートへ相談し、親身に話を聞いてもらえて、もう一度就活に取り組む自信を持つことができたので、本当に良かったです。以前から人と関わることが得意だったので、その長所を生かして、株式会社testの営業職にエントリーしたところ、社員の皆さんの人柄に惹かれ、入社を決意しました
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="user-3-contents">
-              <div class="user-3-img">
-                <img src="./assets/img/S__354672649.jpg" alt="">
-                <div class="user-3-speed">
-                  <?php echo $stories["time"]?>で内定獲得！
-                </div>
-              </div>
-              <div class="user-3-comment">
-                <h4>
-                アドバイザーさんのおかげで自信を持てました!
-                </h4>
-                <div class="user-3-info">
-                  <div class="user-3-info-univ">
-                    慶應義塾大学
-                  </div>
-                  <div class="user-3-info-name">
-                    上野侑紗さん
-                  </div>
-                </div>
-                <div class="user-3-comments">
-                地元の企業で内定をもらっていたけど、関東で働きたいという思いが強くなり、就活を続行。一方で内定をもらう友人も増えはじめ、焦りが生まれた際に、キャリアスタートへ相談し、親身に話を聞いてもらえて、もう一度就活に取り組む自信を持つことができたので、本当に良かったです。以前から人と関わることが得意だったので、その長所を生かして、株式会社testの営業職にエントリーしたところ、社員の皆さんの人柄に惹かれ、入社を決意しました
-                </div>
-              </div>
-            </div>
-          </div>
+          <?php }?>
         </div>
         <div class="swiper-pagination"></div>
         <div class="swiper-button-prev"></div>
@@ -279,6 +245,8 @@
 
   <!-- フッター -->
   <?php include_once('components/footer.php') ?>
+  <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous"></script>
+  <script src="./assets/scripts/clientList/clientList.js"></script>
 </body>
 
 </html>
