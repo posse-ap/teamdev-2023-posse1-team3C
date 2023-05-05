@@ -1,29 +1,41 @@
-// const submitButton = document.querySelector('.submit-button');
-// submitButton.addEventListener('click', () => {
-//   console.log('click');
-//   const lastName = document.getElementById('last-name').value;
-//   const firstName = document.getElementById('first-name').value;
-//   const lastNameKana = document.getElementById('last-name-kana').value;
-//   const firstNameKana = document.getElementById('first-name-kana').value;
-//   const sex = document.getElementById('sex').value;
-//   const graduate = document.getElementById('graduate').value;
-//   const university = document.getElementById('university').value;
-//   const faculty = document.getElementById('faculty').value;
-//   const department = document.getElementById('department').value;
-//   const prefecture = document.getElementById('prefecture').value;
-//   const phone = document.getElementById('phone').value;
-//   const email = document.getElementById('email').value;
-//   const remember = document.getElementById('remember').value;
-//   if(lastName === '' | firstName === '' | lastNameKana === '' | firstNameKana === '' | sex === '' | graduate === '' | university === '' | faculty === '' | department === '' | prefecture === '' | phone === '' | email === '' | remember === '') {
-//     return true;
-//   } else {
-//     return false;
-//     if(false) {
-//       submitButton.onclick = function() {
-//         location.href = './complete.php';
-//       }
-//     }
-//   }
-// });
-
-// ローディング画面を表示後、完了画面へ遷移
+// 各入力項目の要素を取得
+const lastName = document.getElementById('last-name');
+const firstName = document.getElementById('first-name');
+const lastNameKana = document.getElementById('last-name-kana');
+const firstNameKana = document.getElementById('first-name-kana');
+const sex = document.getElementById('sex');
+const graduate = document.getElementById('graduate');
+const university = document.getElementById('university');
+const faculty = document.getElementById('faculty');
+const department = document.getElementById('department');
+const prefecture = document.getElementById('prefecture');
+const phone = document.getElementById('phone');
+const email = document.getElementById('email');
+const remember = document.getElementById('remember');
+// 送信ボタンの要素を取得
+const submitButton = document.querySelector('.submit-button');
+// 送信ボタンを活性化させる関数
+const checkInput = () => {
+  if(lastName.value !== '' && firstName.value !== '' && lastNameKana.value !== '' && firstNameKana.value !== '' && sex.value !== '' && graduate.value !== '' && university.value !== '' && faculty.value !== '' && department.value !== '' && prefecture.value !== '' && phone.value !== '' && email.value !== '' && remember.checked) {
+    submitButton.disabled = false;
+  } else {
+    submitButton.disabled = true;
+  }
+};
+// 初期の状態で送信ボタンを非活性化させる
+submitButton.disabled = true;
+// 入力されたかをチェックする
+lastName.addEventListener('input', checkInput);
+firstName.addEventListener('input', checkInput);
+lastNameKana.addEventListener('input', checkInput);
+firstNameKana.addEventListener('input', checkInput);
+sex.addEventListener('input', checkInput);
+graduate.addEventListener('input', checkInput);
+university.addEventListener('input', checkInput);
+faculty.addEventListener('input', checkInput);
+department.addEventListener('input', checkInput);
+prefecture.addEventListener('input', checkInput);
+phone.addEventListener('input', checkInput);
+email.addEventListener('input', checkInput);
+remember.addEventListener('change', checkInput);
+// 送信ボタンを押した時に完了ページに遷移する
