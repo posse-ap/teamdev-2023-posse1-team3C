@@ -170,17 +170,80 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="user-1-contents">
-
+              <div class="user-1-img">
+                <img src="./assets/img/S__354672649.jpg" alt="">
+                <div class="user-1-speed">
+                  <?php echo $stories["time"]?>で内定獲得！
+                </div>
+              </div>
+              <div class="user-1-comment">
+                <h4>
+                アドバイザーさんのおかげで自信を持てました!
+                </h4>
+                <div class="user-1-info">
+                  <div class="user-1-info-univ">
+                    慶應義塾大学
+                  </div>
+                  <div class="user-1-info-name">
+                    上野侑紗さん
+                  </div>
+                </div>
+                <div class="user-1-comments">
+                地元の企業で内定をもらっていたけど、関東で働きたいという思いが強くなり、就活を続行。一方で内定をもらう友人も増えはじめ、焦りが生まれた際に、キャリアスタートへ相談し、親身に話を聞いてもらえて、もう一度就活に取り組む自信を持つことができたので、本当に良かったです。以前から人と関わることが得意だったので、その長所を生かして、株式会社testの営業職にエントリーしたところ、社員の皆さんの人柄に惹かれ、入社を決意しました
+                </div>
+              </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="user-2-contents">
-
+              <div class="user-2-img">
+                <img src="./assets/img/S__354672649.jpg" alt="">
+                <div class="user-2-speed">
+                  <?php echo $stories["time"]?>で内定獲得！
+                </div>
+              </div>
+              <div class="user-2-comment">
+                <h4>
+                アドバイザーさんのおかげで自信を持てました!
+                </h4>
+                <div class="user-2-info">
+                  <div class="user-2-info-univ">
+                    慶應義塾大学
+                  </div>
+                  <div class="user-2-info-name">
+                    上野侑紗さん
+                  </div>
+                </div>
+                <div class="user-2-comments">
+                地元の企業で内定をもらっていたけど、関東で働きたいという思いが強くなり、就活を続行。一方で内定をもらう友人も増えはじめ、焦りが生まれた際に、キャリアスタートへ相談し、親身に話を聞いてもらえて、もう一度就活に取り組む自信を持つことができたので、本当に良かったです。以前から人と関わることが得意だったので、その長所を生かして、株式会社testの営業職にエントリーしたところ、社員の皆さんの人柄に惹かれ、入社を決意しました
+                </div>
+              </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="user-3-contents">
-
+              <div class="user-3-img">
+                <img src="./assets/img/S__354672649.jpg" alt="">
+                <div class="user-3-speed">
+                  <?php echo $stories["time"]?>で内定獲得！
+                </div>
+              </div>
+              <div class="user-3-comment">
+                <h4>
+                アドバイザーさんのおかげで自信を持てました!
+                </h4>
+                <div class="user-3-info">
+                  <div class="user-3-info-univ">
+                    慶應義塾大学
+                  </div>
+                  <div class="user-3-info-name">
+                    上野侑紗さん
+                  </div>
+                </div>
+                <div class="user-3-comments">
+                地元の企業で内定をもらっていたけど、関東で働きたいという思いが強くなり、就活を続行。一方で内定をもらう友人も増えはじめ、焦りが生まれた際に、キャリアスタートへ相談し、親身に話を聞いてもらえて、もう一度就活に取り組む自信を持つことができたので、本当に良かったです。以前から人と関わることが得意だったので、その長所を生かして、株式会社testの営業職にエントリーしたところ、社員の皆さんの人柄に惹かれ、入社を決意しました
+                </div>
+              </div>
             </div>
           </div>
         </div>
