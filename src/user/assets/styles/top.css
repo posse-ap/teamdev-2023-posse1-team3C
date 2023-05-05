@@ -69,6 +69,111 @@ main {
   background-color: #FCC066;
   border-radius: 15px;
 }
+/* ステップ1 */
+.step-1-img {
+  width: 80%;
+  height: 300px;
+  background-color: #fff;
+  margin-left: 10%;
+  margin-top: 40px;
+  border-radius: 15px;
+}
+.step-1-title {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 40px;
+  position: relative;
+}
+.step-1-title p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #7A7A7A;
+  margin-left: 20px;
+}
+.step-1-title span {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #2E79BA;
+  top: 0;
+  left: 0;
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+}
+/* ステップ2 */
+.step-2-img {
+  width: 80%;
+  height: 300px;
+  background-color: #fff;
+  margin-left: 10%;
+  margin-top: 40px;
+  border-radius: 15px;
+}
+.step-2-title {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 40px;
+  position: relative;
+}
+.step-2-title p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #7A7A7A;
+  margin-left: 20px;
+}
+.step-2-title span {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #2E79BA;
+  top: 0;
+  left: 0;
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+}
+/* ステップ3 */
+.step-3-img {
+  width: 80%;
+  height: 300px;
+  background-color: #fff;
+  margin-left: 10%;
+  margin-top: 40px;
+  border-radius: 15px;
+}
+.step-3-title {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 40px;
+  position: relative;
+}
+.step-3-title p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #7A7A7A;
+  margin-left: 20px;
+}
+.step-3-title span {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #2E79BA;
+  top: 0;
+  left: 0;
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+}
 /* エージェント一覧ページボタン */
 .btn-agent-list {
   height: 140px;
