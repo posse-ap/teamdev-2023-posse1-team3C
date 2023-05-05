@@ -157,7 +157,9 @@
     </div>
 
     <!-- サクセスストーリー -->
-    
+    <div class="success-story-contents">
+      
+    </div>
     <!-- リンク -->
 
     <div class="access">お問い合わせする&emsp;▶︎
