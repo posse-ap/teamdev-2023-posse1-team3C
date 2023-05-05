@@ -77,7 +77,17 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="user-1-contents">
-
+              <div class="user-1-img">
+                <img src="" alt="">
+              </div>
+              <div class="user-1-comment">
+                <h4>
+                  田中太郎
+                </h4>
+                <p>
+                  申し込みをするとエージェントに登録ができるのでしょうか？
+                </p>
+              </div>
             </div>
           </div>
           <div class="swiper-slide">
