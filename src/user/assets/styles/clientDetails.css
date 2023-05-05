@@ -83,9 +83,74 @@ main {
 /* サクセスストーリー */
 .success-story-contents {
   height: 780px;
-  background-color: #FEEDC3;
+  background-color: #C3E5F8;
+}
+.success-story-title {
+  padding-top: 40px;
+}
+.success-story-title-text {
+  width: 60%;
+  height: 60px;
+  color: #2E79BA;
+  margin-left: 20%;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 3;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+.success-story-title-text i {
+  font-weight: 600;
+  font-size: 30px;
+  position: absolute;
+  top: 15px;
+  left: 40px;
+  color: #FBA82C;
+}
+.success-story-title-text p {
+  padding-left: 100px;
+}
+.swiper {
+  height: 600px;
+  background-color: #C3E5F8;
+}
+.swiper-wrapper {
+  height: 600px;
+}
+.swiper-slide {
+  height: 600px;
+  width: 80%;
+  background-color: #C3E5F8;
+}
+.user-1-contents {
+  width: 40%;
+  height: 500px;
+  margin-top: 50px;
+  margin-left: 30%;
+  background-color: #fff;
 }
 
+.user-2-contents {
+  width: 40%;
+  height: 500px;
+  margin-top: 50px;
+  margin-left: 30%;
+  background-color: #fff;
+}
+.user-3-contents {
+  width: 40%;
+  height: 500px;
+  margin-top: 50px;
+  margin-left: 30%;
+  background-color: #fff;
+}
+.swiper-button-prev {
+  margin-left: 40px;
+}
+.swiper-button-next {
+  margin-right: 40px;
+}
 
 /* リンク */
 

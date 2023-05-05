@@ -158,7 +158,36 @@
 
     <!-- サクセスストーリー -->
     <div class="success-story-contents">
-      
+      <div class="success-story-title">
+        <div class="success-story-title-text">
+          <i class="fa-regular fa-tag"></i>
+          <p>
+          <?php echo $company_details["company"] ?>のサクセスストーリー
+          </p>
+        </div>
+      </div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="user-1-contents">
+
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="user-2-contents">
+
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="user-3-contents">
+
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
     </div>
     <!-- リンク -->
 
