@@ -8,5 +8,19 @@ $stmt->execute([
 ]);
 $company_details = $stmt->fetch(PDO::FETCH_ASSOC);
 
+// 対応エリアをAreasCompaniesLinkテーブルから取得
+$sql_areas = "SELECT company_id, area FROM AreasCompaniesLink join Areas on area_id = Areas.id WHERE company_id = :company_id";
+$stmt = $dbh->prepare($sql_areas);
+$stmt->execute([
+  ':company_id' => $company_id
+]);
+$areas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+// サクセスストーリーをStoriesテーブルから取得
+$sql_stories = "SELECT * FROM Stories WHERE company_id = :company_id";
+$stmt = $dbh->prepare($sql_stories);
+$stmt->execute([
+  ':company_id' => $company_id
+]);
+$stories = $stmt->fetch(PDO::FETCH_ASSOC);
 
