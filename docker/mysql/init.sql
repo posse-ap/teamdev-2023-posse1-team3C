@@ -8,21 +8,21 @@ USE TEAMDEV;
 DROP TABLE IF EXISTS AdminUsers;
 CREATE TABLE AdminUsers (
   id INT AUTO_INCREMENT PRIMARY KEY,
-  mail VARCHAR(255),
+  email VARCHAR(255),
   password VARCHAR(255)
 ) CHARSET=utf8;
-insert into AdminUsers (mail, password) 
+insert into AdminUsers (email, password) 
 values ("admin@example.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW");
 
 DROP TABLE IF EXISTS ClientUsers;
 CREATE TABLE ClientUsers (
   id INT AUTO_INCREMENT PRIMARY KEY,
   company_id INT,
-  mail VARCHAR(255),
+  email VARCHAR(255),
   password VARCHAR(255),
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT "発行日時"
 ) CHARSET=utf8;
-insert into ClientUsers (company_id, mail, password) values (1, "client@example.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW");
+insert into ClientUsers (company_id, email, password) values (1, "client@example.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW");
 
 DROP TABLE IF EXISTS Companies;
 CREATE TABLE Companies (
@@ -30,7 +30,7 @@ CREATE TABLE Companies (
   company VARCHAR(255) COMMENT "企業名",
   service VARCHAR(255) COMMENT "サービス名",
   URL VARCHAR(255) COMMENT "サービスのURL",
-  mail VARCHAR(255) COMMENT "メールアドレス",
+  email VARCHAR(255) COMMENT "メールアドレス",
   postcode VARCHAR(255) COMMENT "郵便番号",
   address VARCHAR(255) COMMENT "住所",
   phoneNumber VARCHAR(255) COMMENT "電話番号",
@@ -42,7 +42,7 @@ CREATE TABLE Companies (
   online VARCHAR(255) COMMENT "オンライン対応可"
 ) CHARSET=utf8;
 
-insert into Companies (company, service, URL, mail, postcode, address, phoneNumber, contactType, Date, started_at, finished_at, online) values 
+insert into Companies (company, service, URL, email, postcode, address, phoneNumber, contactType, Date, started_at, finished_at, online) values 
 ("Test", "Testservice", "keio.jp", "li12569@keio.jp", "108-8345", "東京都港区三田２丁目１５−４５", "03-5427-1517", "オンライン", "平日 9-18時 土9-15時 日定休", "2023-05-01", "2023-06-30", "終日対応可"), 
 ("Test2", "Testservice", "keio.jp", "li12569@keio.jp", "108-8345", "東京都港区三田２丁目１５−４５", "03-5427-1517", "オンライン", "平日 9-18時 土9-15時 日定休", "2023-05-01", "2023-06-30", "終日対応可"),
 ("BTBK", "TOAサービス", "https://www.btbk.com", "info@btbk.com", "102-0076", "東京都千代田区五番町12-7　ドミール五番町　102", "02-3398-62917", "対面・オンライン", "年中無休", "2023/04/01", "2023-06-30", "終日対応可"), 
@@ -59,19 +59,19 @@ CREATE TABLE CompaniesDetails (
   search VARCHAR(255) COMMENT "業界研究",
   ES VARCHAR(255) COMMENT "ES添削",
   practice VARCHAR(255) COMMENT "面接練習",
-  seminor VARCHAR(255) COMMENT "セミナー、説明会",
+  seminar VARCHAR(255) COMMENT "セミナー、説明会",
   community VARCHAR(255) COMMENT "就活コミュニティー",
   type VARCHAR(255) COMMENT "総合型/特化型",
   specialChoose VARCHAR(255) COMMENT "特別選考",
   supportType VARCHAR(255) COMMENT "サポート形態",
   Date VARCHAR(255) COMMENT "対応可能日時",
   formType VARCHAR(255) COMMENT "問い合わせ形態",
-  description VARCHAR(255) COMMENT "詳細説明",
+  description VARCHAR(5000) COMMENT "詳細説明",
   FOREIGN KEY (detail_id) REFERENCES Companies(id)
 ) CHARSET=utf8;
 
 insert into CompaniesDetails (
-  detail_id, photo, achievement, people, scale,search, ES, practice, seminor, community, type, specialChoose, supportType, Date, formtype, description
+  detail_id, photo, achievement, people, scale,search, ES, practice, seminar, community, type, specialChoose, supportType, Date, formtype, description
 ) values (
   1, "test", "総合商社", "約1000社", "ベンチャー多め", "就職活動を本格的に始める前に、アドバイザー相談を行うことができます", "あり", "あり", "あり", "なし", "特化型", "あり", "オンラインのみ", "平日 9-18時 土9-15時 日定休", "本登録の前に対面でお話しすることができます。", "てすと"
 ),(
@@ -173,12 +173,12 @@ CREATE TABLE Students (
   department VARCHAR(255) COMMENT "学科",
   prefecture VARCHAR(255) COMMENT "都道府県",
   phoneNumber VARCHAR(255) COMMENT "電話番号",
-  mail VARCHAR(255) COMMENT "メールアドレス",
+  email VARCHAR(255) COMMENT "メールアドレス",
   registered_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT "登録日"
 ) CHARSET=utf8;
 
 insert into Students (
-  name, furigana, sex, graduated_year, university, faculty, department, prefecture, phoneNumber, mail, registered_at
+  name, furigana, sex, graduated_year, university, faculty, department, prefecture, phoneNumber, email, registered_at
 ) values ("岩城和輝", "いわぎかずき", "男", "26卒", "慶應", "経済", "経済", "東京都", "000-0009-000", "kazuki@gmail.com", "2023/04/03 2:33:33"),
 ("辻健世","つじけんせい","男","26卒","早稲田","商学","商学","商学","090-3242-5464","kensei0514@icloud.com","2023/02/02 1:39:44"),
 ("上野侑紗","うえのありさ","女","25卒","東京","理科三類","","東京","090-5521-0993","arisaueno@gmail.com","2022/11/28 3:43:11"),

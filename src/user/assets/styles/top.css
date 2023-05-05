@@ -69,6 +69,111 @@ main {
   background-color: #FCC066;
   border-radius: 15px;
 }
+/* ステップ1 */
+.step-1-img {
+  width: 80%;
+  height: 300px;
+  background-color: #fff;
+  margin-left: 10%;
+  margin-top: 40px;
+  border-radius: 15px;
+}
+.step-1-title {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 40px;
+  position: relative;
+}
+.step-1-title p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #7A7A7A;
+  margin-left: 20px;
+}
+.step-1-title span {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #2E79BA;
+  top: 0;
+  left: 0;
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+}
+/* ステップ2 */
+.step-2-img {
+  width: 80%;
+  height: 300px;
+  background-color: #fff;
+  margin-left: 10%;
+  margin-top: 40px;
+  border-radius: 15px;
+}
+.step-2-title {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 40px;
+  position: relative;
+}
+.step-2-title p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #7A7A7A;
+  margin-left: 20px;
+}
+.step-2-title span {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #2E79BA;
+  top: 0;
+  left: 0;
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+}
+/* ステップ3 */
+.step-3-img {
+  width: 80%;
+  height: 300px;
+  background-color: #fff;
+  margin-left: 10%;
+  margin-top: 40px;
+  border-radius: 15px;
+}
+.step-3-title {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 40px;
+  position: relative;
+}
+.step-3-title p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #7A7A7A;
+  margin-left: 20px;
+}
+.step-3-title span {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #2E79BA;
+  top: 0;
+  left: 0;
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+}
 /* エージェント一覧ページボタン */
 .btn-agent-list {
   height: 140px;
@@ -116,25 +221,106 @@ main {
   background-color: #FEEDC3;
 }
 .user-1-contents {
-  width: 60%;
+  width: 40%;
   height: 500px;
   margin-top: 50px;
-  margin-left: 20%;
+  margin-left: 30%;
   background-color: #fff;
+}
+.user-1-img {
+  width: 100%;
+  height: 250px;
+}
+.user-1-img img {
+  width: 100%;
+  height: 250px;
+}
+.user-1-comment h4 {
+  font-size: 16px;
+  color: #81766E;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+.user-1-comment p {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #81766E;
+  margin-top: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.user-1-comment span {
+  color: #F26A1F;
+  font-weight: 600;
 }
 .user-2-contents {
-  width: 60%;
+  width: 40%;
   height: 500px;
   margin-top: 50px;
-  margin-left: 20%;
+  margin-left: 30%;
   background-color: #fff;
 }
+.user-2-img {
+  width: 100%;
+  height: 250px;
+}
+.user-2-img img {
+  width: 100%;
+  height: 250px;
+}
+.user-2-comment h4 {
+  font-size: 16px;
+  color: #81766E;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+.user-2-comment p {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #81766E;
+  margin-top: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.user-2-comment span {
+  color: #F26A1F;
+  font-weight: 600;
+}
 .user-3-contents {
-  width: 60%;
+  width: 40%;
   height: 500px;
   margin-top: 50px;
-  margin-left: 20%;
+  margin-left: 30%;
   background-color: #fff;
+}
+.user-3-img {
+  width: 100%;
+  height: 250px;
+}
+.user-3-img img {
+  width: 100%;
+  height: 250px;
+}
+.user-3-comment h4 {
+  font-size: 16px;
+  color: #81766E;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+.user-3-comment p {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #81766E;
+  margin-top: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.user-3-comment span {
+  color: #F26A1F;
+  font-weight: 600;
 }
 .swiper-button-prev {
   margin-left: 40px;
