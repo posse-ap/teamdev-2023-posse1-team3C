@@ -76,7 +76,7 @@ include(dirname(__FILE__) . '/components/head.php');
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">連絡用メールアドレス
                 </th>
                 <td class="px-6 py-4">
-                  <?php echo $resultcompany["mail"] ?>
+                  <?php echo $resultcompany["email"] ?>
                 </td>
               </tr>
               <tr class="border-b border-gray-200 dark:border-gray-700">
@@ -116,7 +116,7 @@ include(dirname(__FILE__) . '/components/head.php');
         <h2>パスワード再設定</h2>
         <form action="./assets/php/clientList/resetClientPassword.php" method="POST">
           <input type="hidden" name="company_id" value="<?php echo $resultcompany["id"] ?>">
-          <input type="hidden" name="company_mail" value="<?php echo $resultcompany["mail"] ?>">
+          <input type="hidden" name="company_mail" value="<?php echo $resultcompany["email"] ?>">
           <button type="submit" name="resetSubmit" id="resetButton" class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">生成・再設定</button>
         </form>
       </section>

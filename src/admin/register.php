@@ -37,8 +37,8 @@ include(dirname(__FILE__) . '/components/head.php');
             <input type="text" id="phoneNumber" name="phoneNumber" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
           </div>
           <div class="mb-6">
-            <label for="mail" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">連絡用メールアドレス</label>
-            <input type="email" name="mail" id="mail" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="sample@gmail.com" required>
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">連絡用メールアドレス</label>
+            <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="sample@gmail.com" required>
           </div>
           <div class="mb-6">
             <label for="date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">営業時間</label>
@@ -198,8 +198,8 @@ include(dirname(__FILE__) . '/components/head.php');
               </select>
             </div>
             <div class="flex gap-5 justify-end">
-              <label for="seminor" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">セミナー・企業説明会</label>
-              <select id="seminor" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="seminor">
+              <label for="seminar" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">セミナー・企業説明会</label>
+              <select id="seminar" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="seminar">
                 <option selected></option>
                 <option value="あり">あり</option>
                 <option value="なし">なし</option>

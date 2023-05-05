@@ -104,7 +104,7 @@ include(dirname(__FILE__) . '/components/head.php');
                 メールアドレス
               </th>
               <td class="px-6 py-4">
-                <?php echo $resultStudentDetails["mail"]; ?>
+                <?php echo $resultStudentDetails["email"]; ?>
               </td>
             </tr>
             <tr class="border-b border-gray-200 dark:border-gray-700">
