@@ -12,6 +12,14 @@
   <link rel="stylesheet" href="./assets/styles/common.css">
   <link rel="stylesheet" href="./assets/styles/clientDetails.css">
   <link rel="stylesheet" href="./assets/styles/clientList.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
+  <script src="./assets/scripts/clientDetails/clientDetails.js" defer></script>
 </head>
 
 <body>
@@ -166,36 +174,51 @@
     </div>
 
     <!-- サクセスストーリー -->
-
-
-    <div class="success-story-container">
-      <div class="success-story-name
-        ">🔑&emsp;<?php echo $company_details["company"] ?>のサクセスストーリー</div>
-      <div class="three-stories">
-        <div class="other-story">◀︎</div>
-        <div class="all-success-story">
-
-          <div class="success-story-img-around">
-            <img src="./assets/img/success-story.png" class="success-story-img" alt="success-story-img">
-            <div class="achive">
-              <?php echo $stories["time"] ?>で内定獲得！
+    <div class="success-story-contents">
+      <div class="success-story-title">
+        <div class="success-story-title-text">
+          <i class="fa-regular fa-tag"></i>
+          <p>
+          <?php echo $company_details["company"] ?>のサクセスストーリー
+          </p>
+        </div>
+      </div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <?php foreach ($stories as $story) {?>
+            <div class="swiper-slide">
+            <div class="user-1-contents">
+              <div class="user-1-img">
+                <img src="./assets/img/stories/<?php echo $company_details["company"] ?>/<?php echo $story["photo"]?>" alt="">
+                <div class="user-1-speed">
+                  <?php echo $story["time"]?>で内定獲得！
+                </div>
+              </div>
+              <div class="user-1-comment">
+                <h4>
+                  <?php echo $story["title"]?>
+                </h4>
+                <div class="user-1-info">
+                  <div class="user-1-info-univ">
+                    <?php echo $story["university"]?>
+                  </div>
+                  <div class="user-1-info-name">
+                    <?php echo $story["name"]?>
+                  </div>
+                </div>
+                <div class="user-1-comments">
+                  <?php echo $story["story"]?>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div class="comment">
-            <?php echo $stories["title"] ?>
-          </div>
-          <div class="self-introduce"><?php echo $stories["university"] ?>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<?php echo $stories["name"] ?></div>
-          <div class="story-detail">
-            <?php echo $stories["story"] ?>
-          </div>
-
+          <?php }?>
         </div>
-        <div class="other-story">▶︎</div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
-
     </div>
-
     <!-- リンク -->
 
     <div class="access">お問い合わせする&emsp;▶︎
