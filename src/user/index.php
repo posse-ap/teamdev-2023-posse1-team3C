@@ -50,13 +50,37 @@
       </p>
       <div class="step-container">
         <div class="step step-1">
-
+          <div class="step-1-img">
+            
+          </div>
+          <div class="step-1-title">
+            <p>
+              <span>1</span>
+              最終的な申込までのフローに依存
+            </p>
+          </div>
         </div>
         <div class="step step-2">
-
+          <div class="step-2-img">
+            
+          </div>
+          <div class="step-2-title">
+            <p>
+              <span>2</span>
+              最終的な申込までのフローに依存
+            </p>
+          </div>
         </div>
         <div class="step step-3">
-
+          <div class="step-3-img">
+            
+          </div>
+          <div class="step-3-title">
+            <p>
+              <span>3</span>
+              最終的な申込までのフローに依存
+            </p>
+          </div>
         </div>
       </div>
       <div class="btn-agent-list">
