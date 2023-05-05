@@ -293,32 +293,55 @@ main {
 }
 
 /* リンク */
-
 .access {
-  background-color: rgb(76, 130, 255);
-  color: white;
-  margin: 100px auto 0 auto;
-  width: 200px;
-  height: 60px;
-  font-family: Toppan Bunkyu Gothic;
-  border-radius: 8px;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-top: 80px;
 }
-.official-site {
-  background-color: rgb(105, 158, 255);
-  color: white;
-  margin: 30px auto 100px auto;
-  width: 200px;
-  height: 60px;
-  font-family: Toppan Bunkyu Gothic;
-  border-radius: 8px;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.access-btn {
+  width: 300px;
+  height: 50px;
+  background-color: #2E79BA;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 10px;
+  margin-left: calc(50% - 150px);
+  margin-bottom: 60px;
+  line-height: 50px;
+  border-width: 0;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.access-btn i {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 20px;
+}
+.official {
+  margin-bottom: 80px;
+}
+.official-site-btn {
+  width: 300px;
+  height: 50px;
+  background-color: #3B93C5;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 10px;
+  margin-left: calc(50% - 150px);
+  margin-bottom: 80px;
+  line-height: 50px;
+  border-width: 0;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.official-site-btn i {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 20px;
 }
 
 /* レスポンシブ */
