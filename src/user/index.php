@@ -161,7 +161,7 @@
     </div>
     <!-- ポップ(モーダル) -->
     <!-- ポップ(1ページ目) -->
-    <div class="pop-1">
+    <div class="pop-1 active">
       <div class="pop-area-1">
         <h3 class="pop-1-number">1/3</h3>
         <h2 class="pop-1-title">就活エージェントとは...？</h2>

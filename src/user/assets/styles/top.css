@@ -234,6 +234,9 @@ main {
   position: absolute;
   inset: -60px 0 0 0;
 }
+.pop-1.active {
+  display: block;
+}
 .pop-1::before {
   content: "";
   display: block;
@@ -251,6 +254,8 @@ main {
   border-radius: 10px;
   background-color: #FAE17E;
   z-index: 200;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
 }
 .pop-1-number {
   font-size: 16px;
@@ -332,6 +337,9 @@ main {
   display: none;
   position: absolute;
   inset: -60px 0 0 0;
+}
+.pop-2.active {
+  display: block;
 }
 .pop-2::before {
   content: "";
@@ -431,6 +439,9 @@ main {
   display: none;
   position: absolute;
   inset: -60px 0 0 0;
+}
+.pop-3.active {
+  display: block;
 }
 .pop-3::before {
   content: "";
