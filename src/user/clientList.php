@@ -87,7 +87,7 @@
                   </div>
                 </a>
                 <!-- 詳細に飛ぶ -->
-                <a href="clientDetails.php?id='<?= $company_id ?>'">
+                <a href="clientDetails.php?id=<?= $company_id ?>">
                   <div class="button detail-page">
                     <p class="button-p">詳細ページ</p>
                     <i class="fa-solid fa-caret-right button-i"></i>

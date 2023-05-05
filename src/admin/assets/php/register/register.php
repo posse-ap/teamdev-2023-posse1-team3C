@@ -2,13 +2,13 @@
 if (isset($_POST["registerButton"])) {
   // 入力サれた企業基本情報をcompaniesテーブルに格納
   include("../../../../dbconnect.php");
-  $sql_register_basic = "INSERT INTO Companies (company, mail, service, address, phoneNumber, registered_at, date, url, contactType, online, started_at, finished_at) VALUES (:company, :mail, :address, :service, :phoneNumber, :registered_at ,:date, :url, :contactType, :online, :started_at, :finished_at)";
+  $sql_register_basic = "INSERT INTO Companies (company, email, service, address, phoneNumber, registered_at, date, url, contactType, online, started_at, finished_at) VALUES (:company, :email, :address, :service, :phoneNumber, :registered_at ,:date, :url, :contactType, :online, :started_at, :finished_at)";
   $register = $dbh->prepare($sql_register_basic);
   $register->bindValue(":company", $_POST["company"], PDO::PARAM_STR);
   $register->bindValue(":service", $_POST["service"], PDO::PARAM_STR);
   $register->bindValue(":address", $_POST["address"], PDO::PARAM_STR);
   $register->bindValue(":phoneNumber", $_POST["phoneNumber"], PDO::PARAM_STR);
-  $register->bindValue(":mail", $_POST["mail"], PDO::PARAM_STR);
+  $register->bindValue(":email", $_POST["email"], PDO::PARAM_STR);
   $register->bindValue(":date", $_POST["date"], PDO::PARAM_STR);
   $register->bindValue(":url", $_POST["url"], PDO::PARAM_STR);
   $register->bindValue(":online", $_POST["online"], PDO::PARAM_STR);
@@ -32,7 +32,7 @@ if (isset($_POST["registerButton"])) {
   );
 
   // 企業詳細情報をcompaniesDetailsに格納
-  $sql_register_details = "INSERT INTO CompaniesDetails (detail_id, photo, formType, type, achievement, people, scale, search, ES, practice, seminor, community, supportType, Date, description, specialChoose) values (:detail_id, :photo, :formType, :type, :achievement, :people, :scale, :search, :ES, :practice, :seminor, :community, :supportType, :Date, :description, :specialChoose)";
+  $sql_register_details = "INSERT INTO CompaniesDetails (detail_id, photo, formType, type, achievement, people, scale, search, ES, practice, seminar, community, supportType, Date, description, specialChoose) values (:detail_id, :photo, :formType, :type, :achievement, :people, :scale, :search, :ES, :practice, :seminar, :community, :supportType, :Date, :description, :specialChoose)";
   $register_details = $dbh->prepare($sql_register_details);
   $register_details->execute([
     ":detail_id" => $dbh->lastInsertId(),
@@ -45,7 +45,7 @@ if (isset($_POST["registerButton"])) {
     ":search" => $_POST["search"],
     ":ES" => $_POST["ES"],
     ":practice" => $_POST["practice"],
-    ":seminor" => $_POST["seminor"],
+    ":seminar" => $_POST["seminar"],
     ":community" => $_POST["community"],
     ":supportType" => $_POST["supportType"],
     ":Date" => $_POST["Date"],
@@ -155,18 +155,18 @@ if (isset($_POST["registerButton"])) {
   };
 
   // パスワードを生成してClintUsersテーブルに格納
-  $sql_register_user = "INSERT INTO ClientUsers (company_id, mail, password) values (:company_id, :mail, :password)";
+  $sql_register_user = "INSERT INTO ClientUsers (company_id, email, password) values (:company_id, :email, :password)";
   $register_user = $dbh->prepare($sql_register_user);
   // ランダムな文字列を出力し、それをパスワードとする
   $password = substr(str_shuffle('1234567890abcdefghijklmnopqrstuvwxyz'), 0, 8);
   $register_user->execute([
     ":company_id" => $company_id,
-    ":mail" => $_POST["mail"],
+    ":email" => $_POST["email"],
     ":password" => password_hash($password, PASSWORD_DEFAULT)
   ]);
 
   // 生成したパスワードをメールで送信
-  $to = $_POST["mail"];
+  $to = $_POST["email"];
   $subject = "パスワード設定のお知らせ";
   $from = "admin@example.com";
   $message = "<html><body><p>パスワードを設定しました。</p><p>設定したのパスワードは <b>" . $password . "</b> です。</p></body></html>";
