@@ -18,6 +18,8 @@ const submitButton = document.querySelector('.submit-button');
 const checkInput = () => {
   if(lastName.value !== '' && firstName.value !== '' && lastNameKana.value !== '' && firstNameKana.value !== '' && sex.value !== '' && graduate.value !== '' && university.value !== '' && faculty.value !== '' && department.value !== '' && prefecture.value !== '' && phone.value !== '' && email.value !== '' && remember.checked) {
     submitButton.disabled = false;
+    // 送信ボタンをhoverしたら色が変わるように、クラスを付与する
+    submitButton.classList.add('active');
   } else {
     submitButton.disabled = true;
   }
