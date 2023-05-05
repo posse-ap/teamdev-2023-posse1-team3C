@@ -66,7 +66,7 @@ CREATE TABLE CompaniesDetails (
   supportType VARCHAR(255) COMMENT "サポート形態",
   Date VARCHAR(255) COMMENT "対応可能日時",
   formType VARCHAR(255) COMMENT "問い合わせ形態",
-  description VARCHAR(255) COMMENT "詳細説明",
+  description VARCHAR(5000) COMMENT "詳細説明",
   FOREIGN KEY (detail_id) REFERENCES Companies(id)
 ) CHARSET=utf8;
 
