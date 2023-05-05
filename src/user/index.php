@@ -50,7 +50,7 @@
       </p>
       <div class="step-container">
         <div class="step step-1">
-
+          
         </div>
         <div class="step step-2">
 
