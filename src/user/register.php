@@ -19,7 +19,7 @@
       学生情報登録
     </h2>
     <div class="register-title-decoration"></div>
-    <form>
+    <form action="./complete.php">
       <div class="grid gap-6 mb-6 md:grid-cols-2 name-input">
         <div>
           <label for="last-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">姓</label>

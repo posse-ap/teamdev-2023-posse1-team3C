@@ -40,4 +40,3 @@ prefecture.addEventListener('input', checkInput);
 phone.addEventListener('input', checkInput);
 email.addEventListener('input', checkInput);
 remember.addEventListener('change', checkInput);
-// 送信ボタンを押した時に完了ページに遷移する
