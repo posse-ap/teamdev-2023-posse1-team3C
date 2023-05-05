@@ -5,7 +5,7 @@ main {
 }
 
 /* 名前と画像 */
-.carrier-ticket{
+.carrier-ticket {
   font-size: 30px;
   color: rgb(152, 152, 152);
   font-weight: 700;
@@ -15,7 +15,7 @@ main {
   align-items: center;
   padding: 50px 0px 0px 50px;
 }
-.carrier-img{
+.carrier-img {
   display: block;
   margin: auto;
   width: 700px;
@@ -23,13 +23,12 @@ main {
 }
 
 /* キャリアチケットの特徴 */
-.carrier-ticket-feature-background{
+.carrier-ticket-feature-background {
   background-color: rgb(255, 202, 123);
   padding-top: 20px;
   height: 300px;
 }
-
-.feature-background{
+.feature-background {
   background-color: white;
   display: block;
   width: 500px;
@@ -40,41 +39,9 @@ main {
   
 }
 
-@media screen and (max-width:700px){
-  .feature-background{
-    width: 300px;
-  }
-  
-}
-
-.carrier-ticket-feature{
-  color: #2E79BA;
-  text-align: center;
-  font-weight: 700;
-  font-size: 25px;
-  padding: 15px;
-}
-
-.features{
-  color: rgb(130, 130, 130);
-  font-family:  Tsukushi A Round Gothic;
-  font-weight: 900;
-  font-size: 20px;
-  padding-top: 40px;
-  text-align: left;
-}
-
-.feature{
-  list-style: none;
-  margin-left: 0;
-}
-
-
-
-
 /* 詳細情報 */
 
-.all-detail-info{
+.all-detail-info {
   background-color: rgb(255, 247, 222);
   font-family: Osaka;
   font-weight: 50;
@@ -88,19 +55,19 @@ main {
   border-radius: 15px;
 }
 
-.detail-info{
+.detail-info {
   background-color: rgb(255, 216, 97);
   z-index:100 ;
   
 }
-.each-info{
+.each-info {
   padding :5px;
 }
 
 
 /* キャリアチケットの説明 */
 
-.ticket-explain{
+.ticket-explain {
   background-color: rgb(203, 245, 255);
   width: 600px;
   color: rgb(91, 91, 91);
@@ -116,13 +83,13 @@ main {
 
 /* サクセスストーリー */
 
-.success-story-container{
+.success-story-container {
   background-color: rgb(160, 217, 255);
   height: 600px;
 }
 
 
-.success-story-name{
+.success-story-name {
   background-color: white;
   z-index: 100;
   color: rgb(0, 106, 255);
@@ -139,12 +106,12 @@ main {
 
 }
 
-.three-stories{
+.three-stories {
   display: flex;
   justify-content: space-between;
 }
 
-.other-story{
+.other-story {
   margin-top: 80px;
   font-size: 80px;
   color: #2E79BA;
@@ -157,10 +124,7 @@ main {
   align-items: center;
 }
 
-
-
-
-.all-success-story{
+.all-success-story {
   height: 450px;
   background-color: white;
   width: 500px;
@@ -170,7 +134,7 @@ main {
 }
 
 
-.success-story-img-around{
+.success-story-img-around {
   justify-content: center;
   margin: 0 auto;
   text-align: center; 
@@ -178,12 +142,12 @@ main {
   display: inline-block;
 
 }
-.success-story-img{
+.success-story-img {
   width: 500px;
   display: block;
 }
 
-.achive{
+.achive {
   background-color: rgb(255, 193, 50);
   width: 200px;
   padding: 10px;
@@ -195,7 +159,7 @@ main {
 }
 
 
-.comment{
+.comment {
   color: rgb(43, 146, 255);
   font-family: Toppan Bunkyu Gothic;
   font-weight: 900;  
@@ -206,7 +170,7 @@ main {
 
 }
 
-.self-introduce{
+.self-introduce {
   background-color: white;
   font-family: Toppan Bunkyu Gothic;
   font-weight: 900;  
@@ -216,7 +180,7 @@ main {
 
 }
 
-.story-detail{
+.story-detail {
   font-family: 游ゴシック体;
   width: 500px;
   font-family: Toppan Bunkyu Gothic;
@@ -228,7 +192,7 @@ main {
 
 /* リンク */
 
-.access{
+.access {
   background-color: rgb(76, 130, 255);
   color: white;
   margin: 100px auto 0 auto;
@@ -241,7 +205,7 @@ main {
   align-items: center;
   justify-content: center;
 }
-.official-site{
+.official-site {
   background-color: rgb(105, 158, 255);
   color: white;
   margin: 30px auto 100px auto;
@@ -253,5 +217,33 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
+/* レスポンシブ */
+@media screen and (max-width: 768px){
+  .feature-background {
+    width: 300px;
+  }
+}
+
+.carrier-ticket-feature {
+  color: #2E79BA;
+  text-align: center;
+  font-weight: 700;
+  font-size: 25px;
+  padding: 15px;
+}
+
+.features {
+  color: rgb(130, 130, 130);
+  font-family:  Tsukushi A Round Gothic;
+  font-weight: 900;
+  font-size: 20px;
+  padding-top: 40px;
+  text-align: left;
+}
+
+.feature {
+  list-style: none;
+  margin-left: 0;
 }
