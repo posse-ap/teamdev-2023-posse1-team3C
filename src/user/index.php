@@ -77,17 +77,47 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="user-1-contents">
-
+              <div class="user-1-img">
+                <img src="./assets/img/S__354615303.jpg" alt="">
+              </div>
+              <div class="user-1-comment">
+                <h4>
+                  K.Tさん
+                </h4>
+                <p>
+                エージェントやアドバイザーの人たちとの相性を確認したかったので、CRAFTでいろんなエージェントの方とお話しして自分に合うエージェントを選びました。<span>内定速度や業界特化など様々な観点から比較できた</span>ので、自分にあったアドバイザーの人と出会うことができて無事就活を乗り越えることができました！
+                </p>
+              </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="user-2-contents">
-              
+              <div class="user-2-img">
+                <img src="./assets/img/S__354615303.jpg" alt="">
+              </div>
+              <div class="user-2-comment">
+                <h4>
+                  A.Uさん
+                </h4>
+                <p>
+                エージェントとの相性が本当に自分に合っているかわからなかったので、CRAFTでいろんなエージェントの方とお話しして自分に合うエージェントを選びました。<span>実際に会って話すことができ、事前にエージェントやアドバイザーの方の雰囲気がわかった</span>ので、自分にあったアドバイザーの人と二人三脚で無事就活を乗り越えることができました！
+                </p>
+              </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="user-3-contents">
-              
+              <div class="user-3-img">
+                <img src="./assets/img/S__354615303.jpg" alt="">
+              </div>
+              <div class="user-3-comment">
+                <h4>
+                  K.Iさん
+                </h4>
+                <p>
+                エージェントとの相性が本当に自分に合っているかわからなかったので、CRAFTでいろんなエージェントの方とお話しして自分に合うエージェントを選びました。<span>実際に会って話すことができ、事前にエージェントやアドバイザーの方の雰囲気がわかった</span>ので、自分にあったアドバイザーの人と二人三脚で無事就活を乗り越えることができました！
+                </p>
+              </div>
             </div>
           </div>
         </div>
