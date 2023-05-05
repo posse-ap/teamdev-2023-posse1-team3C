@@ -221,10 +221,25 @@
     </div>
     <!-- リンク -->
 
-    <div class="access">お問い合わせする&emsp;▶︎
+    <div class="access">
+      <a href="./register.php">
+        <button class="access-btn">
+          <span class="access-btn-text">
+            申し込みする
+          </span>
+          <i class="fa-solid fa-caret-right"></i>
+        </button>
+      </a>
     </div>
     <div class="official-site">
-      公式サイトへ ◉
+      <a href="">
+        <button class="official-site-btn">
+          <span class="official-site-btn-text">
+            公式サイトへ
+          </span>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </button>
+      </a>
     </div>
   </main>
 
