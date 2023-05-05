@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="./assets/styles/normalize.css">
   <link rel="stylesheet" href="./assets/styles/common.css">
   <link rel="stylesheet" href="./assets/styles/clientDetails.css">
-  <link rel="stylesheet" href="./assets/styles/clientList.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link
   rel="stylesheet"
