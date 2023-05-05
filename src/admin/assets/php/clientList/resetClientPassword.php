@@ -14,7 +14,7 @@ if (isset($_POST["resetSubmit"])) {
   $hashPassword = password_hash($password, PASSWORD_DEFAULT);
 
   // ハッシュ化したパスワードをDBに格納
-  $sql_resetPassword = "UPDATE ClientUsers SET password = :password WHERE mail = :company_mail and id = :id";
+  $sql_resetPassword = "UPDATE ClientUsers SET password = :password WHERE email = :company_mail and id = :id";
   $resetPassword = $dbh->prepare($sql_resetPassword);
   $resetPassword->bindValue(":password", $hashPassword, PDO::PARAM_STR);
   $resetPassword->bindValue(":id", $company_id, PDO::PARAM_INT);
