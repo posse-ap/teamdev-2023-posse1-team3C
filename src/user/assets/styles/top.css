@@ -61,32 +61,29 @@ main {
 .step-container {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 4%;
   margin-top: 80px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 .step {
-  height: 360px;
-  width: 360px;
+  width: calc(80% / 3);
   background-color: #FCC066;
   border-radius: 15px;
 }
 /* ステップ1 */
 .step-1-img {
   width: 80%;
-  /* 画像が決まったら、heightをautoにする */
-  height: 200px;
+  aspect-ratio: 4/3;
   background-color: #fff;
   margin-left: 10%;
-  /* 画像の高さによっては、margin-topを修正 */
   margin-top: 40px;
   border-radius: 15px;
 }
 .step-1-title {
   width: 80%;
   margin-left: 10%;
-  margin-top: 40px;
+  margin-top: 20px;
   position: relative;
 }
 .step-1-title p {
@@ -112,18 +109,16 @@ main {
 /* ステップ2 */
 .step-2-img {
   width: 80%;
-  /* 画像が決まったら、heightをautoにする */
-  height: 200px;
+  aspect-ratio: 4/3;
   background-color: #fff;
   margin-left: 10%;
-  /* 画像の高さによっては、margin-topを修正 */
   margin-top: 40px;
   border-radius: 15px;
 }
 .step-2-title {
   width: 80%;
   margin-left: 10%;
-  margin-top: 40px;
+  margin-top: 20px;
   position: relative;
 }
 .step-2-title p {
@@ -149,18 +144,16 @@ main {
 /* ステップ3 */
 .step-3-img {
   width: 80%;
-  /* 画像が決まったら、heightをautoにする */
-  height: 200px;
+  aspect-ratio: 4/3;
   background-color: #fff;
   margin-left: 10%;
-  /* 画像の高さによっては、margin-topを修正 */
   margin-top: 40px;
   border-radius: 15px;
 }
 .step-3-title {
   width: 80%;
   margin-left: 10%;
-  margin-top: 40px;
+  margin-top: 20px;
   position: relative;
 }
 .step-3-title p {
@@ -382,7 +375,8 @@ main {
   padding-top: 20px;
   padding-bottom: 20px;
   color: #81766E;
-  margin-left: 80px;
+  margin-left: 60px;
+  margin-right: 50px;
   margin-bottom: 0;
   user-select: none;
 }
@@ -421,8 +415,8 @@ main {
   line-height: 1.4;
   color: #81766E;
   margin-top: 0;
-  margin-left: 80px;
-  padding-right: 40px;
+  margin-left: 60px;
+  padding-right: 50px;
   padding-top: 20px;
   padding-bottom: 40px;
 }
