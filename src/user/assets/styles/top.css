@@ -857,12 +857,12 @@ main {
   }
   .user-1-contents {
     width: 300px;
-    height: 500px;
+    height: 400px;
     margin-top: 20px;
     margin-left: calc(50% - 150px);
     background-color: #fff;
   }
-  
+
   .swiper-button-prev {
     margin-left: 0;
     --swiper-navigation-size: 24px;
