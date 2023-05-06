@@ -1041,4 +1041,50 @@ main {
     top: 6px;
     right: 6px;
   }
+  /* ポップ(2ページ目) */
+  .pop-area-2 {
+    top: calc(50% - 200px);
+    left: 10%;
+    width: 80%;
+    height: 400px;
+  }
+  .pop-2-number {
+    font-size: 14px;
+    margin-left: 5%;
+  }
+  .pop-2-title {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .pop-2-img {
+    height: 150px;
+    margin-top: 6px;
+  }
+  .pop-2-img img {
+    height: 150px;
+    width: 150px;
+    margin-left: calc(50% - 75px);
+  }
+  .pop-2-content {
+    width: 60%;
+    background-color: #fff;
+    padding: 10px 20px 10px 20px;
+    font-size: 12px;
+    margin-top: 0;
+    margin-left: calc(20% - 20px);
+  }
+  .pop-2-btn button {
+    height: 24px;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 24px;
+  }
+  .pop-2-skip-btn button {
+    width: 120px;
+  }
+  .pop-2-btn button i {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+  }
 }
