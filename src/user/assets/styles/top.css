@@ -63,9 +63,11 @@ main {
   justify-content: center;
   gap: 40px;
   margin-top: 80px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .step {
-  height: 460px;
+  height: 360px;
   width: 360px;
   background-color: #FCC066;
   border-radius: 15px;
@@ -73,7 +75,8 @@ main {
 /* ステップ1 */
 .step-1-img {
   width: 80%;
-  height: 300px;
+  /* 画像が決まったら、heightをautoにする */
+  height: 200px;
   background-color: #fff;
   margin-left: 10%;
   margin-top: 40px;
@@ -99,7 +102,7 @@ main {
   color: #fff;
   background-color: #2E79BA;
   top: 0;
-  left: 0;
+  left: -5%;
   line-height: 24px;
   width: 24px;
   height: 24px;
@@ -108,7 +111,8 @@ main {
 /* ステップ2 */
 .step-2-img {
   width: 80%;
-  height: 300px;
+  /* 画像が決まったら、heightをautoにする */
+  height: 200px;
   background-color: #fff;
   margin-left: 10%;
   margin-top: 40px;
@@ -134,7 +138,7 @@ main {
   color: #fff;
   background-color: #2E79BA;
   top: 0;
-  left: 0;
+  left: -5%;
   line-height: 24px;
   width: 24px;
   height: 24px;
@@ -143,7 +147,8 @@ main {
 /* ステップ3 */
 .step-3-img {
   width: 80%;
-  height: 300px;
+  /* 画像が決まったら、heightをautoにする */
+  height: 200px;
   background-color: #fff;
   margin-left: 10%;
   margin-top: 40px;
@@ -169,7 +174,7 @@ main {
   color: #fff;
   background-color: #2E79BA;
   top: 0;
-  left: 0;
+  left: -5%;
   line-height: 24px;
   width: 24px;
   height: 24px;
@@ -782,6 +787,9 @@ main {
   .step-1-title p {
     font-size: 12px;
   }
+  .step-1-title span {
+    left: 0;
+  }
   .step-2 {
     padding-top: 20px;
     margin-top: 20px;
@@ -802,6 +810,9 @@ main {
   .step-2-title p {
     font-size: 12px;
   }
+  .step-2-title span {
+    left: 0;
+  }
   .step-3 {
     padding-top: 20px;
     margin-top: 20px;
@@ -821,6 +832,9 @@ main {
   }
   .step-3-title p {
     font-size: 12px;
+  }
+  .step-3-title span {
+    left: 0;
   }
   .btn-agent-list {
     height: 80px;
