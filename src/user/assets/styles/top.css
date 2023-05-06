@@ -331,7 +331,7 @@ main {
 }
 /* よくあるご質問 */
 .common-question-contents {
-  height: 1000px;
+  padding-bottom: 60px;
 }
 .common-question-contents h3 {
   font-size: 32px;
@@ -368,7 +368,9 @@ main {
 }
 .question-contents {
   font-size: 16px;
-  line-height: 60px;
+  line-height: 1.4;
+  padding-top: 20px;
+  padding-bottom: 20px;
   color: #81766E;
   margin-left: 80px;
   margin-bottom: 0;
@@ -928,5 +930,51 @@ main {
   .swiper-button-next {
     margin-right: 0;
     --swiper-navigation-size: 24px;
+  }
+  .common-question-contents h3 {
+    font-size: 20px;
+    margin-top: 60px;
+  }
+  .question-title {
+    width: 80%;
+    margin-top: 40px;
+    margin-left: 10%;
+  }
+  .question-title i {
+    font-size: 16px;
+    top: 14px;
+    right: 14px;
+  }
+  .question-icon {
+    font-size: 14px;
+    top: 14px;
+    left: 14px;
+  }
+  .question-contents {
+    font-size: 12px;
+    padding-bottom: 20px;
+    margin-left: 40px;
+    margin-right: 30px;
+    margin-bottom: 0;
+    user-select: none;
+  }
+  .question-answer {
+    width: 80%;
+    margin-top: 0;
+    margin-left: 10%;
+  }
+  .answer-icon {
+    font-size: 14px;
+    top: 14px;
+    left: 14px;
+  }
+  .answer-contents {
+    font-size: 12px;
+    line-height: 1.4;
+    margin-top: 0;
+    margin-left: 40px;
+    padding-right: 30px;
+    padding-top: 14px;
+    padding-bottom: 20px;
   }
 }
