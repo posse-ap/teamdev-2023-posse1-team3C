@@ -855,4 +855,20 @@ main {
     width: 360px;
     background-color: #FEEDC3;
   }
+  .user-1-contents {
+    width: 300px;
+    height: 500px;
+    margin-top: 20px;
+    margin-left: calc(50% - 150px);
+    background-color: #fff;
+  }
+  
+  .swiper-button-prev {
+    margin-left: 0;
+    --swiper-navigation-size: 24px;
+  }
+  .swiper-button-next {
+    margin-right: 0;
+    --swiper-navigation-size: 24px;
+  }
 }
