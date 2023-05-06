@@ -473,7 +473,6 @@ main {
   height: 200px;
   width: 200px;
   margin-left: calc(50% - 100px);
-
 }
 .pop-1-content {
   width: 60%;
@@ -669,18 +668,22 @@ main {
   font-size: 24px;
   text-align: center;
   color: #2E79BA;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .pop-3-img {
   width: 100%;
   height: 250px;
-  margin-top: 20px;
+  margin-top: -16px;
+  margin-bottom: -6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .pop-3-img img {
   height: auto;
-  width: 400px;
-  margin-left: calc(50% - 200px);
+  width: 360px;
   border-radius: 5px;
-
 }
 .pop-3-content {
   width: 60%;
@@ -690,7 +693,7 @@ main {
   line-height: 1.4;
   color: #000000;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 0;
   margin-left: calc(20% - 40px);
   border-radius: 10px;
 }
@@ -991,5 +994,51 @@ main {
     padding-right: 30px;
     padding-top: 14px;
     padding-bottom: 20px;
+  }
+  /* ポップ(1ページ目) */
+  .pop-area-1 {
+    top: calc(50% - 200px);
+    left: 10%;
+    width: 80%;
+    height: 400px;
+  }
+  .pop-1-number {
+    font-size: 14px;
+    margin-left: 5%;
+  }
+  .pop-1-title {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .pop-1-img {
+    height: 150px;
+    margin-top: 6px;
+  }
+  .pop-1-img img {
+    height: 150px;
+    width: 150px;
+    margin-left: calc(50% - 75px);
+  }
+  .pop-1-content {
+    width: 60%;
+    background-color: #fff;
+    padding: 10px 20px 10px 20px;
+    font-size: 12px;
+    margin-top: 0;
+    margin-left: calc(20% - 20px);
+  }
+  .pop-1-btn button {
+    height: 24px;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 24px;
+  }
+  .pop-1-skip-btn button {
+    width: 120px;
+  }
+  .pop-1-btn button i {
+    position: absolute;
+    top: 6px;
+    right: 6px;
   }
 }
