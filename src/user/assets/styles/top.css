@@ -836,7 +836,7 @@ main {
     right: 10px;
   }
   .user-voice-contents {
-    height: 500px;
+    height: 480px;
   }
   .user-voice-contents h3 {
     margin-top: 0;
@@ -844,14 +844,14 @@ main {
     padding-top: 40px;
   }
   .swiper {
-    height: 500px;
+    height: 480px;
     background-color: #FEEDC3;
   }
   .swiper-wrapper {
-    height: 500px;
+    height: 480px;
   }
   .swiper-slide {
-    height: 500px;
+    height: 480px;
     width: 360px;
     background-color: #FEEDC3;
   }
@@ -862,7 +862,21 @@ main {
     margin-left: calc(50% - 150px);
     background-color: #fff;
   }
-
+  .user-1-img {
+    height: 200px;
+  }
+  .user-1-img img {
+    height: 200px;
+  }
+  .user-1-comment h4 {
+    font-size: 14px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+  .user-1-comment p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
   .swiper-button-prev {
     margin-left: 0;
     --swiper-navigation-size: 24px;
