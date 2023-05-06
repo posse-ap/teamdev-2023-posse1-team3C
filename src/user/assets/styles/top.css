@@ -835,8 +835,24 @@ main {
     top: 12px;
     right: 10px;
   }
+  .user-voice-contents {
+    height: 500px;
+  }
   .user-voice-contents h3 {
     margin-top: 0;
+    font-size: 20px;
+    padding-top: 40px;
   }
-  
+  .swiper {
+    height: 500px;
+    background-color: #FEEDC3;
+  }
+  .swiper-wrapper {
+    height: 500px;
+  }
+  .swiper-slide {
+    height: 500px;
+    width: 360px;
+    background-color: #FEEDC3;
+  }
 }
