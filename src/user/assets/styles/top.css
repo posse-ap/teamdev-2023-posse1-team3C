@@ -877,6 +877,50 @@ main {
     font-size: 12px;
     line-height: 1.4;
   }
+  .user-2-contents {
+    width: 300px;
+    height: 400px;
+    margin-top: 20px;
+    margin-left: calc(50% - 150px);
+    background-color: #fff;
+  }
+  .user-2-img {
+    height: 200px;
+  }
+  .user-2-img img {
+    height: 200px;
+  }
+  .user-2-comment h4 {
+    font-size: 14px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+  .user-2-comment p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  .user-3-contents {
+    width: 300px;
+    height: 400px;
+    margin-top: 20px;
+    margin-left: calc(50% - 150px);
+    background-color: #fff;
+  }
+  .user-3-img {
+    height: 200px;
+  }
+  .user-3-img img {
+    height: 200px;
+  }
+  .user-3-comment h4 {
+    font-size: 14px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+  .user-3-comment p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
   .swiper-button-prev {
     margin-left: 0;
     --swiper-navigation-size: 24px;
