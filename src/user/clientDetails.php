@@ -29,8 +29,10 @@
 
   <!-- 名前と画像 -->
   <main>
-    <div class="carrier-ticket">
-      <?php echo $company_details["company"]; ?>
+    <div class="agent-name">
+      <h2>
+        <?php echo $company_details["company"]; ?>
+      </h2>
     </div>
 
     <div>
