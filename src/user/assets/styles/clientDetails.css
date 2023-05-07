@@ -45,10 +45,10 @@ main {
 }
 .feature-background {
   background-color: #fff;
-  width: 600px;
+  width: 540px;
   height: 280px;
   text-align: center;
-  margin-left: calc(50% - 300px);
+  margin-left: calc(50% - 280px);
   border-radius: 10px;
   padding: 40px 100px 40px 100px;
 }
@@ -62,8 +62,8 @@ main {
 }
 /* 詳細情報 */
 .agent-info-details {
-  width: 50%;
-  margin-left: 25%;
+  width: 600px;
+  margin-left: calc(50% - 300px);
   background-color: #f8f1e1;
   margin-top: 80px;
   margin-bottom: 80px;
@@ -103,19 +103,24 @@ main {
   padding: 15px 20px 15px 0;
 }
 /* 詳細説明 */
-.ticket-explain {
-  background-color: rgb(203, 245, 255);
-  width: 600px;
-  color: rgb(91, 91, 91);
+.agent-details-explanation {
+  background-color: #E3F2FB;
+  width: 700px;
+  color: #707070;
   font-family: 游ゴシック体;
-  margin:0 auto;
+  margin-left: calc(50% - 350px);
   text-align: center;
-  padding: 50px;
+  box-sizing: border-box;
+  padding: 40px 80px 40px 80px;
   font-weight: 900;
+  line-height: 1.5;
   border-radius: 10px;
-  margin-bottom: 100px;
+  margin-top: 120px;
+  margin-bottom: 150px;
 }
-
+.agent-details-explanation p {
+  margin: 0;
+}
 /* サクセスストーリー */
 .success-story-contents {
   height: 780px;

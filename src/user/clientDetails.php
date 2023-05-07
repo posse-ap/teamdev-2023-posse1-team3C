@@ -163,11 +163,12 @@
         </table>
       </div>
     </div>
-    <!-- キャリアチケットの説明 -->
-    <div class="ticket-explain">
-      <?php echo $company_details["description"] ?>
+    <!-- 詳細説明 -->
+    <div class="agent-details-explanation">
+      <p>
+        <?php echo $company_details["description"] ?>
+      </p>
     </div>
-
     <!-- サクセスストーリー -->
     <div class="success-story-contents">
       <div class="success-story-title">
@@ -215,7 +216,6 @@
       </div>
     </div>
     <!-- リンク -->
-
     <div class="access">
       <a href="./register.php">
         <button class="access-btn">
