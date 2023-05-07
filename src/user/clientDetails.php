@@ -72,94 +72,96 @@
           詳細情報
         </h3>
       </div>
-      <table class="agent-info-details-table">
-        <tr class="each-info">
-          <th>問い合わせ形態</th>
-          <td>
-            <?php echo $company_details["formType"] ?>
-          </td>
-        </tr>
-        <tr class="each-info">
-          <th>総合型 / 特化型</th>
-          <td>
-            <?php echo $company_details["type"] ?>
-          </td>
-        </tr>
-        <tr class="each-info">
-          <th>内定獲得実績</th>
-          <td>
-            <?php echo $company_details["achievement"] ?>
-          </td>
-        </tr>
-        <tr class="each-info">
-          <th>求人数</th>
-          <td>
-            <?php echo $company_details["people"] ?>
-          </td>
-        </tr>
-        <tr class="each-info">
-          <th>対応企業の規模</th>
-          <td>
-            <?php echo $company_details["scale"] ?>
-          </td>
-        </tr>
-        <tr class="each-info">
-          <th>業界研究</th>
-          <td>
-            <?php echo $company_details["search"] ?>
-          </td>
-        </tr>
-        <tr class="each-info">
-          <th>ES添削</th>
-          <td>
-            <?php echo $company_details["ES"] ?>
-          </td>
-        </tr>
-        <tr class="each-info">
-          <th>面接練習</th>
-          <td>
-            <?php echo $company_details["practice"] ?>
-          </td>
-        </tr>
-        <tr class="each-info">
-          <th>セミナー、企業説明会</th>
-          <td>
-            <?php echo $company_details["seminar"] ?>
-          </td>
-        </tr>
-        <tr class="each-info">
-          <th>就活community</th>
-          <td>
-            <?php echo $company_details["community"] ?>
-          </td>
-        </tr>
-        <tr class="each-info">
-          <th>サポート形態</th>
-          <td>
-            <?php echo $company_details["supportType"] ?>
-          </td>
-        </tr>
-        <tr class="each-info">
-          <th>対応エリア</th>
-          <td>
-            <?php foreach ($areas as $area) {
-              echo $area["area"] . " ";
-            } ?>
-          </td>
-        </tr>
-        <tr class="each-info">
-          <th>対応可能日時</th>
-          <td>
-            <?php echo $company_details["Date"] ?>
-          </td>
-        </tr>
-        <tr class="each-info">
-          <th>企業名</th>
-          <td>
-            <?php echo $company_details["company"] ?>
-          </td>
-        </tr>
-      </table>
+      <div class="agent-info-details-table-container">
+        <table class="agent-info-details-table">
+          <tr class="each-info odd">
+            <th>問い合わせ形態</th>
+            <td>
+              <?php echo $company_details["formType"] ?>
+            </td>
+          </tr>
+          <tr class="each-info">
+            <th>総合型 / 特化型</th>
+            <td>
+              <?php echo $company_details["type"] ?>
+            </td>
+          </tr>
+          <tr class="each-info odd">
+            <th>内定獲得実績</th>
+            <td>
+              <?php echo $company_details["achievement"] ?>
+            </td>
+          </tr>
+          <tr class="each-info">
+            <th>求人数</th>
+            <td>
+              <?php echo $company_details["people"] ?>
+            </td>
+          </tr>
+          <tr class="each-info odd">
+            <th>対応企業の規模</th>
+            <td>
+              <?php echo $company_details["scale"] ?>
+            </td>
+          </tr>
+          <tr class="each-info">
+            <th>業界研究</th>
+            <td>
+              <?php echo $company_details["search"] ?>
+            </td>
+          </tr>
+          <tr class="each-info odd">
+            <th>ES添削</th>
+            <td>
+              <?php echo $company_details["ES"] ?>
+            </td>
+          </tr>
+          <tr class="each-info">
+            <th>面接練習</th>
+            <td>
+              <?php echo $company_details["practice"] ?>
+            </td>
+          </tr>
+          <tr class="each-info odd">
+            <th>セミナー、企業説明会</th>
+            <td>
+              <?php echo $company_details["seminar"] ?>
+            </td>
+          </tr>
+          <tr class="each-info">
+            <th>就活community</th>
+            <td>
+              <?php echo $company_details["community"] ?>
+            </td>
+          </tr>
+          <tr class="each-info odd">
+            <th>サポート形態</th>
+            <td>
+              <?php echo $company_details["supportType"] ?>
+            </td>
+          </tr>
+          <tr class="each-info">
+            <th>対応エリア</th>
+            <td>
+              <?php foreach ($areas as $area) {
+                echo $area["area"] . " ";
+              } ?>
+            </td>
+          </tr>
+          <tr class="each-info odd">
+            <th>対応可能日時</th>
+            <td>
+              <?php echo $company_details["Date"] ?>
+            </td>
+          </tr>
+          <tr class="each-info">
+            <th>企業名</th>
+            <td>
+              <?php echo $company_details["company"] ?>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
     <!-- キャリアチケットの説明 -->
     <div class="ticket-explain">

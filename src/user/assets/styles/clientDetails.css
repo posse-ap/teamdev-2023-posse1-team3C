@@ -64,30 +64,43 @@ main {
 .agent-info-details {
   width: 50%;
   margin-left: 25%;
-  background-color: #FCF2D8;
+  background-color: #f8f1e1;
   margin-top: 80px;
   margin-bottom: 80px;
 }
 .agent-info-details-title {
-  height: 40px;
+  height: 60px;
   background-color: #FAE17E;
-  padding-left: 15%;
+  padding-left: 30px;
 }
 .agent-info-details-title h3 {
-  font-size: 20px;
+  font-size: 18px;
   color: #7A7A7A;
   font-weight: 600;
-  line-height: 2;
+  line-height: 3;
+}
+.agent-info-details-table-container {
+  width: 100%;
 }
 .agent-info-details-table {
   width: 100%;
-  padding: 20px 10% 20px 10%;
+  border-collapse: collapse;
 }
-.each-info {
-  height: 40px;
+.each-info.odd {
+  background-color: #fffcf6;
 }
 .each-info th {
   text-align: left;
+  font-size: 15px;
+  color: #7A7A7A;
+  padding: 15px 20px 15px 40px;
+  width: 45%;
+}
+.each-info td {
+  text-align: left;
+  font-size: 15px;
+  color: #000000;
+  padding: 15px 20px 15px 0;
 }
 /* 詳細説明 */
 .ticket-explain {

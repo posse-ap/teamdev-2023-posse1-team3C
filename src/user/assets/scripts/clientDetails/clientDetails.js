@@ -1,3 +1,5 @@
+// 詳細情報のテーブルの偶数行の背景色を変更
+
 // サクセスストーリーのスライドショー
 let mySwiper = new Swiper ('.swiper', {
   loop: true,
