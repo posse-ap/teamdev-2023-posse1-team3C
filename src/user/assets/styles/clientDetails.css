@@ -31,22 +31,35 @@ main {
   object-fit: contain;
 }
 /* エージェント企業の特徴 */
-.carrier-ticket-feature-background {
-  background-color: rgb(255, 202, 123);
-  padding-top: 20px;
+.agent-feature {
+  background-color: #F8DC97;
   height: 400px;
+  width: 100%;
+}
+.agent-feature-title {
+  color: #2E79BA;
+  font-size: 22px;
+  text-align: center;
+  font-weight: 600;
+  padding-top: 30px;
+  margin-bottom: 30px;
 }
 .feature-background {
-  background-color: white;
-  display: block;
-  width: 500px;
-  height: 200px;
-  margin-right: 50%;
-  margin:0 auto;
+  background-color: #fff;
+  width: 600px;
+  height: 280px;
   text-align: center;
-  
+  margin-left: calc(50% - 300px);
+  border-radius: 10px;
+  padding: 40px 100px 40px 100px;
 }
-
+.feature-background tbody tr th {
+  text-align: left;
+}
+.feature-background tbody tr td {
+  text-align: left;
+  color: #ED9630;
+}
 /* 詳細情報 */
 
 .all-detail-info {

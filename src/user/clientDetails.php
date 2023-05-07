@@ -27,23 +27,21 @@
 
   <!-- メイン -->
 
-  <!-- 名前と画像 -->
+  <!-- エージェント企業名と画像 -->
   <main>
     <div class="agent-name">
       <h2>
         <?php echo $company_details["company"]; ?>
       </h2>
     </div>
-
     <div class="agent-img">
       <img src="./assets/img/heroes/<?php echo $company_details["company"] ?>/<?php echo $company_details["photo"] ?>" alt="carrier-img">
     </div>
-
-    <!-- キャリアチケットの特徴 -->
-    <div class="carrier-ticket-feature-background">
-      <div class="carrier-ticket-feature">
+    <!-- エージェント企業の特徴 -->
+    <div class="agent-feature">
+      <h3 class="agent-feature-title">
         <?php echo $company_details["company"] ?>の特徴
-      </div>
+      </h3>
       <table class="feature-background">
         <tbody>
           <tr>
