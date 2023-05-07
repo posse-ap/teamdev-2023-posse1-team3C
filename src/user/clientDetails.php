@@ -35,8 +35,8 @@
       </h2>
     </div>
 
-    <div>
-      <img src="./assets/img/heroes/<?php echo $company_details["company"] ?>/<?php echo $company_details["photo"] ?>" class="carrier-img" alt="carrier-img">
+    <div class="agent-img">
+      <img src="./assets/img/heroes/<?php echo $company_details["company"] ?>/<?php echo $company_details["photo"] ?>" alt="carrier-img">
     </div>
 
     <!-- キャリアチケットの特徴 -->

@@ -1,13 +1,13 @@
 /* メイン */
 main {
   margin-top: 60px;
-  background-color: rgb(255, 255, 255);
+  width: 100%;
 }
 
 /* 名前と画像 */
 .agent-name {
-  padding-top: 20px;
-  padding-left: 10%;
+  padding-top: 40px;
+  padding-left: 12%;
   height: 40px;
 }
 .agent-name h2 {
@@ -18,18 +18,23 @@ main {
   text-underline-offset: 10px;
   margin: 0;
 }
-.carrier-img {
-  display: block;
-  margin: auto;
-  width: 700px;
-  padding-bottom: 50px;
+.agent-img {
+  width: 60%;
+  aspect-ratio: 5/3;
+  margin-left: 20%;
+  padding-top: 40px;
+  margin-bottom: 20px;
 }
-
-/* キャリアチケットの特徴 */
+.agent-img img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+/* エージェント企業の特徴 */
 .carrier-ticket-feature-background {
   background-color: rgb(255, 202, 123);
   padding-top: 20px;
-  height: 300px;
+  height: 400px;
 }
 .feature-background {
   background-color: white;
@@ -344,33 +349,4 @@ main {
   right: 20px;
   top: 15px;
   font-size: 20px;
-}
-
-/* レスポンシブ */
-@media screen and (max-width: 768px){
-  .feature-background {
-    width: 300px;
-  }
-}
-
-.carrier-ticket-feature {
-  color: #2E79BA;
-  text-align: center;
-  font-weight: 700;
-  font-size: 25px;
-  padding: 15px;
-}
-
-.features {
-  color: rgb(130, 130, 130);
-  font-family:  Tsukushi A Round Gothic;
-  font-weight: 900;
-  font-size: 20px;
-  padding-top: 40px;
-  text-align: left;
-}
-
-.feature {
-  list-style: none;
-  margin-left: 0;
 }
