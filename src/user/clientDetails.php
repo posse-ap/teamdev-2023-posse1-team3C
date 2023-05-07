@@ -237,8 +237,6 @@
       </a>
     </div>
   </main>
-
-
   <!-- フッター -->
   <?php include_once('components/footer.php') ?>
   <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous"></script>
