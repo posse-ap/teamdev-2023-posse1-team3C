@@ -62,17 +62,16 @@ main {
 }
 /* 詳細情報 */
 .agent-info-details {
-  width: 70%;
-  margin-left: 15%;
+  width: 50%;
+  margin-left: 25%;
   background-color: #FCF2D8;
   margin-top: 80px;
   margin-bottom: 80px;
 }
 .agent-info-details-title {
   height: 40px;
-  margin-bottom: 30px;
   background-color: #FAE17E;
-  padding-left: 40px;
+  padding-left: 15%;
 }
 .agent-info-details-title h3 {
   font-size: 20px;
@@ -82,8 +81,13 @@ main {
 }
 .agent-info-details-table {
   width: 100%;
-  font-family: Osaka;
-  font-size: 12px;
+  padding: 20px 10% 20px 10%;
+}
+.each-info {
+  height: 40px;
+}
+.each-info th {
+  text-align: left;
 }
 /* 詳細説明 */
 .ticket-explain {
