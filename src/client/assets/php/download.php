@@ -1,8 +1,12 @@
 <?php
 
 include_once('../../../dbconnect.php');
-
-$stmt = $dbh->prepare("SELECT * from Students as stu inner join Statuses as sta ON stu.id = sta.id where NOT sta.status = '無効'");
+$company_id = $_POST['company_id'];
+$stmt = $dbh->prepare("SELECT stu.id ,name,stu.furigana,stu.sex,stu.university,stu.faculty,stu.department,stu.graduated_year,stu.prefecture,stu.phoneNumber,stu.email, stu.registered_at ,sta.status FROM `CompaniesStudentsLink` as link
+join Students as stu on link.Student_id = stu.id 
+join Statuses as sta on sta.id = link.status_id
+where link.company_id = :id and NOT sta.status = '無効'");
+$stmt->bindValue(':id', $company_id);
 $stmt->execute();
 
 // CSVファイルを生成するためのヘッダーを設定する

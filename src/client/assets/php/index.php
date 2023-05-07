@@ -1,13 +1,37 @@
 <?php
-// 学生情報取得
+  // 学生情報取得
   include_once('../dbconnect.php');
-  $sql_students = "SELECT stu.id,stu.name,stu.registered_at,sta.status from Students as stu inner join Statuses as sta ON stu.id = sta.id";
-  $students = $dbh->query($sql_students)->fetchAll(PDO::FETCH_ASSOC);
+  $company_id = $_SESSION['unique_id'];
+  
+  $stmt = $dbh->prepare("SELECT name, stu.id, stu.registered_at, link.company_id, status, sta.id as status_id FROM `CompaniesStudentsLink` as link
+  join Students as stu on link.Student_id = stu.id 
+  join Statuses as sta on sta.id = link.status_id
+  where link.company_id = :id");
+  $stmt->bindValue(':id', $company_id);
+  $stmt->execute();
+  $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 //無効学生、有効学生の数を取得
-  $sql_stu_count = "SELECT COUNT(stu.id) from Students as stu inner join Statuses as sta ON stu.id = sta.id where status = '請求予定' or status = '請求済み'";
-  $valid = $dbh->query($sql_stu_count)->fetch(PDO::FETCH_NUM)[0];
+  $stmt = $dbh->prepare("SELECT name, stu.id, stu.registered_at, link.company_id, status, sta.id as status_id FROM `CompaniesStudentsLink` as link
+  join Students as stu on link.Student_id = stu.id 
+  join Statuses as sta on sta.id = link.status_id
+  where link.company_id = :id and status = '請求予定' or status = '請求済み'");
+  $stmt->bindValue(':id', $company_id);
+  $stmt->execute();
+  $valid = $stmt->rowCount();
 
-  $sql_stu_count2 = "SELECT COUNT(stu.id) from Students as stu inner join Statuses as sta ON stu.id = sta.id where status = '無効'";
-  $invalid = $dbh->query($sql_stu_count2)->fetch(PDO::FETCH_NUM)[0];
+  $stmt = $dbh->prepare("SELECT name, stu.id, stu.registered_at, link.company_id, status, sta.id as status_id FROM `CompaniesStudentsLink` as link
+  join Students as stu on link.Student_id = stu.id 
+  join Statuses as sta on sta.id = link.status_id
+  where link.company_id = :id and status = '無効'");
+  $stmt->bindValue(':id', $company_id);
+  $stmt->execute();
+  $invalid = $stmt->rowCount();
 ?>
+
+<!-- これだとがっくんとって来れないのなんでだろ
+  SELECT stu.id,stu.name,stu.registered_at,sta.status from Students as stu 
+  join Statuses as sta ON stu.id = sta.id
+  join CompaniesStudentsLink as link on link.student_id = stu.id
+  join Companies as com on com.id = link.company_id 
+  where link.company_id= :id -->
