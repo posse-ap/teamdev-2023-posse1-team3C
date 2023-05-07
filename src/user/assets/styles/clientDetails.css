@@ -388,6 +388,7 @@ main {
 }
 /* レスポンシブ */
 @media screen and (max-width: 768px) {
+  /* 企業名と画像 */
   .agent-name {
     padding-top: 20px;
     padding-left: 10%;
@@ -400,7 +401,66 @@ main {
     margin-left: 15%;
     padding-top: 20px;
   }
+  /* エージェント企業の特徴 */
   .agent-feature {
-    height: 600px;
+    height: 300px;
   }
+  .agent-feature-title {
+    font-size: 16px;
+    padding-top: 20px;
+  }
+  .feature-background {
+    width: 360px;
+    margin-left: calc(50% - 180px);
+    padding: 10px 20px 10px 20px;
+    height: 200px;
+  }
+  .feature-background tbody tr th {
+    text-align: left;
+    color: #7A7A7A;
+    font-size: 14px;
+  }
+  .feature-background tbody tr td {
+    text-align: left;
+    color: #ED9630;
+    font-size: 14px;
+  }
+  /* 詳細情報 */
+  .agent-info-details {
+    width: 360px;
+    margin-left: calc(50% - 180px);
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .agent-info-details-title {
+    height: 48px;
+    padding-left: 20px;
+  }
+  .agent-info-details-title h3 {
+    font-size: 16px;
+    line-height: 3;
+  }
+  .each-info th {
+    font-size: 12px;
+    padding: 12px 12px 12px 30px;
+    width: 45%;
+  }
+  .each-info td {
+    text-align: left;
+    font-size: 12px;
+    color: #000000;
+    padding: 12px 12px 12px 0;
+  }
+  /* 詳細説明 */
+  .agent-details-explanation {
+    width: 80%;
+    margin-left: 10%;
+    padding: 20px 40px 20px 40px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  /* サクセスストーリー */
+  
 }
