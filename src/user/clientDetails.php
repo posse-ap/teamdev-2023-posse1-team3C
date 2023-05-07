@@ -24,11 +24,9 @@
 <body>
   <!-- ヘッダー -->
   <?php include_once('components/header.php') ?>
-
   <!-- メイン -->
-
-  <!-- エージェント企業名と画像 -->
   <main>
+    <!-- エージェント企業名と画像 -->
     <div class="agent-name">
       <h2>
         <?php echo $company_details["company"]; ?>
@@ -67,15 +65,14 @@
         </tbody>
       </table>
     </div>
-
     <!-- 詳細情報 -->
-
-
-    <div>
-      <table class="all-detail-info">
-        <tr>
-          <th class="detail-info">詳細情報</th>
-        </tr>
+    <div class="agent-info-details">
+      <div class="agent-info-details-title">
+        <h3>
+          詳細情報
+        </h3>
+      </div>
+      <table class="agent-info-details-table">
         <tr>
           <td class="each-info">問い合わせ形態</td>
           <td>

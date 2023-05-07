@@ -3,7 +3,6 @@ main {
   margin-top: 60px;
   width: 100%;
 }
-
 /* 名前と画像 */
 .agent-name {
   padding-top: 40px;
@@ -55,38 +54,38 @@ main {
 }
 .feature-background tbody tr th {
   text-align: left;
+  color: #7A7A7A;
 }
 .feature-background tbody tr td {
   text-align: left;
   color: #ED9630;
 }
 /* 詳細情報 */
-
-.all-detail-info {
-  background-color: rgb(255, 247, 222);
+.agent-info-details {
+  width: 70%;
+  margin-left: 15%;
+  background-color: #FCF2D8;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.agent-info-details-title {
+  height: 40px;
+  margin-bottom: 30px;
+  background-color: #FAE17E;
+  padding-left: 40px;
+}
+.agent-info-details-title h3 {
+  font-size: 20px;
+  color: #7A7A7A;
+  font-weight: 600;
+  line-height: 2;
+}
+.agent-info-details-table {
+  width: 100%;
   font-family: Osaka;
-  font-weight: 50;
   font-size: 12px;
-  margin:0 auto;
-  text-align: center;
-  width: 500px;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  padding: 40px;
-  border-radius: 15px;
 }
-
-.detail-info {
-  background-color: rgb(255, 216, 97);
-  z-index:100 ;
-}
-.each-info {
-  padding :5px;
-}
-
-
-/* キャリアチケットの説明 */
-
+/* 詳細説明 */
 .ticket-explain {
   background-color: rgb(203, 245, 255);
   width: 600px;
