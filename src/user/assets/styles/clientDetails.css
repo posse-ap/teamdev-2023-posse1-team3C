@@ -433,5 +433,34 @@ main {
     --swiper-navigation-size: 24px;
   }
   /* リンク */
-  
+  .access {
+    margin-top: 20px;
+  }
+  .access-btn {
+    width: 240px;
+    height: 40px;
+    font-size: 12px;
+    margin-left: calc(50% - 120px);
+    margin-bottom: 30px;
+    line-height: 40px;
+  }
+  .access-btn i {
+    right: 12px;
+    top: 12px;
+    font-size: 16px;
+  }
+  .official-site-btn {
+    width: 240px;
+    height: 40px;
+    font-size: 12px;
+    border-radius: 8px;
+    margin-left: calc(50% - 120px);
+    margin-bottom: 40px;
+    line-height: 40px;
+  }
+  .official-site-btn i {
+    right: 12px;
+    top: 12px;
+    font-size: 16px;
+  }
 }
