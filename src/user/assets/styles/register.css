@@ -58,4 +58,49 @@ main {
   width: 20%;
   margin-left: 40%;
   margin-bottom: 80px;
+  background-color: #2B7ABA;
+  cursor: pointer;
+}
+.submit-button.active:hover {
+  background-color: #0061b0;
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 768px) {
+  .name-input {
+    width: 300px;
+    margin-left: calc(50% - 150px);
+  }
+  .sex {
+    width: 100px;
+    margin-left: calc(50% - 150px);
+  }
+  .graduate {
+    width: 100px;
+    margin-left: calc(50% - 150px);
+  }
+  .university-input {
+    width: 200px;
+    margin-left: calc(50% - 150px);
+  }
+  .major-input {
+    width: 180px;
+    margin-left: calc(50% - 150px);
+  }
+  .prefecture {
+    width: 160px;
+    margin-left: calc(50% - 150px);
+  }
+  .phone-number {
+    width: 180px;
+    margin-left: calc(50% - 150px);
+  }
+  .email-input {
+    width: 200px;
+    margin-left: calc(50% - 150px);
+  }
+  .submit-button {
+    width: 200px;
+    margin-left: calc(50% - 100px);
+  }
 }
