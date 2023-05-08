@@ -217,7 +217,7 @@
     </div>
     <!-- リンク -->
     <div class="access">
-      <a href="./register.php">
+      <a href="./register.php?company_id=<?php echo $company_details["id"]?>">
         <button class="access-btn">
           <span class="access-btn-text">
             申し込みする
