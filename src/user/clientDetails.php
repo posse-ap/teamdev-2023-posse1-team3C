@@ -183,26 +183,26 @@
         <div class="swiper-wrapper">
           <?php foreach ($stories as $story) {?>
             <div class="swiper-slide">
-            <div class="user-contents">
-              <div class="user-img">
+            <div class="user-1-contents">
+              <div class="user-1-img">
                 <img src="./assets/img/stories/<?php echo $company_details["company"] ?>/<?php echo $story["photo"]?>" alt="">
-                <div class="user-speed">
+                <div class="user-1-speed">
                   <?php echo $story["time"]?>で内定獲得！
                 </div>
               </div>
-              <div class="user-comment">
+              <div class="user-1-comment">
                 <h4>
                   <?php echo $story["title"]?>
                 </h4>
-                <div class="user-info">
-                  <div class="user-info-univ">
+                <div class="user-1-info">
+                  <div class="user-1-info-univ">
                     <?php echo $story["university"]?>
                   </div>
-                  <div class="user-info-name">
+                  <div class="user-1-info-name">
                     <?php echo $story["name"]?>
                   </div>
                 </div>
-                <div class="user-comments">
+                <div class="user-1-comments">
                   <?php echo $story["story"]?>
                 </div>
               </div>
