@@ -164,24 +164,24 @@ main {
   width: 80%;
   background-color: #C3E5F8;
 }
-.user-1-contents {
+.user-contents {
   width: 560px;
   height: 520px;
   margin-top: 40px;
   margin-left: calc(50% - 280px);
   background-color: #fff;
 }
-.user-1-img {
+.user-img {
   width: 100%;
   height: 250px;
   position: relative;
 }
-.user-1-img img {
+.user-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.user-1-speed {
+.user-speed {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -193,7 +193,7 @@ main {
   font-size: 15px;
   line-height: 2;
 }
-.user-1-comment h4 {
+.user-comment h4 {
   width: 80%;
   color: #2E79BA;
   padding-left: 40px;
@@ -202,7 +202,7 @@ main {
   margin-bottom: 10px;
   margin-top: 20px;
 }
-.user-1-info {
+.user-info {
   margin-left: 40px;
   margin-right: 40px;
   font-size: 14px;
@@ -213,7 +213,7 @@ main {
   border-bottom: #000000 1px solid;
   margin-bottom: 14px;
 }
-.user-1-comments {
+.user-comments {
   margin-left: 40px;
   margin-right: 40px;
   font-size: 13px;
