@@ -12,4 +12,12 @@ counts.forEach(count => {
   }
   console.log(new_element)
   count.innerHTML = new_element;
-})
+});
+// チェックを一個しかつけられないようにする
+$('.checkbox').on('click', () => {
+  if ($(this).prop('checked')){
+  // 一旦全てをクリアして再チェックする
+  $('.checkbox').prop('checked', false);
+  $(this).prop('checked', true);
+  }
+});
