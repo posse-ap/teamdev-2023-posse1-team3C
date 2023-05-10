@@ -17,7 +17,7 @@
   <main>
     <!-- データ持ってくるphpの読み込み -->
   <?php include_once('assets/php/clientList/clientList.php')?>
-
+  <!-- ヒーロー -->
   <div class="cl-mainvisual">
     <div class="cl-mainvisual-contents">
         <div class="title">
@@ -28,7 +28,9 @@
         <p class="cl-p">ポイントや評価を見て気になったら詳細ページに飛んでみよう</p>
     </div>
   </div>
-
+  <!-- 絞りこみ -->
+  
+  <!-- 一覧 -->
   <h2>エージェント一覧</h2>
   <div class="clientlist-wrapper">
     <!-- 企業ごとに情報出力 -->
