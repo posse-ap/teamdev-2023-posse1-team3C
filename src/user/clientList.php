@@ -170,15 +170,115 @@
         <div class="agent-type-comprehensive">
           <h5>総合型</h5>
           <div class="agent-type-comprehensive-content">
-          <label for="agent-type-1">
-            <input type="checkbox" name="agent-type" id="agent-type-1"
-            class="checkbox" value="総合型">
-            <span class="checkbox-fontas"></span>
-            総合型
-          </label>
+              <label for="agent-type-1">
+              <input type="checkbox" name="agent-type" id="agent-type-1"
+              class="checkbox" value="総合型">
+              <span class="checkbox-fontas"></span>
+              総合型
+            </label>
           </div>
         </div>
-
+        <h5 class="agent-type-title">特化型</h5>
+        <div class="agent-type-wrapper">
+          <ul class="a-box">
+            <li class="a-box-item">
+              <label for="agent-type-2">
+                <input type="checkbox" name="agent-type" id="agent-type-2"
+                class="checkbox" value="営業">
+                <span class="checkbox-fontas"></span>
+                営業
+              </label>
+            </li>
+            <li class="a-box-item">
+              <label for="agent-type-3">
+                <input type="checkbox" name="agent-type" id="agent-type-3"
+                class="checkbox" value="事務/アシスタント">
+                <span class="checkbox-fontas"></span>
+                事務/アシスタント
+              </label>
+            </li>
+            <li class="a-box-item">
+              <label for="agent-type-4">
+                <input type="checkbox" name="agent-type" id="agent-type-4"
+                class="checkbox" value="企画/マーケティング">
+                <span class="checkbox-fontas"></span>
+                企画/マーケティング
+              </label>
+            </li>
+            <li class="a-box-item">
+              <label for="agent-type-5">
+                <input type="checkbox" name="agent-type" id="agent-type-5"
+                class="checkbox" value="販売/サービス">
+                <span class="checkbox-fontas"></span>
+                販売/サービス
+              </label>
+            </li>
+            <li class="a-box-item">
+              <label for="agent-type-6">
+                <input type="checkbox" name="agent-type" id="agent-type-6"
+                class="checkbox" value="IT/通信系エンジニア">
+                <span class="checkbox-fontas"></span>
+                IT/通信系エンジニア
+              </label>
+            </li>
+            <li class="a-box-item">
+              <label for="agent-type-7">
+                <input type="checkbox" name="agent-type" id="agent-type-7"
+                class="checkbox" value="建築/土木系エンジニア">
+                <span class="checkbox-fontas"></span>
+                建築/土木系エンジニア
+              </label>
+            </li>
+            <li class="a-box-item">
+              <label for="agent-type-8">
+                <input type="checkbox" name="agent-type" id="agent-type-8"
+                class="checkbox" value="モノづくり系エンジニア">
+                <span class="checkbox-fontas"></span>
+                モノづくり系エンジニア
+              </label>
+            </li>
+            <li class="a-box-item">
+              <label for="agent-type-9">
+                <input type="checkbox" name="agent-type" id="agent-type-9"
+                class="checkbox" value="素材/化学/食品系エンジニア">
+                <span class="checkbox-fontas"></span>
+                素材/化学/食品系エンジニア
+              </label>
+            </li>
+            <li class="a-box-item">
+              <label for="agent-type-10">
+                <input type="checkbox" name="agent-type" id="agent-type-10"
+                class="checkbox" value="医療系専門職">
+                <span class="checkbox-fontas"></span>
+                医療系専門職
+              </label>
+            </li>
+            <li class="a-box-item">
+              <label for="agent-type-11">
+                <input type="checkbox" name="agent-type" id="agent-type-11"
+                class="checkbox" value="金融系専門職">
+                <span class="checkbox-fontas"></span>
+                金融系専門職
+              </label>
+            </li>
+            <li class="a-box-item">
+              <label for="agent-type-12">
+                <input type="checkbox" name="agent-type" id="agent-type-12"
+                class="checkbox" value="コンサルタント/不動産専門職">
+                <span class="checkbox-fontas"></span>
+                コンサルタント/不動産専門職
+              </label>
+            </li>
+            <li class="a-box-item">
+              <label for="agent-type-13">
+                <input type="checkbox" name="agent-type" id="agent-type-13"
+                class="checkbox" value="クリエイティブ">
+                <span class="checkbox-fontas"></span>
+                クリエイティブ
+              </label>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

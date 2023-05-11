@@ -34,6 +34,17 @@ $(function(){
     $(this).parent().parent().css('background-color', '#E7F5FD');
   });
 });
+// チェックをつけたら選択肢の背景色を#E7F5FDにする(総合型・特化型)
+$(function(){
+  $('input[name="agent-type"]').click(function(){
+    var checked = $(this).prop('checked');
+    if (checked) {
+      $(this).parent().parent().css('background-color', '#E7F5FD');
+    } else {
+      $(this).parent().parent().css('background-color', '#fff');
+    }
+  });
+});
 // 詳細絞りこみを開く
 const searchDetailsTitle = document.querySelector('.search-details-title');
 const searchDetailsContents = document.querySelector('.search-details-contents');

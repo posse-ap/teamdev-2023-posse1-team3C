@@ -248,8 +248,34 @@ label {
   font-size: 13px;
   width: 68px;
 }
-.agent-type-comprehensive-content .checkbox-fontas {
+.agent-type .checkbox-fontas {
   font-size: 16px;
+}
+.agent-type-title {
+  margin-left: 20px;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.agent-type-wrapper {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.a-box {
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.a-box-item {
+  list-style: none;
+  background-color: #fff;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 15px;
+  font-size: 13px;
 }
 /* 一覧 */
 h2 {
