@@ -226,6 +226,31 @@ label {
 .search-details-contents.active {
   display: block;
 }
+/* 詳細絞りこみ中身 */
+.agent-type {
+  margin-top: 0;
+}
+.agent-type-comprehensive h5 {
+  margin-top: 0;
+  font-size: 14px;
+  padding-top: 8px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.agent-type-comprehensive-content {
+  margin-left: 20px;
+  background-color: #fff;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 15px;
+  font-size: 13px;
+  width: 68px;
+}
+.agent-type-comprehensive-content .checkbox-fontas {
+  font-size: 16px;
+}
 /* 一覧 */
 h2 {
   margin-top: 30px;

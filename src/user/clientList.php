@@ -43,9 +43,9 @@
         <ul class="g-box">
           <li class="g-box-item">
             <label for="g-box-item-1">
-            <input type="checkbox" name="graduate" id="g-box-item-1"
-            class="checkbox" value="25卒">
-            <span class="checkbox-fontas"></span>
+              <input type="checkbox" name="graduate" id="g-box-item-1"
+              class="checkbox" value="25卒">
+              <span class="checkbox-fontas"></span>
               25卒
             </label>
           </li>
@@ -166,7 +166,20 @@
       <i class="fa-solid fa-caret-down"></i>
     </div>
     <div class="search-details-contents">
-      
+      <div class="agent-type">
+        <div class="agent-type-comprehensive">
+          <h5>総合型</h5>
+          <div class="agent-type-comprehensive-content">
+          <label for="agent-type-1">
+            <input type="checkbox" name="agent-type" id="agent-type-1"
+            class="checkbox" value="総合型">
+            <span class="checkbox-fontas"></span>
+            総合型
+          </label>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
   <!-- 一覧 -->
