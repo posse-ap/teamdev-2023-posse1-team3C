@@ -43,7 +43,7 @@
         <ul class="g-box">
           <li class="g-box-item">
             <label for="g-box-item-1">
-              <input type="checkbox" name="graduate" id="g-box-item-1"
+              <input type="checkbox" name="graduate[]" id="g-box-item-1"
               class="checkbox" value="25卒">
               <span class="checkbox-fontas"></span>
               25卒
@@ -51,14 +51,14 @@
           </li>
           <li class="g-box-item">
             <label for="g-box-item-2">
-              <input type="checkbox" name="graduate" id="g-box-item-2" class="checkbox" value="26卒">
+              <input type="checkbox" name="graduate[]" id="g-box-item-2" class="checkbox" value="26卒">
               <span class="checkbox-fontas"></span>
               26卒
             </label>
           </li>
           <li class="g-box-item">
             <label for="g-box-item-3">
-              <input type="checkbox" name="graduate" id="g-box-item-3" class="checkbox" value="27卒">
+              <input type="checkbox" name="graduate[]" id="g-box-item-3" class="checkbox" value="27卒">
               <span class="checkbox-fontas"></span>
               27卒
             </label>
@@ -72,21 +72,21 @@
         <ul class="s-box">
           <li class="s-box-item">
             <label for="s-box-item-1">
-              <input type="checkbox" name="support" id="s-box-item-1" class="checkbox" value="オンラインのみ">
+              <input type="checkbox" name="support[]" id="s-box-item-1" class="checkbox" value="オンラインのみ">
               <span class="checkbox-fontas"></span>
               オンラインのみ
             </label>
           </li>
           <li class="s-box-item">
             <label for="s-box-item-2">
-              <input type="checkbox" name="support" id="s-box-item-2" class="checkbox" value="対面のみ">
+              <input type="checkbox" name="support[]" id="s-box-item-2" class="checkbox" value="対面のみ">
               <span class="checkbox-fontas"></span>
               対面のみ
             </label>
           </li>
           <li class="s-box-item">
             <label for="s-box-item-3">
-              <input type="checkbox" name="support" id="s-box-item-3" class="checkbox" value="両方可">
+              <input type="checkbox" name="support[]" id="s-box-item-3" class="checkbox" value="両方可">
               <span class="checkbox-fontas"></span>
               両方可
             </label>
@@ -99,56 +99,56 @@
         <ul class="y-box">
           <li class="y-box-item">
             <label for="y-box-item-1">
-              <input type="checkbox" name="your-area" id="y-box-item-1" class="checkbox" value="北海道">
+              <input type="checkbox" name="your-area[]" id="y-box-item-1" class="checkbox" value="北海道">
               <span class="checkbox-fontas"></span>
               北海道
             </label>
           </li>
           <li class="y-box-item">
             <label for="y-box-item-2">
-              <input type="checkbox" name="your-area" id="y-box-item-2" class="checkbox" value="東北">
+              <input type="checkbox" name="your-area[]" id="y-box-item-2" class="checkbox" value="東北">
               <span class="checkbox-fontas"></span>
               東北
             </label>
           </li>
           <li class="y-box-item">
             <label for="y-box-item-3">
-              <input type="checkbox" name="your-area" id="y-box-item-3" class="checkbox" value="関東">
+              <input type="checkbox" name="your-area[]" id="y-box-item-3" class="checkbox" value="関東">
               <span class="checkbox-fontas"></span>
               関東
             </label>
           </li>
           <li class="y-box-item">
             <label for="y-box-item-4">
-              <input type="checkbox" name="your-area" id="y-box-item-4" class="checkbox" value="中部">
+              <input type="checkbox" name="your-area[]" id="y-box-item-4" class="checkbox" value="中部">
               <span class="checkbox-fontas"></span>
               中部
             </label>
           </li>
           <li class="y-box-item">
             <label for="y-box-item-5">
-              <input type="checkbox" name="your-area" id="y-box-item-5" class="checkbox" value="近畿">
+              <input type="checkbox" name="your-area[]" id="y-box-item-5" class="checkbox" value="近畿">
               <span class="checkbox-fontas"></span>
               近畿
             </label>
           </li>
           <li class="y-box-item">
             <label for="y-box-item-6">
-              <input type="checkbox" name="your-area" id="y-box-item-6" class="checkbox" value="中国">
+              <input type="checkbox" name="your-area[]" id="y-box-item-6" class="checkbox" value="中国">
               <span class="checkbox-fontas"></span>
               中国
             </label>
           </li>
           <li class="y-box-item">
             <label for="y-box-item-7">
-              <input type="checkbox" name="your-area" id="y-box-item-7" class="checkbox" value="四国">
+              <input type="checkbox" name="your-area[]" id="y-box-item-7" class="checkbox" value="四国">
               <span class="checkbox-fontas"></span>
               四国
             </label>
           </li>
           <li class="y-box-item">
             <label for="y-box-item-8">
-              <input type="checkbox" name="your-area" id="y-box-item-8" class="checkbox" value="九州">
+              <input type="checkbox" name="your-area[]" id="y-box-item-8" class="checkbox" value="九州">
               <span class="checkbox-fontas"></span>
               九州
             </label>
