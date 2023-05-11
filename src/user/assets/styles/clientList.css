@@ -443,98 +443,98 @@ a{
     text-align: center;
   }
   /* 卒業年度 */
-.graduate h4 {
-  margin-left: 20px;
-  font-size: 14px;
-}
-.graduate-wrapper {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.g-box {
-  gap: 12px;
-}
-.g-box-item {
-  list-style: none;
-  background-color: #fff;
-  height: 30px;
-  line-height: 30px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 15px;
-  font-size: 13px;
-}
-/* サポート形態 */
-.support h4 {
-  margin-left: 20px;
-  font-size: 14px;
-}
-.support-wrapper {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.s-box {
-  gap: 12px;
-}
-.s-box-item {
-  list-style: none;
-  background-color: #fff;
-  height: 30px;
-  line-height: 30px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 15px;
-  font-size: 13px;
-}
-/* お住まいの地域 */
-.your-area h4 {
-  margin-left: 20px;
-  font-size: 14px;
-}
-.your-area-wrapper {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.y-box {
-  gap: 12px;
-}
-.y-box-item {
-  height: 30px;
-  line-height: 30px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 15px;
-  font-size: 13px;
-}
-/* 基本情報・共通部分 */
-.checkbox-fontas {
-  font-size: 16px;
-}
-/* 詳細絞りこみ */
-.search-details-title {
-  width: 360px;
-  height: 40px;
-  margin-left: calc(50% - 180px);
-  margin-top: 20px;
-  position: relative;
-}
-.search-details-title-content {
-  height: 40px;
-  line-height: 40px;
-  font-size: 14px;
-  margin-left: 20px;
-}
-.search-details-title i {
-  font-size: 22px;
-  top: 10px;
-}
-.search-details-contents {
-  width: 360px;
-  height: 800px;
-  margin-left: calc(50% - 180px);
-  margin-top: 0;
-  margin-bottom: 20px;
-}
+  .graduate h4 {
+    margin-left: 20px;
+    font-size: 14px;
+  }
+  .graduate-wrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .g-box {
+    gap: 12px;
+  }
+  .g-box-item {
+    list-style: none;
+    background-color: #fff;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+    font-size: 13px;
+  }
+  /* サポート形態 */
+  .support h4 {
+    margin-left: 20px;
+    font-size: 14px;
+  }
+  .support-wrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .s-box {
+    gap: 12px;
+  }
+  .s-box-item {
+    list-style: none;
+    background-color: #fff;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+    font-size: 13px;
+  }
+  /* お住まいの地域 */
+  .your-area h4 {
+    margin-left: 20px;
+    font-size: 14px;
+  }
+  .your-area-wrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .y-box {
+    gap: 12px;
+  }
+  .y-box-item {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+    font-size: 13px;
+  }
+  /* 基本情報・共通部分 */
+  .checkbox-fontas {
+    font-size: 16px;
+  }
+  /* 詳細絞りこみ */
+  .search-details-title {
+    width: 360px;
+    height: 40px;
+    margin-left: calc(50% - 180px);
+    margin-top: 20px;
+    position: relative;
+  }
+  .search-details-title-content {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    margin-left: 20px;
+  }
+  .search-details-title i {
+    font-size: 22px;
+    top: 10px;
+  }
+  .search-details-contents {
+    width: 360px;
+    height: 800px;
+    margin-left: calc(50% - 180px);
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
   /* エージェント一覧 */
   h2 {
     font-size: 16px;
