@@ -286,7 +286,7 @@ h2 {
   position: relative;
   color: #545454;
 }
-h2::before{
+h2::before {
   content: '';
   position: absolute;
   bottom: -12px;
@@ -295,60 +295,64 @@ h2::before{
   height: 2px;
   background-color: #545454;
 }
-.clientlist{
+/* 企業リストの各内容 */
+.clientlist {
   background-color: #E7F5FD;
   padding: 3px;
   border: 1px solid #A7D6FF;
-  margin:30px 15%;
   bottom: 30px;
-  width: 70%;
+  width: 720px;
+  margin-left: calc(50% - 360px);
+  margin-top: 30px;
+  margin-bottom: 30px;
   border-radius: 16px;
   height: 380px;
 }
-.clientlist-contents{
+.clientlist-contents {
   display: flex;
-  height: 280px;
-  width: 100%;
-  justify-content: center;
+  height: 320px;
+  width: 660px;
+  margin-top: 15px;
+  margin-left: calc(50% - 330px);
+  gap: 20px;
 }
-.list-img{
-  width: 50%;
-  height: 100px;
+.list-img {
+  margin-top: 15px;
+  width: 200px;
+  height: 120px;
   background-image: url(../img/success-story.png);
   background-size: cover;
+  margin-bottom: 25px;
+  margin-left: calc(50% - 100px);
 }
-.list-star{
+.list-star {
   background-color: white;
   border-radius: 12px;
   text-align: center;
-
 }
 .list-star-table{
   padding: 20px 2px;
-  width: 300px;
+  width: 240px;
   height: 15px;
-
+  margin: 10px 40px;
 }
-.clientlist-main{
-  margin: 20px;
-  width: 50%;
+.clientlist-main {
+  margin: 0;
+  width: 320px;
 }
-h3{
+h3 {
   margin-left: 30px;
-  margin-top: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 th{
-  font-size: 18px;
+  font-size: 12px;
+  text-align: left;
+  color: #7A7A7A;
 }
 td{
-  font-size: 18px;
-}
-table{
-  margin: 10px auto;
-}
-.list-img{
-  width: 150px;
-  margin-left: 10px;
+  font-size: 12px;
+  text-align: left;
 }
 .link-button>button{
   margin: 30px;
@@ -366,23 +370,37 @@ table{
   justify-content: space-evenly;
   padding-left: 10px;
 }
-.button-p{
+.button-p {
   text-decoration: none;
   color: white;
 
 }
-.button-i{
+.button-i {
   color: white;
 }
 a{
   text-decoration: none;
 }
-.list-sub{
-  width: 50%;
+.clientlist-sub {
+  width: 320px;
+  padding-left: 60px;
 }
-
-.list-sub-point{
-  height: 100px;
+.list-sub-point {
+  height: 140px;
+}
+.list-sub-point ul {
+  padding-left: 25px;
+  margin-top: 15px;
+}
+.list-sub-point li {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+.list-sub-point-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-left: #2E79BA solid 3px;
+  padding-left: 10px;
 }
 @media screen and (max-width:768px) {
   /* ヒーロー */

@@ -325,7 +325,7 @@
             <?php include('assets/php/clientList/clientlist-point.php') ?>
             <div class="clientlist-sub">
               <div class="list-sub-point">
-                <h4 class="list-sub-point-h3">ポイント</h4>
+                <h4 class="list-sub-point-title">ポイント</h4>
                 <ul>
                   <!-- それぞれ個数が違うためforeachで出力 -->
                   <?php foreach ($points_data as $goodpoint){ ?>
