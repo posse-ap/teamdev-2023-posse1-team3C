@@ -34,6 +34,13 @@ $(function(){
     $(this).parent().parent().css('background-color', '#E7F5FD');
   });
 });
+// 詳細絞りこみを開く
+const searchDetailsTitle = document.querySelector('.search-details-title');
+const searchDetailsContents = document.querySelector('.search-details-contents');
+searchDetailsTitle.addEventListener('click', () => {
+  searchDetailsTitle.classList.toggle('active');
+  searchDetailsContents.classList.toggle('active');
+});
 // 星をvalueの値に応じて出力
 let counts = document.querySelectorAll('.list-star-value')
 counts.forEach(count => {

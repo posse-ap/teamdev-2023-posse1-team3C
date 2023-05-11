@@ -165,6 +165,9 @@
       </p>
       <i class="fa-solid fa-caret-down"></i>
     </div>
+    <div class="search-details-contents">
+      
+    </div>
   </div>
   <!-- 一覧 -->
   <h2>エージェント一覧</h2>
