@@ -60,6 +60,10 @@ main {
   text-align: left;
   color: #ED9630;
 }
+.feature {
+  margin-left: 0;
+  list-style: none;
+}
 /* 詳細情報 */
 .agent-info-details {
   width: 600px;
