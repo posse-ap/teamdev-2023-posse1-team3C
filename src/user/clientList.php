@@ -157,6 +157,15 @@
       </div>
     </div>
   </div>
+  <!-- 詳細絞りこみ -->
+  <div class="search-details">
+    <div class="search-details-title">
+      <p class="search-details-title-content">
+        詳細絞りこみはコチラ
+      </p>
+      <i class="fa-solid fa-caret-down"></i>
+    </div>
+  </div>
   <!-- 一覧 -->
   <h2>エージェント一覧</h2>
   <div class="clientlist-wrapper">
