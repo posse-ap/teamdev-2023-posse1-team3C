@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous" defer></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
-  <script src="./assets/scripts/clientList/clientList.js"></script>
+  <script src="./assets/scripts/clientList/clientList.js" defer></script>
 </head>
 <body>
   <!-- ヘッダー読み込み -->
@@ -43,21 +43,22 @@
         <ul class="g-box">
           <li class="g-box-item">
             <label for="g-box-item-1">
-            <input type="checkbox" name="graduate" id="g-box-item-1" value="25卒" class="checkbox">
+            <input type="checkbox" name="graduate" id="g-box-item-1"
+            class="checkbox" value="25卒">
             <span class="checkbox-fontas"></span>
               25卒
             </label>
           </li>
           <li class="g-box-item">
             <label for="g-box-item-2">
-              <input type="checkbox" name="graduate" id="g-box-item-2" value="26卒" class="checkbox">
+              <input type="checkbox" name="graduate" id="g-box-item-2" class="checkbox" value="26卒">
               <span class="checkbox-fontas"></span>
               26卒
             </label>
           </li>
           <li class="g-box-item">
             <label for="g-box-item-3">
-              <input type="checkbox" name="graduate" id="g-box-item-3" value="27卒" class="checkbox">
+              <input type="checkbox" name="graduate" id="g-box-item-3" class="checkbox" value="27卒">
               <span class="checkbox-fontas"></span>
               27卒
             </label>

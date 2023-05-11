@@ -1,4 +1,11 @@
-
+// チェックを一個しかつけられないようにする(卒業年度)
+$(function(){
+  $('input[name="graduate"]').click(function(){
+    var checked = $(this).prop('checked');
+    $('input[name="graduate"]').prop('checked', false);
+    $(this).prop('checked', checked);
+  });
+});
 // 星をvalueの値に応じて出力
 let counts = document.querySelectorAll('.list-star-value')
 counts.forEach(count => {
@@ -13,11 +20,4 @@ counts.forEach(count => {
   console.log(new_element)
   count.innerHTML = new_element;
 });
-// チェックを一個しかつけられないようにする
-$('.checkbox').on('click', () => {
-  if ($(this).prop('checked')){
-  // 一旦全てをクリアして再チェックする
-  $('.checkbox').prop('checked', false);
-  $(this).prop('checked', true);
-  }
-});
+
