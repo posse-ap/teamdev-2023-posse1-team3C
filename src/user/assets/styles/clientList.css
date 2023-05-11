@@ -245,6 +245,7 @@ label {
   border-radius: 15px;
   font-size: 13px;
   width: 68px;
+  user-select: none;
 }
 .agent-type .checkbox-fontas {
   font-size: 16px;
@@ -274,6 +275,7 @@ label {
   padding-right: 10px;
   border-radius: 15px;
   font-size: 13px;
+  user-select: none;
 }
 /* 一覧 */
 h2 {
