@@ -6,8 +6,11 @@ $(function(){
     // 選択肢の背景色を白にする
     $('input[name="graduate"]').parent().parent().css('background-color', '#fff');
     $(this).prop('checked', checked);
-    // 選択肢の背景色を#E7F5FDにする
-    $(this).parent().parent().css('background-color', '#E7F5FD');
+    if (checked) {
+      $(this).parent().parent().css('background-color', '#E7F5FD');
+    } else {
+      $(this).parent().parent().css('background-color', '#fff');
+    }
   });
 });
 // チェックを一個しかつけられないようにする(サポート形態)
@@ -18,8 +21,11 @@ $(function(){
     // 選択肢の背景色を白にする
     $('input[name="support"]').parent().parent().css('background-color', '#fff');
     $(this).prop('checked', checked);
-    // 選択肢の背景色を#E7F5FDにする
-    $(this).parent().parent().css('background-color', '#E7F5FD');
+    if (checked) {
+      $(this).parent().parent().css('background-color', '#E7F5FD');
+    } else {
+      $(this).parent().parent().css('background-color', '#fff');
+    }
   });
 });
 // チェックを一個しかつけられないようにする(お住まいの地域)
@@ -30,8 +36,11 @@ $(function(){
     // 選択肢の背景色を白にする
     $('input[name="your-area"]').parent().parent().css('background-color', '#fff');
     $(this).prop('checked', checked);
-    // 選択肢の背景色を#E7F5FDにする
-    $(this).parent().parent().css('background-color', '#E7F5FD');
+    if (checked) {
+      $(this).parent().parent().css('background-color', '#E7F5FD');
+    } else {
+      $(this).parent().parent().css('background-color', '#fff');
+    }
   });
 });
 // チェックをつけたら選択肢の背景色を#E7F5FDにする(総合型・特化型)
