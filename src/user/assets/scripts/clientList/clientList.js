@@ -15,7 +15,11 @@ $(function(){
   $('input[name="support"]').click(function(){
     var checked = $(this).prop('checked');
     $('input[name="support"]').prop('checked', false);
+    // 選択肢の背景色を白にする
+    $('input[name="support"]').parent().parent().css('background-color', '#fff');
     $(this).prop('checked', checked);
+    // 選択肢の背景色を#E7F5FDにする
+    $(this).parent().parent().css('background-color', '#E7F5FD');
   });
 });
 // チェックを一個しかつけられないようにする(お住まいの地域)
@@ -23,7 +27,11 @@ $(function(){
   $('input[name="your-area"]').click(function(){
     var checked = $(this).prop('checked');
     $('input[name="your-area"]').prop('checked', false);
+    // 選択肢の背景色を白にする
+    $('input[name="your-area"]').parent().parent().css('background-color', '#fff');
     $(this).prop('checked', checked);
+    // 選択肢の背景色を#E7F5FDにする
+    $(this).parent().parent().css('background-color', '#E7F5FD');
   });
 });
 // 星をvalueの値に応じて出力
