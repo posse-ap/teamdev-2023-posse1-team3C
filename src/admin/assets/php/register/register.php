@@ -155,14 +155,15 @@ if (isset($_POST["registerButton"])) {
   };
 
   // パスワードを生成してClintUsersテーブルに格納
-  $sql_register_user = "INSERT INTO ClientUsers (company_id, email, password) values (:company_id, :email, :password)";
+  $sql_register_user = "INSERT INTO ClientUsers (company_id, email, password, created_at) values (:company_id, :email, :password, :created_at)";
   $register_user = $dbh->prepare($sql_register_user);
   // ランダムな文字列を出力し、それをパスワードとする
   $password = substr(str_shuffle('1234567890abcdefghijklmnopqrstuvwxyz'), 0, 8);
   $register_user->execute([
     ":company_id" => $company_id,
     ":email" => $_POST["email"],
-    ":password" => password_hash($password, PASSWORD_DEFAULT)
+    ":password" => password_hash($password, PASSWORD_DEFAULT),
+    ":created_at" => date("Y-m-d H:i:s")
   ]);
 
   // 生成したパスワードをメールで送信

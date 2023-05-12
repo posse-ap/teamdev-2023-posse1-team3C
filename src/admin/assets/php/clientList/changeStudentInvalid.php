@@ -1,4 +1,5 @@
 <?php
+// 無効ボタンを押すと学生のstatusを無効にする
 if (isset($_POST["invalidSubmit"])) {
   include("../../../../dbconnect.php");
   // 学生を無効にするために必要な情報を取得
