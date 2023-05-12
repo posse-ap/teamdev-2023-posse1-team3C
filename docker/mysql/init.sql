@@ -20,7 +20,8 @@ CREATE TABLE ClientUsers (
   company_id INT,
   email VARCHAR(255),
   password VARCHAR(255),
-  created_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT "発行日時"
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT "発行日時",
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT "更新日時"
 ) CHARSET=utf8;
 insert into ClientUsers (company_id, email, password) values (1, "client@example.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW");
 
