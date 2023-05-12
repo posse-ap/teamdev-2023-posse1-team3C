@@ -12,21 +12,23 @@
   $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 //無効学生、有効学生の数を取得
-  $stmt = $dbh->prepare("SELECT name, stu.id, stu.registered_at, link.company_id, status, sta.id as status_id FROM `CompaniesStudentsLink` as link
-  join Students as stu on link.Student_id = stu.id 
+  $stmt = $dbh->prepare("SELECT count(stu.id) from CompaniesStudentsLink as link
+  join Students as stu on link.Student_id = stu.id
   join Statuses as sta on sta.id = link.status_id
-  where link.company_id = :id and status = '請求予定' or status = '請求済み'");
-  $stmt->bindValue(':id', $company_id);
-  $stmt->execute();
-  $valid = $stmt->rowCount();
+  where link.company_id = :id and (status = '請求予定' or status = '請求済み')");
+  $stmt->execute([
+    ':id' => $company_id
+  ]);
+  $valid = $stmt->fetch();
 
-  $stmt = $dbh->prepare("SELECT name, stu.id, stu.registered_at, link.company_id, status, sta.id as status_id FROM `CompaniesStudentsLink` as link
-  join Students as stu on link.Student_id = stu.id 
+  $stmt = $dbh->prepare("SELECT count(stu.id) from CompaniesStudentsLink as link
+  join Students as stu on link.Student_id = stu.id
   join Statuses as sta on sta.id = link.status_id
   where link.company_id = :id and status = '無効'");
-  $stmt->bindValue(':id', $company_id);
-  $stmt->execute();
-  $invalid = $stmt->rowCount();
+  $stmt->execute([
+    ':id' => $company_id
+  ]);
+  $invalid = $stmt->fetch();
 ?>
 
 <!-- これだとがっくんとって来れないのなんでだろ
@@ -35,3 +37,4 @@
   join CompaniesStudentsLink as link on link.student_id = stu.id
   join Companies as com on com.id = link.company_id 
   where link.company_id= :id -->
+
