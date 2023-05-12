@@ -23,7 +23,7 @@ include(dirname(__FILE__) . '/components/head.php');
       <section class="text-center">
         <h2 class="underline mb-4 ">企業詳細情報</h2>
       </section>
-      <section class="flex justify-center gap-9 align-middle">
+      <section class="flex justify-center gap-6 align-middle">
         <h3 class="">掲載状況</h3>
         <!-- 今日の日付と比較して、終了日を過ぎていないなら -->
         <?php if (strtotime(date("Y/m/d")) < strtotime($resultcompany["finished_at"])) { ?>

@@ -17,7 +17,7 @@ if (!isset($_SESSION['unique_id'])) {
   <?php include_once('components/link.php') ?>
   <?php include_once('assets/php/index.php') ?>
   <header class="sticky top-10 z-50">
-    <h1 class="my-1 mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center">HOME</h1>
+    <h1 class="my-1 mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center"><?php echo $company?> HOME</h1>
   </header>
 
   <section class="text-gray-600 body-font relative">
