@@ -27,7 +27,7 @@
       <p class="recommend">
         \多くの学生が複数のエージェントを利用しています/
       </p>
-      <a href="./index.php">
+      <a href="./clientList.php">
         <button>
           <p>
             他のエージェントも見てみる

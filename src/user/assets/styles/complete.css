@@ -49,3 +49,9 @@ main {
   text-align: center;
   margin: 0;
 }
+@media screen and (max-width:768px) {
+  .recommend {
+    margin-top: 80px;
+    font-size: 14px;
+  }
+}
