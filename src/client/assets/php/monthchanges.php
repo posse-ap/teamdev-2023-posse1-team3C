@@ -11,10 +11,10 @@ join Statuses as sta on sta.id = link.status_id
 where link.company_id= :id
 and stu.registered_at LIKE :month');
 
-$stmt->bindValue(':id', $company_id);
-$stmt->bindValue(':month', $month);
-
-$stmt->execute();
+$stmt->execute([
+    ':id' => $company_id,
+    ':month' => $month
+]);
 $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $string= '';
 foreach ($students as $student){

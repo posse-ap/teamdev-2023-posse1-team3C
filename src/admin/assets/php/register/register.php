@@ -4,19 +4,20 @@ if (isset($_POST["registerButton"])) {
   include("../../../../dbconnect.php");
   $sql_register_basic = "INSERT INTO Companies (company, email, service, address, phoneNumber, registered_at, date, url, contactType, online, started_at, finished_at) VALUES (:company, :email, :address, :service, :phoneNumber, :registered_at ,:date, :url, :contactType, :online, :started_at, :finished_at)";
   $register = $dbh->prepare($sql_register_basic);
-  $register->bindValue(":company", $_POST["company"], PDO::PARAM_STR);
-  $register->bindValue(":service", $_POST["service"], PDO::PARAM_STR);
-  $register->bindValue(":address", $_POST["address"], PDO::PARAM_STR);
-  $register->bindValue(":phoneNumber", $_POST["phoneNumber"], PDO::PARAM_STR);
-  $register->bindValue(":email", $_POST["email"], PDO::PARAM_STR);
-  $register->bindValue(":date", $_POST["date"], PDO::PARAM_STR);
-  $register->bindValue(":url", $_POST["url"], PDO::PARAM_STR);
-  $register->bindValue(":online", $_POST["online"], PDO::PARAM_STR);
-  $register->bindValue(":contactType", $_POST["contactType"], PDO::PARAM_STR);
-  $register->bindValue(":registered_at", date("Y-m-d H:i:s"), PDO::PARAM_STR);
-  $register->bindValue(":started_at", date_format(date_create_from_format('m/d/Y', $_POST["start"]), 'Y-m-d 0:0:0'));
-  $register->bindValue(":finished_at", date_format(date_create_from_format('m/d/Y', $_POST["end"]), 'Y-m-d 23:59:59'));
-  $register->execute();
+  $register->execute([
+    ":company" => $_POST["company"],
+    ":service" => $_POST["service"],
+    ":address" => $_POST["address"],
+    ":phoneNumber" => $_POST["phoneNumber"],
+    ":email" => $_POST["email"],
+    ":date" => $_POST["date"],
+    ":url" => $_POST["url"],
+    ":online" => $_POST["online"],
+    ":contactType" => $_POST["contactType"],
+    ":registered_at" => date("Y-m-d H:i:s"),
+    ":started_at" => date_format(date_create_from_format('m/d/Y', $_POST["start"]), 'Y-m-d 0:0:0'),
+    ":finished_at" => date_format(date_create_from_format('m/d/Y', $_POST["end"]), 'Y-m-d 23:59:59')
+  ]);
 
   // 掲載情報をCompaniesDetailsテーブルに格納
   // 画像をアップロード
@@ -155,21 +156,22 @@ if (isset($_POST["registerButton"])) {
   };
 
   // パスワードを生成してClintUsersテーブルに格納
-  $sql_register_user = "INSERT INTO ClientUsers (company_id, email, password) values (:company_id, :email, :password)";
+  $sql_register_user = "INSERT INTO ClientUsers (company_id, email, password, created_at) values (:company_id, :email, :password, :created_at)";
   $register_user = $dbh->prepare($sql_register_user);
   // ランダムな文字列を出力し、それをパスワードとする
   $password = substr(str_shuffle('1234567890abcdefghijklmnopqrstuvwxyz'), 0, 8);
   $register_user->execute([
     ":company_id" => $company_id,
     ":email" => $_POST["email"],
-    ":password" => password_hash($password, PASSWORD_DEFAULT)
+    ":password" => password_hash($password, PASSWORD_DEFAULT),
+    ":created_at" => date("Y-m-d H:i:s")
   ]);
 
   // 生成したパスワードをメールで送信
   $to = $_POST["email"];
   $subject = "パスワード設定のお知らせ";
   $from = "admin@example.com";
-  $message = "<html><body><p>パスワードを設定しました。</p><p>設定したのパスワードは <b>" . $password . "</b> です。</p></body></html>";
+  $message = '<html><body><p>パスワードを設定しました。</p><p>設定したのパスワードは <b>' . $password . '</b> です。</p><p><a href="http://localhost:8080/client/auth/signin.php">こちら</a>からログインしてください。</p></body></html>' ;
   $headers = "MIME-Version: 1.0\r\n";
   $headers .= "From: $from  \r\n";
   $headers .= "Content-Type: text/html; charset=UTF-8" . "\r\n" . "Content-Transfer-Encoding: base64\r\n";

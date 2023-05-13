@@ -14,18 +14,20 @@ if (isset($_POST["resetSubmit"])) {
   $hashPassword = password_hash($password, PASSWORD_DEFAULT);
 
   // ハッシュ化したパスワードをDBに格納
-  $sql_resetPassword = "UPDATE ClientUsers SET password = :password WHERE email = :company_mail and id = :id";
+  $sql_resetPassword = "UPDATE ClientUsers SET password = :password ,updated_at = :updated_at WHERE email = :company_mail and company_id = :id";
   $resetPassword = $dbh->prepare($sql_resetPassword);
-  $resetPassword->bindValue(":password", $hashPassword, PDO::PARAM_STR);
-  $resetPassword->bindValue(":id", $company_id, PDO::PARAM_INT);
-  $resetPassword->bindValue(":company_mail", $company_mail, PDO::PARAM_STR);
-  $resetPassword->execute();
+  $resetPassword->execute([
+    ":password" => $hashPassword,
+    ":id" => $company_id,
+    ":company_mail" => $company_mail,
+    ":updated_at" => $created_at
+  ]);
 
   // 生成したパスワードをメールで送信
   $to = $company_mail;
   $subject = "パスワード再設定";
   $from = "sender@example.com";
-  $message = "<html><body><p>パスワードを再設定しました。</p><p>再設定後のパスワードは <b>" . $password . "</b> です。</p></body></html>" ;
+  $message = "<html><body><h2>". $_POST["company_name"]. "様</h2><p>株式会社boozerです。いつもお世話になっております。</p><p>パスワード再設定の連絡を受け、パスワードを再設定しました。</p><p>再設定後のパスワードは <b>" . $password . "</b> です。</p><p>今度ともよろしくお願いします。</p></body></html>" ;
   $headers = "MIME-Version: 1.0\r\n";
   $headers .= "From: $from  \r\n";
   $headers .= "Content-Type: text/html; charset=UTF-8" ."\r\n". "Content-Transfer-Encoding: base64\r\n";

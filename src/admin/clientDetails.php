@@ -23,7 +23,7 @@ include(dirname(__FILE__) . '/components/head.php');
       <section class="text-center">
         <h2 class="underline mb-4 ">企業詳細情報</h2>
       </section>
-      <section class="flex justify-center gap-9 align-middle">
+      <section class="flex justify-center gap-6 align-middle">
         <h3 class="">掲載状況</h3>
         <!-- 今日の日付と比較して、終了日を過ぎていないなら -->
         <?php if (strtotime(date("Y/m/d")) < strtotime($resultcompany["finished_at"])) { ?>
@@ -115,6 +115,7 @@ include(dirname(__FILE__) . '/components/head.php');
       <section class="flex justify-center gap-8 align-middle">
         <h2>パスワード再設定</h2>
         <form action="./assets/php/clientList/resetClientPassword.php" method="POST">
+          <input type="hidden" name="company_name" value="<?php echo $resultcompany["company"] ?>">
           <input type="hidden" name="company_id" value="<?php echo $resultcompany["id"] ?>">
           <input type="hidden" name="company_mail" value="<?php echo $resultcompany["email"] ?>">
           <button type="submit" name="resetSubmit" id="resetButton" class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">生成・再設定</button>

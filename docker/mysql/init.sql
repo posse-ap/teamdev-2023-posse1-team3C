@@ -20,7 +20,8 @@ CREATE TABLE ClientUsers (
   company_id INT,
   email VARCHAR(255),
   password VARCHAR(255),
-  created_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT "発行日時"
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT "発行日時",
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT "更新日時"
 ) CHARSET=utf8;
 insert into ClientUsers (company_id, email, password) values (1, "client@example.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW");
 
@@ -43,7 +44,7 @@ CREATE TABLE Companies (
 ) CHARSET=utf8;
 
 insert into Companies (company, service, URL, email, postcode, address, phoneNumber, contactType, Date, started_at, finished_at, online) values 
-("Test", "Testservice", "keio.jp", "li12569@keio.jp", "108-8345", "東京都港区三田２丁目１５−４５", "03-5427-1517", "オンライン", "平日 9-18時 土9-15時 日定休", "2023-05-01", "2023-06-30", "終日対応可"), 
+("Test", "Testservice", "keio.jp", "client@example.com", "108-8345", "東京都港区三田２丁目１５−４５", "03-5427-1517", "オンライン", "平日 9-18時 土9-15時 日定休", "2023-05-01", "2023-06-30", "終日対応可"), 
 ("Test2", "Testservice", "keio.jp", "li12569@keio.jp", "108-8345", "東京都港区三田２丁目１５−４５", "03-5427-1517", "オンライン", "平日 9-18時 土9-15時 日定休", "2023-05-01", "2023-06-30", "終日対応可"),
 ("BTBK", "TOAサービス", "https://www.btbk.com", "info@btbk.com", "102-0076", "東京都千代田区五番町12-7　ドミール五番町　102", "02-3398-62917", "対面・オンライン", "年中無休", "2023/04/01", "2023-06-30", "終日対応可"), 
 ("SSS", "SSSService", "https://www.sss-service.jp", "sss@sssservice.jp", "011-333-9444", "北海道札幌市中央区3条西4-1-1　日本生命札幌ビル　5階", "011-333-9444", "オンライン", "平日土祝　9:00-19:30", "2023/02/01", "2023-03-30", "終日対応可");
