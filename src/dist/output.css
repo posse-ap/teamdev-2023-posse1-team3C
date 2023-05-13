@@ -595,6 +595,10 @@ video {
   top: 1.75rem;
 }
 
+.top-20 {
+  top: 5rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -824,6 +828,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-3\/4 {
+  width: 75%;
 }
 
 .max-w-4xl {

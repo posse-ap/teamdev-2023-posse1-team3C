@@ -1,10 +1,11 @@
+"use strict";
 // チェックを一個しかつけられないようにする(卒業年度)
 $(function(){
-  $('input[name="graduate"]').click(function(){
+  $('input[name="graduate[]"]').click(function(){
     var checked = $(this).prop('checked');
-    $('input[name="graduate"]').prop('checked', false);
+    $('input[name="graduate[]"]').prop('checked', false);
     // 選択肢の背景色を白にする
-    $('input[name="graduate"]').parent().parent().css('background-color', '#fff');
+    $('input[name="graduate[]"]').parent().parent().css('background-color', '#fff');
     $(this).prop('checked', checked);
     if (checked) {
       $(this).parent().parent().css('background-color', '#E7F5FD');
@@ -15,11 +16,11 @@ $(function(){
 });
 // チェックを一個しかつけられないようにする(サポート形態)
 $(function(){
-  $('input[name="support"]').click(function(){
+  $('input[name="support[]"]').click(function(){
     var checked = $(this).prop('checked');
-    $('input[name="support"]').prop('checked', false);
+    $('input[name="support[]"]').prop('checked', false);
     // 選択肢の背景色を白にする
-    $('input[name="support"]').parent().parent().css('background-color', '#fff');
+    $('input[name="support[]"]').parent().parent().css('background-color', '#fff');
     $(this).prop('checked', checked);
     if (checked) {
       $(this).parent().parent().css('background-color', '#E7F5FD');
@@ -30,11 +31,11 @@ $(function(){
 });
 // チェックを一個しかつけられないようにする(お住まいの地域)
 $(function(){
-  $('input[name="your-area"]').click(function(){
+  $('input[name="your-area[]"]').click(function(){
     var checked = $(this).prop('checked');
-    $('input[name="your-area"]').prop('checked', false);
+    $('input[name="your-area[]"]').prop('checked', false);
     // 選択肢の背景色を白にする
-    $('input[name="your-area"]').parent().parent().css('background-color', '#fff');
+    $('input[name="your-area[]"]').parent().parent().css('background-color', '#fff');
     $(this).prop('checked', checked);
     if (checked) {
       $(this).parent().parent().css('background-color', '#E7F5FD');
@@ -45,7 +46,7 @@ $(function(){
 });
 // チェックをつけたら選択肢の背景色を#E7F5FDにする(総合型・特化型)
 $(function(){
-  $('input[name="agent-type"]').click(function(){
+  $('input[name="agent-type[]"]').click(function(){
     var checked = $(this).prop('checked');
     if (checked) {
       $(this).parent().parent().css('background-color', '#E7F5FD');
@@ -55,7 +56,7 @@ $(function(){
   });
 });
 // 詳細絞りこみを開く
-const searchDetailsTitle = document.querySelector('.search-details-title');
+let searchDetailsTitle = document.querySelector('.search-details-title');
 const searchDetailsContents = document.querySelector('.search-details-contents');
 searchDetailsTitle.addEventListener('click', () => {
   searchDetailsTitle.classList.toggle('active');
