@@ -5,17 +5,16 @@ $company_id = $_SESSION['unique_id'];
 $month = $_POST['month'].'%';
 
 
-
 $stmt = $dbh->prepare('SELECT name, stu.id, stu.registered_at, link.company_id, status, sta.id as status_id FROM `CompaniesStudentsLink` as link
 join Students as stu on link.Student_id = stu.id 
 join Statuses as sta on sta.id = link.status_id
 where link.company_id= :id
 and stu.registered_at LIKE :month');
 
-$stmt->bindValue(':id', $company_id);
-$stmt->bindValue(':month', $month);
-
-$stmt->execute();
+$stmt->execute([
+    ':id' => $company_id,
+    ':month' => $month
+]);
 $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $string= '';
 foreach ($students as $student){

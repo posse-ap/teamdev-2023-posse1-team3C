@@ -289,6 +289,14 @@
         </div>
       </div>
     </div>
+    <!-- 使い方はこちらをタップ -->
+    <div class="how-to-use">
+      <button class="how-to-use-btn">
+        使い方は
+        <br>
+        こちらをタップ
+      </button>
+    </div>
   </main>
   <!-- フッター -->
   <?php include_once('components/footer.php')?>

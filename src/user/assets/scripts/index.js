@@ -34,6 +34,11 @@ const pop3btn = document.querySelector('.pop-3-btn button');
 pop3btn.addEventListener('click', () => {
   pop3.classList.remove('active');
 });
+// 使い方はこちらをタップ→ポップ1ページ目を表示
+const howToUseBtn = document.querySelector('.how-to-use-btn');
+howToUseBtn.addEventListener('click', () => {
+  pop1.classList.add('active');
+});
 // 利用者の声のスライドショー
 let mySwiper = new Swiper ('.swiper', {
   loop: true,
