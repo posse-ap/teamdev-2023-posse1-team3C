@@ -227,7 +227,7 @@
       </a>
     </div>
     <div class="official-site">
-      <a href="">
+      <a href="" target="_blank">
         <button class="official-site-btn">
           <span class="official-site-btn-text">
             公式サイトへ
