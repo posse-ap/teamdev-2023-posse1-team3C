@@ -1,5 +1,13 @@
 <?php
 if(isset($_POST["registerButton"])) {
+  // メールアドレスが不正な形式の場合はエラーを返す
+  $pattern = '/^[a-zA-Z0-9_\.\-]+?@[A-Za-z0-9_\.\-]+$/';
+  if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+    header("Location: ../../../../user/register.php?company_id=" . $_POST["company_id"] . "&error=invalidEmail");
+    // エラーメッセージをセッションに格納
+    $_SESSION["error"] = "メールアドレスの形式が正しくありません";
+    exit();
+  }
   // 入力された学生の情報をstudentsテーブルに登録する
   include("../../../../dbconnect.php");
   $sql_register_basic = "INSERT INTO Students (name, furigana, sex, email, phoneNumber, registered_at, graduated_year, university, faculty, department, prefecture) VALUES (:name, :furigana, :sex, :email, :phoneNumber, :registered_at ,:graduated_year, :university, :faculty, :department, :prefecture)";
