@@ -1,5 +1,5 @@
 const checkboxes = document.querySelectorAll('.checkbox');
-let tag = [];
+let tag = [[], [], []];
 let s_graduated = [];
 let s_support = [];
 let s_area = [];
@@ -8,11 +8,18 @@ let s_area = [];
 checkboxes.forEach((checkbox) => {
   checkbox.addEventListener('click', () => {
      // チェックボックスのクリックごとに `tag` をリセットする
-    if(!tag.includes(checkbox.value)){
-    tag.push(checkbox.value);
-    } else {
-      tag = tag.filter(item => item !== checkbox.value);
+    // if(!tag.includes(checkbox.value)){
+    // tag.push(checkbox.value);
+    // } else {
+    //   tag = tag.filter(item => item !== checkbox.value);
+    // }
+    if (checkbox.value >= 1 && checkbox.value <= 3 && tag[0].includes(checkbox.value)) {
+      tag[0].splice(0, tag[0].length)
+    } else if (checkbox.value >= 1 && checkbox.value <= 3 && !tag.includes(checkbox.value)) {
+      tag[0].splice(0, tag[0].length)
+      tag[0].push(checkbox.value);
     }
+
     console.log(tag)
     let list = document.getElementById('client-list');
     let xhr = new XMLHttpRequest();
