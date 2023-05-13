@@ -8,16 +8,8 @@ let s_area = [];
 checkboxes.forEach((checkbox) => {
   checkbox.addEventListener('click', () => {
      // チェックボックスのクリックごとに `tag` をリセットする
-    let tag = [];
-
-    checkboxes.forEach((checkbox) => {
-      if (checkbox.checked){
-        tag.push(checkbox.value);
-        console.log(tag)
-      }
-      
-
-    });
+    tag = [];
+    tag.push(checkbox.value);
     console.log(tag)
     let list = document.getElementById('client-list');
     let xhr = new XMLHttpRequest();
@@ -33,9 +25,5 @@ checkboxes.forEach((checkbox) => {
     };
     let params = `tag=${tag}`;
     xhr.send(params);
-    checkboxes.forEach((checkbox) => {
-      checkbox.checked = false;
-    })
-   
   });
   });
