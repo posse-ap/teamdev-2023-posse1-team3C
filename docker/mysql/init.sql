@@ -224,4 +224,22 @@ insert into Invalids (
   1, "名前がふざけてる"
 );
 
+DROP TABLE IF EXISTS Tags;
+CREATE TABLE Tags (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  tag VARCHAR(255) COMMENT "タグ名"
+) CHARSET=utf8;
+
+insert into Tags (tag) values ("25卒"), ("26卒"), ("27卒"), ("オンラインのみ"), ("対面のみ"), ("両方可"), ("IT"), ("北海道"), ("東北"), ("関東"), ("中部"), ("近畿"), ("中国"), ("四国"), ("九州"), ("総合型"), ("営業"), ("事務/アシスタント"), ("企画/マーケティング"), ("販売/サービス"), ("IT/通信系エンジニア"), ("建築/土木系エンジニア"), ("モノづくり系エンジニア"), ("素材/化学/食品系エンジニア"), ("医療系専門職"), ("金融系専門職"), ("コンサルタント/不動産専門"), ("クリエイティブ"), ("就活コミュニティあり"), ("業界研究あり"), ("インターンシップ紹介あり"), ("説明会あり"), ("面接練習あり"), ("ES添削あり"), ("文系"), ("理系"), ("ベンチャー"), ("大手"), ("土日祝日"), ("平日18時まで対応可"), ("平日21時対応可");
+
+DROP TABLE IF EXISTS CompaniesTagsLink;
+CREATE TABLE CompaniesTagsLink (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  company_id INT,
+  tag_id INT,
+  FOREIGN KEY (company_id) REFERENCES Companies(id),
+  FOREIGN KEY (tag_id) REFERENCES Tags(id)
+) CHARSET=utf8;
+
+insert into CompaniesTagsLink (company_id, tag_id) values (1,1), (1,2), (1,3), (1,4), (1,5), (1,6), (1,7), (2,1), (2,2), (2,3), (2,4), (2,5), (2,6), (2,7), (3,1), (3,2), (3,3), (3,4), (3,5), (3,6), (3,7), (4,1), (4,2), (4,3), (4,4), (4,5), (4,6), (4,7);
 
