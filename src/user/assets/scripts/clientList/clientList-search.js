@@ -1,21 +1,24 @@
 const checkboxes = document.querySelectorAll('.checkbox');
 let tag = [];
+let s_graduated = [];
+let s_support = [];
+let s_area = [];
 
 
 checkboxes.forEach((checkbox) => {
   checkbox.addEventListener('click', () => {
-    simple_tag = []; // チェックボックスのクリックごとに `tag` をリセットする
-    tag = [];
+     // チェックボックスのクリックごとに `tag` をリセットする
+    let tag = [];
+
     checkboxes.forEach((checkbox) => {
-      if (checkbox.checked) {
-        tag.pop();
+      if (checkbox.checked){
         tag.push(checkbox.value);
+        console.log(tag)
       }
-      tag = []; // チェックボックスのクリックごとに `tag` をリセットする
-      }
-    );
+      
+
     });
-    
+    console.log(tag)
     let list = document.getElementById('client-list');
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "assets/php/clientList/clientlist-search.php", true);
@@ -30,4 +33,9 @@ checkboxes.forEach((checkbox) => {
     };
     let params = `tag=${tag}`;
     xhr.send(params);
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = false;
+    })
+   
+  });
   });

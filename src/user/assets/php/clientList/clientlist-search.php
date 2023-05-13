@@ -1,10 +1,25 @@
 <?php
   include_once('../../../../dbconnect.php');
+  
+  // $s_graduated = $_POST['s_graduated'];
+  // $s_support = $_POST['s_support'];
+  // $s_area = $_POST['s_area'];
   $tag = $_POST['tag'];
 
   var_dump($tag);
+
   $string = 'where 1=1';
-// where句の中身を作るための関数
+  // where句の中身を作るための関数
+  if ($s_graduated !== ""){
+    $string .= ' and '.'tag_id ='.$s_graduated;
+  }
+  if ($s_support !== ""){
+    $string .= ' and '.'tag_id ='.$s_support;
+  }
+  if ($s_area !== ""){
+    $string .= ' and '.'tag_id ='.$s_area;
+  }
+
   global $string;
   $tags = (array) $tag;
   foreach ($tags as $tag) {
