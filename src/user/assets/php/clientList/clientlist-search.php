@@ -5,19 +5,12 @@
   var_dump($tag);
   $string = 'where 1=1';
 // where句の中身を作るための関数
-function where_string($sample, $column) {
   global $string;
-  $sample = (array) $sample;
-  
-  if (!empty($sample)) {
-    if ($string != 'where') {
-      $string .= ' and ';
-    }
-      $string .= ' ' . $column . ' in (' . implode(",", $sample) . ')';
+  $tags = (array) $tag;
+  foreach ($tags as $tag) {
+    $string .= ' and '.'tag_id ='.$tag;
   }
-}
-
-where_string($graduate, 'gy.Graduated_year');
+  var_dump($string);
 
 // where_string($yourarea, 'a.area');
 // var_dump($string);
@@ -28,6 +21,8 @@ where_string($graduate, 'gy.Graduated_year');
   LEFT OUTER JOIN AreasCompaniesLink as acl ON acl.company_id = c.id
   LEFT OUTER JOIN Areas as a ON a.id = acl.area_id
   LEFT OUTER JOIN Graduated_years as gy ON gy.id = cgl.graduated_id
+  LEFT OUTER JOIN CompaniesTagsLink as ctl ON ctl.company_id = c.id
+  LEFT OUTER JOIN Tags as t ON gy.id = ctl.tag_id
   LEFT OUTER JOIN `Ratings` as ra ON ra.Rating_id = c.id ".$string.";";
 
   $stmt = $dbh->prepare($sql_companies);

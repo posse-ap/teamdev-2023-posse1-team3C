@@ -378,6 +378,9 @@ td{
 .button-i {
   color: white;
 }
+.button.detail-page {
+  background-color: #3B93C5;
+}
 a{
   text-decoration: none;
 }
@@ -563,43 +566,50 @@ a{
     width: 90px;
     left: calc(50% - 45px);
   }
-  .clientlist-wrapper{
+  .clientlist-wrapper {
     padding-bottom: 30px;
   }
-  .clientlist{
-    background-color: #E7F5FD;
-    padding: 15px;
-    margin: 20px auto;
-    bottom: 30px;
-    width: 90%;
-    border-radius: 16px;
-    border: 1px solid #A7D6FF;
+  /* 企業リストの各内容 */
+  .clientlist {
+    padding: 2px;
+    margin-left: calc(50% - 183px);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 360px;
+    height: 280px;
+    border-radius: 10px;
+  }
+  .clientlist-contents {
+    height: 240px;
+    width: 340px;
+    margin-top: 10px;
+    margin-left: calc(50% - 170px);
+    gap: 10px;
+  }
+  .list-img{
+    width: 100px;
+    height: 60px;
+    margin-bottom: 10px;
+    margin-left: 7.5px;
   }
   .clientlist-name{
     margin-bottom: 5px;
+    margin-top: 15px;
+    font-size: 16px;
   }
-
-  .clientlist-contents{
-    display: flex;
-    height: 280px;
-    width: 100%;
-  }
-  .list-img{
-    width: 70%;
-    height: 130px;
-    background-size: cover;
-  }
-
-  .list-star{
+  .list-star {
     background-color: white;
     border-radius: 12px;
+    margin-top: 20px;
   }
   .list-star-table{
     padding: 20px 2px;
+    margin: 0 20px;
     width: 150px;
+    margin-left: 10px;
   }
   .clientlist-main{
-    margin: 20px;
+    width: 165px;
   }
   h3{
     margin-left: 30px;
@@ -636,16 +646,41 @@ a{
   .button-p{
     text-decoration: none;
     color: white;
-
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .button-i{
     color: white;
   }
+  .button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: -5px;
+  }
   a{
     text-decoration: none;
   }
+  .clientlist-sub {
+    width: 165px;
+    padding-left: 20px;
+  }
   .list-sub-point{
-    height: 120px;
+    height: 90px;
+  }
+  .list-sub-point ul{
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  .list-sub-point li{
+    font-size: 10px;
+    margin-bottom: 3px;
+  }
+  .list-sub-point-title{
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-left: #2E79BA solid 3px;
+    padding-left: 10px;
+    font-size: 14px;
   }
 }
 

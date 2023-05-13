@@ -20,7 +20,8 @@ CREATE TABLE ClientUsers (
   company_id INT,
   email VARCHAR(255),
   password VARCHAR(255),
-  created_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT "発行日時"
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT "発行日時",
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT "更新日時"
 ) CHARSET=utf8;
 insert into ClientUsers (company_id, email, password) values (1, "client@example.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW");
 
@@ -43,7 +44,7 @@ CREATE TABLE Companies (
 ) CHARSET=utf8;
 
 insert into Companies (company, service, URL, email, postcode, address, phoneNumber, contactType, Date, started_at, finished_at, online) values 
-("Test", "Testservice", "keio.jp", "li12569@keio.jp", "108-8345", "東京都港区三田２丁目１５−４５", "03-5427-1517", "オンライン", "平日 9-18時 土9-15時 日定休", "2023-05-01", "2023-06-30", "終日対応可"), 
+("Test", "Testservice", "keio.jp", "client@example.com", "108-8345", "東京都港区三田２丁目１５−４５", "03-5427-1517", "オンライン", "平日 9-18時 土9-15時 日定休", "2023-05-01", "2023-06-30", "終日対応可"), 
 ("Test2", "Testservice", "keio.jp", "li12569@keio.jp", "108-8345", "東京都港区三田２丁目１５−４５", "03-5427-1517", "オンライン", "平日 9-18時 土9-15時 日定休", "2023-05-01", "2023-06-30", "終日対応可"),
 ("BTBK", "TOAサービス", "https://www.btbk.com", "info@btbk.com", "102-0076", "東京都千代田区五番町12-7　ドミール五番町　102", "02-3398-62917", "対面・オンライン", "年中無休", "2023/04/01", "2023-06-30", "終日対応可"), 
 ("SSS", "SSSService", "https://www.sss-service.jp", "sss@sssservice.jp", "011-333-9444", "北海道札幌市中央区3条西4-1-1　日本生命札幌ビル　5階", "011-333-9444", "オンライン", "平日土祝　9:00-19:30", "2023/02/01", "2023-03-30", "終日対応可");
@@ -184,6 +185,8 @@ insert into Students (
 ("上野侑紗","うえのありさ","女","25卒","東京","理科三類","","東京","090-5521-0993","arisaueno@gmail.com","2022/11/28 3:43:11"),
 ("井上学","いのうえがく","男","24卒","西南学院","神学","神学","福岡","090-3424-0011","gakkun@icloud.com","2023/01/19 12:30:04"),
 ("森はるか","もりはるか","女","25卒","大妻女子","家政","ライフデザイン","東京","090-4248-4821","moriharumaru@icloud.com","2023/02/03 9:43:00"),
+("塚越雄真","つかこしゆうま","男","25卒","富山","経済","経済","富山","090-2211-0909","tsukakyun@gmail.com","2022/08/30 14:43:09"),
+("野呂美智子","のろみちこ","女","25卒","北星学園","社会福祉学","社会福祉学","北海道","090-1313-9482","micchi@icloud.com","2022/12/02 3:49:44"),
 ("塚越雄真","つかこしゆうま","男","25卒","富山","経済","経済","富山","090-2211-0909","tsukakyun@gmail.com","2022/08/30 14:43:09");
 DROP TABLE IF EXISTS Statuses;
 CREATE TABLE Statuses (
@@ -221,4 +224,22 @@ insert into Invalids (
   1, "名前がふざけてる"
 );
 
+DROP TABLE IF EXISTS Tags;
+CREATE TABLE Tags (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  tag VARCHAR(255) COMMENT "タグ名"
+) CHARSET=utf8;
+
+insert into Tags (tag) values ("25卒"), ("26卒"), ("27卒"), ("オンラインのみ"), ("対面のみ"), ("両方可"), ("IT"), ("北海道"), ("東北"), ("関東"), ("中部"), ("近畿"), ("中国"), ("四国"), ("九州"), ("総合型"), ("営業"), ("事務/アシスタント"), ("企画/マーケティング"), ("販売/サービス"), ("IT/通信系エンジニア"), ("建築/土木系エンジニア"), ("モノづくり系エンジニア"), ("素材/化学/食品系エンジニア"), ("医療系専門職"), ("金融系専門職"), ("コンサルタント/不動産専門"), ("クリエイティブ"), ("就活コミュニティあり"), ("業界研究あり"), ("インターンシップ紹介あり"), ("説明会あり"), ("面接練習あり"), ("ES添削あり"), ("文系"), ("理系"), ("ベンチャー"), ("大手"), ("土日祝日"), ("平日18時まで対応可"), ("平日21時対応可");
+
+DROP TABLE IF EXISTS CompaniesTagsLink;
+CREATE TABLE CompaniesTagsLink (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  company_id INT,
+  tag_id INT,
+  FOREIGN KEY (company_id) REFERENCES Companies(id),
+  FOREIGN KEY (tag_id) REFERENCES Tags(id)
+) CHARSET=utf8;
+
+insert into CompaniesTagsLink (company_id, tag_id) values (1,1), (1,2), (1,3), (1,4), (1,5), (1,6), (1,7), (2,1), (2,2), (2,3), (2,4), (2,5), (2,6), (2,7), (3,1), (3,2), (3,3), (3,4), (3,5), (3,6), (3,7), (4,1), (4,2), (4,3), (4,4), (4,5), (4,6), (4,7);
 

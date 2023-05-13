@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous" defer></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
-  <script src="./assets/scripts/clientList/clientList.js" defer></script>
+  <!-- <script src="./assets/scripts/clientList/clientList.js" defer></script> -->
 </head>
 <body>
   <!-- ヘッダー読み込み -->
@@ -44,21 +44,21 @@
           <li class="g-box-item">
             <label for="g-box-item-1">
               <input type="checkbox" name="graduate[]" id="g-box-item-1"
-              class="checkbox" value="'25卒'">
+              class="checkbox" value="1">
               <span class="checkbox-fontas"></span>
               25卒
             </label>
           </li>
           <li class="g-box-item">
             <label for="g-box-item-2">
-              <input type="checkbox" name="graduate[]" id="g-box-item-2" class="checkbox" value="'26卒'">
+              <input type="checkbox" name="graduate[]" id="g-box-item-2" class="checkbox" value="2">
               <span class="checkbox-fontas"></span>
               26卒
             </label>
           </li>
           <li class="g-box-item">
             <label for="g-box-item-3">
-              <input type="checkbox" name="graduate[]" id="g-box-item-3" class="checkbox" value="'27卒'">
+              <input type="checkbox" name="graduate[]" id="g-box-item-3" class="checkbox" value="3">
               <span class="checkbox-fontas"></span>
               27卒
             </label>
@@ -72,21 +72,21 @@
         <ul class="s-box">
           <li class="s-box-item">
             <label for="s-box-item-1">
-              <input type="checkbox" name="support[]" id="s-box-item-1" class="checkbox" value="オンラインのみ">
+              <input type="checkbox" name="support[]" id="s-box-item-1" class="checkbox" value="4">
               <span class="checkbox-fontas"></span>
               オンラインのみ
             </label>
           </li>
           <li class="s-box-item">
             <label for="s-box-item-2">
-              <input type="checkbox" name="support[]" id="s-box-item-2" class="checkbox" value="対面のみ">
+              <input type="checkbox" name="support[]" id="s-box-item-2" class="checkbox" value="5">
               <span class="checkbox-fontas"></span>
               対面のみ
             </label>
           </li>
           <li class="s-box-item">
             <label for="s-box-item-3">
-              <input type="checkbox" name="support[]" id="s-box-item-3" class="checkbox" value="両方可">
+              <input type="checkbox" name="support[]" id="s-box-item-3" class="checkbox" value="6">
               <span class="checkbox-fontas"></span>
               両方可
             </label>
@@ -335,10 +335,10 @@
               </div>
               <div class="link-button">
                 <!-- データベースのURLが正しくないから飛べないけど正しければ飛べるはず -->
-                <a href="<?= $company['URL']?>">
+                <a href="./register.php?company_id=<?php echo $company_id?>">
                   <div class="button official-link">
-                    <p class="button-p">公式サイト</p>
-                    <i class="fa-solid fa-arrow-up-right-from-square button-i"></i>
+                    <p class="button-p">申し込みする</p>
+                    <i class="fa-solid fa-caret-right button-i"></i>
                   </div>
                 </a>
                 <!-- 詳細に飛ぶ -->
