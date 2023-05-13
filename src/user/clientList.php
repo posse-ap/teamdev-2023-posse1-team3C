@@ -127,28 +127,29 @@
           </li>
           <li class="y-box-item">
             <label for="y-box-item-5">
-              <input type="checkbox" name="your-area[]" id="y-box-item-5" class="checkbox" value="'近畿'" type-data="s-area">
+              <input type="checkbox" name="your-area[]" id="y-box-item-5" class="
+              " value="11" type-data="s-area">
               <span class="checkbox-fontas"></span>
               近畿
             </label>
           </li>
           <li class="y-box-item">
             <label for="y-box-item-6">
-              <input type="checkbox" name="your-area[]" id="y-box-item-6" class="checkbox" value="'中国'" type-data="s-area">
+              <input type="checkbox" name="your-area[]" id="y-box-item-6" class="checkbox" value="12" type-data="s-area">
               <span class="checkbox-fontas"></span>
               中国
             </label>
           </li>
           <li class="y-box-item">
             <label for="y-box-item-7">
-              <input type="checkbox" name="your-area[]" id="y-box-item-7" class="checkbox" value="'四国'" type-data="s-area">
+              <input type="checkbox" name="your-area[]" id="y-box-item-7" class="checkbox" value="13" type-data="s-area">
               <span class="checkbox-fontas"></span>
               四国
             </label>
           </li>
           <li class="y-box-item">
             <label for="y-box-item-8">
-              <input type="checkbox" name="your-area[]" id="y-box-item-8" class="checkbox" value="'九州'" type-data="s-area">
+              <input type="checkbox" name="your-area[]" id="y-box-item-8" class="checkbox" value="14" type-data="s-area">
               <span class="checkbox-fontas"></span>
               九州
             </label>
@@ -172,7 +173,7 @@
           <div class="agent-type-comprehensive-content">
               <label for="agent-type-1">
               <input type="checkbox" name="agent-type[]" id="agent-type-1"
-              class="checkbox" value="総合型">
+              class="checkbox" value="15">
               <span class="checkbox-fontas"></span>
               総合型
             </label>
@@ -184,7 +185,7 @@
             <li class="a-box-item">
               <label for="agent-type-2">
                 <input type="checkbox" name="agent-type[]" id="agent-type-2"
-                class="checkbox" value="営業">
+                class="checkbox" value="16">
                 <span class="checkbox-fontas"></span>
                 営業
               </label>
@@ -192,7 +193,7 @@
             <li class="a-box-item">
               <label for="agent-type-3">
                 <input type="checkbox" name="agent-type[]" id="agent-type-3"
-                class="checkbox" value="事務/アシスタント">
+                class="checkbox" value="17">
                 <span class="checkbox-fontas"></span>
                 事務/アシスタント
               </label>
@@ -200,7 +201,7 @@
             <li class="a-box-item">
               <label for="agent-type-4">
                 <input type="checkbox" name="agent-type[]" id="agent-type-4"
-                class="checkbox" value="企画/マーケティング">
+                class="checkbox" value="18">
                 <span class="checkbox-fontas"></span>
                 企画/マーケティング
               </label>
