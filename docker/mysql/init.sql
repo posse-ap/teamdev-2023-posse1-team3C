@@ -11,7 +11,7 @@ CREATE TABLE AdminUsers (
   email VARCHAR(255),
   password VARCHAR(255)
 ) CHARSET=utf8;
-insert into AdminUsers (email, password) 
+insert into AdminUsers (email, password)
 values ("admin@example.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW");
 
 DROP TABLE IF EXISTS ClientUsers;
