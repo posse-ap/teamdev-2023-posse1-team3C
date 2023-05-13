@@ -36,7 +36,7 @@ main {
   position: relative;
   cursor: pointer;
   position: fixed;
-  bottom: 12vh;
+  top: 600px;
   z-index: 70;
 }
 .btn-search-for-agent button i {
@@ -336,7 +336,7 @@ main {
 }
 /* よくあるご質問 */
 .common-question-contents {
-  padding-bottom: 60px;
+  padding-bottom: 100px;
 }
 .common-question-contents h3 {
   font-size: 32px;
@@ -770,7 +770,7 @@ main {
     margin-left: calc(50% - 120px);
     margin-top: 20px;
     font-size: 14px;
-    bottom: 8vh;
+    top: 83vh;
   }
   .btn-search-for-agent button i {
     font-size: 16px;
