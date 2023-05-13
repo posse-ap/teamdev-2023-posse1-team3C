@@ -8,8 +8,11 @@ let s_area = [];
 checkboxes.forEach((checkbox) => {
   checkbox.addEventListener('click', () => {
      // チェックボックスのクリックごとに `tag` をリセットする
-    tag = [];
+    if(!tag.includes(checkbox.value)){
     tag.push(checkbox.value);
+    } else {
+      tag = tag.filter(item => item !== checkbox.value);
+    }
     console.log(tag)
     let list = document.getElementById('client-list');
     let xhr = new XMLHttpRequest();
