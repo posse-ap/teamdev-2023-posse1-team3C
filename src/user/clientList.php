@@ -335,10 +335,10 @@
               </div>
               <div class="link-button">
                 <!-- データベースのURLが正しくないから飛べないけど正しければ飛べるはず -->
-                <a href="<?= $company['URL']?>">
+                <a href="./register.php?company_id=<?php echo $company_id?>">
                   <div class="button official-link">
-                    <p class="button-p">公式サイト</p>
-                    <i class="fa-solid fa-arrow-up-right-from-square button-i"></i>
+                    <p class="button-p">申し込みする</p>
+                    <i class="fa-solid fa-caret-right button-i"></i>
                   </div>
                 </a>
                 <!-- 詳細に飛ぶ -->
