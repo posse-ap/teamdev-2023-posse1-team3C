@@ -15,20 +15,25 @@
 
 
   // 企業一覧に必要なデータをCompaniesTagsLinksから取得
-  $sql_companies = "SELECT c.id, c.company, c.URL, cd.photo, ra.people,ra.support,ra.achievement,ra.speed,ra.amount , t.tag FROM `CompaniesTagsLink` as ctl left outer JOIN CompaniesDetails as cd ON cd.detail_id = ctl.company_id  LEFT OUTER JOIN `Ratings` as ra ON ra.Rating_id = ctl.company_id LEFT OUTER JOIN  `Companies` as c ON ctl.company_id = c.id LEFT OUTER JOIN `Tags` as t ON t.id = ctl.tag_id $string ";
+  $sql_companies = "SELECT c.id, c.company, c.URL, cd.photo, ra.people,ra.support,ra.achievement,ra.speed,ra.amount , t.tag  FROM `CompaniesTagsLink` as ctl left outer JOIN CompaniesDetails as cd ON cd.detail_id = ctl.company_id  LEFT OUTER JOIN `Ratings` as ra ON ra.Rating_id = ctl.company_id LEFT OUTER JOIN  `Companies` as c ON ctl.company_id = c.id LEFT OUTER JOIN `Tags` as t ON t.id = ctl.tag_id $string ";
   $stmt = $dbh->prepare($sql_companies);
   $stmt->execute();
   $companies = $stmt->fetchALl(PDO::FETCH_ASSOC);
-  echo "<pre>";
-  print_r($companies);
-  echo "</pre>";
   $data = '';
 
   // 推しポイントを取得
-  $sql_goodPoints = "SELECT distinct gp.GoodPoint , c.id FROM `GoodPoints` as gp left outer JOIN CompaniesTagsLink as ctl ON ctl.company_id = gp.company_id left outer JOIN `Companies` as c ON c.id = ctl.company_id left outer JOIN `Tags` as t ON t.id = ctl.tag_id $string";
+  $sql_goodPoints = "SELECT * from `GoodPoints`";
   $stmt = $dbh->prepare($sql_goodPoints);
   $stmt->execute();
   $goodPoints = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  // 推しポイントを企業ごとに分ける
+  foreach ($goodPoints as $key => $goodPoint) {
+    $index = array_search($goodPoint["company_id"], array_column($companies, 'id'));
+    $companies[$index]["GoodPointLink"][] = $goodPoint;
+  }
+  echo "<pre>";
+  print_r($companies);
+  echo "</pre>";
   $data = '';
 
 
@@ -72,9 +77,10 @@ foreach ($companies as $company){
         <h4 class="list-sub-point-title">ポイント</h4>
         <ul>
           <!-- それぞれ個数が違うためforeachで出力 -->';
-      foreach ($goodPoints as $goodpoint){ 
-        $data .=  '<li>'. $goodpoint['GoodPoint'] .'</li>';
-        };
+          for ($i=0; $i < count($company["GoodPointLink"]); $i++) {
+            $data .= '<li class="list-sub-point-item">'. $company["GoodPointLink"][$i]["GoodPoint"] .'</li>';
+          }
+
         $data.='</ul>
       </div>
       <div class="link-button">
