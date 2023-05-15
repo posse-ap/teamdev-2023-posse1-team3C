@@ -24,6 +24,7 @@
 <body>
   <!-- ヘッダー -->
   <?php include_once('components/header.php') ?>
+  <?php include_once('components/menubar.php')?>
   <!-- メイン -->
   <main>
     <!-- エージェント企業名と画像 -->
