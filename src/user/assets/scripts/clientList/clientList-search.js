@@ -41,6 +41,16 @@ checkboxes.forEach((checkbox) => {
     } else if (checkbox.value >= 15 && !tag.includes(checkbox.value)) {
       tag[3].push(checkbox.value)
     }
+    for (let j = 0; j < counts.length; j++) {
+      let cnt = counts[j].getAttribute("value");
+      let new_element = '';
+      for (let i = 0; i < 5; i++) {
+          if (i < cnt) {
+              new_element += '<i class="fas fa-star"></i>';
+          }
+      }
+      counts[j].innerHTML = new_element;
+  }
 
     console.log(tag)
     let list = document.getElementById('client-list');
@@ -57,5 +67,6 @@ checkboxes.forEach((checkbox) => {
     };
     let params = `tag=${tag}`;
     xhr.send(params);
+
   });
   });

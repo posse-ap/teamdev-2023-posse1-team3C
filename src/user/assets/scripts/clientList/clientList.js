@@ -64,10 +64,27 @@ searchDetailsTitle.addEventListener('click', () => {
 });
 
 // 星をvalueの値に応じて出力
-let counts = document.getElementsByClassName('list-star-value');
+// let counts = document.getElementsByClassName('list-star-value');
+// let new_element = '';
+
+// for (let j = 0; j < counts.length; j++) {
+//     let cnt = counts[j].getAttribute("value");
+//     let new_element = '';
+//     for (let i = 0; i < 5; i++) {
+//         if (i < cnt) {
+//             new_element += '<i class="fas fa-star"></i>';
+//         }
+//     }
+//     counts[j].innerHTML = new_element;
+// }
+//   counts.innerHTML = new_element;
+
+let counts = document.querySelectorAll('.list-star-value');
+let new_element = '';
 
 for (let j = 0; j < counts.length; j++) {
     let cnt = counts[j].getAttribute("value");
+    console.log(cnt);
     let new_element = '';
     for (let i = 0; i < 5; i++) {
         if (i < cnt) {
@@ -76,6 +93,6 @@ for (let j = 0; j < counts.length; j++) {
     }
     counts[j].innerHTML = new_element;
 }
-  count.innerHTML = new_element;
-;
+  counts.innerHTML = new_element;
+
 

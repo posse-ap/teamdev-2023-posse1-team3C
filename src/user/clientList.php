@@ -365,8 +365,8 @@
   <?php include_once('components/footer.php')?>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous"></script>
-  <script src="./assets/scripts/clientList/clientList.js"></script>
-  <script src="./assets/scripts/clientList/clientList-search.js"></script>
+  <script src="./assets/scripts/clientList/clientList.js" defer></script>
+  <script src="./assets/scripts/clientList/clientList-search.js" defer></script>
 
 </body>
 </html>
