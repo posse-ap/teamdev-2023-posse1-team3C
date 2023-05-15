@@ -14,20 +14,23 @@
   var_dump($string);
 
 
-  $sql_companies = "SELECT c.id,c.company,c.URL,cd.photo,ra.people,ra.support,ra.achievement,ra.speed,ra.amount FROM `Companies` as c 
-  LEFT OUTER JOIN CompaniesDetails as cd ON cd.detail_id = c.id
-  LEFT OUTER JOIN CompaniesGraduatedLink as cgl ON cgl.company_id = c.id
-  LEFT OUTER JOIN AreasCompaniesLink as acl ON acl.company_id = c.id
-  LEFT OUTER JOIN Areas as a ON a.id = acl.area_id
-  LEFT OUTER JOIN Graduated_years as gy ON gy.id = cgl.graduated_id
-  LEFT OUTER JOIN CompaniesTagsLink as ctl ON ctl.company_id = c.id
-  LEFT OUTER JOIN Tags as t ON gy.id = ctl.tag_id
-  LEFT OUTER JOIN `Ratings` as ra ON ra.Rating_id = c.id ".$string.";";
-
+  // 企業一覧に必要なデータをCompaniesTagsLinksから取得
+  $sql_companies = "SELECT c.id, c.company, c.URL, cd.photo, ra.people,ra.support,ra.achievement,ra.speed,ra.amount , t.tag FROM `CompaniesTagsLink` as ctl left outer JOIN CompaniesDetails as cd ON cd.detail_id = ctl.company_id  LEFT OUTER JOIN `Ratings` as ra ON ra.Rating_id = ctl.company_id LEFT OUTER JOIN  `Companies` as c ON ctl.company_id = c.id LEFT OUTER JOIN `Tags` as t ON t.id = ctl.tag_id $string ";
   $stmt = $dbh->prepare($sql_companies);
   $stmt->execute();
-  $companies = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  $companies = $stmt->fetchALl(PDO::FETCH_ASSOC);
+  echo "<pre>";
+  print_r($companies);
+  echo "</pre>";
   $data = '';
+
+  // 推しポイントを取得
+  $sql_goodPoints = "SELECT distinct gp.GoodPoint , c.id FROM `GoodPoints` as gp left outer JOIN CompaniesTagsLink as ctl ON ctl.company_id = gp.company_id left outer JOIN `Companies` as c ON c.id = ctl.company_id left outer JOIN `Tags` as t ON t.id = ctl.tag_id $string";
+  $stmt = $dbh->prepare($sql_goodPoints);
+  $stmt->execute();
+  $goodPoints = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  $data = '';
+
 
 foreach ($companies as $company){
   $company_id = $company['id'];
@@ -36,7 +39,7 @@ foreach ($companies as $company){
     <h3 class="clientlist-name">'. $company['company'] .'</h3>
     <div class="clientlist-contents">
     <div class="clientlist-main">
-    <div class="list-img" style="background-image: url(../user/assets/img/heroes/'. $company["company"].' $company["photo"]);">
+    <div class="list-img" style="background-image: url(../user/assets/img/heroes/'.$company["company"].'/ '.$company["photo"] .');">
     </div>
     <div class="list-star">
       <table class="list-star-table">
@@ -69,11 +72,9 @@ foreach ($companies as $company){
         <h4 class="list-sub-point-title">ポイント</h4>
         <ul>
           <!-- それぞれ個数が違うためforeachで出力 -->';
-          
-      foreach ($points_data as $goodpoint){ 
+      foreach ($goodPoints as $goodpoint){ 
         $data .=  '<li>'. $goodpoint['GoodPoint'] .'</li>';
         };
-           
         $data.='</ul>
       </div>
       <div class="link-button">
@@ -85,7 +86,7 @@ foreach ($companies as $company){
           </div>
         </a>
         <!-- 詳細に飛ぶ -->
-        <a href="clientDetails.php?id=<?= $company_id ?>">
+        <a href="clientDetails.php?id=" ' .$company["id"] .'">
           <div class="button detail-page">
             <p class="button-p">詳細ページ</p>
             <i class="fa-solid fa-caret-right button-i"></i>
@@ -97,7 +98,4 @@ foreach ($companies as $company){
 </div>';
 }
 echo $data;
-
-
-
 ?>
