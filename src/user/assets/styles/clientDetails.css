@@ -23,9 +23,10 @@ main {
 .agent-img {
   width: 50%;
   aspect-ratio: 5/3;
-  margin-left: 10%;
+  margin-left: 25%;
   padding-top: 40px;
   margin-bottom: 20px;
+  padding-top: 20px;
 }
 .agent-img img {
   width: 100%;
@@ -128,6 +129,7 @@ main {
 .success-story-contents {
   height: 780px;
   background-color: #C3E5F8;
+  margin-bottom: 200px;
 }
 .success-story-title {
   padding-top: 40px;
@@ -229,13 +231,6 @@ main {
   margin-right: 40px;
 }
 /* リンク */
-.access {
-  margin-top: 80px;
-  position: fixed;
-  top: 80px;
-  right: 10%;
-  z-index: 120;
-}
 .access-btn {
   width: 300px;
   height: 50px;
@@ -244,28 +239,24 @@ main {
   font-size: 16px;
   font-weight: 700;
   border-radius: 10px;
-  margin-left: calc(50% - 150px);
-  margin-bottom: 60px;
   line-height: 50px;
   border-width: 0;
   position: relative;
   cursor: pointer;
   user-select: none;
 }
-
 .access-btn i {
   position: absolute;
   right: 20px;
   top: 15px;
   font-size: 20px;
 }
-.official-site {
-  margin-top: 20px;
-  margin-bottom: 80px;
+.access {
   position: fixed;
-  top: 220px;
-  right: 10%;
+  left: calc(50% - 150px);
+  bottom: 180px;
   z-index: 120;
+  margin-left: 0;
 }
 .official-site-btn {
   width: 300px;
@@ -275,8 +266,6 @@ main {
   font-size: 16px;
   font-weight: 700;
   border-radius: 10px;
-  margin-left: calc(50% - 150px);
-  margin-bottom: 80px;
   line-height: 50px;
   border-width: 0;
   position: relative;
@@ -288,6 +277,32 @@ main {
   right: 20px;
   top: 15px;
   font-size: 20px;
+}
+.official-site {
+  position: fixed;
+  left: calc(50% - 150px);
+  bottom: 120px;
+  z-index: 120;
+}
+.favorite-btn {
+  width: 300px;
+  height: 50px;
+  background-color: #F36F6F;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 10px;
+  line-height: 50px;
+  border-width: 0;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.favorite {
+  position: fixed;
+  left: calc(50% - 150px);
+  bottom: 60px;
+  z-index: 120;
 }
 /* レスポンシブ */
 @media screen and (max-width: 768px) {
@@ -367,6 +382,7 @@ main {
   /* サクセスストーリー */
   .success-story-contents {
     height: 600px;
+    margin-bottom: 180px;
   }
   .success-story-title {
     padding-top: 24px;
@@ -447,7 +463,11 @@ main {
   }
   /* リンク */
   .access {
-    margin-top: 20px;
+    position: fixed;
+    left: calc(50% - 60px);
+    bottom: 190px;
+    z-index: 120;
+    margin-left: 0;
   }
   .access-btn {
     width: 240px;
@@ -462,6 +482,12 @@ main {
     top: 12px;
     font-size: 16px;
   }
+  .official-site {
+    position: fixed;
+    left: calc(50% - 60px);
+    bottom: 130px;
+    z-index: 120;
+  }
   .official-site-btn {
     width: 240px;
     height: 40px;
@@ -475,5 +501,20 @@ main {
     right: 12px;
     top: 12px;
     font-size: 16px;
+  }
+  .favorite {
+    position: fixed;
+    left: calc(50% - 60px);
+    bottom: 80px;
+    z-index: 120;
+  }
+  .favorite-btn {
+    width: 240px;
+    height: 40px;
+    font-size: 12px;
+    border-radius: 8px;
+    margin-left: calc(50% - 120px);
+    margin-bottom: 40px;
+    line-height: 40px;
   }
 }

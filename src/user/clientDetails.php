@@ -236,6 +236,11 @@
         </button>
       </a>
     </div>
+    <div class="favorite">
+      <button type="button" class="favorite-btn" value="">
+        お気に入り登録
+      </button>
+    </div>
   </main>
   <!-- フッター -->
   <?php include_once('components/footer.php') ?>
