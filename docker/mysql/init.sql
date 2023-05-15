@@ -93,7 +93,13 @@ insert into GoodPoints (
   company_id, GoodPoint
 ) values 
 (1, "豊富な求人数"),
-(1, "土曜対応！");
+(1, "土曜対応！"),
+(2, "大企業多数"),
+(2, "土日祝対応！"),
+(3, "業界No.1の求人数！"),
+(3, "土日祝対応！"),
+(4, "オンラインで全国どこからでも応募可"),
+(4, "土日祝対応！");
 
 DROP TABLE IF EXISTS Areas;
 CREATE TABLE Areas (
