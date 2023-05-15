@@ -240,7 +240,7 @@
   <!-- フッター -->
   <?php include_once('components/footer.php') ?>
   <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous"></script>
-  <script src="./assets/scripts/clientList/clientList.js"></script>
+  <script src="./assets/scripts/clientDetails/clientDetails.js"></script>
 </body>
 
 </html>
