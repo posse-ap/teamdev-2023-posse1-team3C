@@ -25,3 +25,15 @@ let mySwiper = new Swiper ('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+// お気に入りボタンを押したら色が変わる、テキストが変更される
+let favorite = document.querySelector('.favorite-btn');
+let favoriteText = document.querySelector('.favorite-btn-text');
+favorite.addEventListener('click', function() {
+  if (favorite.classList.contains('active')) {
+    favorite.classList.remove('active');
+    favoriteText.textContent = 'お気に入りに追加';
+  } else {
+    favorite.classList.add('active');
+    favoriteText.textContent = 'お気に入り済み';
+  }
+});

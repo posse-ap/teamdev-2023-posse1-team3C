@@ -240,7 +240,9 @@
     </div>
     <div class="favorite">
       <button type="button" class="favorite-btn" value="">
-        お気に入り登録
+        <span class="favorite-btn-text">
+          お気に入りに追加
+        </span>
       </button>
     </div>
   </main>
