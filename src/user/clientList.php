@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous" defer></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
-  <!-- <script src="./assets/scripts/clientList/clientList.js" defer></script> -->
+  <script src="./assets/scripts/clientList/clientList.js" defer></script>
 </head>
 <body>
   <!-- ヘッダー読み込み -->

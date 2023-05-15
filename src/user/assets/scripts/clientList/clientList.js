@@ -92,7 +92,7 @@ for (let j = 0; j < counts.length; j++) {
         }
     }
     counts[j].innerHTML = new_element;
+    console.log('aaaa');
 }
-  counts.innerHTML = new_element;
 
 

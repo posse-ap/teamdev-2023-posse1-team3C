@@ -2,10 +2,6 @@
 
 const checkboxes = document.querySelectorAll('.checkbox');
 let tag = [[], [], [], []];
-let s_graduated = [];
-let s_support = [];
-let s_area = [];
-
 
 checkboxes.forEach((checkbox) => {
   checkbox.addEventListener('click', () => {
@@ -62,6 +58,20 @@ checkboxes.forEach((checkbox) => {
         if (xhr.status === 200) {
           let data = xhr.responseText;
           list.innerHTML = data;
+          let counts = document.querySelectorAll('.list-star-value');
+
+          for (let j = 0; j < counts.length; j++) {
+              let cnt = counts[j].getAttribute("value");
+              console.log(cnt);
+              let new_element = '';
+              for (let i = 0; i < 5; i++) {
+                  if (i < cnt) {
+                      new_element += '<i class="fas fa-star"></i>';
+                  }
+              }
+              counts[j].innerHTML = new_element;
+              console.log('aaaa');
+          }
         }
       }
     };

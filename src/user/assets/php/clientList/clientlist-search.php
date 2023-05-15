@@ -1,33 +1,34 @@
 <?php
 include_once('../../../../dbconnect.php');
 $tags = $_POST['tag'];
-print_r($tags);
-
-print_r('aaa----------
-');
 $tagArrays = array_filter(explode(',', $tags));
-var_dump($tagArrays);
-
-$str = '[' . implode(',', $tagArrays) . ']';
-var_dump($str);
 
 $placeholders = implode(',', array_fill(0, count($tagArrays), '?'));
+var_dump($tagArrays);
 var_dump($placeholders);
-// 企業一覧に必要なデータをCompaniesTagsLinksから取得
-$sql_companies =  "SELECT c.id, c.company, c.URL, MAX(cd.photo) as photo, ra.people, ra.support, ra.achievement, ra.speed, ra.amount, t.id as tag_id
-FROM `CompaniesTagsLink` as ctl
-LEFT OUTER JOIN CompaniesDetails as cd ON cd.detail_id = ctl.company_id
-LEFT OUTER JOIN `Ratings` as ra ON ra.Rating_id = ctl.company_id
-LEFT OUTER JOIN `Companies` as c ON ctl.company_id = c.id
-LEFT OUTER JOIN `Tags` as t ON t.id = ctl.tag_id
+$sql_companies = "
+SELECT c.id, c.company, c.service, c.URL, cd.photo, ra.people, ra.support, ra.achievement, ra.speed, ra.amount
+FROM `Companies` as c
+LEFT OUTER JOIN `CompaniesDetails` as cd ON cd.detail_id = c.id
+LEFT OUTER JOIN `CompaniesTagsLink` as ctl ON ctl.company_id = c.id
+LEFT OUTER JOIN `Ratings` as ra ON ra.rating_id = c.id
 WHERE ctl.tag_id IN ($placeholders)
-GROUP BY c.id, c.company, c.URL, ra.people, ra.support, ra.achievement, ra.speed, ra.amount, t.id
+GROUP BY c.id
 HAVING COUNT(DISTINCT ctl.tag_id) = " . count($tagArrays);
-var_dump($sql_companies);
 
 $stmt = $dbh->prepare($sql_companies);
-$stmt->execute($tagArrays);
+$cnt = count($tagArrays);
+$i=1;
+
+foreach ($tagArrays as $key => $tagId) {
+  $stmt->bindValue($i, $tagId, PDO::PARAM_INT);
+  $i++;
+}
+var_dump($sql_companies);
+$stmt->execute();
 $companies = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
 
 // echo "<pre>";
 // print_r($companies);
@@ -60,8 +61,6 @@ $data = '';
 $i = 0;
 
 foreach ($companies as $company) {
-
-  var_dump($i);
   $company_id = $company['id'];
   include('clientlist-point2.php');
   $data .= '<div class="clientlist">
@@ -105,10 +104,11 @@ foreach ($companies as $company) {
           $sql_points->bindValue(':company_id', $company_id);
           $sql_points->execute();
           $points_data = $sql_points->fetchAll(PDO::FETCH_ASSOC);
-  foreach ($points_data as $point){
-    $data .= '<li class="list-sub-point-item">' . $point['GoodPoint'] . '</li>';
 
-  }
+      foreach ($points_data as $point){
+        $data .= '<li class="list-sub-point-item">' . $point['GoodPoint'] . '</li>';
+
+      }
 
   $data .= '</ul>
       </div>
@@ -131,7 +131,6 @@ foreach ($companies as $company) {
     </div>
 </div>
 </div>';
-var_dump($i+1);
 
 }
 echo $data;
