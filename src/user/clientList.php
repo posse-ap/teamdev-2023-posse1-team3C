@@ -16,7 +16,7 @@
 <body>
   <!-- ヘッダー読み込み -->
   <?php include_once('components/header.php')?>
-
+  <?php include_once('components/menubar.php')?>
   <main>
     <!-- データ持ってくるphpの読み込み -->
   <?php include_once('assets/php/clientList/clientList.php')?>

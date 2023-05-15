@@ -13,7 +13,7 @@
       </li>
       <li class="menubar-item">
         <a href="./clientList.php" class="menubar-link">
-          <div class="menubar-link-content">
+          <div class="menubar-link-content menubar-search">
             <i class="fa-solid fa-magnifying-glass"></i>
             <span class="menubar-link-text">
               SEARCH
