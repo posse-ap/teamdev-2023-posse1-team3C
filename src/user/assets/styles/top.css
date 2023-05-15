@@ -1,6 +1,20 @@
 body {
   position: relative;
 }
+/* メニューバー */
+.menubar-home {
+  background-color: #D6EAF8;
+  border-radius: 5px;
+}
+.menubar-home:hover {
+  background-color: #D6EAF8;
+}
+.menubar-home .menubar-link-text {
+  color: #2E79BA;
+}
+.menubar-home i {
+  color: #2E79BA;
+}
 /* メイン */
 main {
   margin-top: 120px;

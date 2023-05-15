@@ -3,7 +3,7 @@
     <ul class="menubar-list">
       <li class="menubar-item">
         <a href="./index.php" class="menubar-link">
-          <div class="menubar-link-content">
+          <div class="menubar-link-content menubar-home">
             <i class="fa-solid fa-house"></i>
             <span class="menubar-link-text">
               HOME
