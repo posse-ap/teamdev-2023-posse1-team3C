@@ -129,7 +129,7 @@ main {
 .success-story-contents {
   height: 780px;
   background-color: #C3E5F8;
-  margin-bottom: 200px;
+  margin-bottom: 40px;
 }
 .success-story-title {
   padding-top: 40px;
@@ -232,31 +232,37 @@ main {
 }
 /* リンク */
 .access-btn {
-  width: 300px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   background-color: #2E79BA;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
-  border-radius: 10px;
-  line-height: 50px;
+  border-radius: 50%;
   border-width: 0;
   position: relative;
   cursor: pointer;
   user-select: none;
-}
-.access-btn i {
-  position: absolute;
-  right: 20px;
-  top: 15px;
-  font-size: 20px;
+  padding-top: 15px;
+  /* 影をつける */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
 }
 .access {
   position: fixed;
-  left: calc(50% - 150px);
-  bottom: 180px;
+  top: 20%;
+  right: 5%;
   z-index: 120;
   margin-left: 0;
+}
+.access-btn i {
+  position: absolute;
+  top: 10px;
+  left: calc(50% - 10px);
+  font-size: 20px;
+  font-weight: 500;
+}
+.access-btn-text {
+  font-size: 12px;
 }
 .official-site-btn {
   width: 300px;
@@ -271,18 +277,14 @@ main {
   position: relative;
   cursor: pointer;
   user-select: none;
+  margin-bottom: 20px;
+  margin-left: calc(50% - 150px);
 }
 .official-site-btn i {
   position: absolute;
   right: 20px;
   top: 15px;
   font-size: 20px;
-}
-.official-site {
-  position: fixed;
-  left: calc(50% - 150px);
-  bottom: 120px;
-  z-index: 120;
 }
 .favorite-btn {
   width: 300px;
@@ -297,12 +299,8 @@ main {
   position: relative;
   cursor: pointer;
   user-select: none;
-}
-.favorite {
-  position: fixed;
-  left: calc(50% - 150px);
-  bottom: 60px;
-  z-index: 120;
+  margin-bottom: 20px;
+  margin-left: calc(50% - 150px);
 }
 /* レスポンシブ */
 @media screen and (max-width: 768px) {
@@ -382,7 +380,7 @@ main {
   /* サクセスストーリー */
   .success-story-contents {
     height: 600px;
-    margin-bottom: 180px;
+    margin-bottom: 40px;
   }
   .success-story-title {
     padding-top: 24px;
@@ -463,30 +461,26 @@ main {
   }
   /* リンク */
   .access {
-    position: fixed;
-    left: calc(50% - 60px);
-    bottom: 190px;
+    top: 20%;
+    right: 8%;
     z-index: 120;
     margin-left: 0;
   }
   .access-btn {
-    width: 240px;
-    height: 40px;
-    font-size: 12px;
-    margin-left: calc(50% - 120px);
+    width: 80px;
+    height: 80px;
+    font-size: 8px;
+    margin-left: calc(50% - 40px);
     margin-bottom: 30px;
-    line-height: 40px;
+    line-height: 1.4;
   }
   .access-btn i {
-    right: 12px;
-    top: 12px;
+    top: 10px;
+    left: calc(50% - 8px);
     font-size: 16px;
   }
-  .official-site {
-    position: fixed;
-    left: calc(50% - 60px);
-    bottom: 130px;
-    z-index: 120;
+  .access-btn-text {
+    font-size: 8px;
   }
   .official-site-btn {
     width: 240px;
@@ -494,7 +488,7 @@ main {
     font-size: 12px;
     border-radius: 8px;
     margin-left: calc(50% - 120px);
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     line-height: 40px;
   }
   .official-site-btn i {
@@ -502,19 +496,13 @@ main {
     top: 12px;
     font-size: 16px;
   }
-  .favorite {
-    position: fixed;
-    left: calc(50% - 60px);
-    bottom: 80px;
-    z-index: 120;
-  }
   .favorite-btn {
     width: 240px;
     height: 40px;
     font-size: 12px;
     border-radius: 8px;
     margin-left: calc(50% - 120px);
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     line-height: 40px;
   }
 }

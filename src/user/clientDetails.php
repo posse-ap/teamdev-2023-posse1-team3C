@@ -219,10 +219,12 @@
     <div class="access">
       <a href="./register.php?company_id=<?php echo $company_details["id"]?>">
         <button class="access-btn">
+        <i class="fa-regular fa-pen-to-square"></i>
           <span class="access-btn-text">
-            申し込みする
+            申し込みは
+            <br>
+            コチラ
           </span>
-          <i class="fa-solid fa-caret-right"></i>
         </button>
       </a>
     </div>
