@@ -60,8 +60,8 @@ header {
   height: 35px;
 }
 .menubar-link-content {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 .menubar-link-content:hover {
   background-color: #1E5C9E;
@@ -132,8 +132,8 @@ footer {
     display: none;
   }
   .menubar-link-content {
-    margin-left: 9px;
-    margin-right: 9px;
+    margin-left: 3px;
+    margin-right: 3px;
   }
   /* フッター */
   footer {
