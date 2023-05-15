@@ -766,6 +766,9 @@ main {
 }
 /* レスポンシブ */
 @media screen and (max-width: 768px) {
+  main {
+    margin-top: 60px;
+  }
   .toppage-hero {
     width: 100%;
     height: 300px;
