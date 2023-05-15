@@ -16,7 +16,7 @@ main {
   color: #fff;
   margin: 0;
   position: absolute;
-  bottom: 200px;
+  bottom: 50%;
   right: 6%;
   font-size: 40px;
   transform: rotate(-13deg);
@@ -36,7 +36,7 @@ main {
   position: relative;
   cursor: pointer;
   position: fixed;
-  top: 600px;
+  bottom: 14vh;
   z-index: 70;
 }
 .btn-search-for-agent button i {

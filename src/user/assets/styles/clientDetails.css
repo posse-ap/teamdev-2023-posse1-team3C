@@ -1,3 +1,6 @@
+body {
+  position: relative;
+}
 /* メイン */
 main {
   margin-top: 60px;
@@ -18,9 +21,9 @@ main {
   margin: 0;
 }
 .agent-img {
-  width: 60%;
+  width: 50%;
   aspect-ratio: 5/3;
-  margin-left: 20%;
+  margin-left: 10%;
   padding-top: 40px;
   margin-bottom: 20px;
 }
@@ -228,6 +231,10 @@ main {
 /* リンク */
 .access {
   margin-top: 80px;
+  position: fixed;
+  top: 80px;
+  right: 10%;
+  z-index: 120;
 }
 .access-btn {
   width: 300px;
@@ -252,8 +259,13 @@ main {
   top: 15px;
   font-size: 20px;
 }
-.official {
+.official-site {
+  margin-top: 20px;
   margin-bottom: 80px;
+  position: fixed;
+  top: 220px;
+  right: 10%;
+  z-index: 120;
 }
 .official-site-btn {
   width: 300px;
