@@ -1,34 +1,18 @@
 <?php
   include_once('../../../../dbconnect.php');
-  
-  // $s_graduated = $_POST['s_graduated'];
-  // $s_support = $_POST['s_support'];
-  // $s_area = $_POST['s_area'];
-  $tag = $_POST['tag'];
+  $tags = $_POST['tag'];
+  print_r($tags);
 
-  var_dump($tag);
 
+  $tagArrays = array_filter(explode(',', $tags));
+  print_r($tagArrays);
   $string = 'where 1=1';
-  // where句の中身を作るための関数
-  if ($s_graduated !== ""){
-    $string .= ' and '.'tag_id ='.$s_graduated;
-  }
-  if ($s_support !== ""){
-    $string .= ' and '.'tag_id ='.$s_support;
-  }
-  if ($s_area !== ""){
-    $string .= ' and '.'tag_id ='.$s_area;
-  }
-
   global $string;
-  $tags = (array) $tag;
-  foreach ($tags as $tag) {
-    $string .= ' and '.'tag_id ='.$tag;
+  foreach ($tagArrays as $key => $value) {
+    $string .= ' and '.'tag_id ='.$value;
   }
   var_dump($string);
 
-// where_string($yourarea, 'a.area');
-// var_dump($string);
 
   $sql_companies = "SELECT c.id,c.company,c.URL,cd.photo,ra.people,ra.support,ra.achievement,ra.speed,ra.amount FROM `Companies` as c 
   LEFT OUTER JOIN CompaniesDetails as cd ON cd.detail_id = c.id
