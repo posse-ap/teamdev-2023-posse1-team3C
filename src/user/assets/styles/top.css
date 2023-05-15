@@ -30,7 +30,7 @@ main {
   color: #fff;
   margin: 0;
   position: absolute;
-  bottom: 20%;
+  bottom: 30%;
   right: 6%;
   font-size: 40px;
   transform: rotate(-13deg);
@@ -1037,6 +1037,9 @@ main {
     padding-bottom: 20px;
   }
   /* ポップ(1ページ目) */
+  .pop-1 {
+    bottom: -60px;
+  }
   .pop-area-1 {
     top: calc(50% - 200px);
     left: 10%;
@@ -1083,6 +1086,9 @@ main {
     right: 6px;
   }
   /* ポップ(2ページ目) */
+  .pop-2 {
+    bottom: -60px;
+  }
   .pop-area-2 {
     top: calc(50% - 200px);
     left: 10%;
@@ -1129,6 +1135,9 @@ main {
     right: 6px;
   }
   /* ポップ(3ページ目) */
+  .pop-3 {
+    bottom: -60px;
+  }
   .pop-area-3 {
     top: calc(50% - 200px);
     left: 10%;
