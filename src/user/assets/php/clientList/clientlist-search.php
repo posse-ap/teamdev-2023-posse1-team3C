@@ -3,43 +3,37 @@ include_once('../../../../dbconnect.php');
 $tags = $_POST['tag'];
 print_r($tags);
 
-
+print_r('aaa----------
+');
 $tagArrays = array_filter(explode(',', $tags));
-print_r($tagArrays);
-$string = 'where 1=1';
-global $string;
-$flag = true;
-foreach ($tagArrays as $key => $value) {
-  if ($flag) {
-    $string .= ' and ' . 'tag_id =' . $value;
-    $flag = false;
-  }
-  $string .= ' or ' . 'tag_id =' . $value;
-}
-var_dump($string);
+var_dump($tagArrays);
 
+$str = '[' . implode(',', $tagArrays) . ']';
+var_dump($str);
 
+$placeholders = implode(',', array_fill(0, count($tagArrays), '?'));
+var_dump($placeholders);
 // 企業一覧に必要なデータをCompaniesTagsLinksから取得
-$sql_companies = "SELECT c.id, c.company, c.URL, cd.photo, ra.people,ra.support,ra.achievement,ra.speed,ra.amount ,t.id as tag_id FROM `CompaniesTagsLink` as ctl left outer JOIN CompaniesDetails as cd ON cd.detail_id = ctl.company_id  LEFT OUTER JOIN `Ratings` as ra ON ra.Rating_id = ctl.company_id LEFT OUTER JOIN  `Companies` as c ON ctl.company_id = c.id LEFT OUTER JOIN `Tags` as t ON t.id = ctl.tag_id $string GROUP BY c.id
-  HAVING COUNT(*) >= " . count($tagArrays) . "";
+$sql_companies =  "SELECT c.id, c.company, c.URL, MAX(cd.photo) as photo, ra.people, ra.support, ra.achievement, ra.speed, ra.amount, t.id as tag_id
+FROM `CompaniesTagsLink` as ctl
+LEFT OUTER JOIN CompaniesDetails as cd ON cd.detail_id = ctl.company_id
+LEFT OUTER JOIN `Ratings` as ra ON ra.Rating_id = ctl.company_id
+LEFT OUTER JOIN `Companies` as c ON ctl.company_id = c.id
+LEFT OUTER JOIN `Tags` as t ON t.id = ctl.tag_id
+WHERE ctl.tag_id IN ($placeholders)
+GROUP BY c.id, c.company, c.URL, ra.people, ra.support, ra.achievement, ra.speed, ra.amount, t.id
+HAVING COUNT(DISTINCT ctl.tag_id) = " . count($tagArrays);
+var_dump($sql_companies);
+
 $stmt = $dbh->prepare($sql_companies);
-$stmt->execute();
-$companies = $stmt->fetchALl(PDO::FETCH_ASSOC);
+$stmt->execute($tagArrays);
+$companies = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 // echo "<pre>";
 // print_r($companies);
 // echo "</pre>";
 
-// 推しポイントを取得
-$sql_goodPoints = "SELECT * from `GoodPoints`";
-$stmt = $dbh->prepare($sql_goodPoints);
-$stmt->execute();
-$goodPoints = $stmt->fetchAll(PDO::FETCH_ASSOC);
-// 推しポイントを企業ごとに分ける
-foreach ($goodPoints as $key => $goodPoint) {
-  $index = array_search($goodPoint["company_id"], array_column($companies, 'id'));
-  print_r($index);
-  $companies[$index]["GoodPointLink"][] = $goodPoint;
-}
+
 // echo "<pre>";
 // print_r($goodPoints);
 // echo "</pre>";
@@ -63,9 +57,11 @@ foreach ($goodPoints as $key => $goodPoint) {
 // print_r($filterCompanies);
 // echo "</pre>";
 $data = '';
-
+$i = 0;
 
 foreach ($companies as $company) {
+
+  var_dump($i);
   $company_id = $company['id'];
   include('clientlist-point2.php');
   $data .= '<div class="clientlist">
@@ -105,8 +101,13 @@ foreach ($companies as $company) {
         <h4 class="list-sub-point-title">ポイント</h4>
         <ul>
           <!-- それぞれ個数が違うためforeachで出力 -->';
-  for ($i = 0; $i < count($company["GoodPointLink"]); $i++) {
-    $data .= '<li class="list-sub-point-item">' . $company["GoodPointLink"][$i]["GoodPoint"] . '</li>';
+          $sql_points = $dbh->prepare("SELECT * FROM `GoodPoints` WHERE company_id = :company_id");
+          $sql_points->bindValue(':company_id', $company_id);
+          $sql_points->execute();
+          $points_data = $sql_points->fetchAll(PDO::FETCH_ASSOC);
+  foreach ($points_data as $point){
+    $data .= '<li class="list-sub-point-item">' . $point['GoodPoint'] . '</li>';
+
   }
 
   $data .= '</ul>
@@ -130,5 +131,7 @@ foreach ($companies as $company) {
     </div>
 </div>
 </div>';
+var_dump($i+1);
+
 }
 echo $data;
