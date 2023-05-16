@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="../admin/assets/styles/normalize.css">
 <link rel="stylesheet" href="../../dist/output.css">
-<link rel="stylesheet" href="../admin/assets/styles/top.css">
 <link rel="stylesheet" href="../admin/assets/styles/common.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
 

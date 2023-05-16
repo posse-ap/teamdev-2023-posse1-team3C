@@ -6,6 +6,7 @@ include(dirname(__FILE__) . '/components/head.php');
 ?>
 <title>admin画面トップページ</title>
 <?php include(dirname(__FILE__) . '/components/link.php')?>
+<link rel="stylesheet" href="../admin/assets/styles/top.css">
 </head>
 
 <body>
@@ -15,6 +16,7 @@ include(dirname(__FILE__) . '/components/head.php');
     <!-- sidebar読み込み -->
     <?php include(dirname(__FILE__) . '/components/sidebar.php'); ?>
     <main class="pt-20">
+      <h2 class="w-4/5 text-center page-title">Dashboard</h2>
       <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">

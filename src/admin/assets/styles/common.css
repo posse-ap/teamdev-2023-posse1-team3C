@@ -1,6 +1,24 @@
 body {
   background-color: #F6F6F6;
 }
+.header-title {
+  left: 45%;
+}
+main {
+  padding-left: 223px;
+}
+form {
+  width: 95%;
+}
+.inactive {
+  cursor: pointer;
+  pointer-events: none;
+  opacity: 0.3;
+}
+#remember:checked ~ .registerButton {
+  pointer-events: auto;
+  opacity: 1;
+}
 #logo-sidebar {
   background-color: #0060AF;
 }

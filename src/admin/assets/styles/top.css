@@ -1,23 +1,17 @@
-.header-title {
-  left: 45%;
+/* ページタイトル */
+.page-title {
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 20px;
+  margin-bottom: 40px;
+  position: relative;
 }
-main {
-  padding-left: 223px;
-}
-
-form {
-  width: 95%;
-}
-
-
-
-.inactive {
-  cursor: pointer;
-  pointer-events: none;
-  opacity: 0.3;
-}
-
-#remember:checked ~ .registerButton {
-  pointer-events: auto;
-  opacity: 1;
+.page-title::before{
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 40px);
+  width: 80px;
+  height: 2px;
+  background-color: black;
 }
