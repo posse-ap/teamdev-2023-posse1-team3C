@@ -42,7 +42,7 @@ main {
 }
 .title{
   margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .fa-solid{
   display: inline;
@@ -118,6 +118,7 @@ main {
 /* サポート形態 */
 .support h4 {
   margin-left: 40px;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 .support-wrapper {
@@ -145,6 +146,7 @@ main {
 /* お住まいの地域 */
 .your-area h4 {
   margin-left: 40px;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 .your-area-wrapper {
@@ -258,8 +260,8 @@ label {
   padding-right: 10px;
   border-radius: 15px;
   font-size: 13px;
-  width: 68px;
   user-select: none;
+  width: 80px;
 }
 .agent-type .checkbox-fontas {
   font-size: 16px;

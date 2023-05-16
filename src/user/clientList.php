@@ -129,8 +129,7 @@
           </li>
           <li class="y-box-item">
             <label for="y-box-item-5">
-              <input type="checkbox" name="your-area[]" id="y-box-item-5" class="
-              " value="11" type-data="s-area">
+              <input type="checkbox" name="your-area[]" id="y-box-item-5" class="checkbox" value="11" type-data="s-area">
               <span class="checkbox-fontas"></span>
               近畿
             </label>
