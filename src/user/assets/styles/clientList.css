@@ -342,12 +342,15 @@ h2::before {
   background-color: white;
   border-radius: 12px;
   text-align: center;
+  height: 120px;
+  padding-top: 10px;
 }
 .list-star-table{
   padding: 20px 2px;
   width: 240px;
   height: 15px;
-  margin: 10px 40px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 .clientlist-main {
   margin: 0;
@@ -607,6 +610,7 @@ a{
     background-color: white;
     border-radius: 12px;
     margin-top: 20px;
+    padding-top: 15px;
   }
   .list-star-table{
     padding: 20px 2px;
