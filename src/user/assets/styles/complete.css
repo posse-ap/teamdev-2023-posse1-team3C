@@ -26,12 +26,17 @@ main {
   text-align: center;
   margin-top: 40px;
 }
+.recommend {
+  text-align: center;
+  margin-top: 100px;
+  color: #699BF7;
+}
 .complete button {
-  width: 200px;
+  width: 240px;
   height: 40px;
   background-color: #fff;
-  margin-left: calc(50% - 100px);
-  margin-top: 100px;
+  margin-left: calc(50% - 120px);
+  margin-top: 20px;
   border-radius: 5px;
   border-color: #2b7aba;
   cursor: pointer;
@@ -43,4 +48,13 @@ main {
   color: #2b7aba;
   text-align: center;
   margin: 0;
+}
+@media screen and (max-width:768px) {
+  main {
+    margin-top: 0;
+  }
+  .recommend {
+    margin-top: 80px;
+    font-size: 14px;
+  }
 }

@@ -13,6 +13,7 @@
 <body>
   <!-- ヘッダー -->
   <?php include_once('components/header.php')?>
+  <?php include_once('components/menubar.php')?>
   <main>
     <div class="complete">
       <h2>
@@ -24,10 +25,13 @@
       <h3>
         申し込みが完了しました
       </h3>
-      <a href="./index.php">
+      <p class="recommend">
+        \多くの学生が複数のエージェントを利用しています/
+      </p>
+      <a href="./clientList.php">
         <button>
           <p>
-            トップページに戻る
+            他のエージェントも見てみる
           </p>
         </button>
       </a>
