@@ -15,7 +15,7 @@ include(dirname(__FILE__) . '/components/head.php');
 <?php } ?>
 </head>
 
-<body class="bg-gray-300">
+<body>
   <!-- header読み込み -->
   <?php include(dirname(__FILE__) . '/components/header.php'); ?>
   <div class="wrapper">
