@@ -159,7 +159,7 @@ include(dirname(__FILE__) . '/components/head.php');
             </div>
           </div>
           <!-- 詳細情報 -->
-          <h4 class="w-4/5 info-details">詳細情報</h4>
+          <h5 class="w-4/5">詳細情報</h5>
           <div>
             <div class="mb-6">
               <label for="formType" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">お問い合わせ形態</label>
@@ -185,129 +185,137 @@ include(dirname(__FILE__) . '/components/head.php');
               <label for="search" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">業界研究</label>
               <input type="text" id="search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="search">
             </div>
-            <div class="flex gap-5 justify-end">
-              <label for="ES" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ES添削</label>
-              <select id="ES" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="ES">
+            <div class="flex gap-5 justify-end info-details-content">
+              <label for="ES" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white info-details-title">ES添削</label>
+              <select id="ES" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 info-details-input" name="ES">
                 <option selected></option>
                 <option value="あり">あり</option>
                 <option value="なし">なし</option>
               </select>
             </div>
-            <div class="flex gap-5 justify-end">
-              <label for="practice" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">面接練習</label>
-              <select id="practice" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="practice">
+            <div class="flex gap-5 justify-end info-details-content">
+              <label for="practice" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white info-details-title">面接練習</label>
+              <select id="practice" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 info-details-input" name="practice">
                 <option selected></option>
                 <option value="あり">あり</option>
                 <option value="なし">なし</option>
               </select>
             </div>
-            <div class="flex gap-5 justify-end">
-              <label for="seminar" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">セミナー・企業説明会</label>
-              <select id="seminar" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="seminar">
+            <div class="flex gap-5 justify-end info-details-content">
+              <label for="seminar" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white info-details-title">セミナー・企業説明会</label>
+              <select id="seminar" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 info-details-input" name="seminar">
                 <option selected></option>
                 <option value="あり">あり</option>
                 <option value="なし">なし</option>
               </select>
             </div>
-            <div class="flex gap-5 justify-end">
-              <label for="community" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">就活コミュニティ</label>
-              <select id="community" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="community">
+            <div class="flex gap-5 justify-end info-details-content">
+              <label for="community" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white info-details-title">就活コミュニティ</label>
+              <select id="community" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 info-details-input" name="community">
                 <option selected></option>
                 <option value="あり">あり</option>
                 <option value="なし">なし</option>
               </select>
             </div>
-            <div class="flex gap-5 justify-end">
-              <label for="specialChoose" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">特別選考</label>
-              <select id="specialChoose" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="specialChoose">
+            <div class="flex gap-5 justify-end info-details-content">
+              <label for="specialChoose" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white info-details-title">特別選考</label>
+              <select id="specialChoose" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 info-details-input" name="specialChoose">
                 <option selected></option>
                 <option value="あり">あり</option>
                 <option value="なし">なし</option>
               </select>
             </div>
-            <div class="mb-6">
+            <div class="mb-6 support-container">
               <label for="supportType" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">サポート形態</label>
               <input type="text" id="supportType" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="supportType">
             </div>
-            <div>
+            <div class="area-container">
+              <div class="area-container-title">
               対応地域
-              <ul class="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
-                  <div class="flex items-center pl-3">
-                    <input id="hokkaidou" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500 " value="1" name="Areas[]">
-                    <label for="hokkaidou" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">北海道</label>
-                  </div>
-                </li>
-                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
-                  <div class="flex items-center pl-3">
-                    <input id="touhoku" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="2" name="Areas[]">
-                    <label for="touhoku" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">東北</label>
-                  </div>
-                </li>
-                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
-                  <div class="flex items-center pl-3">
-                    <input id="kantou" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="3" name="Areas[]">
-                    <label for="kantou" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">関東</label>
-                  </div>
-                </li>
-                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
-                  <div class="flex items-center pl-3">
-                    <input id="chuubu" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="4" name="Areas[]">
-                    <label for="chuubu" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">中部</label>
-                  </div>
-                </li>
-                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
-                  <div class="flex items-center pl-3">
-                    <input id="kinki" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="5" name="Areas[]">
-                    <label for="kinki" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">近畿</label>
-                  </div>
-                </li>
-                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
-                  <div class="flex items-center pl-3">
-                    <input id="chuugoku" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="6" name="Areas[]">
-                    <label for="chuugoku" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">中国</label>
-                  </div>
-                </li>
-                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
-                  <div class="flex items-center pl-3">
-                    <input id="sikoku" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="7" name="Areas[]">
-                    <label for="sikoku" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">四国</label>
-                  </div>
-                </li>
-                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
-                  <div class="flex items-center pl-3">
-                    <input id="kyuusyuu" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="8" name="Areas[]">
-                    <label for="kyuusyuu" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">九州</label>
-                  </div>
-                </li>
-              </ul>
+              </div>
+              <div class="area-list">
+                <ul class="sm:flex area-list-1">
+                  <li class="w-full area-list-1-item">
+                    <div class="flex items-center pl-3">
+                      <input id="hokkaidou" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="1" name="Areas[]">
+                      <label for="hokkaidou" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">北海道</label>
+                    </div>
+                  </li>
+                  <li class="w-full area-list-1-item">
+                    <div class="flex items-center pl-3">
+                      <input id="touhoku" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="2" name="Areas[]">
+                      <label for="touhoku" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">東北</label>
+                    </div>
+                  </li>
+                  <li class="w-full area-list-1-item">
+                    <div class="flex items-center pl-3">
+                      <input id="kantou" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="3" name="Areas[]">
+                      <label for="kantou" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">関東</label>
+                    </div>
+                  </li>
+                  <li class="w-full area-list-1-item">
+                    <div class="flex items-center pl-3">
+                      <input id="chuubu" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="4" name="Areas[]">
+                      <label for="chuubu" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">中部</label>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="sm:flex area-list-2">
+                  <li class="w-full area-list-2-item">
+                    <div class="flex items-center pl-3">
+                      <input id="kinki" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="5" name="Areas[]">
+                      <label for="kinki" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">近畿</label>
+                    </div>
+                  </li>
+                  <li class="w-full area-list-2-item">
+                    <div class="flex items-center pl-3">
+                      <input id="chuugoku" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="6" name="Areas[]">
+                      <label for="chuugoku" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">中国</label>
+                    </div>
+                  </li>
+                  <li class="w-full area-list-2-item">
+                    <div class="flex items-center pl-3">
+                      <input id="sikoku" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="7" name="Areas[]">
+                      <label for="sikoku" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">四国</label>
+                    </div>
+                  </li>
+                  <li class="w-full area-list-2-item">
+                    <div class="flex items-center pl-3">
+                      <input id="kyuusyuu" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="8" name="Areas[]">
+                      <label for="kyuusyuu" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">九州</label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="mb-6">
               <label for="Date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">対応可能時間</label>
               <input type="text" id="Date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="Date">
             </div>
-            <div>
+            <div class="year-container">
+              <div class="year-container-title">
               対応卒業年度
-              <ul class="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+              </div>
+              <ul class="sm:flex year-list">
+                <li class="w-full year-list-item">
                   <div class="flex items-center pl-3">
                     <input id="24" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="1" name="graduated_years[]">
                     <label for="24" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">24卒</label>
                   </div>
                 </li>
-                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+                <li class="w-full year-list-item">
                   <div class="flex items-center pl-3">
                     <input id="25" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="2" name="graduated_years[]">
                     <label for="25" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">25卒</label>
                   </div>
                 </li>
-                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+                <li class="w-full year-list-item">
                   <div class="flex items-center pl-3">
                     <input id="26" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="3" name="graduated_years[]">
                     <label for="26" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">26卒</label>
                   </div>
                 </li>
-                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+                <li class="w-full year-list-item">
                   <div class="flex items-center pl-3">
                     <input id="27" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="4" name="graduated_years[]">
                     <label for="27" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">27卒</label>
@@ -322,53 +330,56 @@ include(dirname(__FILE__) . '/components/head.php');
           </div>
           <!-- サクセスストーリー -->
           <div>
-            <h3>サクセスストーリ</h3>
+            <h5>サクセスストーリー</h5>
+            <h6>1人目</h6>
             <div class="mb-8">
-              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="successFirst">写真を選択してください</label>
+              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content" for="successFirst">写真を選択してください</label>
               <input name="successFirstImage" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="successFirst" type="file">
-              <label for="successFirstTime" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">内定までにかかった時間</label>
+              <label for="successFirstTime" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content">内定までにかかった時間</label>
               <input type="text" id="successFirstTime" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successFirstTime">
-              <label for="successFirstUniversity" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">大学名</label>
+              <label for="successFirstUniversity" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content">大学名</label>
               <input type="text" id="successFirstUniversity" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successFirstUniversity">
-              <label for="successFirstName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">名前</label>
+              <label for="successFirstName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content">名前</label>
               <input type="text" id="successFirstName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successFirstName">
-              <label for="successFirstTitle" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">見出し</label>
+              <label for="successFirstTitle" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content">見出し</label>
               <input type="text" id="successFirstTitle" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successFirstTitle">
-              <label for="successFirstStory" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">詳細説明</label>
+              <label for="successFirstStory" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content">詳細説明</label>
               <textarea id="successFirstStory" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..." name="successFirstStory"></textarea>
             </div>
+            <h6>2人目</h6>
             <div class="mb-8">
-              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="successSecond">写真を選択してください</label>
+              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content" for="successSecond">写真を選択してください</label>
               <input name="successSecondImage" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="successSecond" type="file">
-              <label for="successSecondTime" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">内定までにかかった時間</label>
+              <label for="successSecondTime" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content">内定までにかかった時間</label>
               <input type="text" id="successSecondTime" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successSecondTime">
-              <label for="successSecondUniversity" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">大学名</label>
+              <label for="successSecondUniversity" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content">大学名</label>
               <input type="text" id="successSecondUniversity" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successSecondUniversity">
-              <label for="successSecondName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">名前</label>
+              <label for="successSecondName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content">名前</label>
               <input type="text" id="successSecondName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successSecondName">
-              <label for="successSecondTitle" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">見出し</label>
+              <label for="successSecondTitle" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content">見出し</label>
               <input type="text" id="successSecondTitle" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successSecondTitle">
-              <label for="successSecondStory" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">詳細説明</label>
+              <label for="successSecondStory" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content">詳細説明</label>
               <textarea id="successSecondStory" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..." name="successSecondStory"></textarea>
             </div>
+            <h6>3人目</h6>
             <div class="mb-8">
-              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="successThird">写真を選択してください</label>
+              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content success-content" for="successThird">写真を選択してください</label>
               <input name="successThirdImage" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="successThird" type="file">
-              <label for="successThirdTime" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">内定までにかかった時間</label>
+              <label for="successThirdTime" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content">内定までにかかった時間</label>
               <input type="text" id="successThirdTime" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successThirdTime">
-              <label for="successThirdUniversity" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">大学名</label>
+              <label for="successThirdUniversity" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content">大学名</label>
               <input type="text" id="successThirdUniversity" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successThirdUniversity">
-              <label for="successThirdName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">名前</label>
+              <label for="successThirdName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content">名前</label>
               <input type="text" id="successThirdName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successThirdName">
-              <label for="successThirdTitle" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">見出し</label>
+              <label for="successThirdTitle" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content">見出し</label>
               <input type="text" id="successThirdTitle" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successThirdTitle">
-              <label for="successThirdStory" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">詳細説明</label>
+              <label for="successThirdStory" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content">詳細説明</label>
               <textarea id="successThirdStory" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..." name="successThirdStory"></textarea>
             </div>
           </div>
           <!-- 推しポイント -->
           <div>
-            <h3>推しポイント</h3>
+            <h5>推しポイント</h5>
             <div class="mb-6">
               <label for="goodPointFirst" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">推しポイント1</label>
               <input type="text" id="goodPointFirst" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="goodPoints[]">
@@ -384,12 +395,12 @@ include(dirname(__FILE__) . '/components/head.php');
           </div>
         </section>
         <!-- 登録ボタン -->
-        <section class="mx-4">
+        <section class="mx-4 btn-register">
           <div class="flex items-start mb-6">
             <div class="flex items-center h-5">
               <input id="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required>
               <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">誤りが無いことを確認しました。</label>
-              <button type="submit" name="registerButton" class= "inactive text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 registerButton inactive">Submit</button>
+              <button type="submit" name="registerButton" class= "inactive text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 registerButton inactive">送信</button>
             </div>
           </div>
         </section>
