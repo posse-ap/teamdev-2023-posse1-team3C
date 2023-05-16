@@ -13,7 +13,7 @@
   <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous" defer></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
   <script src="./assets/scripts/clientList/clientList.js" defer></script>
-  <script src="./assets/scripts/clientList/clientList-search.js" defer></script>
+
 </head>
 <body>
   <!-- ヘッダー読み込み -->
@@ -364,6 +364,6 @@
   </main>
   <!-- フッター -->
   <?php include_once('components/footer.php')?>
-
+  <script src="./assets/scripts/clientList/clientList-search.js" ></script>
 </body>
 </html>

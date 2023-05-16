@@ -102,30 +102,30 @@ const params = new URLSearchParams(queryString);
 
 // graduateの値を取得
 const graduateValues = params.getAll('graduate[]');
-
+console.log(graduateValues);
 // supportの値を取得
 const supportValues = params.getAll('support[]');
-
+console.log(supportValues);
 // your-areaの値を取得
 const yourAreaValues = params.getAll('your-area[]');
-
+console.log(yourAreaValues);
 // チェックボックスにチェックを付ける
 graduateValues.forEach(value => {
-  const checkbox = document.querySelector(`input[name="graduate[]"][value="${value}"]`);
+  const checkbox = document.querySelectorAll(`input[name="graduate[]"][value="${value}"]`);
   if (checkbox) {
     checkbox.checked = true;
   }
 });
 
 supportValues.forEach(value => {
-  const checkbox = document.querySelector(`input[name="support[]"][value="${value}"]`);
+  const checkbox = document.querySelectorAll(`input[name="support[]"][value="${value}"]`);
   if (checkbox) {
     checkbox.checked = true;
   }
 });
 
 yourAreaValues.forEach(value => {
-  const checkbox = document.querySelector(`input[name="your-area[]"][value="${value}"]`);
+  const checkbox = document.querySelectorAll(`input[name="your-area[]"][value="${value}"]`);
   if (checkbox) {
     checkbox.checked = true;
   }

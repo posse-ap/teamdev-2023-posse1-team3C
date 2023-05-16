@@ -1,4 +1,4 @@
-// const { check } = require("prettier");
+
 
 const checkboxes = document.querySelectorAll('.checkbox');
 const checkbox = document.querySelector('.checkbox');
@@ -11,12 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 checkboxes.forEach((checkbox) => {
   checkbox.addEventListener('click', () => {
-     // チェックボックスのクリックごとに `tag` をリセットする
-    // if(!tag.includes(checkbox.value)){
-    // tag.push(checkbox.value);
-    // } else {
-    //   tag = tag.filter(item => item !== checkbox.value);
-    // }
     if (checkbox.value >= 1 && checkbox.value <= 3 && tag[0].includes(checkbox.value)) {
       tag[0].splice(0, tag[0].length)
     } else if (checkbox.value >= 1 && checkbox.value <= 3 && !tag.includes(checkbox.value)) {
@@ -54,6 +48,24 @@ checkboxes.forEach((checkbox) => {
       counts[j].innerHTML = new_element;
   }
 
+    // 現在のURLからクエリパラメータを取得
+const queryString = window.location.search;
+// クエリパラメータの文字列を解析してオブジェクトに変換
+const paramator = new URLSearchParams(queryString);
+// クエリパラメータの値を配列に格納
+const values = [
+  [paramator.get("graduate")],
+  [paramator.get("support")],
+  [paramator.get("your-area")],
+  []
+];
+
+
+
+console.log(values);
+if(values.length > 0 && tag.length > 0) {
+  tag = values;
+}
     console.log(tag)
     let list = document.getElementById('client-list');
     let xhr = new XMLHttpRequest();
@@ -86,3 +98,6 @@ checkboxes.forEach((checkbox) => {
 
   });
   });
+
+
+
