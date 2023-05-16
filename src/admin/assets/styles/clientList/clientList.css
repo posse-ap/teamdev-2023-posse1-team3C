@@ -1,0 +1,26 @@
+/* ページタイトル */
+.page-title {
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 40px;
+  margin-bottom: 60px;
+  position: relative;
+}
+.page-title::before{
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 40px);
+  width: 80px;
+  height: 2px;
+  background-color: black;
+}
+/* テーブル */
+.client-info-table {
+  width: 840px;
+  margin-left: 10%;
+  margin-bottom: 40px;
+}
+.client-info-table-title {
+  background-color: #DEECEF;
+}
