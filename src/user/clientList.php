@@ -7,11 +7,12 @@
   <title>CRAFT 企業一覧ページ</title>
   <link rel="stylesheet" href="./assets/styles/normalize.css">
   <link rel="stylesheet" href="./assets/styles/common.css">
+  <link rel="stylesheet" href="../dist/output.css">
   <link rel="stylesheet" href="./assets/styles/clientList.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous" defer></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
-  <!-- <script src="./assets/scripts/clientList/clientList.js" defer></script> -->
+  <script src="./assets/scripts/clientList/clientList.js" defer></script>
 </head>
 <body>
   <!-- ヘッダー読み込み -->
@@ -44,21 +45,21 @@
           <li class="g-box-item">
             <label for="g-box-item-1">
               <input type="checkbox" name="graduate[]" id="g-box-item-1"
-              class="checkbox" value="25卒">
+              class="checkbox" value="1" type-data="s-graduated">
               <span class="checkbox-fontas"></span>
               25卒
             </label>
           </li>
           <li class="g-box-item">
             <label for="g-box-item-2">
-              <input type="checkbox" name="graduate[]" id="g-box-item-2" class="checkbox" value="26卒">
+              <input type="checkbox" name="graduate[]" id="g-box-item-2" class="checkbox" value="2" type-data="s-graduated">
               <span class="checkbox-fontas"></span>
               26卒
             </label>
           </li>
           <li class="g-box-item">
             <label for="g-box-item-3">
-              <input type="checkbox" name="graduate[]" id="g-box-item-3" class="checkbox" value="27卒">
+              <input type="checkbox" name="graduate[]" id="g-box-item-3" class="checkbox" value="3" type-data="s-graduated">
               <span class="checkbox-fontas"></span>
               27卒
             </label>
@@ -72,21 +73,21 @@
         <ul class="s-box">
           <li class="s-box-item">
             <label for="s-box-item-1">
-              <input type="checkbox" name="support[]" id="s-box-item-1" class="checkbox" value="オンラインのみ">
+              <input type="checkbox" name="support[]" id="s-box-item-1" class="checkbox" value="4" type-data="s-support">
               <span class="checkbox-fontas"></span>
               オンラインのみ
             </label>
           </li>
           <li class="s-box-item">
             <label for="s-box-item-2">
-              <input type="checkbox" name="support[]" id="s-box-item-2" class="checkbox" value="対面のみ">
+              <input type="checkbox" name="support[]" id="s-box-item-2" class="checkbox" value="5" type-data="s-support">
               <span class="checkbox-fontas"></span>
               対面のみ
             </label>
           </li>
           <li class="s-box-item">
             <label for="s-box-item-3">
-              <input type="checkbox" name="support[]" id="s-box-item-3" class="checkbox" value="両方可">
+              <input type="checkbox" name="support[]" id="s-box-item-3" class="checkbox" value="6" type-data="s-support">
               <span class="checkbox-fontas"></span>
               両方可
             </label>
@@ -99,56 +100,57 @@
         <ul class="y-box">
           <li class="y-box-item">
             <label for="y-box-item-1">
-              <input type="checkbox" name="your-area[]" id="y-box-item-1" class="checkbox" value="北海道">
+              <input type="checkbox" name="your-area[]" id="y-box-item-1" class="checkbox" value="7" type-data="s-area">
               <span class="checkbox-fontas"></span>
               北海道
             </label>
           </li>
           <li class="y-box-item">
             <label for="y-box-item-2">
-              <input type="checkbox" name="your-area[]" id="y-box-item-2" class="checkbox" value="東北">
-              <span class="checkbox-fontas"></span>
+              <input type="checkbox" name="your-area[]" id="y-box-item-2" class="checkbox" value="8">
+              <span class="checkbox-fontas" type-data="s-area"></span>
               東北
             </label>
           </li>
           <li class="y-box-item">
             <label for="y-box-item-3">
-              <input type="checkbox" name="your-area[]" id="y-box-item-3" class="checkbox" value="関東">
-              <span class="checkbox-fontas"></span>
+              <input type="checkbox" name="your-area[]" id="y-box-item-3" class="checkbox" value="9" type-data="s-area">
+              <span class="checkbox-fontas" ></span>
               関東
             </label>
           </li>
           <li class="y-box-item">
             <label for="y-box-item-4">
-              <input type="checkbox" name="your-area[]" id="y-box-item-4" class="checkbox" value="中部">
+              <input type="checkbox" name="your-area[]" id="y-box-item-4" class="checkbox" value="10" type-data="s-area">
               <span class="checkbox-fontas"></span>
               中部
             </label>
           </li>
           <li class="y-box-item">
             <label for="y-box-item-5">
-              <input type="checkbox" name="your-area[]" id="y-box-item-5" class="checkbox" value="近畿">
+              <input type="checkbox" name="your-area[]" id="y-box-item-5" class="
+              " value="11" type-data="s-area">
               <span class="checkbox-fontas"></span>
               近畿
             </label>
           </li>
           <li class="y-box-item">
             <label for="y-box-item-6">
-              <input type="checkbox" name="your-area[]" id="y-box-item-6" class="checkbox" value="中国">
+              <input type="checkbox" name="your-area[]" id="y-box-item-6" class="checkbox" value="12" type-data="s-area">
               <span class="checkbox-fontas"></span>
               中国
             </label>
           </li>
           <li class="y-box-item">
             <label for="y-box-item-7">
-              <input type="checkbox" name="your-area[]" id="y-box-item-7" class="checkbox" value="四国">
+              <input type="checkbox" name="your-area[]" id="y-box-item-7" class="checkbox" value="13" type-data="s-area">
               <span class="checkbox-fontas"></span>
               四国
             </label>
           </li>
           <li class="y-box-item">
             <label for="y-box-item-8">
-              <input type="checkbox" name="your-area[]" id="y-box-item-8" class="checkbox" value="九州">
+              <input type="checkbox" name="your-area[]" id="y-box-item-8" class="checkbox" value="14" type-data="s-area">
               <span class="checkbox-fontas"></span>
               九州
             </label>
@@ -172,7 +174,7 @@
           <div class="agent-type-comprehensive-content">
               <label for="agent-type-1">
               <input type="checkbox" name="agent-type[]" id="agent-type-1"
-              class="checkbox" value="総合型">
+              class="checkbox" value="15">
               <span class="checkbox-fontas"></span>
               総合型
             </label>
@@ -184,7 +186,7 @@
             <li class="a-box-item">
               <label for="agent-type-2">
                 <input type="checkbox" name="agent-type[]" id="agent-type-2"
-                class="checkbox" value="営業">
+                class="checkbox" value="16">
                 <span class="checkbox-fontas"></span>
                 営業
               </label>
@@ -192,7 +194,7 @@
             <li class="a-box-item">
               <label for="agent-type-3">
                 <input type="checkbox" name="agent-type[]" id="agent-type-3"
-                class="checkbox" value="事務/アシスタント">
+                class="checkbox" value="17">
                 <span class="checkbox-fontas"></span>
                 事務/アシスタント
               </label>
@@ -200,7 +202,7 @@
             <li class="a-box-item">
               <label for="agent-type-4">
                 <input type="checkbox" name="agent-type[]" id="agent-type-4"
-                class="checkbox" value="企画/マーケティング">
+                class="checkbox" value="18">
                 <span class="checkbox-fontas"></span>
                 企画/マーケティング
               </label>
@@ -208,7 +210,7 @@
             <li class="a-box-item">
               <label for="agent-type-5">
                 <input type="checkbox" name="agent-type[]" id="agent-type-5"
-                class="checkbox" value="販売/サービス">
+                class="checkbox" value="19">
                 <span class="checkbox-fontas"></span>
                 販売/サービス
               </label>
@@ -216,7 +218,7 @@
             <li class="a-box-item">
               <label for="agent-type-6">
                 <input type="checkbox" name="agent-type[]" id="agent-type-6"
-                class="checkbox" value="IT/通信系エンジニア">
+                class="checkbox" value="20">
                 <span class="checkbox-fontas"></span>
                 IT/通信系エンジニア
               </label>
@@ -224,7 +226,7 @@
             <li class="a-box-item">
               <label for="agent-type-7">
                 <input type="checkbox" name="agent-type[]" id="agent-type-7"
-                class="checkbox" value="建築/土木系エンジニア">
+                class="checkbox" value="21">
                 <span class="checkbox-fontas"></span>
                 建築/土木系エンジニア
               </label>
@@ -232,7 +234,7 @@
             <li class="a-box-item">
               <label for="agent-type-8">
                 <input type="checkbox" name="agent-type[]" id="agent-type-8"
-                class="checkbox" value="モノづくり系エンジニア">
+                class="checkbox" value="22">
                 <span class="checkbox-fontas"></span>
                 モノづくり系エンジニア
               </label>
@@ -240,7 +242,7 @@
             <li class="a-box-item">
               <label for="agent-type-9">
                 <input type="checkbox" name="agent-type[]" id="agent-type-9"
-                class="checkbox" value="素材/化学/食品系エンジニア">
+                class="checkbox" value="23">
                 <span class="checkbox-fontas"></span>
                 素材/化学/食品系エンジニア
               </label>
@@ -248,7 +250,7 @@
             <li class="a-box-item">
               <label for="agent-type-10">
                 <input type="checkbox" name="agent-type[]" id="agent-type-10"
-                class="checkbox" value="医療系専門職">
+                class="checkbox" value="24">
                 <span class="checkbox-fontas"></span>
                 医療系専門職
               </label>
@@ -256,7 +258,7 @@
             <li class="a-box-item">
               <label for="agent-type-11">
                 <input type="checkbox" name="agent-type[]" id="agent-type-11"
-                class="checkbox" value="金融系専門職">
+                class="checkbox" value="25">
                 <span class="checkbox-fontas"></span>
                 金融系専門職
               </label>
@@ -264,7 +266,7 @@
             <li class="a-box-item">
               <label for="agent-type-12">
                 <input type="checkbox" name="agent-type[]" id="agent-type-12"
-                class="checkbox" value="コンサルタント/不動産専門職">
+                class="checkbox" value="26">
                 <span class="checkbox-fontas"></span>
                 コンサルタント/不動産専門職
               </label>
@@ -272,7 +274,7 @@
             <li class="a-box-item">
               <label for="agent-type-13">
                 <input type="checkbox" name="agent-type[]" id="agent-type-13"
-                class="checkbox" value="クリエイティブ">
+                class="checkbox" value="27">
                 <span class="checkbox-fontas"></span>
                 クリエイティブ
               </label>
@@ -284,7 +286,7 @@
   </div>
   <!-- 一覧 -->
   <h2>エージェント一覧</h2>
-  <div class="clientlist-wrapper">
+  <div class="clientlist-wrapper" id='client-list'>
     <!-- 企業ごとに情報出力 -->
     <?php foreach ($companies as $company){ ?>
       <?php $company_id = $company['id']; ?>
@@ -364,7 +366,8 @@
   <?php include_once('components/footer.php')?>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous"></script>
-  <script src="./assets/scripts/clientList/clientList.js"></script>
+  <script src="./assets/scripts/clientList/clientList.js" defer></script>
+  <script src="./assets/scripts/clientList/clientList-search.js" defer></script>
 
 </body>
 </html>
