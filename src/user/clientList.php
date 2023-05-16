@@ -13,11 +13,12 @@
   <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous" defer></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
   <script src="./assets/scripts/clientList/clientList.js" defer></script>
+  <script src="./assets/scripts/clientList/clientList-search.js" defer></script>
 </head>
 <body>
   <!-- ヘッダー読み込み -->
   <?php include_once('components/header.php')?>
-
+  <?php include_once('components/menubar.php')?>
   <main>
     <!-- データ持ってくるphpの読み込み -->
   <?php include_once('assets/php/clientList/clientList.php')?>
@@ -363,10 +364,6 @@
   </main>
   <!-- フッター -->
   <?php include_once('components/footer.php')?>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous"></script>
-  <script src="./assets/scripts/clientList/clientList.js" defer></script>
-  <script src="./assets/scripts/clientList/clientList-search.js" defer></script>
 
 </body>
 </html>

@@ -21,6 +21,7 @@
 <body>
   <!-- ヘッダー -->
   <?php include_once('components/header.php')?>
+  <?php include_once('components/menubar.php')?>
   <main>
     <!-- ヒーロー -->
     <div class="toppage-hero">
@@ -209,14 +210,6 @@
             </p>
           </div>
         </div>
-      </div>
-      <div class="btn-agent-list">
-        <a href="./clientList.php">
-          <button>
-            エージェント一覧ページ
-            <i class="fa-solid fa-caret-right"></i>
-          </button>
-        </a>
       </div>
     </div>
     <!-- 利用者の声 -->

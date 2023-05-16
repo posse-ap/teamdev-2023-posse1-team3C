@@ -24,6 +24,7 @@
 <body>
   <!-- ヘッダー -->
   <?php include_once('components/header.php') ?>
+  <?php include_once('components/menubar.php')?>
   <!-- メイン -->
   <main>
     <!-- エージェント企業名と画像 -->
@@ -219,15 +220,17 @@
     <div class="access">
       <a href="./register.php?company_id=<?php echo $company_details["id"]?>">
         <button class="access-btn">
+        <i class="fa-regular fa-pen-to-square"></i>
           <span class="access-btn-text">
-            申し込みする
+            申し込みは
+            <br>
+            コチラ
           </span>
-          <i class="fa-solid fa-caret-right"></i>
         </button>
       </a>
     </div>
     <div class="official-site">
-      <a href="">
+      <a href="" target="_blank">
         <button class="official-site-btn">
           <span class="official-site-btn-text">
             公式サイトへ
@@ -236,11 +239,17 @@
         </button>
       </a>
     </div>
+    <div class="favorite">
+      <button type="button" class="favorite-btn" value="">
+        <span class="favorite-btn-text">
+          お気に入りに追加
+        </span>
+      </button>
+    </div>
   </main>
   <!-- フッター -->
   <?php include_once('components/footer.php') ?>
   <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous"></script>
-  <script src="./assets/scripts/clientDetails/clientDetails.js"></script>
 </body>
 
 </html>
