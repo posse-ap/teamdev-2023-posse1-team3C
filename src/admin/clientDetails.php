@@ -5,6 +5,8 @@
 <?php
 include(dirname(__FILE__) . '/components/head.php');
 ?>
+<title>admin画面企業詳細ページ</title>
+<?php include(dirname(__FILE__) . '/components/link.php')?>
 <?php if (isset($passwordAlert)) { ?>
 
   <script>

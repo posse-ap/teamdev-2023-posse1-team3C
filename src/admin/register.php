@@ -2,16 +2,18 @@
 <?php
 include(dirname(__FILE__) . '/components/head.php');
 ?>
-
+<title>admin画面企業登録ページ</title>
+<?php include(dirname(__FILE__) . '/components/link.php')?>
+<link rel="stylesheet" href="./assets/styles/register/register.css">
 </head>
 
-<body class="bg-gray-300">
+<body>
   <!-- header読み込み -->
   <?php include(dirname(__FILE__) . '/components/header.php'); ?>
   <div class="wrapper">
     <!-- sidebar読み込み -->
     <?php include(dirname(__FILE__) . '/components/sidebar.php'); ?>
-    <main class="pt-20 max-w-4xl">
+    <main class="pt-20">
       <h3 class="w-4/5 text-center">企業登録</h3>
       <form action="./assets/php/register/register.php" method="POST" enctype="multipart/form-data">
         <!-- 基本情報登録 -->

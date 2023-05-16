@@ -4,7 +4,8 @@ include(dirname(__FILE__) . '/components/head.php');
 ?>
 <?php include('../dbconnect.php') ?>
 <?php include('./assets/php/clientList/studentDetails.php') ?>
-
+<title>admin画面学生詳細情報ページ</title>
+<?php include(dirname(__FILE__) . '/components/link.php')?>
 
 </head>
 

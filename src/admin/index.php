@@ -4,7 +4,8 @@
 <?php
 include(dirname(__FILE__) . '/components/head.php');
 ?>
-
+<title>admin画面トップページ</title>
+<?php include(dirname(__FILE__) . '/components/link.php')?>
 </head>
 
 <body class="bg-gray-300">
