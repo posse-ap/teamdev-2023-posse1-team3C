@@ -289,8 +289,8 @@ main {
 .favorite-btn {
   width: 300px;
   height: 50px;
-  background-color: #ddd;
-  color: #636363;
+  background-color: #fa4747;
+  color: #fff;
   font-size: 16px;
   font-weight: 700;
   border-radius: 10px;
@@ -303,8 +303,8 @@ main {
   margin-left: calc(50% - 150px);
 }
 .favorite-btn.active {
-  background-color: #fa4747;
-  color: #fff;
+  background-color: #ddd;
+  color: #636363;
 }
 /* レスポンシブ */
 @media screen and (max-width: 768px) {

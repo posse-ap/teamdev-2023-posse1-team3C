@@ -2,8 +2,8 @@
 .page-title {
   font-size: 20px;
   font-weight: 600;
-  padding-top: 20px;
-  margin-bottom: 40px;
+  padding-top: 40px;
+  margin-bottom: 60px;
   position: relative;
 }
 .page-title::before{
@@ -16,19 +16,11 @@
   background-color: black;
 }
 /* テーブル */
-.student-info-container {
+.client-info-table {
   width: 840px;
   margin-left: 10%;
   margin-bottom: 40px;
 }
-.student-info-container h3 {
-  font-size: 16px;
-  font-weight: 550;
-  margin-bottom: 15px;
-}
-.student-info-table-title {
+.client-info-table-title {
   background-color: #DEECEF;
-}
-.student-details-btn {
-  font-size: 12px;
 }
