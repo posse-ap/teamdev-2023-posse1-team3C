@@ -72,3 +72,59 @@
   font-weight: 550;
   width: 200px;
 }
+/* 登録学生情報 */
+.student-info-container {
+  width: 720px;
+  margin-left: calc(50% - 360px);
+  align-items: center;
+  margin-bottom: 40px;
+}
+.student-info-container h3 {
+  font-size: 16px;
+  font-weight: 550;
+  width: 400px;
+  margin-bottom: 20px;
+}
+.student-info-title {
+  padding-top: 15px;
+  font-size: 14px;
+}
+.month-select {
+  margin-left: 40px;
+}
+#month-btn {
+  margin-left: 40px;
+  background-color: #1A56DB;
+  color: #fff;
+}
+.student-info-container form {
+  margin-bottom: 40px;
+}
+.student-number {
+  font-size: 30px;
+  color: red;
+  font-weight: 550;
+  margin-bottom: 10px;
+}
+.invalid-student-number {
+  font-size: 24px;
+  font-weight: 550;
+  margin-bottom: 10px;
+}
+.student-info-table-title {
+  font-size: 16px;
+  font-weight: 550;
+  margin-bottom: 40px;
+  margin-left: calc(50% - 360px);
+}
+.student-table-title {
+  background-color: #DEECEF;
+}
+.student-table {
+  width: 800px;
+  margin-left: calc(50% - 360px);
+}
+.list-btn {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
