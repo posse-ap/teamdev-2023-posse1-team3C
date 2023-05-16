@@ -3,6 +3,13 @@
 const checkboxes = document.querySelectorAll('.checkbox');
 let tag = [[], [], [], []];
 
+
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    checkboxes.click();
+  })
+
 checkboxes.forEach((checkbox) => {
   checkbox.addEventListener('click', () => {
      // チェックボックスのクリックごとに `tag` をリセットする
