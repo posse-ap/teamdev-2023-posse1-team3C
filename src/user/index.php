@@ -41,6 +41,7 @@
   <div class="graduate">
     <h4>卒業年度</h4>
     <div class="graduate-wrapper">
+
       <ul class="g-box">
         <li class="g-box-item">
           <label for="g-box-item-1">

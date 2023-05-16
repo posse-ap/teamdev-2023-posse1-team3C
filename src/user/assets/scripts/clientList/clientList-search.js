@@ -1,14 +1,13 @@
 // const { check } = require("prettier");
 
 const checkboxes = document.querySelectorAll('.checkbox');
+const checkbox = document.querySelector('.checkbox');
 let tag = [[], [], [], []];
 
-
-
-
-  document.addEventListener('DOMContentLoaded', function() {
-    checkboxes.click();
-  })
+document.addEventListener('DOMContentLoaded', function() {
+    checkbox.click();
+    console.log('A');
+})
 
 checkboxes.forEach((checkbox) => {
   checkbox.addEventListener('click', () => {
