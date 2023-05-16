@@ -363,6 +363,7 @@ h3 {
   margin-left: 30px;
   margin-top: 15px;
   margin-bottom: 15px;
+  font-weight: 600;
 }
 th{
   font-size: 12px;
@@ -423,6 +424,7 @@ a{
   margin-bottom: 15px;
   border-left: #2E79BA solid 3px;
   padding-left: 10px;
+  font-weight: 600;
 }
 @media screen and (max-width:768px) {
   /* ヒーロー */
