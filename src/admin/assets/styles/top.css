@@ -15,3 +15,20 @@
   height: 2px;
   background-color: black;
 }
+/* テーブル */
+.student-info-container {
+  width: 840px;
+  margin-left: 10%;
+  margin-bottom: 40px;
+}
+.student-info-container h3 {
+  font-size: 16px;
+  font-weight: 550;
+  margin-bottom: 15px;
+}
+.student-info-table-title {
+  background-color: #DEECEF;
+}
+.student-details-btn {
+  font-size: 12px;
+}
