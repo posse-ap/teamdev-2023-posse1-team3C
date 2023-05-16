@@ -14,10 +14,11 @@ include(dirname(__FILE__) . '/components/head.php');
     <!-- sidebar読み込み -->
     <?php include(dirname(__FILE__) . '/components/sidebar.php'); ?>
     <main class="pt-20">
-      <h3 class="w-4/5 text-center">企業登録</h3>
+      <h3 class="w-4/5 text-center page-title">企業登録</h3>
+      <h4 class="w-4/5 text-center">基本情報登録</h4>
       <form action="./assets/php/register/register.php" method="POST" enctype="multipart/form-data">
         <!-- 基本情報登録 -->
-        <section class="mx-4">
+        <section class="mx-4 basic-info">
           <div class="mb-6">
             <label for="company" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">企業名</label>
             <input type="text" id="company" name="company" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -88,21 +89,21 @@ include(dirname(__FILE__) . '/components/head.php');
           </div>
         </section>
         <!-- 掲載情報登録 -->
-        <section>
-          <h3>掲載情報登録</h3>
+        <h4 class="w-4/5 text-center info-site-title">掲載情報登録</h4>
+        <section class="info-site">
           <!-- ヒーロー画像 -->
           <div>
-            <h3>企業宣材写真</h3>
+            <h5>企業宣材写真</h5>
             <div>
               <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">写真を選択してください</label>
               <input name="heroImage" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file">
             </div>
           </div>
           <!-- 星評価 -->
-          <div>
-            <h3>星評価(0~5で評価)</h3>
-            <div class="flex gap-5 justify-end">
-              <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">求人数</label>
+          <div class="star-container">
+            <h5>星評価(0~5で評価)</h5>
+            <div class="flex gap-5 justify-end star-content">
+              <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white star-title">求人数</label>
               <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="peopleRate">
                 <option selected></option>
                 <option value="5">5</option>
@@ -112,8 +113,8 @@ include(dirname(__FILE__) . '/components/head.php');
                 <option value="1">1</option>
               </select>
             </div>
-            <div class="flex gap-5 justify-end">
-              <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">サポート力</label>
+            <div class="flex gap-5 justify-end star-content">
+              <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white star-title">サポート力</label>
               <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="supportRate">
                 <option selected></option>
                 <option value="5">5</option>
@@ -123,8 +124,8 @@ include(dirname(__FILE__) . '/components/head.php');
                 <option value="1">1</option>
               </select>
             </div>
-            <div class="flex gap-5 justify-end">
-              <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">内定獲得実績</label>
+            <div class="flex gap-5 justify-end star-content">
+              <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white star-title">内定獲得実績</label>
               <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="achievementRate">
                 <option selected></option>
                 <option value="5">5</option>
@@ -134,8 +135,8 @@ include(dirname(__FILE__) . '/components/head.php');
                 <option value="1">1</option>
               </select>
             </div>
-            <div class="flex gap-5 justify-end">
-              <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">内定速度</label>
+            <div class="flex gap-5 justify-end star-content">
+              <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white star-title">内定速度</label>
               <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="speedRate">
                 <option selected></option>
                 <option value="5">5</option>
@@ -145,8 +146,8 @@ include(dirname(__FILE__) . '/components/head.php');
                 <option value="1">1</option>
               </select>
             </div>
-            <div class="flex gap-5 justify-end">
-              <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">業界の多さ</label>
+            <div class="flex gap-5 justify-end star-content">
+              <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white star-title">業界の多さ</label>
               <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="amountRate">
                 <option selected></option>
                 <option value="5">5</option>
@@ -158,6 +159,7 @@ include(dirname(__FILE__) . '/components/head.php');
             </div>
           </div>
           <!-- 詳細情報 -->
+          <h4 class="w-4/5 info-details">詳細情報</h4>
           <div>
             <div class="mb-6">
               <label for="formType" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">お問い合わせ形態</label>

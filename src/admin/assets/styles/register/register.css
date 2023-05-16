@@ -1,9 +1,61 @@
 body {
   background-color: #F6F6F6;
 }
-h3 {
+.page-title {
   font-size: 20px;
   font-weight: 600;
   padding-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.page-title::before{
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 50px);
+  width: 100px;
+  height: 2px;
+  background-color: black;
+}
+form {
+  margin-right: 0;
+}
+/* 基本情報登録 */
+h4 {
+  font-size: 16px;
+  margin-top: 40px;
+  font-weight: 550;
+  margin-bottom: 40px;
+}
+.basic-info {
+  width: 500px;
+  margin-left: 20%;
+}
+/* 掲載情報登録 */
+.info-site-title {
+  margin-left: 24px;
+}
+.info-site {
+  width: 500px;
+  margin-left: 20%;
+}
+.star-container {
+  margin-bottom: 40px;
+}
+h5 {
+  font-size: 16px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.star-content {
+  margin-bottom: 10px;
+}
+.star-title {
+  padding-top: 10px;
+  font-size: 12px;
+}
+/* 詳細情報 */
+.info-details {
+  margin-left: 20%;
+  padding-left: 20px;
 }
