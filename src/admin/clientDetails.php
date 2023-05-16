@@ -7,6 +7,7 @@ include(dirname(__FILE__) . '/components/head.php');
 ?>
 <title>admin画面企業詳細ページ</title>
 <?php include(dirname(__FILE__) . '/components/link.php')?>
+<link rel="stylesheet" href="./assets/styles/clientDetails/clientDetails.css">
 <?php if (isset($passwordAlert)) { ?>
 
   <script>
@@ -22,18 +23,20 @@ include(dirname(__FILE__) . '/components/head.php');
     <!-- sidebar読み込み -->
     <?php include(dirname(__FILE__) . '/components/sidebar.php'); ?>
     <main class="pt-20">
-      <section class="text-center">
-        <h2 class="underline mb-4 ">企業詳細情報</h2>
+      <section class="w-4/5 text-center">
+        <h2 class="mb-4 page-title">企業詳細情報</h2>
       </section>
-      <section class="flex justify-center gap-6 align-middle">
-        <h3 class="">掲載状況</h3>
+      <section class="flex status-container">
+        <h3 class="status-title">掲載状況</h3>
         <!-- 今日の日付と比較して、終了日を過ぎていないなら -->
-        <?php if (strtotime(date("Y/m/d")) < strtotime($resultcompany["finished_at"])) { ?>
-          <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 h-6">掲載中</span>
-        <?php } else { ?>
-          <!-- 今日の日付と比較して、終了日を過ぎているなら -->
-          <span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300 h-5">掲載停止中</span>
-        <?php } ?>
+        <div class="status-now">
+          <?php if (strtotime(date("Y/m/d")) < strtotime($resultcompany["finished_at"])) { ?>
+            <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 h-6">掲載中</span>
+          <?php } else { ?>
+            <!-- 今日の日付と比較して、終了日を過ぎているなら -->
+            <span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300 h-5">掲載停止中</span>
+          <?php } ?>
+        </div>
         <form action="./assets/php/clientList/changeFinished_at.php" method="post">
           <input type="hidden" name="company_id" value="<?php echo $resultcompany["id"] ?>">
           <input type="date" name="selected_at">
@@ -42,70 +45,70 @@ include(dirname(__FILE__) . '/components/head.php');
       </section>
       <!-- 企業基本情報テーブル -->
       <section>
-        <div class="relative overflow-x-auto shadow-md sm:rounded-lg mb-5 text-center">
-          <h3 class="text-center">企業基本情報</h3>
-          <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <div class="relative overflow-x-auto mb-5">
+          <h3 class="client-info-table-title">企業基本情報</h3>
+          <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 client-info-table">
             <tbody>
               <tr class="border-b border-gray-200 dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">企業名
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800 client-info-title">企業名
                 </th>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 bg-white">
                   <?php echo $resultcompany["company"] ?>
                 </td>
               </tr>
               <tr class="border-b border-gray-200 dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">エージェントサービス名
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800 client-info-title">エージェントサービス名
                 </th>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 bg-white">
                   <?php echo $resultcompany["service"] ?>
                 </td>
               </tr>
               <tr class="border-b border-gray-200 dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">所在地
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800 client-info-title">所在地
                 </th>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 bg-white">
                   <?php echo $resultcompany["address"] ?>
                 </td>
               </tr>
               <tr class="border-b border-gray-200 dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">連絡用電話番号
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800 client-info-title">連絡用電話番号
                 </th>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 bg-white">
                   <?php echo $resultcompany["phoneNumber"] ?>
                 </td>
               </tr>
               <tr class="border-b border-gray-200 dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">連絡用メールアドレス
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800 client-info-title">連絡用メールアドレス
                 </th>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 bg-white">
                   <?php echo $resultcompany["email"] ?>
                 </td>
               </tr>
               <tr class="border-b border-gray-200 dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">営業時間
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800 client-info-title">営業時間
                 </th>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 bg-white">
                   <?php echo $resultcompany["Date"] ?>
                 </td>
               </tr>
               <tr class="border-b border-gray-200 dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">公式サイトURL
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800 client-info-title">公式サイトURL
                 </th>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 bg-white">
                   <?php echo $resultcompany["URL"] ?>
                 </td>
               </tr>
               <tr class="border-b border-gray-200 dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">登録学生とのコンタクト形態
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800 client-info-title">登録学生とのコンタクト形態
                 </th>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 bg-white">
                   <?php echo $resultcompany["contactType"] ?>
                 </td>
               </tr>
               <tr class="border-b border-gray-200 dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">オンライン対応の可否
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800 client-info-title">オンライン対応の可否
                 </th>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 bg-white">
                   <?php echo $resultcompany["online"] ?>
                 </td>
               </tr>
@@ -114,8 +117,8 @@ include(dirname(__FILE__) . '/components/head.php');
         </div>
       </section>
       <!-- パスワード再設定 -->
-      <section class="flex justify-center gap-8 align-middle">
-        <h2>パスワード再設定</h2>
+      <section class="flex justify-center gap-8 align-middle password-container">
+        <h3>パスワード再設定</h3>
         <form action="./assets/php/clientList/resetClientPassword.php" method="POST">
           <input type="hidden" name="company_name" value="<?php echo $resultcompany["company"] ?>">
           <input type="hidden" name="company_id" value="<?php echo $resultcompany["id"] ?>">

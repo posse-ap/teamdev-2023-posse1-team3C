@@ -1,0 +1,74 @@
+.page-title {
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 20px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.page-title::before{
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 50px);
+  width: 100px;
+  height: 2px;
+  background-color: black;
+}
+.status-container {
+  width: 720px;
+  gap: 20px;
+  margin-left: calc(50% - 360px);
+  align-items: center;
+  margin-bottom: 40px;
+}
+.status-title {
+  font-size: 16px;
+  font-weight: 550;
+  width: 100px;
+}
+.status-now {
+  width: 200px;
+}
+.status-now span {
+  font-size: 14px;
+  font-weight: 550;
+  display: block;
+  width: 130px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+.status-container form {
+  width: 340px;
+}
+.status-container button {
+  margin-bottom: 0;
+  margin-left: 40px;
+}
+/* 企業基本情報テーブル */
+.client-info-table-title {
+  font-size: 16px;
+  font-weight: 550;
+  margin-bottom: 40px;
+  margin-left: calc(50% - 360px);
+}
+.client-info-table {
+  width: 720px;
+  margin-left: calc(50% - 360px);
+  margin-bottom: 40px;
+}
+.client-info-title {
+  background-color: #DEECEF;
+}
+/* パスワード設定 */
+.password-container {
+  width: 720px;
+  margin-left: calc(50% - 360px);
+  align-items: center;
+  margin-bottom: 40px;
+}
+.password-container h3 {
+  font-size: 16px;
+  font-weight: 550;
+  width: 200px;
+}
