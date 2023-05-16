@@ -7,6 +7,7 @@
   <title>CRAFT 企業一覧ページ</title>
   <link rel="stylesheet" href="./assets/styles/normalize.css">
   <link rel="stylesheet" href="./assets/styles/common.css">
+  <link rel="stylesheet" href="../dist/output.css">
   <link rel="stylesheet" href="./assets/styles/clientList.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous" defer></script>

@@ -2,10 +2,18 @@
 include_once('../../../../dbconnect.php');
 $tags = $_POST['tag'];
 $tagArrays = array_filter(explode(',', $tags));
-
 $placeholders = implode(',', array_fill(0, count($tagArrays), '?'));
-var_dump($tagArrays);
-var_dump($placeholders);
+// var_dump($tagArrays);
+// var_dump($placeholders);
+// タグを一度押して、また外した時のバグ修正
+$error = "";
+if($placeholders == "") {
+  $placeholders = "1 = 1";
+  $error = '<div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+  <span class="font-medium ml-4">タグを選択してください</span> タグを選択しないと検索できません。
+</div>';
+}
+
 $sql_companies = "
 SELECT c.id, c.company, c.service, c.URL, cd.photo, ra.people, ra.support, ra.achievement, ra.speed, ra.amount
 FROM `Companies` as c
@@ -24,46 +32,20 @@ foreach ($tagArrays as $key => $tagId) {
   $stmt->bindValue($i, $tagId, PDO::PARAM_INT);
   $i++;
 }
-var_dump($sql_companies);
+// var_dump($sql_companies);
 $stmt->execute();
 $companies = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-// echo "<pre>";
-// print_r($companies);
-// echo "</pre>";
-
-
-// echo "<pre>";
-// print_r($goodPoints);
-// echo "</pre>";
-
-// $goodPointsDetails = $companies[0]['GoodPointLink'];
-// echo "<pre>";
-// print_r($goodPointsDetails);
-// echo "</pre>";
-// $firstCompanyId = $companies[0]['id'];
-
-
-// echo "<pre>";
-// print_r($goodPointsDetails);
-// echo "</pre>";
-
-// $filterCompanies = array_filter($companies[1]["GoodPointLink"], function ($company) {
-//   return $company["GoodPointLink"][3]['company_id'] === 1;
-// });
-
-// echo "<pre>";
-// print_r($filterCompanies);
-// echo "</pre>";
 $data = '';
 $i = 0;
-
+print_r($error);
 foreach ($companies as $company) {
   $company_id = $company['id'];
   include('clientlist-point2.php');
-  $data .= '<div class="clientlist">
+  $data .=
+  '<div class="clientlist">
     <h3 class="clientlist-name">' . $company['company'] . '</h3>
     <div class="clientlist-contents">
     <div class="clientlist-main">
