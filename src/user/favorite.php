@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./assets/styles/favorite.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
+  <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous"></script>
   <script src="./assets/scripts/favorite/favorite.js" defer></script>
 </head>
 
@@ -37,7 +38,7 @@
       </div>
     </div>
     <div class="button-container">
-      <a href="" target="_blank">
+      <a href="" target="_blank" class="page-button">
         <div class="official-page">公式ページ<i class="fa-solid     fa-arrow-up-right-from-square"></i></div>
       </a>
       <a href="">
@@ -60,8 +61,6 @@
 </main>
 <!-- フッター -->
 <?php include_once('components/footer.php') ?>
-  <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous"></script>
-  <script src="./assets/scripts/clientList/clientList.js"></script>
 </body>
 
 </html>
