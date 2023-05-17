@@ -17,42 +17,33 @@
 <body>
 <?php include_once('components/header.php') ?>
 
+
 <main>
+  
   <h2 class="top-favorite">お気に入り一覧</h2>
+  <div id="favoritesList">
+  <!-- お気に入り企業の情報がここに表示されます -->
+</div>
 
 
   <div class="lets-favorite">現在のあなたのお気に入り一覧はこちら<br><br>チェックをつけて一括登録しよう！</div>
 
+  <div class="service-wrapper" id='service-wrapper'>
 
-
-  <div class="service-box">
-    <div class="container">
-      <label>
-        <input type="checkbox" class="checkbox">
-        <span class="checkbox-fontas"></span>
-      </label>
-      <div class="s-container">
-        <div class="service-name">サービスA</div>
-        <div class="browsing-history">最終閲覧履歴2023/02/21</div>
-      </div>
-    </div>
-    <div class="button-container">
-      <a href="" target="_blank">
-        <div class="official-page">公式ページ<i class="fa-solid     fa-arrow-up-right-from-square"></i></div>
-      </a>
-      <a href="">
-        <div class="detail-page">詳細ページ<i class="fa-solid     fa-chevron-right"></i></div>
-      </a>
-      <div class="subscribe-favorite"><i class="fa-solid fa-heart" style="color: #ff6b97;"></i>お気に入り登録</div>
-    </div>
   </div>
 
 
 
 
 
+    
 
-  <div></div>
+
+
+
+
+
+
 
   <div class="lets-favorite">＼気になったエージェントと話してみよう／</div>
   <div class="subscribe">一括登録する<i class="fa-solid fa-play"></i></div>
@@ -61,7 +52,7 @@
 <!-- フッター -->
 <?php include_once('components/footer.php') ?>
   <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous"></script>
-  <script src="./assets/scripts/clientList/clientList.js"></script>
+  <script src="./assets/scripts/favorite/favorite.js"></script>
 </body>
 
 </html>

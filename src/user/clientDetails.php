@@ -240,7 +240,7 @@
       </a>
     </div>
     <div class="favorite">
-      <button type="button" class="favorite-btn" value="">
+      <button type="button" class="favorite-btn" value="" id="favoriteButton" data-name="<?= $company_details["company"]?>" data-url="<?= $company_details["URL"]?>" data-id="<?= $company_details["id"]?>" onclick="addToFavorites()">
         <span class="favorite-btn-text">
           お気に入りに追加
         </span>
