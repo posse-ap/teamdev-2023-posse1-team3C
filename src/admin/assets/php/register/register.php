@@ -2,7 +2,7 @@
 if (isset($_POST["registerButton"])) {
   // 入力サれた企業基本情報をcompaniesテーブルに格納
   include("../../../../dbconnect.php");
-  $sql_register_basic = "INSERT INTO Companies (company, email, service, address, phoneNumber, registered_at, date, url, contactType, online, started_at, finished_at) VALUES (:company, :email, :address, :service, :phoneNumber, :registered_at ,:date, :url, :contactType, :online, :started_at, :finished_at)";
+  $sql_register_basic = "INSERT INTO Companies (company, email, address, service, phoneNumber, registered_at, date, url, contactType, online, started_at, finished_at) VALUES (:company, :email, :address, :service, :phoneNumber, :registered_at ,:date, :url, :contactType, :online, :started_at, :finished_at)";
   $register = $dbh->prepare($sql_register_basic);
   $register->execute([
     ":company" => $_POST["company"],
