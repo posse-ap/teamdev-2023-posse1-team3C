@@ -46,13 +46,14 @@ function addToFavorites() {
   // localStorage.clear();
   let favorite = document.querySelector('.favorite-btn');
   let companyID = favorite.getAttribute('data-id');
-  let currentTime = new Date().toLocaleString();;
+  let currentTime = new Date().toLocaleString();
+  // ローカルストレージからお気に入り情報を取得
+  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
   if (favorite.value == 0){
   
 
-  // ローカルストレージからお気に入り情報を取得
-  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+  
 
   // 既に同じIDの企業がローカルストレージ内に存在するかチェック
   const existingIndex = favorites.findIndex(item => item.id === companyID);
@@ -73,12 +74,8 @@ function addToFavorites() {
   localStorage.setItem("favorites", JSON.stringify(favorites));
   }else{
     const existingIndex = favorites.findIndex(item => item.id === companyID);
-
-    if (existingIndex !== -1) {
-    // 同じIDの企業が既に登録されている場合は削除
     favorites.splice(existingIndex, 1);
-    }
-
+    localStorage.setItem("favorites", JSON.stringify(favorites));
   }
   
 }

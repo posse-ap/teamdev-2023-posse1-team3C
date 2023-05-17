@@ -19,6 +19,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
   <script src="./assets/scripts/clientDetails/clientDetails.js" defer></script>
+  <script src="./assets/scripts/clientDetails/favorite-search.js" defer></script>
 </head>
 
 <body>
@@ -240,7 +241,7 @@
       </a>
     </div>
     <div class="favorite">
-      <button type="button" class="favorite-btn" value="" id="favoriteButton" data-name="<?= $company_details["company"]?>" data-url="<?= $company_details["URL"]?>" data-id="<?= $company_details["id"]?>" onclick="addToFavorites()">
+      <button type="button" class="favorite-btn" value="" id="favoriteButton" data-name="<?= $company_details["company"]?>" data-url="<?= $company_details["URL"]?>" data-id="<?= $company_details["id"]?>"onclick="addToFavorites()">
         <span class="favorite-btn-text">
           お気に入りに追加
         </span>
