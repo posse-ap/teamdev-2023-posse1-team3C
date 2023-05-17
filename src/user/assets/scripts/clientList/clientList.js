@@ -97,7 +97,7 @@ for (let j = 0; j < counts.length; j++) {
 // クエリパラメータを取得
 const queryString = window.location.search;
 
-// クエリパラメータを解析してオブジェクトに変換
+// // クエリパラメータを解析してオブジェクトに変換
 const params = new URLSearchParams(queryString);
 
 // graduateの値を取得
@@ -109,23 +109,23 @@ const supportValues = params.getAll('support[]');
 // your-areaの値を取得
 const yourAreaValues = params.getAll('your-area[]');
 
-// チェックボックスにチェックを付ける
+// // チェックボックスにチェックを付ける
 graduateValues.forEach(value => {
-  const checkbox = document.querySelector(`input[name="graduate[]"][value="${value}"]`);
+  const checkbox = document.querySelectorAll(`input[name="graduate"][value="${value}"]`);
   if (checkbox) {
     checkbox.checked = true;
   }
 });
 
 supportValues.forEach(value => {
-  const checkbox = document.querySelector(`input[name="support[]"][value="${value}"]`);
+  const checkbox = document.querySelectorAll(`input[name="support"][value="${value}"]`);
   if (checkbox) {
     checkbox.checked = true;
   }
 });
 
 yourAreaValues.forEach(value => {
-  const checkbox = document.querySelector(`input[name="your-area[]"][value="${value}"]`);
+  const checkbox = document.querySelectorAll(`input[name="your-area"][value="${value}"]`);
   if (checkbox) {
     checkbox.checked = true;
   }
