@@ -219,7 +219,7 @@
     </div>
     <!-- リンク -->
     <div class="access">
-      <a href="./register.php?company_id=<?php echo $company_details["id"]?>">
+      <a href="./register.php?company_id[]=<?php echo $company_details["id"]?>">
         <button class="access-btn">
         <i class="fa-regular fa-pen-to-square"></i>
           <span class="access-btn-text">
