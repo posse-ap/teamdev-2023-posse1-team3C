@@ -27,33 +27,21 @@
 </div>
 
 
-  <div class="lets-favorite">現在のあなたのお気に入り一覧はこちら<br><br>チェックをつけて一括登録しよう！</div>
+<div class="lets-favorite">現在のあなたのお気に入り一覧はこちら<br><br>チェックをつけて一括登録しよう！</div>
 
-  <div class="service-wrapper" id='service-wrapper'>
-
+<form id="favoriteForm" action="register.php" method="GET">
+  <div class="service-wrapper" id="service-wrapper">
+    <!-- お気に入り企業の一覧をここに表示する -->
   </div>
 
-
-
-
-
-    
-
-
-
-
-
-
-
-
   <div class="lets-favorite">＼気になったエージェントと話してみよう／</div>
-  <div class="subscribe">一括登録する<i class="fa-solid fa-play"></i></div>
+  <button class="subscribe" type="submit">一括登録する<i class="fa-solid fa-play"></i></button>
+</form>
 
 </main>
 <!-- フッター -->
 <?php include_once('components/footer.php') ?>
   <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous"></script>
-  <script src="./assets/scripts/favorite/favorite.js"></script>
 </body>
 
 </html>

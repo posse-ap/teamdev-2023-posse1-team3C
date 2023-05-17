@@ -20,7 +20,7 @@
     </h2>
     <div class="register-title-decoration"></div>
     <form method="post" action="./assets/php/register/register.php">
-      <input type="hidden" name="company_id" value=<?php echo $_GET["company_id"]?>>
+      <input type="hidden" name="company_id" value="<?php echo implode(',', $_GET['company_id']); ?>">
       <div class="grid gap-6 mb-6 md:grid-cols-2 name-input">
         <div>
           <label for="last-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">姓</label>

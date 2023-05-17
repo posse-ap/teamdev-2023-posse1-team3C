@@ -14,14 +14,10 @@ function checkIfIdExists(id) {
       return true;
     }
   }
-
   // 指定したidが存在しない場合
   return false;
 }
-
-// 使用例
 const idExists = checkIfIdExists(id);
-
 if (idExists){
   favorite.classList.add('active');
   favoriteText.textContent = 'お気に入り済み';
