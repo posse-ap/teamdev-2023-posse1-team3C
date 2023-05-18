@@ -51,10 +51,6 @@ function addToFavorites() {
   const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
   if (favorite.value == 0){
-  
-
-  
-
   // 既に同じIDの企業がローカルストレージ内に存在するかチェック
   const existingIndex = favorites.findIndex(item => item.id === companyID);
 
@@ -80,4 +76,43 @@ function addToFavorites() {
   
 }
 
+window.addEventListener('load', () => {
+  let favorite = document.querySelector('.favorite-btn');
+  let companyID = favorite.getAttribute('data-id');
+  let currentTime = new Date().toLocaleString();
 
+  // ローカルストレージからお気に入り情報を取得
+  const histories = JSON.parse(localStorage.getItem("histories")) || [];
+
+  if (histories.length === 0) {
+    // 企業の情報（仮のデータ）
+    let companyName = favorite.getAttribute('data-name');
+    let companyURL = favorite.getAttribute('data-url');
+
+    // お気に入り情報を追加
+    histories.push({ name: companyName, url: companyURL, id: companyID, time: currentTime });
+  } else {
+    // 既に同じIDの企業がローカルストレージ内に存在するかチェック
+    const existingIndex = histories.findIndex(item => item.id === companyID);
+
+    if (existingIndex !== -1) {
+      // 同じIDの企業が既に登録されている場合は削除
+      histories.splice(existingIndex, 1);// 企業の情報（仮のデータ）
+      let companyName = favorite.getAttribute('data-name');
+      let companyURL = favorite.getAttribute('data-url');
+
+      // お気に入り情報を追加
+      histories.push({ name: companyName, url: companyURL, id: companyID, time: currentTime });
+    } else {
+      // 企業の情報（仮のデータ）
+      let companyName = favorite.getAttribute('data-name');
+      let companyURL = favorite.getAttribute('data-url');
+
+      // お気に入り情報を追加
+      histories.push({ name: companyName, url: companyURL, id: companyID, time: currentTime });
+    }
+  }
+
+  // ローカルストレージに保存
+  localStorage.setItem("histories", JSON.stringify(histories));
+});

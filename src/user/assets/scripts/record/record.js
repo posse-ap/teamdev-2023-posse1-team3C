@@ -1,4 +1,4 @@
-const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+const favorites = JSON.parse(localStorage.getItem("histories")) || [];
 
 // お気に入り企業の情報をHTMLに書き換え
 const service_box = document.getElementById("service-wrapper");
