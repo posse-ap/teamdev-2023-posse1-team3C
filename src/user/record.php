@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./assets/styles/record.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
-  <script src="./assets/scripts/record/record.js" defer></script>
+  <!-- <script src="./assets/scripts/record/record.js" defer></script> -->
 </head>
 
 <body>
@@ -30,7 +30,33 @@
   <div class="lets-favorite">あなたがチェックした企業はこちら</div>
 
   <div class="service-wrapper" id='service-wrapper'>
-
+  <div class="service-box" id="service_box">
+  <div class="container">
+  <label>
+    <input type="checkbox" class="checkbox">
+    <span class="checkbox-fontas"></span>
+  </label>
+  <div class="s-container">
+    <div class="service-name">$companyName</div>
+    <div class="browsing-history">最終閲覧履歴<br>$companytime</div>
+  </div>
+</div>
+<div class="button-container">
+  <a href="$companyURL" target="_blank">
+    <div class="official-page">公式サイト<i class="fa-solid     fa-arrow-up-right-from-square"></i></div>
+  </a>
+  <a href="clientDetails.php?id=$companyID">
+    <div class="detail-page">詳細ページ<i class="fa-solid     fa-chevron-right"></i></div>
+  </a>
+  <button type="button" class="favorite-btn" value="" id="favoriteButton" data-name="<?= $company_details["company"]?>" data-url="<?= $company_details["URL"]?>" data-id="<?= $company_details["id"]?>" onclick="addToFavorites()">
+    <span class="favorite-btn-text">
+      お気に入りに追加
+    </span>
+  </button>
+</div>
+</div>
+</div>
+</div>
   </div>
 
   <div class="lets-favorite">＼気になったエージェントと話してみよう／</div>

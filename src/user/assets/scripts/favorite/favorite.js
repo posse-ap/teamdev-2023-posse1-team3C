@@ -26,7 +26,7 @@ favorites.forEach((favorite) => {
 </div>
 <div class="button-container">
   <a href="${companyURL}" target="_blank">
-    <div class="official-page">公式ページ<i class="fa-solid     fa-arrow-up-right-from-square"></i></div>
+    <div class="official-page">公式サイト<i class="fa-solid     fa-arrow-up-right-from-square"></i></div>
   </a>
   <a href="clientDetails.php?id=${companyID}">
     <div class="detail-page">詳細ページ<i class="fa-solid     fa-chevron-right"></i></div>

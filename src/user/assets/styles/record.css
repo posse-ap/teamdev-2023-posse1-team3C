@@ -122,20 +122,20 @@ label{
   border-radius: 5px;
   background-color: white;
   color: #2E79BA;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 550;
   border-width: 2px;
   border-color: #97c1e6;
   border-style: solid;
   text-align: center;
   position: relative;
-  line-height: 50px;
+  line-height: 30px;
 }
 .official-page i{
-  font-size: 16px;
+  font-size: 14px;
   position: absolute;
-  top: 17px;
-  right: 10px;
+  top: 8px;
+  right: 5px;
 }
 .detail-page{
   width: 120px;
@@ -144,23 +144,23 @@ label{
   background-color: white;
   color: #2E79BA;
   text-align: center;
-  font-size: 18px;
+  font-size: 14px;
   border-width: 2px;
   border-color: #97c1e6;
   border-style: solid;
   position: relative;
-  line-height: 50px;
+  line-height: 30px;
   font-weight: 550;
 }
 .detail-page i{
-  font-size: 16px;
+  font-size: 14px;
   position: absolute;
-  top: 17px;
-  right: 10px;
+  top: 8px;
+  right: 5px;
 }
 .favorite-btn {
-  width: 120px;
-  height: 30px;
+  width: 144px;
+  height: 34px;
   border-radius: 5px;
   background-color: white;
   color: #2E79BA;
@@ -169,6 +169,7 @@ label{
   border-color: #97c1e6;
   border-style: solid;
   text-align: center;
+  font-weight: 600;
 }
 /* ボタン */
 .subscribe{
@@ -218,30 +219,34 @@ label{
   }
   .browsing-history {
     font-size: 12px;
+    margin-top: 14px;
     width: 150px;
   }
   .official-page {
-    width: 130px;
+    width: 90px;
     height: 36px;
-    margin-left: 20px;
+    margin-left: 10px;
     font-size: 13px;
     line-height: 36px;
   }
   .official-page i {
-    font-size: 13px;
-    top: 11.5px;
-    right: 8px;
+    display: none;
   }
   .detail-page {
-    width: 130px;
+    width: 90px;
     height: 36px;
     margin-left: 0;
     font-size: 13px;
     line-height: 36px;
   }
   .detail-page i {
-    font-size: 13px;
-    top: 11.5px;
-    right: 8px;
+    display: none;
+  }
+  .favorite-btn {
+    width: 90px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: white;
+    color: #2E79BA;
   }
 }
