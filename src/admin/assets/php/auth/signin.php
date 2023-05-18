@@ -7,7 +7,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     $password = $_POST['password'];
 
     if (!empty($email) && !empty($password)) {
-        $stmt = $dbh->prepare('SELECT * FROM AdminUsers WHERE mail = :email');
+        $stmt = $dbh->prepare('SELECT * FROM AdminUsers WHERE email = :email');
         $stmt->bindValue(':email', $email);
         $stmt->execute();
         $row_cnt = $stmt->rowCount();

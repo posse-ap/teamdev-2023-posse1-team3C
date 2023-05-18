@@ -337,7 +337,7 @@
               </div>
               <div class="link-button">
                 <!-- データベースのURLが正しくないから飛べないけど正しければ飛べるはず -->
-                <a href="./register.php?company_id=<?php echo $company_id?>">
+                <a href="./register.php?company_id[]=<?php echo $company_id?>">
                   <div class="button official-link">
                     <p class="button-p">申し込みする</p>
                     <i class="fa-solid fa-caret-right button-i"></i>
