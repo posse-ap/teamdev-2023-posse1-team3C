@@ -80,9 +80,12 @@ checkboxes.forEach((checkbox) => {
       [paramator.get("your-area")],
       [],
     ];
+    console.log(values[0][0] !== null);
 
-    if (values.length > 0 && tag.length > 0) {
+    // クエリパラメータの値がnullでなければ、配列に格納
+    if (values[0][0] !== null)  {
       tag = values;
+      console.log("nullじゃなくて");
     }
     console.log(tag);
     let list = document.getElementById("client-list");

@@ -1,7 +1,44 @@
 "use strict";
+// クエリパラメータを取得
+const queryString = window.location.search;
+
+// クエリパラメータを解析してオブジェクトに変換
+const params = new URLSearchParams(queryString);
+// graduateの値を取得
+const graduateValues = params.getAll('graduate');
+console.log(graduateValues);
+// supportの値を取得
+const supportValues = params.getAll('support');
+console.log(supportValues);
+// your-areaの値を取得
+const yourAreaValues = params.getAll('your-area');
+console.log(yourAreaValues);
+// チェックボックスにチェックを付ける
+graduateValues.forEach(value => {
+  const checkbox = document.querySelectorAll(`input[name="graduate"][value="${value}"]`);
+  console.log(checkbox)
+  if (checkbox !== null && checkbox !== undefined) {
+    checkbox.checked = true;
+  }
+});
+
+supportValues.forEach(value => {
+  const checkbox = document.querySelectorAll(`input[name="support"][value="${value}"]`);
+  console.log(checkbox)
+  if (checkbox !== null && checkbox !== undefined) {
+    checkbox.checked = true;
+  }
+});
+
+yourAreaValues.forEach(value => {
+  const checkbox = document.querySelectorAll(`input[name="your-area"][value="${value}"]`);
+  if (checkbox !== null && checkbox !== undefined) {
+    checkbox.checked = true;
+  }
+});
 // チェックを一個しかつけられないようにする(卒業年度)
 $(function(){
-  $('input[name="graduate"]').click(function(){
+  $('input[name="graduate"]').change(function(){
     var checked = $(this).prop('checked');
     $('input[name="graduate"]').prop('checked', false);
     // 選択肢の背景色を白にする
@@ -92,42 +129,9 @@ for (let j = 0; j < counts.length; j++) {
     }
     counts[j].innerHTML = new_element;
 }
-// クエリパラメータを取得
-const queryString = window.location.search;
 
-// クエリパラメータを解析してオブジェクトに変換
-const params = new URLSearchParams(queryString);
 
-// graduateの値を取得
-const graduateValues = params.getAll('graduate');
-console.log(graduateValues);
-// supportの値を取得
-const supportValues = params.getAll('support');
-console.log(supportValues);
-// your-areaの値を取得
-const yourAreaValues = params.getAll('your-area');
-console.log(yourAreaValues);
-// チェックボックスにチェックを付ける
-// graduateValues.forEach(value => {
-//   const checkbox = document.querySelectorAll(`input[name="graduate"][value="${value}"]`);
-//   if (checkbox) {
-//     checkbox.checked = true;
-//   }
-// });
 
-// supportValues.forEach(value => {
-//   const checkbox = document.querySelectorAll(`input[name="support"][value="${value}"]`);
-//   if (checkbox) {
-//     checkbox.checked = true;
-//   }
-// });
-
-// yourAreaValues.forEach(value => {
-//   const checkbox = document.querySelectorAll(`input[name="your-area"][value="${value}"]`);
-//   if (checkbox) {
-//     checkbox.checked = true;
-//   }
-// });
 
 
 
