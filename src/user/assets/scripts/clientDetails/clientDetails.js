@@ -53,8 +53,6 @@ function addToFavorites() {
   if (favorite.value == 0){
   
 
-  
-
   // 既に同じIDの企業がローカルストレージ内に存在するかチェック
   const existingIndex = favorites.findIndex(item => item.id === companyID);
 
@@ -79,5 +77,22 @@ function addToFavorites() {
   }
   
 }
+// レダーチャートを表示
+var options = {
+  series: [{
+  data: [3, 4, 4, 5, 4],
+}],
+  chart: {
+  height: '280',
+  type: 'radar',
+  toolbar: {
+    show: false
+  },
+},
+xaxis:{
+  categories: ['求人数', 'サポート力', '内定獲得実績', '内定実績', '業種の多さ']
+}
+};
 
-
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();

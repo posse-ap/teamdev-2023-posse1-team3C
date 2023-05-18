@@ -27,15 +27,19 @@
 </div>
 
 
-<div class="lets-favorite">現在のあなたのお気に入り一覧はこちら<br><br>チェックをつけて一括登録しよう！</div>
+<div class="lets-favorite">
+  現在のあなたのお気に入り一覧はこちら
+  <br>
+  チェックをつけて一括登録しよう！
+</div>
 
 <form id="favoriteForm" action="register.php" method="GET">
   <div class="service-wrapper" id="service-wrapper">
     <!-- お気に入り企業の一覧をここに表示する -->
   </div>
 
-  <div class="lets-favorite">＼気になったエージェントと話してみよう／</div>
-  <button class="subscribe" type="submit">一括登録する<i class="fa-solid fa-play"></i></button>
+  <div class="lets-talk">\ 気になったエージェントと話してみよう /</div>
+  <button class="subscribe" type="submit">一括登録する<i class="fa-solid fa-caret-right"></i></button>
 </form>
 
 </main>

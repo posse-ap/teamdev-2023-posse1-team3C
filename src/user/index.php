@@ -8,12 +8,8 @@
   <link rel="stylesheet" href="./assets/styles/normalize.css">
   <link rel="stylesheet" href="./assets/styles/common.css">
   <link rel="stylesheet" href="./assets/styles/top.css">
-  <link rel="stylesheet" href="./assets/styles/clientList.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
   <script src="./assets/scripts/index.js" defer></script>
@@ -33,132 +29,134 @@
         </h2>
       </div>
     </div>
-    <form class="search" action="./clientList.php" method="get">
-  <div class="search-title">
-    <i class="fa-regular fa-tag"></i>
-    <h3>基本情報</h3>
-  </div>
-  <div class="graduate">
-    <h4>卒業年度</h4>
-    <div class="graduate-wrapper">
+    <form action="./clientList.php" method="get">
+      <div class="search">
+        <div class="search-title">
+          <i class="fa-regular fa-tag"></i>
+          <h3>基本情報</h3>
+        </div>
+        <div class="graduate">
+          <h4>卒業年度</h4>
+          <div class="graduate-wrapper">
 
-      <ul class="g-box">
-        <li class="g-box-item">
-          <label for="g-box-item-1">
-            <input type="checkbox" name="graduate" id="g-box-item-1" class="checkbox" value="1" type-data="s-graduated">
-            <span class="checkbox-fontas"></span>
-            25卒
-          </label>
-        </li>
-        <li class="g-box-item">
-          <label for="g-box-item-2">
-            <input type="checkbox" name="graduate" id="g-box-item-2" class="checkbox" value="2" type-data="s-graduated">
-            <span class="checkbox-fontas"></span>
-            26卒
-          </label>
-        </li>
-        <li class="g-box-item">
-          <label for="g-box-item-3">
-            <input type="checkbox" name="graduate" id="g-box-item-3" class="checkbox" value="3" type-data="s-graduated">
-            <span class="checkbox-fontas"></span>
-            27卒
-          </label>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="support">
-    <h4>サポート形態</h4>
-    <div class="support-wrapper">
-      <ul class="s-box">
-        <li class="s-box-item">
-          <label for="s-box-item-1">
-            <input type="checkbox" name="support" id="s-box-item-1" class="checkbox" value="4" type-data="s-support">
-            <span class="checkbox-fontas"></span>
-            オンラインのみ
-          </label>
-        </li>
-        <li class="s-box-item">
-          <label for="s-box-item-2">
-            <input type="checkbox" name="support" id="s-box-item-2" class="checkbox" value="5" type-data="s-support">
-            <span class="checkbox-fontas"></span>
-            対面のみ
-          </label>
-        </li>
-        <li class="s-box-item">
-          <label for="s-box-item-3">
-            <input type="checkbox" name="support" id="s-box-item-3" class="checkbox" value="6" type-data="s-support">
-            <span class="checkbox-fontas"></span>
-            両方可
-          </label>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="your-area">
-    <h4>お住まいの地域</h4>
-    <div class="your-area-wrapper">
-      <ul class="y-box">
-        <li class="y-box-item">
-          <label for="y-box-item-1">
-            <input type="checkbox" name="your-area" id="y-box-item-1" class="checkbox" value="7" type-data="s-area">
-            <span class="checkbox-fontas"></span>
-           
-            北海道
-          </label>
-        </li>
-        <li class="y-box-item">
-          <label for="y-box-item-2">
-            <input type="checkbox" name="your-area" id="y-box-item-2" class="checkbox" value="8" type-data="s-area">
-            <span class="checkbox-fontas"></span>
-            東北
-          </label>
-        </li>
-        <li class="y-box-item">
-          <label for="y-box-item-3">
-            <input type="checkbox" name="your-area" id="y-box-item-3" class="checkbox" value="9" type-data="s-area">
-            <span class="checkbox-fontas"></span>
-            関東
-          </label>
-        </li>
-        <li class="y-box-item">
-          <label for="y-box-item-4">
-            <input type="checkbox" name="your-area[]" id="y-box-item-4" class="checkbox" value="10" type-data="s-area">
-            <span class="checkbox-fontas"></span>
-            中部
-          </label>
-        </li>
-        <li class="y-box-item">
-          <label for="y-box-item-5">
-            <input type="checkbox" name="your-area[]" id="y-box-item-5" class="checkbox" value="11" type-data="s-area">
-            <span class="checkbox-fontas"></span>
-            近畿
-          </label>
-        </li>
-        <li class="y-box-item">
-          <label for="y-box-item-6">
-            <input type="checkbox" name="your-area[]" id="y-box-item-6" class="checkbox" value="12" type-data="s-area">
-            <span class="checkbox-fontas"></span>
-            中国
-          </label>
-        </li>
-        <li class="y-box-item">
-          <label for="y-box-item-7">
-            <input type="checkbox" name="your-area[]" id="y-box-item-7" class="checkbox" value="13" type-data="s-area">
-            <span class="checkbox-fontas"></span>
-            四国
-          </label>
-        </li>
-        <li class="y-box-item">
-          <label for="y-box-item-8">
-            <input type="checkbox" name="your-area[]" id="y-box-item-8" class="checkbox" value="14" type-data="s-area">
-            <span class="checkbox-fontas"></span>
-            九州
-          </label>
-        </li>
-      </ul>
-    </div>
-  </div>
+            <ul class="g-box">
+              <li class="g-box-item">
+                <label for="g-box-item-1">
+                  <input type="checkbox" name="graduate" id="g-box-item-1" class="checkbox" value="1" type-data="s-graduated">
+                  <span class="checkbox-fontas"></span>
+                  25卒
+                </label>
+              </li>
+              <li class="g-box-item">
+                <label for="g-box-item-2">
+                  <input type="checkbox" name="graduate" id="g-box-item-2" class="checkbox" value="2" type-data="s-graduated">
+                  <span class="checkbox-fontas"></span>
+                  26卒
+                </label>
+              </li>
+              <li class="g-box-item">
+                <label for="g-box-item-3">
+                  <input type="checkbox" name="graduate" id="g-box-item-3" class="checkbox" value="3" type-data="s-graduated">
+                  <span class="checkbox-fontas"></span>
+                  27卒
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="support">
+          <h4>サポート形態</h4>
+          <div class="support-wrapper">
+            <ul class="s-box">
+              <li class="s-box-item">
+                <label for="s-box-item-1">
+                  <input type="checkbox" name="support" id="s-box-item-1" class="checkbox" value="4" type-data="s-support">
+                  <span class="checkbox-fontas"></span>
+                  オンラインのみ
+                </label>
+              </li>
+              <li class="s-box-item">
+                <label for="s-box-item-2">
+                  <input type="checkbox" name="support" id="s-box-item-2" class="checkbox" value="5" type-data="s-support">
+                  <span class="checkbox-fontas"></span>
+                  対面のみ
+                </label>
+              </li>
+              <li class="s-box-item">
+                <label for="s-box-item-3">
+                  <input type="checkbox" name="support" id="s-box-item-3" class="checkbox" value="6" type-data="s-support">
+                  <span class="checkbox-fontas"></span>
+                  両方可
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="your-area">
+          <h4>お住まいの地域</h4>
+          <div class="your-area-wrapper">
+            <ul class="y-box">
+              <li class="y-box-item">
+                <label for="y-box-item-1">
+                  <input type="checkbox" name="your-area" id="y-box-item-1" class="checkbox" value="7" type-data="s-area">
+                  <span class="checkbox-fontas"></span>
+                
+                  北海道
+                </label>
+              </li>
+              <li class="y-box-item">
+                <label for="y-box-item-2">
+                  <input type="checkbox" name="your-area" id="y-box-item-2" class="checkbox" value="8" type-data="s-area">
+                  <span class="checkbox-fontas"></span>
+                  東北
+                </label>
+              </li>
+              <li class="y-box-item">
+                <label for="y-box-item-3">
+                  <input type="checkbox" name="your-area" id="y-box-item-3" class="checkbox" value="9" type-data="s-area">
+                  <span class="checkbox-fontas"></span>
+                  関東
+                </label>
+              </li>
+              <li class="y-box-item">
+                <label for="y-box-item-4">
+                  <input type="checkbox" name="your-area[]" id="y-box-item-4" class="checkbox" value="10" type-data="s-area">
+                  <span class="checkbox-fontas"></span>
+                  中部
+                </label>
+              </li>
+              <li class="y-box-item">
+                <label for="y-box-item-5">
+                  <input type="checkbox" name="your-area[]" id="y-box-item-5" class="checkbox" value="11" type-data="s-area">
+                  <span class="checkbox-fontas"></span>
+                  近畿
+                </label>
+              </li>
+              <li class="y-box-item">
+                <label for="y-box-item-6">
+                  <input type="checkbox" name="your-area[]" id="y-box-item-6" class="checkbox" value="12" type-data="s-area">
+                  <span class="checkbox-fontas"></span>
+                  中国
+                </label>
+              </li>
+              <li class="y-box-item">
+                <label for="y-box-item-7">
+                  <input type="checkbox" name="your-area[]" id="y-box-item-7" class="checkbox" value="13" type-data="s-area">
+                  <span class="checkbox-fontas"></span>
+                  四国
+                </label>
+              </li>
+              <li class="y-box-item">
+                <label for="y-box-item-8">
+                  <input type="checkbox" name="your-area[]" id="y-box-item-8" class="checkbox" value="14" type-data="s-area">
+                  <span class="checkbox-fontas"></span>
+                  九州
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
   <!-- エージェントを探してみる -->
   <div class="btn-search-for-agent">
     <button type="submit">
