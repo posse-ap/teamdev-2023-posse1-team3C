@@ -8,7 +8,7 @@
   <title>CRAFT 企業詳細ページ</title>
   <link rel="stylesheet" href="./assets/styles/normalize.css">
   <link rel="stylesheet" href="./assets/styles/common.css">
-  <link rel="stylesheet" href="./assets/styles/favorite.css">
+  <link rel="stylesheet" href="./assets/styles/record.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
   <script src="./assets/scripts/record/record.js" defer></script>
@@ -21,7 +21,7 @@
 
 <main>
   
-  <h2 class="top-favorite">履歴</h2>
+  <h2 class="top-favorite">履歴一覧</h2>
   <div id="favoritesList">
   <!-- お気に入り企業の情報がここに表示されます -->
 </div>
@@ -34,7 +34,7 @@
   </div>
 
   <div class="lets-favorite">＼気になったエージェントと話してみよう／</div>
-  <div class="subscribe">一括登録する<i class="fa-solid fa-play"></i></div>
+  <div class="subscribe">一括登録する<i class="fa-solid fa-caret-right"></i></div>
 
 </main>
 <!-- フッター -->

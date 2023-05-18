@@ -31,7 +31,11 @@ favorites.forEach((favorite) => {
   <a href="clientDetails.php?id=${companyID}">
     <div class="detail-page">詳細ページ<i class="fa-solid     fa-chevron-right"></i></div>
   </a>
-  <div class="subscribe-favorite" id="favorite-btn"><i class="fa-solid fa-heart" style="color: #ff6b97;"></i>お気に入り登録</div>
+  <button type="button" class="favorite-btn" value="" id="favoriteButton" data-name="<?= ${company_details["company"]}?>" data-url="<?= ${company_details["URL"]}?>" data-id="<?= ${company_details["id"]}?>"onclick="addToFavorites()">
+    <span class="favorite-btn-text">
+      お気に入りに追加
+    </span>
+  </button>
 </div>
 </div>
 </div>
@@ -39,3 +43,44 @@ favorites.forEach((favorite) => {
 });
 
 service_box.innerHTML = str;
+
+// ローカルストレージの中にidが存在しているのかチェックしてお気に入りボタンを変更する。
+
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get('id');
+console.log(id);
+function checkIfIdExists(id) {
+  // ローカルストレージからデータを取得
+  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+  // データ内をループしてidの存在をチェック
+  for (const item of favorites) {
+    if (item.id === id) {
+      // 指定したidが存在する場合
+      return true;
+    }
+  }
+  // 指定したidが存在しない場合
+  return false;
+}
+const idExists = checkIfIdExists(id);
+if (idExists){
+  favorite.classList.add('active');
+  favoriteText.textContent = 'お気に入り済み';
+  favorite.value = 1;
+}
+// お気に入りボタンを押したら色が変わる、テキストが変更される
+let favorite = document.querySelector('.favorite-btn');
+let favoriteText = document.querySelector('.favorite-btn-text');
+favorite.addEventListener('click', function() {
+  if (favorite.classList.contains('active')) {
+    favorite.classList.remove('active');
+    favoriteText.textContent = 'お気に入りに追加';
+    favorite.value = 0;
+  } else {
+    favorite.classList.add('active');
+    favoriteText.textContent = 'お気に入り済み';
+    favorite.value = 1;
+  }
+
+});

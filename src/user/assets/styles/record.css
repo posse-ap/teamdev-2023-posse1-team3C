@@ -1,0 +1,247 @@
+main {
+  margin-top: 120px;
+}
+/* メニューバー */
+.menubar-history {
+  background-color: #D6EAF8;
+  border-radius: 5px;
+}
+.menubar-history:hover {
+  background-color: #D6EAF8;
+}
+.menubar-history .menubar-link-text {
+  color: #2E79BA;
+}
+.menubar-history i {
+  color: #2E79BA;
+}
+.top-favorite {
+  padding-top: 60px;
+  margin-bottom: 60px;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+  color: #545454;
+}
+.top-favorite::before{
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: calc(50% - 35px);
+  width: 70px;
+  height: 2px;
+  background-color: black;
+}
+.lets-favorite{
+  color: #2E79BA  ;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  font-family: 游ゴシック;
+  font-weight: 600;
+  line-height: 2;
+}
+.lets-talk {
+  color: #2E79BA;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-family: 游ゴシック;
+  font-weight: 600;
+  line-height: 2;
+}
+.service-box{
+  width: 480px;
+  height: 160px;
+  border-radius: 10px;
+  background-color: #f5fbff;
+  border-color: #97c1e6;
+  border-style: solid;
+  margin: 20px auto 20px auto;
+}
+.container{
+  display: flex;
+  width: 480px;
+}
+.s-container{
+  display: flex;
+  flex-basis: 420px;
+  width: 420px;
+  margin-bottom: 30px;
+}
+/* チェックボックス */
+.checkbox {
+  display: none;
+}
+.checkbox-fontas {
+  position: relative;
+  vertical-align: middle;
+  font-size: 30px;
+}
+.checkbox + .checkbox-fontas:before {
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  content: '\f058';
+  color: #ccc;
+}
+.checkbox:checked + .checkbox-fontas:before {
+  color: #2E79BA;
+}
+label{
+  margin: 15px 15px 15px 20px;
+}
+.service-name{
+  font-family: 游ゴシック;
+  font-weight: 900;
+  font-size: 16px;
+  margin-top: 22px;
+  width: 190px;
+}
+.browsing-history{
+  font-family: 游ゴシック;
+  font-weight: 900;
+  font-size: 14px;
+  color: #2E79BA;
+  margin-top: 22px;
+  text-align: right;
+  width: 200px;
+}
+.button-container{
+  display: flex;
+  padding: 0 10px 0 10px;
+  gap: 20px;
+}
+.button-container a{
+  text-decoration: none;
+}
+.official-page{
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: white;
+  color: #2E79BA;
+  font-size: 18px;
+  font-weight: 550;
+  border-width: 2px;
+  border-color: #97c1e6;
+  border-style: solid;
+  text-align: center;
+  position: relative;
+  line-height: 50px;
+}
+.official-page i{
+  font-size: 16px;
+  position: absolute;
+  top: 17px;
+  right: 10px;
+}
+.detail-page{
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: white;
+  color: #2E79BA;
+  text-align: center;
+  font-size: 18px;
+  border-width: 2px;
+  border-color: #97c1e6;
+  border-style: solid;
+  position: relative;
+  line-height: 50px;
+  font-weight: 550;
+}
+.detail-page i{
+  font-size: 16px;
+  position: absolute;
+  top: 17px;
+  right: 10px;
+}
+.favorite-btn {
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: white;
+  color: #2E79BA;
+  font-size: 14px;
+  border-width: 2px;
+  border-color: #97c1e6;
+  border-style: solid;
+  text-align: center;
+}
+/* ボタン */
+.subscribe{
+  margin-left: calc(50% - 100px);
+  color: white;
+  background-color: #2E79BA;
+  border-radius: 15px;
+  text-align: center;
+  height: 50px;
+  width: 200px;
+  font-family: Osaka;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 100px;
+  border-width: 0;
+  position: relative;
+  line-height: 50px;
+}
+.subscribe i{
+  font-size: 16px;
+  position: absolute;
+  top: 17px;
+  right: 10px;
+}
+@media screen and (max-width:768px) {
+  .container{
+    width: 360px;
+    height: 70px;
+  }
+  .service-box {
+    width: 360px;
+    height: 140px;
+  }
+  .s-container {
+    width: 320px;
+  }
+  .checkbox-fontas {
+    font-size: 20px;
+  }
+  label {
+    margin: 10px;
+  }
+  .service-name {
+    font-size: 14px;
+    margin-top: 14px;
+    width: 150px;
+  }
+  .browsing-history {
+    font-size: 12px;
+    width: 150px;
+  }
+  .official-page {
+    width: 130px;
+    height: 36px;
+    margin-left: 20px;
+    font-size: 13px;
+    line-height: 36px;
+  }
+  .official-page i {
+    font-size: 13px;
+    top: 11.5px;
+    right: 8px;
+  }
+  .detail-page {
+    width: 130px;
+    height: 36px;
+    margin-left: 0;
+    font-size: 13px;
+    line-height: 36px;
+  }
+  .detail-page i {
+    font-size: 13px;
+    top: 11.5px;
+    right: 8px;
+  }
+}
