@@ -19,6 +19,7 @@ graduateValues.forEach(value => {
   console.log(checkbox)
   if (checkbox !== null && checkbox !== undefined) {
     checkbox.checked = true;
+    checkbox[0].classList.toggle("check-active")
   }
 });
 
@@ -27,6 +28,7 @@ supportValues.forEach(value => {
   console.log(checkbox)
   if (checkbox !== null && checkbox !== undefined) {
     checkbox.checked = true;
+    checkbox[0].classList.toggle("check-active")
   }
 });
 
@@ -34,6 +36,7 @@ yourAreaValues.forEach(value => {
   const checkbox = document.querySelectorAll(`input[name="your-area"][value="${value}"]`);
   if (checkbox !== null && checkbox !== undefined) {
     checkbox.checked = true;
+    checkbox[0].classList.toggle("check-active")
   }
 });
 // チェックを一個しかつけられないようにする(卒業年度)

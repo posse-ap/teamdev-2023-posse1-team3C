@@ -1,11 +1,11 @@
 const checkboxes = document.querySelectorAll(".checkbox");
-const checkbox = document.querySelector(".checkbox");
+const checkbox = document.querySelector(".check-active");
 let tag = [[], [], [], []];
 
 document.addEventListener("DOMContentLoaded", function () {
-  checkbox.click();
+checkbox.change();
 });
-
+console.log(tag)
 checkboxes.forEach((checkbox) => {
   // 現在のURLからクエリパラメータを取得
   const queryString = window.location.search;
@@ -18,6 +18,7 @@ checkboxes.forEach((checkbox) => {
     [parameter.get("your-area")],
     [],
   ];
+
   checkbox.addEventListener("click", () => {
     if (
       checkbox.value >= 1 &&
