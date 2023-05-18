@@ -80,7 +80,6 @@ checkboxes.forEach((checkbox) => {
       [paramator.get("your-area")],
       [],
     ];
-    console.log(values[0][0] !== null);
 
     // クエリパラメータの値がnullでなければ、配列に格納
     if (values[0][0] !== null)  {
