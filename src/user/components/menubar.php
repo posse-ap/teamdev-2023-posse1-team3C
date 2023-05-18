@@ -23,7 +23,7 @@
       </li>
       <li class="menubar-item">
         <a href="./record.php" class="menubar-link">
-          <div class="menubar-link-content">
+          <div class="menubar-link-content menubar-history">
             <i class="fa-solid fa-clock-rotate-left"></i>
             <span class="menubar-link-text">
               HISTORY
@@ -33,7 +33,7 @@
       </li>
       <li class="menubar-item">
         <a href="./favorite.php" class="menubar-link">
-          <div class="menubar-link-content">
+          <div class="menubar-link-content menubar-favorite">
             <i class="fa-solid fa-heart"></i>
             <span class="menubar-link-text">
               FAVORITE

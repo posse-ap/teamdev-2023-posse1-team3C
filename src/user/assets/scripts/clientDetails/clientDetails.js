@@ -75,6 +75,22 @@ function addToFavorites() {
   }
   
 }
+// レダーチャートを表示
+var options = {
+  series: [{
+  data: [3, 4, 4, 5, 4],
+}],
+  chart: {
+  height: '280',
+  type: 'radar',
+  toolbar: {
+    show: false
+  },
+},
+xaxis:{
+  categories: ['求人数', 'サポート力', '内定獲得実績', '内定実績', '業種の多さ']
+}
+};
 
 window.addEventListener('load', () => {
   let favorite = document.querySelector('.favorite-btn');
@@ -116,3 +132,5 @@ window.addEventListener('load', () => {
   // ローカルストレージに保存
   localStorage.setItem("histories", JSON.stringify(histories));
 });
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
