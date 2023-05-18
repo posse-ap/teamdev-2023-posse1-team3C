@@ -7,6 +7,17 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 checkboxes.forEach((checkbox) => {
+  // 現在のURLからクエリパラメータを取得
+  const queryString = window.location.search;
+  // クエリパラメータの文字列を解析してオブジェクトに変換
+  const paramator = new URLSearchParams(queryString);
+  // クエリパラメータの値を配列に格納
+  const values = [
+    [paramator.get("graduate")],
+    [paramator.get("support")],
+    [paramator.get("your-area")],
+    [],
+  ];
   checkbox.addEventListener("click", () => {
     if (
       checkbox.value >= 1 &&
@@ -69,23 +80,38 @@ checkboxes.forEach((checkbox) => {
       counts[j].innerHTML = new_element;
     }
 
-    // 現在のURLからクエリパラメータを取得
-    const queryString = window.location.search;
-    // クエリパラメータの文字列を解析してオブジェクトに変換
-    const paramator = new URLSearchParams(queryString);
-    // クエリパラメータの値を配列に格納
-    const values = [
-      [paramator.get("graduate")],
-      [paramator.get("support")],
-      [paramator.get("your-area")],
-      [],
-    ];
+    // 配列の要素ごとに比較
+    function areArraysEqual(arr1, arr2) {
+      if (arr1.length !== arr2.length) {
+        return false;
+      }
+
+      for (var i = 0; i < arr1.length; i++) {
+        if (arr1[i].length !== arr2[i].length) {
+          return false;
+        }
+
+        for (var j = 0; j < arr1[i].length; j++) {
+          if (arr1[i][j] !== arr2[i][j]) {
+            return false;
+          }
+        }
+      }
+      return true;
+    }
+
+    console.log(tag);
+    console.log(values);
+    console.log(areArraysEqual(values, tag));
 
     // クエリパラメータの値がnullでなければ、配列に格納
-    if (values[0][0] !== null)  {
+    if (!areArraysEqual(values, tag) && values[0][0] != null) {
       tag = values;
       console.log("nullじゃなくて");
+    } else {
+      tag = tag;
     }
+    // console.log(values);
     console.log(tag);
     let list = document.getElementById("client-list");
     let xhr = new XMLHttpRequest();
