@@ -207,5 +207,54 @@ label{
   right: 10px;
 }
 @media screen and (max-width:768px) {
-  
+  .container{
+    width: 360px;
+    height: 70px;
+  }
+  .service-box {
+    width: 360px;
+    height: 140px;
+  }
+  .s-container {
+    width: 320px;
+  }
+  .checkbox-fontas {
+    font-size: 20px;
+  }
+  label {
+    margin: 10px;
+  }
+  .service-name {
+    font-size: 14px;
+    margin-top: 14px;
+    width: 150px;
+  }
+  .browsing-history {
+    font-size: 12px;
+    width: 150px;
+  }
+  .official-page {
+    width: 130px;
+    height: 36px;
+    margin-left: 20px;
+    font-size: 13px;
+    line-height: 36px;
+  }
+  .official-page i {
+    font-size: 13px;
+    top: 11.5px;
+    right: 8px;
+  }
+  .detail-page {
+    width: 130px;
+    height: 36px;
+    margin-left: 0;
+    font-size: 13px;
+    line-height: 36px;
+  }
+  .detail-page i {
+    font-size: 13px;
+    top: 11.5px;
+    right: 8px;
+  }
 }
