@@ -84,7 +84,6 @@ let new_element = '';
 
 for (let j = 0; j < counts.length; j++) {
     let cnt = counts[j].getAttribute("value");
-    console.log(cnt);
     let new_element = '';
     for (let i = 0; i < 5; i++) {
         if (i < cnt) {
@@ -92,7 +91,6 @@ for (let j = 0; j < counts.length; j++) {
         }
     }
     counts[j].innerHTML = new_element;
-    console.log('aaaa');
 }
 // クエリパラメータを取得
 const queryString = window.location.search;
@@ -101,35 +99,35 @@ const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 
 // graduateの値を取得
-const graduateValues = params.getAll('graduate[]');
+const graduateValues = params.getAll('graduate');
 console.log(graduateValues);
 // supportの値を取得
-const supportValues = params.getAll('support[]');
+const supportValues = params.getAll('support');
 console.log(supportValues);
 // your-areaの値を取得
-const yourAreaValues = params.getAll('your-area[]');
+const yourAreaValues = params.getAll('your-area');
 console.log(yourAreaValues);
 // チェックボックスにチェックを付ける
-graduateValues.forEach(value => {
-  const checkbox = document.querySelectorAll(`input[name="graduate[]"][value="${value}"]`);
-  if (checkbox) {
-    checkbox.checked = true;
-  }
-});
+// graduateValues.forEach(value => {
+//   const checkbox = document.querySelectorAll(`input[name="graduate"][value="${value}"]`);
+//   if (checkbox) {
+//     checkbox.checked = true;
+//   }
+// });
 
-supportValues.forEach(value => {
-  const checkbox = document.querySelectorAll(`input[name="support[]"][value="${value}"]`);
-  if (checkbox) {
-    checkbox.checked = true;
-  }
-});
+// supportValues.forEach(value => {
+//   const checkbox = document.querySelectorAll(`input[name="support"][value="${value}"]`);
+//   if (checkbox) {
+//     checkbox.checked = true;
+//   }
+// });
 
-yourAreaValues.forEach(value => {
-  const checkbox = document.querySelectorAll(`input[name="your-area[]"][value="${value}"]`);
-  if (checkbox) {
-    checkbox.checked = true;
-  }
-});
+// yourAreaValues.forEach(value => {
+//   const checkbox = document.querySelectorAll(`input[name="your-area"][value="${value}"]`);
+//   if (checkbox) {
+//     checkbox.checked = true;
+//   }
+// });
 
 
 
