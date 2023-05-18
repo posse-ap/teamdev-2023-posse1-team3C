@@ -10,12 +10,12 @@ checkboxes.forEach((checkbox) => {
   // 現在のURLからクエリパラメータを取得
   const queryString = window.location.search;
   // クエリパラメータの文字列を解析してオブジェクトに変換
-  const paramator = new URLSearchParams(queryString);
+  const parameter = new URLSearchParams(queryString);
   // クエリパラメータの値を配列に格納
   const values = [
-    [paramator.get("graduate")],
-    [paramator.get("support")],
-    [paramator.get("your-area")],
+    [parameter.get("graduate")],
+    [parameter.get("support")],
+    [parameter.get("your-area")],
     [],
   ];
   checkbox.addEventListener("click", () => {
@@ -105,7 +105,7 @@ checkboxes.forEach((checkbox) => {
     console.log(areArraysEqual(values, tag));
 
     // クエリパラメータの値がnullでなければ、配列に格納
-    if (!areArraysEqual(values, tag) && values[0][0] != null) {
+    if (areArraysEqual(values, tag) && values[0][0] != null) {
       tag = values;
       console.log("nullじゃなくて");
     } else {
