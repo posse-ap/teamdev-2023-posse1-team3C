@@ -130,6 +130,7 @@ label{
   text-align: center;
   position: relative;
   line-height: 30px;
+  margin-left: 15px;
 }
 .official-page i{
   font-size: 14px;
@@ -162,14 +163,19 @@ label{
   width: 144px;
   height: 34px;
   border-radius: 5px;
-  background-color: white;
-  color: #2E79BA;
+  background-color: #fa4747;
+  color: #fff;
   font-size: 14px;
-  border-width: 2px;
-  border-color: #97c1e6;
-  border-style: solid;
+  border: #fa4747 solid 2px;
   text-align: center;
   font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+.favorite-btn.active {
+  background-color: #ddd;
+  color: #636363;
+  border: #636363 solid 2px;
 }
 /* ボタン */
 .subscribe{

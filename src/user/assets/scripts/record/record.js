@@ -44,11 +44,25 @@ favorites.forEach((favorite) => {
 
 service_box.innerHTML = str;
 
+// お気に入りボタンを押したら色が変わる、テキストが変更される
 let favorite = document.querySelector('.favorite-btn');
 let favoriteText = document.querySelector('.favorite-btn-text');
+favorite.addEventListener('click', function() {
+  if (favorite.classList.contains('active')) {
+    favorite.classList.remove('active');
+    favoriteText.textContent = 'お気に入りに追加';
+    favorite.value = 0;
+  } else {
+    favorite.classList.add('active');
+    favoriteText.textContent = 'お気に入り済み';
+    favorite.value = 1;
+  }
+
+});
 function addToFavorites() {
   // これ解除すれば中身が初期化するのでわかりやすい
   // localStorage.clear();
+  let favorite = document.querySelector('.favorite-btn');
   let companyID = favorite.getAttribute('data-id');
   let currentTime = new Date().toLocaleString();
   // ローカルストレージからお気に入り情報を取得
@@ -107,16 +121,3 @@ if (idExists){
   favoriteText.textContent = 'お気に入り済み';
   favorite.value = 1;
 }
-// お気に入りボタンを押したら色が変わる、テキストが変更される
-favorite.addEventListener('click', function() {
-  if (favorite.classList.contains('active')) {
-    favorite.classList.remove('active');
-    favoriteText.textContent = 'お気に入りに追加';
-    favorite.value = 0;
-  } else {
-    favorite.classList.add('active');
-    favoriteText.textContent = 'お気に入り済み';
-    favorite.value = 1;
-  }
-
-});
