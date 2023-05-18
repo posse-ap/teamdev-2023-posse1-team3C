@@ -30,7 +30,7 @@
   <div class="lets-favorite">あなたがチェックした企業はこちら</div>
 
   <div class="service-wrapper" id='service-wrapper'>
-  
+    
   </div>
 
   <div class="lets-favorite">＼気になったエージェントと話してみよう／</div>
