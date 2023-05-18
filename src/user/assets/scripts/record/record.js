@@ -45,7 +45,8 @@ favorites.forEach((favorite) => {
 service_box.innerHTML = str;
 
 // ローカルストレージの中にidが存在しているのかチェックしてお気に入りボタンを変更する。
-
+let favorite = document.querySelector('.favorite-btn');
+let favoriteText = document.querySelector('.favorite-btn-text');
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get('id');
 console.log(id);
@@ -70,8 +71,6 @@ if (idExists){
   favorite.value = 1;
 }
 // お気に入りボタンを押したら色が変わる、テキストが変更される
-let favorite = document.querySelector('.favorite-btn');
-let favoriteText = document.querySelector('.favorite-btn-text');
 favorite.addEventListener('click', function() {
   if (favorite.classList.contains('active')) {
     favorite.classList.remove('active');
