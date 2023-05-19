@@ -8,6 +8,9 @@ const params = new URLSearchParams(queryString);
 const graduateValues = params.getAll('graduate');
 const changeGraduateCheckbox = document.querySelector(`input[name="graduate"][value="${graduateValues}"]`).parentNode.parentNode;
 changeGraduateCheckbox.style.backgroundColor = "#E7F5FD";
+const changeGraduateSpan = document.querySelector(`.checkbox-fontas-${graduateValues}`)
+changeGraduateCheckbox.checked = true;
+changeGraduateSpan.style.color = "#1E90FF";
 // supportの値を取得
 const supportValues = params.getAll('support');
 console.log(supportValues)
