@@ -33,7 +33,7 @@
     
   </div>
 
-  <div class="lets-favorite">＼気になったエージェントと話してみよう／</div>
+  <div class="lets-talk">＼気になったエージェントと話してみよう／</div>
   <div class="subscribe">一括登録する<i class="fa-solid fa-caret-right"></i></div>
 
 </main>
