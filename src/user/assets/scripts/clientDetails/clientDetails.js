@@ -78,9 +78,14 @@ function addToFavorites() {
   
 }
 // レダーチャートを表示
+let stars = [];
+let starCounts = counts.forEach(count => {
+  let starCount = count.getAttribute("value");
+  stars.push(starCount);
+})
 var options = {
   series: [{
-  data: [3, 4, 4, 5, 4],
+  data: stars,
 }],
   chart: {
   height: '280',
