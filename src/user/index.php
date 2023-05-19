@@ -156,16 +156,15 @@
             </ul>
           </div>
         </div>
+        <!-- エージェントを探してみる -->
+        <div class="btn-search-for-agent">
+          <button type="submit">
+            エージェントを探してみる
+            <i class="fa-solid fa-caret-right"></i>
+          </button>
+        </div>
       </div>
-  <!-- エージェントを探してみる -->
-  <div class="btn-search-for-agent">
-    <button type="submit">
-      エージェントを探してみる
-      <i class="fa-solid fa-caret-right"></i>
-    </button>
-  </div>
-</form>
-
+    </form>
     
     <!-- 申し込みするための３ステップ -->
     <div class="step-explanation-contents">
