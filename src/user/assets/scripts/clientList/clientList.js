@@ -6,13 +6,17 @@ const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 // graduateの値を取得
 const graduateValues = params.getAll('graduate');
-console.log(graduateValues);
+const changeGraduateCheckbox = document.querySelector(`input[name="graduate"][value="${graduateValues}"]`).parentNode.parentNode;
+changeGraduateCheckbox.style.backgroundColor = "#E7F5FD";
 // supportの値を取得
 const supportValues = params.getAll('support');
-console.log(supportValues);
+console.log(supportValues)
+const changeSupportCheckbox = document.querySelector(`input[name="support"][value="${supportValues}"]`).parentNode.parentNode;
+changeSupportCheckbox.style.backgroundColor = "#E7F5FD";
 // your-areaの値を取得
 const yourAreaValues = params.getAll('your-area');
-console.log(yourAreaValues);
+const changeYourAreaCheckbox = document.querySelector(`input[name="your-area"][value="${yourAreaValues}"]`).parentNode.parentNode;
+changeYourAreaCheckbox.style.backgroundColor = "#E7F5FD";
 // チェックボックスにチェックを付ける
 graduateValues.forEach(value => {
   const checkbox = document.querySelectorAll(`input[name="graduate"][value="${value}"]`);
@@ -34,6 +38,7 @@ supportValues.forEach(value => {
 
 yourAreaValues.forEach(value => {
   const checkbox = document.querySelectorAll(`input[name="your-area"][value="${value}"]`);
+  console.log(checkbox)
   if (checkbox !== null && checkbox !== undefined) {
     checkbox.checked = true;
     checkbox[0].classList.toggle("check-active")

@@ -13,7 +13,9 @@
   <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous" defer></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
   <script src="./assets/scripts/clientList/clientList.js" defer></script>
-
+  <?php
+  // include_once('assets/php/clientList/searchClientFromIndex.php');
+  ?>
 </head>
 <body>
   <!-- ヘッダー読み込み -->
