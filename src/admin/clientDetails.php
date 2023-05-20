@@ -149,7 +149,7 @@ include(dirname(__FILE__) . '/components/head.php');
         </div>
         <div>
           <div>
-            総学生数：
+            有効学生数：
             <span class="student-number"><?php print_r($resultCountStudents["totalStudents"]) ?></span>
             人
           </div>

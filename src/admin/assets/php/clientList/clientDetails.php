@@ -16,8 +16,8 @@ $CompaniesStudentsLink = $dbh->prepare($sql_CompaniesStudentsLink);
 $CompaniesStudentsLink->bindValue(":id", $_GET["id"], PDO::PARAM_INT);
 $CompaniesStudentsLink->execute();
 
-// 企業毎に登録されている全ての学生の数を取得
-$sql_countStudents = "SELECT COUNT(*) as totalStudents FROM `CompaniesStudentsLink` where company_id = :id";
+// 企業毎に登録されている無効学生以外の数を取得
+$sql_countStudents = "SELECT COUNT(*) as totalStudents FROM `CompaniesStudentsLink` where company_id = :id and status_id !=3";
 $countStudents = $dbh->prepare($sql_countStudents);
 $countStudents->bindValue(":id", $_GET["id"], PDO::PARAM_INT);
 $countStudents->execute();
