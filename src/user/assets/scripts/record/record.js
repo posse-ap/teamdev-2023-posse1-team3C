@@ -31,7 +31,7 @@ favorites.forEach((favorite) => {
   <a href="clientDetails.php?id=${companyID}">
     <div class="detail-page">詳細ページ<i class="fa-solid     fa-chevron-right"></i></div>
   </a>
-  <button type="button" class="favorite-btn" value="" id="favoriteButton" data-name="<?= ${company_details["company"]}?>" data-url="<?= ${company_details["URL"]}?>" data-id="<?= ${company_details["id"]}?>" onclick="addToFavorites()">
+  <button type="button" class="favorite-btn" value="" id="favoriteButton" data-name="${companyName}" data-url="${companyURL}" data-id="${companyID}" onclick="addToFavorites()">
     <span class="favorite-btn-text">
       お気に入りに追加
     </span>
@@ -45,79 +45,85 @@ favorites.forEach((favorite) => {
 service_box.innerHTML = str;
 
 // お気に入りボタンを押したら色が変わる、テキストが変更される
-let favorite = document.querySelector('.favorite-btn');
-let favoriteText = document.querySelector('.favorite-btn-text');
-favorite.addEventListener('click', function() {
-  if (favorite.classList.contains('active')) {
-    favorite.classList.remove('active');
-    favoriteText.textContent = 'お気に入りに追加';
-    favorite.value = 0;
-  } else {
-    favorite.classList.add('active');
-    favoriteText.textContent = 'お気に入り済み';
-    favorite.value = 1;
-  }
+let favorite_btns = document.querySelectorAll('.favorite-btn');
+let favoriteTexts = document.querySelectorAll('.favorite-btn-text');
 
+favorite_btns.forEach((favorite_btn, index) => {
+  favorite_btn.addEventListener('click', function() {
+    if (favorite_btn.classList.contains('active')) {
+      favorite_btn.classList.remove('active');
+      favoriteTexts[index].textContent = 'お気に入りに追加';
+      favorite_btn.value = 0;
+    } else {
+      favorite_btn.classList.add('active');
+      favoriteTexts[index].textContent = 'お気に入り済み';
+      favorite_btn.value = 1;
+    }
+    addToFavorites(favorite_btn);
+  });
 });
+
+
 function addToFavorites() {
-  // これ解除すれば中身が初期化するのでわかりやすい
-  // localStorage.clear();
-  let favorite = document.querySelector('.favorite-btn');
-  let companyID = favorite.getAttribute('data-id');
+  let favorite_btn = document.querySelector('.favorite-btn');
+  let companyID = favorite_btn.getAttribute('data-id');
   let currentTime = new Date().toLocaleString();
   // ローカルストレージからお気に入り情報を取得
   const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
-  if (favorite.value == 0){
-  
+  if (favorite_btn.value == 0) {
+    // 既に同じIDの企業がローカルストレージ内に存在するかチェック
+    const existingIndex = favorites.findIndex(item => item.id === companyID);
 
-  
+    if (existingIndex !== -1) {
+      // 同じIDの企業が既に登録されている場合は削除
+      favorites.splice(existingIndex, 1);
+    }
 
-  // 既に同じIDの企業がローカルストレージ内に存在するかチェック
-  const existingIndex = favorites.findIndex(item => item.id === companyID);
+    // 企業の情報（仮のデータ）
+    let companyName = favorite_btn.getAttribute('data-name');
+    let companyURL = favorite_btn.getAttribute('data-url');
 
-  if (existingIndex !== -1) {
-    // 同じIDの企業が既に登録されている場合は削除
-    favorites.splice(existingIndex, 1);
-  }
+    // お気に入り情報を追加
+    favorites.push({ name: companyName, url: companyURL, id: companyID, time: currentTime });
 
-  // 企業の情報（仮のデータ）
-  let companyName = favorite.getAttribute('data-name');
-  let companyURL = favorite.getAttribute('data-url');
-
-  // お気に入り情報を追加
-  favorites.push({ name: companyName, url: companyURL, id: companyID,time: currentTime});
-
-  // ローカルストレージに保存
-  localStorage.setItem("favorites", JSON.stringify(favorites));
-  }else{
+    // ローカルストレージに保存
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  } else {
     const existingIndex = favorites.findIndex(item => item.id === companyID);
     favorites.splice(existingIndex, 1);
     localStorage.setItem("favorites", JSON.stringify(favorites));
   }
-  
 }
-// ローカルストレージの中にidが存在しているのかチェックしてお気に入りボタンを変更する。
-const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get('id');
-console.log(id);
-function checkIfIdExists(id) {
-  // ローカルストレージからデータを取得
-  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
-  // データ内をループしてidの存在をチェック
-  for (const item of favorites) {
-    if (item.id === id) {
-      // 指定したidが存在する場合
-      return true;
-    }
-  }
-  // 指定したidが存在しない場合
-  return false;
-}
-const idExists = checkIfIdExists(id);
-if (idExists){
-  favorite.classList.add('active');
-  favoriteText.textContent = 'お気に入り済み';
-  favorite.value = 1;
-}
+// // ローカルストレージの中にidが存在しているのかチェックしてお気に入りボタンを変更する。
+// const urlParams = new URLSearchParams(window.location.search);
+// const id = urlParams.get('id');
+// console.log(id);
+
+// function checkIfIdExists(id) {
+//   // ローカルストレージからデータを取得
+//   const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+//   // データ内をループしてidの存在をチェック
+//   for (const item of favorites) {
+//     if (item.id === id) {
+//       // 指定したidが存在する場合
+//       return true;
+//     }
+//   }
+//   // 指定したidが存在しない場合
+//   return false;
+// }
+
+// const idExists = checkIfIdExists(id);
+
+// if (idExists) {
+//   favorite_btns.forEach((favorite_btn, index) => {
+//     if (favorite_btn.getAttribute('data-id') === id) {
+//       favorite_btn.classList.add('active');
+//       favoriteTexts[index].textContent = 'お気に入り済み';
+//       favorite_btn.value = 1;
+//     }
+//   });
+// }
