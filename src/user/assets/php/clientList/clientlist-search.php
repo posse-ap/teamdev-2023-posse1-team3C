@@ -3,6 +3,7 @@ include_once('../../../../dbconnect.php');
 $tags = $_POST['tag'];
 $tagArrays = array_filter(explode(',', $tags));
 $placeholders = implode(',', array_fill(0, count($tagArrays), '?'));
+
 // var_dump($tagArrays);
 // var_dump($placeholders);
 // タグを一度押して、また外した時のバグ修正
