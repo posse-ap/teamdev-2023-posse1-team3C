@@ -158,7 +158,7 @@
         </div>
         <!-- エージェントを探してみる -->
         <div class="btn-search-for-agent">
-          <button type="submit">
+          <button type="submit" onclick="searchStart()">
             エージェントを探してみる
             <i class="fa-solid fa-caret-right"></i>
           </button>
