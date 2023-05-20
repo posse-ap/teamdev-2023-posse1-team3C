@@ -192,6 +192,7 @@ label {
 .checkbox:checked + .checkbox-fontas:before {
   color: #2E79BC;
 }
+
 /* 詳細絞りこみ */
 .search-details-title {
   width: 720px;
