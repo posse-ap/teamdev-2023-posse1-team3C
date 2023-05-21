@@ -6,7 +6,7 @@
 include(dirname(__FILE__) . '/components/head.php');
 ?>
 <title>admin画面企業詳細ページ</title>
-<?php include(dirname(__FILE__) . '/components/link.php')?>
+<?php include(dirname(__FILE__) . '/components/link.php') ?>
 <link rel="stylesheet" href="./assets/styles/clientDetails/clientDetails.css">
 <?php if (isset($passwordAlert)) { ?>
 
@@ -37,10 +37,19 @@ include(dirname(__FILE__) . '/components/head.php');
             <span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300 h-5">掲載停止中</span>
           <?php } ?>
         </div>
-        <form action="./assets/php/clientList/changeFinished_at.php" method="post">
+        <form action="./assets/php/clientList/changeFinished_at.php" method="post" class="flex">
           <input type="hidden" name="company_id" value="<?php echo $resultcompany["id"] ?>">
-          <input type="date" name="selected_at">
+          <div class="relative max-w-sm">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+              <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <input datepicker datepicker-autohide type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="掲載終了日を更新" name="selected_at">
+          </div>
+          <div>
           <button type="submit" name="submit" class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">変更</button>
+          </div>
         </form>
       </section>
       <!-- 企業基本情報テーブル -->
@@ -130,9 +139,9 @@ include(dirname(__FILE__) . '/components/head.php');
       <section class="student-info-container">
         <h3>登録学生情報</h3>
         <div class="text-center">
-          <form action="#" method="POST" class="flex" >
+          <form action="#" method="POST" class="flex">
             <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white student-info-title">月毎の学生情報を見る</label>
-            <select name="month" id="month" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-48 month-select" >
+            <select name="month" id="month" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-48 month-select">
               <option selected>月を選択してください</option>
               <option value="2023-04">2023/04</option>
               <option value="2023-03">2023/03</option>
@@ -200,7 +209,7 @@ include(dirname(__FILE__) . '/components/head.php');
                     <?php echo $list["status"] ?>
                   </td>
                   <td class="px-6 py-4 bg-white">
-                    <a href="http://localhost:8080/admin/studentDetails.php?id=<?php echo $list["id"]?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    <a href="http://localhost:8080/admin/studentDetails.php?id=<?php echo $list["id"] ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                       <?php echo $list["student_id"] ?>
                     </a>
                   </td>
