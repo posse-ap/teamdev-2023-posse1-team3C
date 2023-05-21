@@ -1,7 +1,13 @@
 <?php
 include_once('../../../../dbconnect.php');
 $company_id = $_POST['company_id'];
-$month = $_POST['month'].'%';
+// 全期間が選択された時のみ、$monthの内容を変更する
+if($_POST['month'] === '全期間'){
+  $month = '%';
+} else {
+  $month = $_POST['month'].'%';
+}
+
 
 $stmt = $dbh->prepare('SELECT Name, Students.id, Students.registered_at, CompaniesStudentsLink.company_id, status, company, Statuses.id as status_id FROM `CompaniesStudentsLink` 
 join Students on CompaniesStudentsLink.Student_id = Students.id
@@ -9,6 +15,7 @@ join Companies on Companies.id = CompaniesStudentsLink.company_id
 join Statuses on Statuses.id = status_id
 where CompaniesStudentsLink.company_id = :id
 and Students.registered_at LIKE :month
+order by Students.registered_at desc
 ');
 $stmt->bindValue(':id', $company_id);
 $stmt->bindValue(':month', $month);

@@ -104,7 +104,7 @@ include(dirname(__FILE__) . '/components/head.php');
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800 client-info-title">公式サイトURL
                 </th>
                 <td class="px-6 py-4 bg-white">
-                  <?php echo $resultcompany["URL"] ?>
+                  <a href="<?php echo $resultcompany["URL"] ?>" target="_blank">こちらをクリック</a>
                 </td>
               </tr>
               <tr class="border-b border-gray-200 dark:border-gray-700">
@@ -143,6 +143,7 @@ include(dirname(__FILE__) . '/components/head.php');
             <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white student-info-title">月毎の学生情報を見る</label>
             <select name="month" id="month" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-48 month-select">
               <option selected>月を選択してください</option>
+              <option value="全期間">全期間</option>
               <option value="2023-04">2023/04</option>
               <option value="2023-03">2023/03</option>
               <option value="2023-02">2023/02</option>
@@ -210,7 +211,7 @@ include(dirname(__FILE__) . '/components/head.php');
                   </td>
                   <td class="px-6 py-4 bg-white">
                     <a href="http://localhost:8080/admin/studentDetails.php?id=<?php echo $list["id"] ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                      <?php echo $list["student_id"] ?>
+                    詳細
                     </a>
                   </td>
                 </tr>
