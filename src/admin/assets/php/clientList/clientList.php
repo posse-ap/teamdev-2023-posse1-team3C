@@ -7,6 +7,7 @@ $dbh = new PDO($dsn, $user, $password);
 $sql_companiesUnfinish = "
 select id, Company, finished_at from Companies 
 where finished_at >= now()
+order by finished_at desc
 ";
 $companiesUnfinish = $dbh->query($sql_companiesUnfinish)->fetchAll(PDO::FETCH_ASSOC);
 
@@ -14,6 +15,7 @@ $companiesUnfinish = $dbh->query($sql_companiesUnfinish)->fetchAll(PDO::FETCH_AS
 $sql_companiesFinish = "
 select id, Company, finished_at from Companies 
 where finished_at < now() or finished_at is null
+order by finished_at desc
 ";
 $companiesFinish = $dbh->query($sql_companiesFinish)->fetchAll(PDO::FETCH_ASSOC);
 
