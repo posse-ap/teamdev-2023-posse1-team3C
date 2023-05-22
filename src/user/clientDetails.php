@@ -32,7 +32,7 @@
     <!-- エージェント企業名と画像 -->
     <div class="agent-name">
       <h2>
-        <?php echo $company_details["company"]; ?>
+        <?php echo $company_details["service"]; ?>
       </h2>
     </div>
     <div class="agent-img">
