@@ -47,22 +47,31 @@ main {
   padding-top: 30px;
   margin-bottom: 30px;
 }
+.feature-container {
+  display: flex;
+  width: 720px;
+  margin-left: calc(50% - 360px);
+  gap: 40px;
+}
 .feature-background {
   background-color: #fff;
-  width: 540px;
+  width: 360px;
   height: 280px;
   text-align: center;
-  margin-left: calc(50% - 280px);
   border-radius: 10px;
-  padding: 40px 100px 40px 100px;
+  padding: 30px 50px 30px 50px;
 }
 .feature-background tbody tr th {
   text-align: left;
   color: #7A7A7A;
+  font-size: 14px;
 }
 .feature-background tbody tr td {
   text-align: left;
   color: #ED9630;
+}
+#chart {
+  width: 320px;
 }
 /* 詳細情報 */
 .agent-info-details {
@@ -326,27 +335,36 @@ main {
   }
   /* エージェント企業の特徴 */
   .agent-feature {
-    height: 300px;
+    height: 400px;
   }
   .agent-feature-title {
     font-size: 16px;
     padding-top: 20px;
   }
-  .feature-background {
+  .feature-container {
     width: 360px;
     margin-left: calc(50% - 180px);
+    display: block;
+  }
+  .feature-background {
+    width: 200px;
+    margin-left: calc(50% - 100px);
     padding: 10px 20px 10px 20px;
-    height: 200px;
+    height: 100px;
   }
   .feature-background tbody tr th {
     text-align: left;
     color: #7A7A7A;
-    font-size: 14px;
+    font-size: 10px;
   }
   .feature-background tbody tr td {
     text-align: left;
     color: #ED9630;
-    font-size: 14px;
+    font-size: 10px;
+  }
+  #chart {
+    width: 200px;
+    margin-left: calc(50% - 100px);
   }
   /* 詳細情報 */
   .agent-info-details {

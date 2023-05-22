@@ -43,30 +43,33 @@
       <h3 class="agent-feature-title">
         <?php echo $company_details["company"] ?>の特徴
       </h3>
-      <table class="feature-background">
-        <tbody>
-          <tr>
-            <th>求人数</th>
-            <td class="feature list-star-value" value="<?= $ratings['people'] ?>"></td>
-          </tr>
-          <tr>
-            <th>サポート力</th>
-            <td class="feature list-star-value" value="<?= $ratings['support'] ?>"></td>
-          </tr>
-          <tr>
-            <th>内定獲得実績</th>
-            <td class="feature list-star-value" value="<?= $ratings['achievement'] ?>"></td>
-          </tr>
-          <tr>
-            <th>内定速度</th>
-            <td class="feature list-star-value" value="<?= $ratings['speed'] ?>"></td>
-          </tr>
-          <tr>
-            <th>扱っている業界の多さ</th>
-            <td class="feature list-star-value" value="<?= $ratings['amount'] ?>"></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="feature-container">
+      <div id="chart"></div>
+        <table class="feature-background">
+          <tbody>
+            <tr>
+              <th>求人数</th>
+              <td class="feature list-star-value" value="<?= $ratings['people'] ?>"></td>
+            </tr>
+            <tr>
+              <th>サポート力</th>
+              <td class="feature list-star-value" value="<?= $ratings['support'] ?>"></td>
+            </tr>
+            <tr>
+              <th>内定獲得実績</th>
+              <td class="feature list-star-value" value="<?= $ratings['achievement'] ?>"></td>
+            </tr>
+            <tr>
+              <th>内定速度</th>
+              <td class="feature list-star-value" value="<?= $ratings['speed'] ?>"></td>
+            </tr>
+            <tr>
+              <th>扱っている業界の多さ</th>
+              <td class="feature list-star-value" value="<?= $ratings['amount'] ?>"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <!-- 詳細情報 -->
     <div class="agent-info-details">

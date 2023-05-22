@@ -86,7 +86,7 @@ $(function(){
     $('input[name="graduate"]').parent().parent().css('background-color', '#fff');
     $(this).prop('checked', checked);
     if (checked) {
-      $(this).parent().parent().css('background-color', '#E7F5FD');
+      $(this).parent().parent().css('background-color', '#D6EAF8');
     } else {
       $(this).parent().parent().css('background-color', '#fff');
     }
@@ -101,7 +101,7 @@ $(function(){
     $('input[name="support"]').parent().parent().css('background-color', '#fff');
     $(this).prop('checked', checked);
     if (checked) {
-      $(this).parent().parent().css('background-color', '#E7F5FD');
+      $(this).parent().parent().css('background-color', '#D6EAF8');
     } else {
       $(this).parent().parent().css('background-color', '#fff');
     }
@@ -116,7 +116,7 @@ $(function(){
     $('input[name="your-area"]').parent().parent().css('background-color', '#fff');
     $(this).prop('checked', checked);
     if (checked) {
-      $(this).parent().parent().css('background-color', '#E7F5FD');
+      $(this).parent().parent().css('background-color', '#D6EAF8');
     } else {
       $(this).parent().parent().css('background-color', '#fff');
     }

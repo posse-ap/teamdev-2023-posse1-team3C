@@ -76,20 +76,33 @@ function addToFavorites() {
   
 }
 // レダーチャートを表示
+let stars = [];
+let starCounts = counts.forEach(count => {
+  let starCount = count.getAttribute("value");
+  stars.push(starCount);
+})
 var options = {
   series: [{
-  data: [3, 4, 4, 5, 4],
-}],
+    data: stars,
+  }],
   chart: {
-  height: '280',
-  type: 'radar',
-  toolbar: {
-    show: false
+    height: '280',
+    type: 'radar',
+    toolbar: {
+      show: false
+    },
   },
-},
-xaxis:{
-  categories: ['求人数', 'サポート力', '内定獲得実績', '内定実績', '業種の多さ']
-}
+  xaxis:{
+    categories: ['求人数', 'サポート力', '内定獲得実績', '内定実績', '業種の多さ']
+  },
+  responsive: [{
+    breakpoint: 768, // ウィンドウ幅が768px以下の場合に適用
+    options: {
+      chart: {
+        height: '180',
+      }
+    }
+  }]
 };
 
 window.addEventListener('load', () => {

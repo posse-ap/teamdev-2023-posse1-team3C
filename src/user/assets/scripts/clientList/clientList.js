@@ -11,20 +11,25 @@ if(queryString !== "") {
   console.log(queryString)
 // graduateの値を取得
 const graduateValues = params.getAll('graduate');
-const changeGraduateCheckbox = document.querySelector(`input[name="graduate"][value="${graduateValues}"]`).parentNode.parentNode;
-changeGraduateCheckbox.style.backgroundColor = "#E7F5FD";
+const changeGraduateCheckbox = document.querySelector(`input[name="graduate"][value="${graduateValues}"]`);
+const changeGraduateCheckboxArea = changeGraduateCheckbox.parentNode.parentNode;
+changeGraduateCheckboxArea.style.backgroundColor = "#E7F5FD";
 const changeGraduateSpan = document.querySelector(`.checkbox-fontas-${graduateValues}`)
 changeGraduateCheckbox.checked = true;
-changeGraduateSpan.style.color = "#1E90FF";
+console.log(changeGraduateCheckbox);
 // supportの値を取得
 const supportValues = params.getAll('support');
 console.log(supportValues)
-const changeSupportCheckbox = document.querySelector(`input[name="support"][value="${supportValues}"]`).parentNode.parentNode;
-changeSupportCheckbox.style.backgroundColor = "#E7F5FD";
+const changeSupportCheckbox = document.querySelector(`input[name="support"][value="${supportValues}"]`);
+const changeSupportCheckboxArea = document.querySelector(`input[name="support"][value="${supportValues}"]`).parentNode.parentNode;
+changeSupportCheckboxArea.style.backgroundColor = "#E7F5FD";
+changeSupportCheckbox.checked = true;
 // your-areaの値を取得
 const yourAreaValues = params.getAll('your-area');
-const changeYourAreaCheckbox = document.querySelector(`input[name="your-area"][value="${yourAreaValues}"]`).parentNode.parentNode;
-changeYourAreaCheckbox.style.backgroundColor = "#E7F5FD";
+const changeYourAreaCheckbox = document.querySelector(`input[name="your-area"][value="${yourAreaValues}"]`);
+const changeYourAreaCheckboxArea = document.querySelector(`input[name="your-area"][value="${yourAreaValues}"]`).parentNode.parentNode;
+changeYourAreaCheckboxArea.style.backgroundColor = "#E7F5FD";
+changeYourAreaCheckbox.checked = true;
 // チェックボックスにチェックを付ける
 graduateValues.forEach(value => {
   const checkbox = document.querySelectorAll(`input[name="graduate"][value="${value}"]`);

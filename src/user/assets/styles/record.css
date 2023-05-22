@@ -42,6 +42,9 @@ main {
   font-weight: 600;
   line-height: 2;
 }
+.service-wrapper {
+  min-height: 40vh;
+}
 .lets-talk {
   color: #2E79BA;
   font-size: 16px;
@@ -59,7 +62,9 @@ main {
   background-color: #f5fbff;
   border-color: #97c1e6;
   border-style: solid;
-  margin: 20px auto 20px auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: calc(50% - 240px);
 }
 .container{
   display: flex;
@@ -208,6 +213,7 @@ label{
   .service-box {
     width: 360px;
     height: 140px;
+    margin-left: calc(50% - 180px);
   }
   .s-container {
     width: 320px;
