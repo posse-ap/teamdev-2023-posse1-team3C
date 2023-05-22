@@ -685,13 +685,13 @@ a{
   }
   .clientlist-sub {
     width: 165px;
-    padding-left: 20px;
+    padding-left: 10px;
   }
   .list-sub-point{
-    height: 150px;
+    height: 144px;
   }
   .list-sub-point ul{
-    padding-left: 20px;
+    padding-left: 10px;
     margin-top: 10px;
   }
   .list-sub-point li{
