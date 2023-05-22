@@ -242,6 +242,10 @@ label {
   display: block;
 }
 /* 詳細絞りこみ中身 */
+.error-list {
+  width: 720px;
+  margin-left: calc(50% - 360px);
+}
 .agent-type {
   margin-top: 0;
 }
@@ -583,6 +587,10 @@ a{
   }
   .clientlist-wrapper {
     padding-bottom: 30px;
+  }
+  .error-list {
+    width: 360px;
+    margin-left: calc(50% - 180px);
   }
   /* 企業リストの各内容 */
   .clientlist {

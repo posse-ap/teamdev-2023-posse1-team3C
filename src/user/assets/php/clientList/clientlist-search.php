@@ -10,8 +10,8 @@ $placeholders = implode(',', array_fill(0, count($tagArrays), '?'));
 $error = "";
 if($placeholders == "") {
   $placeholders = "1 = 1";
-  $error = '<div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
-  <span class="font-medium ml-4">タグを選択してください</span> タグを選択しないと検索できません。
+  $error = '<div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 error-list" role="alert">
+  タグを選択してください。タグを選択しないと検索できません。
 </div>';
 }
 
