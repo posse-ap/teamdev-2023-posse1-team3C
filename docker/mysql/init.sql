@@ -11,6 +11,8 @@ CREATE TABLE AdminUsers (
   email VARCHAR(255),
   password VARCHAR(255)
 ) CHARSET=utf8;
+
+-- passwordは全部root
 insert into AdminUsers (email, password) 
 values ("admin@example.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW");
 
@@ -23,8 +25,23 @@ CREATE TABLE ClientUsers (
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT "発行日時",
   updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT "更新日時"
 ) CHARSET=utf8;
-insert into ClientUsers (company_id, email, password) values (1, "client@example.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW");
 
+-- passwordは全部root
+insert into ClientUsers (company_id, email, password) values 
+(1, "careerticket@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(2, "shinsotsu@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(3, "irodas@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(4, "doda@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(5, "rikunabi@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(6, "jobstring@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(7, "neo@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(8, "digupcareer@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(9, "syn@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(10, "careecen@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(11, "typeshukatsu@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(12, "careerpark@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(13, "twing@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(14, "goodfind@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW");
 DROP TABLE IF EXISTS Companies;
 CREATE TABLE Companies (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -56,7 +73,7 @@ insert into Companies (company, service, URL, email, postcode, address, phoneNum
 ("シンクエージェント", "キャリセン就活エージェント", "https://careecen-shukatsu-agent.com/", "careecen@gmail.com", "107-0052", "東京都港区赤坂4-8-14 赤坂坂東ビルディング5階", "03-5413-4975", "対面・オンライン", "平日9:30-18:30", "2022-12-01", "2023-04-30", "対応可"),
 ("キャリアデザインセンター", "type就活エージェント", "https://typeshukatsu.jp/s/service/", "typeshukatsu@gmail.com", "107-0052", "東京都港区赤坂3-21-20 赤坂ロングビーチビル", "03-5413-4975", "対面", "平日9:30-18:30", "2022-12-01", "2023-04-30", "対応可"),
 ("ポート", "キャリアパーク就職エージェント", "https://careerpark-agent.jp/", "careerpark@gmail.com", "160-0074", "東京都新宿区北新宿２丁目２１−１ 新宿フロントタワー 5F", "03-5937-6735", "対面・オンライン", "平日9:30-19:30", "2022-12-01", "2023-04-30", "対応可"),
-("ツイング", "ツイング就活エージェント", "https://twing.tokyo/lp/shukatsu/", "careerpark@gmail.com", "160-0022", "東京都新宿区新宿２丁目１１−４ ストークビル長崎", "03-5315-4914", "対面・オンライン", "平日9:30-19:30", "2022-12-01", "2023-04-30", "対応可"),
+("ツイング", "ツイング就活エージェント", "https://twing.tokyo/lp/shukatsu/", "twing@gmail.com", "160-0022", "東京都新宿区新宿２丁目１１−４ ストークビル長崎", "03-5315-4914", "対面・オンライン", "平日9:30-19:30", "2022-12-01", "2023-04-30", "対応可"),
 ("スローガン", "Goodfindエージェント", "https://www.goodfind.jp/2022/agent", "goodfind@gmail.com", "107-0062", "東京都港区南青山2-11-17", "03-6434-5225", "対面", "平日9:30-19:30", "2022-12-01", "2023-04-30", "対応可");
 
 DROP TABLE IF EXISTS CompaniesDetails;
