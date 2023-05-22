@@ -120,35 +120,35 @@
               </li>
               <li class="y-box-item">
                 <label for="y-box-item-4">
-                  <input type="checkbox" name="your-area[]" id="y-box-item-4" class="checkbox" value="10" type-data="s-area">
+                  <input type="checkbox" name="your-area" id="y-box-item-4" class="checkbox" value="10" type-data="s-area">
                   <span class="checkbox-fontas"></span>
                   中部
                 </label>
               </li>
               <li class="y-box-item">
                 <label for="y-box-item-5">
-                  <input type="checkbox" name="your-area[]" id="y-box-item-5" class="checkbox" value="11" type-data="s-area">
+                  <input type="checkbox" name="your-area" id="y-box-item-5" class="checkbox" value="11" type-data="s-area">
                   <span class="checkbox-fontas"></span>
                   近畿
                 </label>
               </li>
               <li class="y-box-item">
                 <label for="y-box-item-6">
-                  <input type="checkbox" name="your-area[]" id="y-box-item-6" class="checkbox" value="12" type-data="s-area">
+                  <input type="checkbox" name="your-area" id="y-box-item-6" class="checkbox" value="12" type-data="s-area">
                   <span class="checkbox-fontas"></span>
                   中国
                 </label>
               </li>
               <li class="y-box-item">
                 <label for="y-box-item-7">
-                  <input type="checkbox" name="your-area[]" id="y-box-item-7" class="checkbox" value="13" type-data="s-area">
+                  <input type="checkbox" name="your-area" id="y-box-item-7" class="checkbox" value="13" type-data="s-area">
                   <span class="checkbox-fontas"></span>
                   四国
                 </label>
               </li>
               <li class="y-box-item">
                 <label for="y-box-item-8">
-                  <input type="checkbox" name="your-area[]" id="y-box-item-8" class="checkbox" value="14" type-data="s-area">
+                  <input type="checkbox" name="your-area" id="y-box-item-8" class="checkbox" value="14" type-data="s-area">
                   <span class="checkbox-fontas"></span>
                   九州
                 </label>

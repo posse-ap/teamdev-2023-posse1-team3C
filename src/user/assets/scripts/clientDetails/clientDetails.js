@@ -86,7 +86,7 @@ var options = {
     data: stars,
   }],
   chart: {
-    height: '280',
+    height: '260',
     type: 'radar',
     toolbar: {
       show: false
@@ -99,7 +99,7 @@ var options = {
     breakpoint: 768, // ウィンドウ幅が768px以下の場合に適用
     options: {
       chart: {
-        height: '180',
+        height: '240',
       }
     }
   }]
