@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="../../dist/output.css">
 <link rel="stylesheet" href="../admin/assets/styles/common.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="../user/assets/styles/clientList.css">
 
 <!-- swiper読み込み、スライダー作成用
 <link　rel="stylesheet"　href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/> -->

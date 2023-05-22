@@ -3,7 +3,7 @@
 include(dirname(__FILE__) . '/components/head.php');
 ?>
 <title>admin画面企業登録ページ</title>
-<?php include(dirname(__FILE__) . '/components/link.php')?>
+<?php include(dirname(__FILE__) . '/components/link.php') ?>
 <link rel="stylesheet" href="./assets/styles/register/register.css">
 </head>
 
@@ -231,7 +231,7 @@ include(dirname(__FILE__) . '/components/head.php');
             </div>
             <div class="area-container">
               <div class="area-container-title">
-              対応地域
+                対応地域
               </div>
               <div class="area-list">
                 <ul class="sm:flex area-list-1">
@@ -294,12 +294,12 @@ include(dirname(__FILE__) . '/components/head.php');
             </div>
             <div class="year-container">
               <div class="year-container-title">
-              対応卒業年度
+                対応卒業年度
               </div>
               <ul class="sm:flex year-list">
                 <li class="w-full year-list-item">
                   <div class="flex items-center pl-3">
-                    <input id="24" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="1" name="graduated_years[]" >
+                    <input id="24" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" value="1" name="graduated_years[]">
                     <label for="24" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">24卒</label>
                   </div>
                 </li>
@@ -394,13 +394,187 @@ include(dirname(__FILE__) . '/components/head.php');
             </div>
           </div>
         </section>
+        <section>
+          <div class="search">
+            <div class="search-title">
+              <i class="fa-regular fa-tag"></i>
+              <h3>基本情報</h3>
+            </div>
+            <div class="graduate">
+              <h4>卒業年度</h4>
+              <div class="graduate-wrapper">
+                <ul class="g-box">
+                  <li class="g-box-item">
+                    <label for="g-box-item-1">
+                      <input type="checkbox" name="graduate" id="g-box-item-1" class="checkbox" value="1" type-data="s-graduated">
+                      <span class="checkbox-fontas checkbox-fontas-1"></span>
+                      25卒
+                    </label>
+                  </li>
+                  <li class="g-box-item">
+                    <label for="g-box-item-2">
+                      <input type="checkbox" name="graduate" id="g-box-item-2" class="checkbox" value="2" type-data="s-graduated">
+                      <span class="checkbox-fontas checkbox-fontas-2"></span>
+                      26卒
+                    </label>
+                  </li>
+                  <li class="g-box-item">
+                    <label for="g-box-item-3">
+                      <input type="checkbox" name="graduate" id="g-box-item-3" class="checkbox" value="3" type-data="s-graduated">
+                      <span class="checkbox-fontas checkbox-fontas-3"></span>
+                      27卒
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="support">
+              <h4>サポート形態</h4>
+              <div class="support-wrapper">
+                <ul class="s-box">
+                  <li class="s-box-item">
+                    <label for="s-box-item-1">
+                      <input type="checkbox" name="support" id="s-box-item-1" class="checkbox" value="4" type-data="s-support">
+                      <span class="checkbox-fontas checkbox-fontas-4"></span>
+                      オンラインのみ
+                    </label>
+                  </li>
+                  <li class="s-box-item">
+                    <label for="s-box-item-2">
+                      <input type="checkbox" name="support" id="s-box-item-2" class="checkbox" value="5" type-data="s-support">
+                      <span class="checkbox-fontas checkbox-fontas-5"></span>
+                      対面のみ
+                    </label>
+                  </li>
+                  <li class="s-box-item">
+                    <label for="s-box-item-3">
+                      <input type="checkbox" name="support" id="s-box-item-3" class="checkbox" value="6" type-data="s-support">
+                      <span class="checkbox-fontas checkbox-fontas-6"></span>
+                      両方可
+                    </label>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="search-details">
+            <div class="search-details-title">
+              <p class="search-details-title-content">
+                詳細絞りこみはコチラ
+              </p>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="search-details-contents">
+              <div class="agent-type">
+                <div class="agent-type-comprehensive">
+                  <h5>総合型</h5>
+                  <div class="agent-type-comprehensive-content">
+                    <label for="agent-type-1">
+                      <input type="checkbox" name="agent-type[]" id="agent-type-1" class="checkbox" value="15">
+                      <span class="checkbox-fontas"></span>
+                      総合型
+                    </label>
+                  </div>
+                </div>
+                <h5 class="agent-type-title">特化型</h5>
+                <div class="agent-type-wrapper">
+                  <ul class="a-box">
+                    <li class="a-box-item">
+                      <label for="agent-type-2">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-2" class="checkbox" value="16">
+                        <span class="checkbox-fontas"></span>
+                        営業
+                      </label>
+                    </li>
+                    <li class="a-box-item">
+                      <label for="agent-type-3">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-3" class="checkbox" value="17">
+                        <span class="checkbox-fontas"></span>
+                        事務/アシスタント
+                      </label>
+                    </li>
+                    <li class="a-box-item">
+                      <label for="agent-type-4">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-4" class="checkbox" value="18">
+                        <span class="checkbox-fontas"></span>
+                        企画/マーケティング
+                      </label>
+                    </li>
+                    <li class="a-box-item">
+                      <label for="agent-type-5">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-5" class="checkbox" value="19">
+                        <span class="checkbox-fontas"></span>
+                        販売/サービス
+                      </label>
+                    </li>
+                    <li class="a-box-item">
+                      <label for="agent-type-6">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-6" class="checkbox" value="20">
+                        <span class="checkbox-fontas"></span>
+                        IT/通信系エンジニア
+                      </label>
+                    </li>
+                    <li class="a-box-item">
+                      <label for="agent-type-7">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-7" class="checkbox" value="21">
+                        <span class="checkbox-fontas"></span>
+                        建築/土木系エンジニア
+                      </label>
+                    </li>
+                    <li class="a-box-item">
+                      <label for="agent-type-8">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-8" class="checkbox" value="22">
+                        <span class="checkbox-fontas"></span>
+                        モノづくり系エンジニア
+                      </label>
+                    </li>
+                    <li class="a-box-item">
+                      <label for="agent-type-9">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-9" class="checkbox" value="23">
+                        <span class="checkbox-fontas"></span>
+                        素材/化学/食品系エンジニア
+                      </label>
+                    </li>
+                    <li class="a-box-item">
+                      <label for="agent-type-10">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-10" class="checkbox" value="24">
+                        <span class="checkbox-fontas"></span>
+                        医療系専門職
+                      </label>
+                    </li>
+                    <li class="a-box-item">
+                      <label for="agent-type-11">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-11" class="checkbox" value="25">
+                        <span class="checkbox-fontas"></span>
+                        金融系専門職
+                      </label>
+                    </li>
+                    <li class="a-box-item">
+                      <label for="agent-type-12">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-12" class="checkbox" value="26">
+                        <span class="checkbox-fontas"></span>
+                        コンサルタント/不動産専門職
+                      </label>
+                    </li>
+                    <li class="a-box-item">
+                      <label for="agent-type-13">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-13" class="checkbox" value="27">
+                        <span class="checkbox-fontas"></span>
+                        クリエイティブ
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <!-- 登録ボタン -->
         <section class="mx-4 btn-register">
           <div class="flex items-start mb-6">
             <div class="flex items-center h-5">
               <input id="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="required">
               <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">誤りが無いことを確認しました。</label>
-              <button type="submit" name="registerButton" class= "inactive text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 registerButton inactive">送信</button>
+              <button type="submit" name="registerButton" class="inactive text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 registerButton inactive">送信</button>
             </div>
           </div>
         </section>
