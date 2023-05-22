@@ -95,7 +95,7 @@ include(dirname(__FILE__) . '/components/head.php');
           <div>
             <h5>企業宣材写真</h5>
             <div>
-              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">写真を選択してください</label>
+              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">写真を選択してください(2MG以下)</label>
               <input name="heroImage" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 upload-limit" id="file_input" type="file" required="required" accept="image/png, image/jpeg">
             </div>
           </div>
@@ -333,7 +333,7 @@ include(dirname(__FILE__) . '/components/head.php');
             <h5>サクセスストーリー</h5>
             <h6>1人目</h6>
             <div class="mb-8">
-              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content" for="successFirst">写真を選択してください</label>
+              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content" for="successFirst">写真を選択してください(2MG以下)</label>
               <input name="successFirstImage" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 upload-limit" id="successFirst" type="file" required="required" accept="image/png, image/jpeg">
               <label for="successFirstTime" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content">内定までにかかった時間</label>
               <input type="text" id="successFirstTime" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successFirstTime" required="required">
@@ -348,7 +348,7 @@ include(dirname(__FILE__) . '/components/head.php');
             </div>
             <h6>2人目</h6>
             <div class="mb-8">
-              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content" for="successSecond">写真を選択してください</label>
+              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content" for="successSecond">写真を選択してください(2MG以下)</label>
               <input name="successSecondImage" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 upload-limit" id="successSecond" type="file" required="required" accept="image/png, image/jpeg">
               <label for="successSecondTime" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content">内定までにかかった時間</label>
               <input type="text" id="successSecondTime" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successSecondTime" required="required">
@@ -363,7 +363,7 @@ include(dirname(__FILE__) . '/components/head.php');
             </div>
             <h6>3人目</h6>
             <div class="mb-8">
-              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content success-content" for="successThird">写真を選択してください</label>
+              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content success-content" for="successThird">写真を選択してください(2MG以下)</label>
               <input name="successThirdImage" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 upload-limit" id="successThird" type="file" required="required" accept="image/png, image/jpeg">
               <label for="successThirdTime" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white success-content">内定までにかかった時間</label>
               <input type="text" id="successThirdTime" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="successThirdTime" required="required">
