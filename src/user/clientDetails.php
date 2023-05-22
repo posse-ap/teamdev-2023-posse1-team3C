@@ -191,7 +191,7 @@
             <div class="swiper-slide">
             <div class="user-1-contents">
               <div class="user-1-img">
-                <img src="./assets/img/stories/<?php echo $company_details["company"] ?>/<?php echo $story["photo"]?>" alt="">
+                <img src="./assets/img/stories/<?php echo $company_details["service"] ?>/<?php echo $story["photo"]?>" alt="">
                 <div class="user-1-speed">
                   <?php echo $story["time"]?>で内定獲得！
                 </div>
