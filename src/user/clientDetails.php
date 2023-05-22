@@ -16,7 +16,7 @@
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
 />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
   <script src="https://unpkg.com/apexcharts/dist/apexcharts.min.js" defer></script>
   <script src="./assets/scripts/clientDetails/clientDetails.js" defer></script>
@@ -36,7 +36,7 @@
       </h2>
     </div>
     <div class="agent-img">
-      <img src="./assets/img/heroes/<?php echo $company_details["company"] ?>/<?php echo $company_details["photo"] ?>" alt="carrier-img">
+      <img src="./assets/img/heroes/<?php echo $company_details["service"] ?>/<?php echo $company_details["photo"] ?>" alt="carrier-img">
     </div>
     <!-- エージェント企業の特徴 -->
     <div class="agent-feature">
