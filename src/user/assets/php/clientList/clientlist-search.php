@@ -47,10 +47,10 @@ foreach ($companies as $company) {
   include('clientlist-point2.php');
   $data .=
   '<div class="clientlist">
-    <h3 class="clientlist-name">' . $company['company'] . '</h3>
+    <h3 class="clientlist-name">' . $company['service'] . '</h3>
     <div class="clientlist-contents">
     <div class="clientlist-main">
-    <div class="list-img" style="background-image: url(../user/assets/img/heroes/' . $company["company"] . '/' . $company["photo"] . ');">
+    <div class="list-img" style="background-image: url(../user/assets/img/heroes/' . $company["service"] . '/' . $company["photo"] . ');">
     </div>
     <div class="list-star">
       <table class="list-star-table">
