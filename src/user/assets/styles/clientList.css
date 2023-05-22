@@ -379,9 +379,6 @@ td{
   font-size: 12px;
   text-align: left;
 }
-.link-button>button{
-  margin: 30px;
-}
 .button{
   width: 140px;
   height: 35px;
@@ -423,6 +420,9 @@ a{
 .list-sub-point li {
   font-size: 13px;
   margin-bottom: 5px;
+}
+.list-sub-point-item {
+  list-style: circle;
 }
 .list-sub-point-title {
   margin-top: 0;
@@ -599,11 +599,11 @@ a{
     margin-top: 20px;
     margin-bottom: 20px;
     width: 360px;
-    height: 280px;
+    height: 320px;
     border-radius: 10px;
   }
   .clientlist-contents {
-    height: 240px;
+    height: 260px;
     width: 340px;
     margin-top: 10px;
     margin-left: calc(50% - 170px);
@@ -611,7 +611,7 @@ a{
   }
   .list-img{
     width: 100px;
-    height: 60px;
+    height: 80px;
     margin-bottom: 10px;
     margin-left: 7.5px;
   }
@@ -651,21 +651,19 @@ a{
   .list-img{
     width: 150px;
   }
-  .link-button>button{
-    margin: 30px;
-  }
   .button{
     width: 140px;
-    height: 35px;
-    line-height: 30px;
+    height: 25px;
+    line-height: 25px;
     text-align: center;
-    margin: 30px 5px;
+    margin: 20px 5px;
     background-color: #2E79BA;
     border-radius: 7px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     padding-left: 10px;
+    font-size: 12px;
   }
   .button-p{
     text-decoration: none;
@@ -675,6 +673,7 @@ a{
   }
   .button-i{
     color: white;
+    font-size: 12px;
   }
   .button {
     margin-top: 20px;
@@ -689,7 +688,7 @@ a{
     padding-left: 20px;
   }
   .list-sub-point{
-    height: 90px;
+    height: 150px;
   }
   .list-sub-point ul{
     padding-left: 20px;
@@ -701,10 +700,10 @@ a{
   }
   .list-sub-point-title{
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
     border-left: #2E79BA solid 3px;
-    padding-left: 10px;
-    font-size: 14px;
+    padding-left: 6px;
+    font-size: 12px;
   }
 }
 
