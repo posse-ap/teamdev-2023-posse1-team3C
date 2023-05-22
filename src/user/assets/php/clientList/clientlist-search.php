@@ -97,7 +97,7 @@ foreach ($companies as $company) {
       </div>
       <div class="link-button">
         <!-- データベースのURLが正しくないから飛べないけど正しければ飛べるはず -->
-        <a href="' . $company['URL'] . '">
+        <a href="' . $company['URL'] . '" target="_blank">
           <div class="button official-link">
             <p class="button-p">公式サイト</p>
             <i class="fa-solid fa-arrow-up-right-from-square button-i"></i>
