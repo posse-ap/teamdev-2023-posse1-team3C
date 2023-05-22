@@ -121,4 +121,56 @@ npx tailwindcss -i ./input.css -o ./dist/output.css --watch
 ```
 docker compose down
 ```
+## 動作確認
+### [user](http://localhost:8080/user/index.php)
 
+
+### [admin](http://localhost:8080/admin/auth/login.php)
+```
+email: admin@example.com
+password: root
+```
+
+### [client](http://localhost:8080/client/auth/signin.php)
+```
+サービス名: キャリアチケット
+email: careerticket@gmail.com
+password: root
+
+サービス名: マイナビ新卒紹介
+email: shinsotsu@gmail.com
+password: root
+
+サービス名: irodas
+email: irodas@gmail.com
+password: root
+
+サービス名: doda新卒エージェント
+email: doda@gmail.com
+password: root
+
+サービス名: リクナビ就職エージェント
+email: rikunabi@gmail.com
+password: root
+
+サービス名: JobSpring
+email: jobstring@gmail.com
+password: root
+
+サービス名: 就職エージェントneo
+email: neo@gmail.com
+password: root
+
+サービス名: DIG UP CAREER
+email: digupcareer@gmail.com
+password: root
+
+サービス名: シンアド就活
+email: syn@gmail.com
+password: root
+
+サービス名: キャリセン就活エージェント
+email: careecen@gmail.com
+password: root
+
+```

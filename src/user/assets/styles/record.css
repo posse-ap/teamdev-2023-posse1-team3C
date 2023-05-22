@@ -213,6 +213,7 @@ label{
   .service-box {
     width: 360px;
     height: 140px;
+    margin-left: calc(50% - 180px);
   }
   .s-container {
     width: 320px;

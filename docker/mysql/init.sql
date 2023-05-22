@@ -11,6 +11,8 @@ CREATE TABLE AdminUsers (
   email VARCHAR(255),
   password VARCHAR(255)
 ) CHARSET=utf8;
+
+-- passwordは全部root
 insert into AdminUsers (email, password) 
 values ("admin@example.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW");
 
@@ -23,8 +25,23 @@ CREATE TABLE ClientUsers (
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT "発行日時",
   updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT "更新日時"
 ) CHARSET=utf8;
-insert into ClientUsers (company_id, email, password) values (1, "client@example.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW");
 
+-- passwordは全部root
+insert into ClientUsers (company_id, email, password) values 
+(1, "careerticket@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(2, "shinsotsu@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(3, "irodas@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(4, "doda@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(5, "rikunabi@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(6, "jobstring@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(7, "neo@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(8, "digupcareer@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(9, "syn@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(10, "careecen@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(11, "typeshukatsu@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(12, "careerpark@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(13, "twing@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW"),
+(14, "goodfind@gmail.com", "$2y$10$Tb9eEbx3.T8Wthv3hRSKV.RilWOLgKI1NAeYQjy3DJLbpOh5nmBKW");
 DROP TABLE IF EXISTS Companies;
 CREATE TABLE Companies (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -44,12 +61,16 @@ CREATE TABLE Companies (
 ) CHARSET=utf8;
 
 insert into Companies (company, service, URL, email, postcode, address, phoneNumber, contactType, Date, started_at, finished_at, online) values 
-("Test", "Testservice", "keio.jp", "client@example.com", "108-8345", "東京都港区三田２丁目１５−４５", "03-5427-1517", "オンライン", "平日 9-18時 土9-15時 日定休", "2023-05-01", "2023-06-30", "終日対応可"), 
-("Test2", "Testservice", "keio.jp", "li12569@keio.jp", "108-8345", "東京都港区三田２丁目１５−４５", "03-5427-1517", "オンライン", "平日 9-18時 土9-15時 日定休", "2023-05-01", "2023-06-30", "終日対応可"),
-("BTBK", "TOAサービス", "https://www.btbk.com", "info@btbk.com", "102-0076", "東京都千代田区五番町12-7　ドミール五番町　102", "02-3398-62917", "対面・オンライン", "年中無休", "2023/04/01", "2023-06-30", "終日対応可"), 
-("SSS", "SSSService", "https://www.sss-service.jp", "sss@sssservice.jp", "011-333-9444", "北海道札幌市中央区3条西4-1-1　日本生命札幌ビル　5階", "011-333-9444", "オンライン", "平日土祝　9:00-19:30", "2023/02/01", "2023-03-30", "終日対応可");
-
-
+("レバレジーズ", "キャリアチケット", "https://careerticket.jp/", "careerticket@gmail.com", "150-0002", "東京都渋谷区渋谷３丁目６−３ 363清水ビル 4F", "0120-962-647", "対面・オンライン", "平日・土10:00-20:00", "2023-04-01", "2023-06-30", "対応可"), 
+("マイナビ新卒紹介", "マイナビ新卒紹介", "https://shinsotsu.mynavi-agent.jp/", "shinsotsu@gmail.com", "151-0051", "東京都新宿区新宿４丁目１−６ JR新宿ミライナタワー 26階", "03-6628-5012", "対面", "平日9:15-17-45", "2023-04-01", "2023-06-30", "対応可"),
+("irodas", "irodas", "https://irodas.com/", "irodas@gmail.com", "531-0072", "大阪府大阪市北区豊崎３丁目９−７ いずみビル 7階", "06-6136-5608", "対面・オンライン", "平日9:00-18:00", "2023-04-01", "2023-09-30", "対応可"), 
+("パーソルキャリア", "doda新卒エージェント", "https://doda-student.jp/", "doda@gmail.com", "100-0005", "東京都千代田区丸の内２丁目４", "03-6213-9000", "対面・オンライン", "平日9:00-18:00", "2023-02-01", "2023-03-30", "対応可"),
+("リクナビ", "リクナビ就職エージェント", "http://job.rikunabi.com/agent/", "rikunabi@gmail.com", "100-6640", "東京都千代田区丸の内1-9-2 グラントウキョウサウスタワー", "0120-951-231", "対面", "平日9:00-18:00", "2023-02-01", "2023-07-30", "対応可"),
+("HRクラウド", "JobSpring", "https://jobspring.jp/", "jobstring@gmail.com", "101-0051", "東京都千代田区神田神保町２丁目５−３ 北沢ビル 8階A", "03-6261-5989", "対面・オンライン", "平日9:00-18:00", "2022-12-01", "2023-07-30", "対応可"),
+("ネオキャリア", "就職エージェントneo", "https://www.s-agent.jp/", "neo@gmail.com", "160-0023", "東京都新宿区西新宿１丁目２２−２ 新宿サンエービル 2F", "03-5908-8058", "対面", "平日9:30-18:30", "2022-12-01", "2023-07-30", "対応可"),
+("NaS", "DIG UP CAREER", "https://digupcareer10.studio.site/", "digupcareer@gmail.com", "150-0011", "東京都渋谷区東３丁目１４−１５", "080-4618-2189", "対面・オンライン", "平日9:30-18:30", "2022-12-01", "2023-07-30", "対応可"),
+("イングリウッド", "シンアド就活", "https://syn-ad.com/2024/", "syn@gmail.com", "150-0043", "東京都渋谷区道玄坂1-21-1 渋谷ソラスタ 13F", "03-6277-5117", "対面・オンライン", "平日9:30-18:30", "2022-12-01", "2023-07-30", "対応可"),
+("シンクエージェント", "キャリセン就活エージェント", "https://careecen-shukatsu-agent.com/", "careecen@gmail.com", "107-0052", "東京都港区赤坂4-8-14 赤坂坂東ビルディング5階", "03-5413-4975", "対面・オンライン", "平日9:30-18:30", "2022-12-01", "2023-04-30", "対応可");
 DROP TABLE IF EXISTS CompaniesDetails;
 CREATE TABLE CompaniesDetails (
   detail_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -74,11 +95,25 @@ CREATE TABLE CompaniesDetails (
 insert into CompaniesDetails (
   detail_id, photo, achievement, people, scale,search, ES, practice, seminar, community, type, specialChoose, supportType, Date, formtype, description
 ) values (
-  1, "test", "総合商社", "約1000社", "ベンチャー多め", "就職活動を本格的に始める前に、アドバイザー相談を行うことができます", "あり", "あり", "あり", "なし", "特化型", "あり", "オンラインのみ", "平日 9-18時 土9-15時 日定休", "本登録の前に対面でお話しすることができます。", "てすと"
+  1, "test", "総合商社", "内定率80%超え、最短2週間", "170社以上", "ベンチャー企業", "あり", "あり", "あり", "あり", "総合型", "あり", "オンラインのみ", "平日 9:00〜18:00", "本登録の前に対面でお話しすることができます。", "業界No.1の求人数！"
 ),(
-  4, "IMG_6480.jpg", "建設、教育など多数", "38000", "中小企業多め", "なし", "あり", "あり", "なし", "あり", "総合型", "あり", "本登録の前にオンラインでお話しすることができます。", "平日土祝 9:00-19:30", "本登録の前に対面でお話しすることができます。", "オンラインで全国どこからでも応募可"
+  4, "IMG_6480.jpg", "最短1週間で内定、DeNAやオプト、セブンイレブン", "5,000社", "大手企業、中小企業", "あり", "あり", "あり", "あり", "あり", "総合型", "あり", "本登録の前にオンラインでお話しすることができます。", "平日9:00-18:00", "本登録の前に対面でお話しすることができます。", "オンラインで全国どこからでも応募可"
 ),(
-  3, "IMG_6761.JPG", "総合商社、外資など多数", "210000", "中小から大企業まで", "あり", "あり", "あり", "あり", "なし", "総合型", "あり", "本登録の前にオンラインでお話しすることができます。", "平日土祝 9:00-19:30", "本登録の前に対面でお話しすることができます。", "業界No.1の求人数！"
+  3, "IMG_6761.JPG", "年間13,000名を１５００社以上サービス９５％満足度", "210000", "ベンチャー企業", "なし", "あり", "あり", "あり", "あり", "総合型", "なし", "本登録の前にオンラインでお話しすることができます。", "平日9:00-18:00", "本登録の前に対面でお話しすることができます。", "業界No.1の求人数！"
+), (
+  2, "IMG_6761.JPG", "最短2週間での内定獲得が目指せます。 面接トレーニングによる内定率86％、入社後の定着率92％", "年間15万名以上の学生が登録し、7,300名以上", "大手企業、中小企業", "あり", "あり", "あり", "あり", "なし", "総合型", "あり", "本登録の前に対面でお話しすることができます。", "平日9:15-17:45", "本登録の前に対面でお話しすることができます。", "オンラインで全国どこからでも応募可 "
+), (
+  5, "IMG_6761.JPG", "累計３０００００社以上", "年間15万名以上の学生が登録し、7,300名以上", "大手企業、中小企業", "なし", "あり", "あり", "あり", "なし", "総合型", "なし", "本登録の前に対面でお話しすることができます。", "平日9:00-18:00", "本登録の前に対面でお話しすることができます。", "オンラインで全国どこからでも応募可 "
+), (
+  6, "IMG_6761.JPG", "3年以内の離職率は、0.1%と驚き最短2週間の", "年間15万名以上の学生が登録し、7,300名以上", "ベンチャー企業", "あり", "あり", "あり", "あり", "あり", "総合型", "なし", "本登録の前に対面でお話しすることができます。", "平日9:00-18:00", "本登録の前に対面でお話しすることができます。", "オンラインで全国どこからでも応募可"
+), (
+  7, "IMG_6761.JPG", "2010〜2020年の1年間で4万件以上の求人", "年間15万名以上の学生が登録し、7,300名以上", "大手企業、中小企業", "なし", "なし", "なし", "なし", "なし", "総合型", "なし", "本登録の前に対面でお話しすることができます。", "平日9:00-18:00", "本登録の前に対面でお話しすることができます。", "オンラインで全国どこからでも応募可"
+), (
+  8, "IMG_6761.JPG", "2010〜2020年の1年間で4万件以上の求人", "年間15万名以上の学生が登録し、7,300名以上", "ベンチャー企業", "あり", "なし", "なし", "なし", "なし", "総合型", "なし", "本登録の前に対面でお話しすることができます。", "平日9:00-18:00", "本登録の前に対面でお話しすることができます。", "オンラインで全国どこからでも応募可"
+), (
+  9, "IMG_6761.JPG", "2010〜2020年の1年間で4万件以上の求人", "年間15万名以上の学生が登録し、7,300名以上", "ベンチャー企業", "あり", "なし", "なし", "なし", "なし", "総合型", "あり", "本登録の前に対面でお話しすることができます。", "平日9:00-18:00", "本登録の前に対面でお話しすることができます。", "オンラインで全国どこからでも応募可"
+), (
+  10, "IMG_6761.JPG", "2010〜2020年の1年間で4万件以上の求人", "10,000以上", "ベンチャー企業", "あり", "なし", "なし", "なし", "なし", "総合型", "あり", "本登録の前に対面でお話しすることができます。", "平日9:30-18:30", "本登録の前に対面でお話しすることができます。", "オンラインで全国どこからでも応募可"
 );
 
 DROP TABLE IF EXISTS GoodPoints;
@@ -236,7 +271,7 @@ CREATE TABLE Tags (
   tag VARCHAR(255) COMMENT "タグ名"
 ) CHARSET=utf8;
 
-insert into Tags (tag) values ("25卒"), ("26卒"), ("27卒"), ("オンラインのみ"), ("対面のみ"), ("両方可"), ("IT"), ("北海道"), ("東北"), ("関東"), ("中部"), ("近畿"), ("中国"), ("四国"), ("九州"), ("総合型"), ("営業"), ("事務/アシスタント"), ("企画/マーケティング"), ("販売/サービス"), ("IT/通信系エンジニア"), ("建築/土木系エンジニア"), ("モノづくり系エンジニア"), ("素材/化学/食品系エンジニア"), ("医療系専門職"), ("金融系専門職"), ("コンサルタント/不動産専門"), ("クリエイティブ"), ("就活コミュニティあり"), ("業界研究あり"), ("インターンシップ紹介あり"), ("説明会あり"), ("面接練習あり"), ("ES添削あり"), ("文系"), ("理系"), ("ベンチャー"), ("大手"), ("土日祝日"), ("平日18時まで対応可"), ("平日21時対応可");
+insert into Tags (id,tag) values ("25卒"), ("26卒"), ("27卒"), ("オンラインのみ"), ("対面のみ"), ("両方可"), ("IT"), ("北海道"), ("東北"), ("関東"), ("中部"), ("近畿"), ("中国"), ("四国"), ("九州"), ("総合型"), ("営業"), ("事務/アシスタント"), ("企画/マーケティング"), ("販売/サービス"), ("IT/通信系エンジニア"), ("建築/土木系エンジニア"), ("モノづくり系エンジニア"), ("素材/化学/食品系エンジニア"), ("医療系専門職"), ("金融系専門職"), ("コンサルタント/不動産専門"), ("クリエイティブ"), ("就活コミュニティあり"), ("業界研究あり"), ("インターンシップ紹介あり"), ("説明会あり"), ("面接練習あり"), ("ES添削あり"), ("文系"), ("理系"), ("ベンチャー"), ("大手"), ("土日祝日"), ("平日18時まで対応可"), ("平日21時対応可");
 
 DROP TABLE IF EXISTS CompaniesTagsLink;
 CREATE TABLE CompaniesTagsLink (

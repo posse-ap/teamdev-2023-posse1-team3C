@@ -44,6 +44,7 @@
         <?php echo $company_details["company"] ?>の特徴
       </h3>
       <div class="feature-container">
+      <div id="chart"></div>
         <table class="feature-background">
           <tbody>
             <tr>
@@ -68,7 +69,6 @@
             </tr>
           </tbody>
         </table>
-        <div id="chart"></div>
       </div>
     </div>
     <!-- 詳細情報 -->

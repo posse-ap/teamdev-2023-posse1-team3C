@@ -2,7 +2,7 @@ document.getElementById('month-btn').addEventListener('click', function (event) 
   event.preventDefault(); // イベントをキャンセルする
   // Ajaxを始める
 });
-
+// 変更ボタンを押す
 document.getElementById('month-btn').addEventListener('click', function () {
   let select = document.getElementById('month');
   let input = document.getElementById('input');
