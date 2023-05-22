@@ -97,12 +97,11 @@ foreach ($companies as $company) {
       </div>
       <div class="link-button">
         <!-- データベースのURLが正しくないから飛べないけど正しければ飛べるはず -->
-        <a href="' . $company['URL'] . '" target="_blank">
-          <div class="button official-link">
-            <p class="button-p">公式サイト</p>
-            <i class="fa-solid fa-arrow-up-right-from-square button-i"></i>
-          </div>
-        </a>
+        <button type="button" class="favorite-btn" value="" id="favoriteButton" data-name="${companyName}" data-url="${companyURL}" data-id="${companyID}" onclick="addToFavorites(this)">
+          <span class="favorite-btn-text">
+            お気に入りに追加
+          </span>
+        </button>
         <!-- 詳細に飛ぶ -->
         <a href="clientDetails.php?id= '.$company["id"].'">
           <div class="button detail-page">
