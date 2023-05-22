@@ -86,7 +86,7 @@ var options = {
     data: stars,
   }],
   chart: {
-    height: '280',
+    height: '260',
     type: 'radar',
     toolbar: {
       show: false
@@ -95,14 +95,6 @@ var options = {
   xaxis:{
     categories: ['求人数', 'サポート力', '内定獲得実績', '内定実績', '業種の多さ']
   },
-  responsive: [{
-    breakpoint: 768, // ウィンドウ幅が768px以下の場合に適用
-    options: {
-      chart: {
-        height: '180',
-      }
-    }
-  }]
 };
 
 window.addEventListener('load', () => {
