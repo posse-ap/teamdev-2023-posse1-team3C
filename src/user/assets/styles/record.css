@@ -43,7 +43,6 @@ main {
   line-height: 2;
 }
 .service-wrapper {
-  width: 100px;
   min-height: 40vh;
 }
 .lets-talk {
@@ -63,7 +62,9 @@ main {
   background-color: #f5fbff;
   border-color: #97c1e6;
   border-style: solid;
-  margin: 20px auto 20px auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: calc(50% - 240px);
 }
 .container{
   display: flex;
