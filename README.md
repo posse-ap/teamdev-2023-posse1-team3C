@@ -173,20 +173,4 @@ password: root
 email: careecen@gmail.com
 password: root
 
-サービス名: type就活エージェント
-email: typeshukatsu@gmail.com
-password: root
-
-サービス名: キャリアパーク就職エージェント
-email: careerpark@gmail.com
-password: root
-
-サービス名: ツイング就活エージェント
-email: twing@gmail.com
-password: root
-
-サービス名: Goodfindエージェント
-email: goodfind@gmail.com
-password: root
-
 ```

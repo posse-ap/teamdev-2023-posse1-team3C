@@ -178,6 +178,44 @@ if (isset($_POST["registerButton"])) {
   // メール送信
   mb_send_mail($to, $subject, $message, $headers);
 
+  // 選択されたたぐをCompaniesTagsLinkに格納
+  $sql_register_tag = "INSERT INTO CompaniesTagsLink (company_id, tag_id) value (:company_id, :tag_id)";
+  $register_tag = $dbh->prepare($sql_register_tag);
+  // 対応地域
+  $areas = $_POST["your-area"];
+  foreach ($areas as $area) {
+    $register_tag->execute([
+      ":company_id" => $company_id,
+      ":tag_id" => $area
+    ]);
+  };
+  // サポート形態
+  $supportTypes = $_POST["support"];
+  foreach ($supportTypes as $supportType) {
+    $register_tag->execute([
+      ":company_id" => $company_id,
+      ":tag_id" => $supportType
+    ]);
+  };
+  // 卒業年度
+  $graduated_years = $_POST["graduate[]"];
+  foreach ($graduated_years as $graduated_year) {
+    $register_tag->execute([
+      ":company_id" => $company_id,
+      ":tag_id" => $graduated_year
+    ]);
+  };
+  // 業界
+  $agentTypes = $_POST["agent-type"];
+  foreach ($agentTypes as $agentType) {
+    $register_tag->execute([
+      ":company_id" => $company_id,
+      ":tag_id" => $agentType
+    ]);
+  };
+
+
+
   // 企業一覧ページに戻る
   header("Location: ../../../../admin/clientList.php");
 }
