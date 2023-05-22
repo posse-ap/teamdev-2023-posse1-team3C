@@ -36,7 +36,7 @@
       </h2>
     </div>
     <div class="agent-img">
-      <img src="./assets/img/heroes/<?php echo $company_details["company"] ?>/<?php echo $company_details["photo"] ?>" alt="carrier-img">
+      <img src="./assets/img/heroes/<?php echo $company_details["service"] ?>/<?php echo $company_details["photo"] ?>" alt="carrier-img">
     </div>
     <!-- エージェント企業の特徴 -->
     <div class="agent-feature">
