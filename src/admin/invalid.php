@@ -1,3 +1,4 @@
+<?php include_once('./components/sessionLogout.php')?>
 <?php include('../dbconnect.php')?>
 <!-- head読み込み -->
 <?php

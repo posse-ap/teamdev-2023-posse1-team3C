@@ -21,7 +21,7 @@ if (isset($_POST["registerButton"])) {
 
   // 掲載情報をCompaniesDetailsテーブルに格納
   // 画像をアップロード
-  $dir_path_hero = dirname(__FILE__) . "/../../../../user/assets/img/heroes" . "/" . $_POST["company"] . "/";
+  $dir_path_hero = dirname(__FILE__) . "/../../../../user/assets/img/heroes" . "/" . $_POST["service"] . "/";
   if (!is_dir($dir_path_hero)) {
     mkdir($dir_path_hero, 0777);
   }
@@ -92,7 +92,7 @@ if (isset($_POST["registerButton"])) {
   // サクセスストーリーをStoriesテーブルに格納
   $sql_register_story = "INSERT INTO Stories (company_id, title, time, university, name, story, photo) values (:company_id, :title, :time, :university, :name, :story, :photo)";
   $register_story = $dbh->prepare($sql_register_story);
-  $dir_path = dirname(__FILE__) . "/../../../../user/assets/img/stories" . "/" . $_POST["company"] . "/";
+  $dir_path = dirname(__FILE__) . "/../../../../user/assets/img/stories" . "/" . $_POST["service"] . "/";
   if (!is_dir($dir_path)) {
     mkdir($dir_path, 0777);
   }
@@ -198,7 +198,7 @@ if (isset($_POST["registerButton"])) {
     ]);
   };
   // 卒業年度
-  $graduated_years = $_POST["graduate[]"];
+  $graduated_years = $_POST["graduate"];
   foreach ($graduated_years as $graduated_year) {
     $register_tag->execute([
       ":company_id" => $company_id,

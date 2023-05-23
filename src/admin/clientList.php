@@ -1,3 +1,4 @@
+<?php include_once('./components/sessionLogout.php')?>
 <?php include('../dbconnect.php') ?>
 <?php include('./assets/php/clientList/clientList.php') ?>
 <!-- head読み込み -->

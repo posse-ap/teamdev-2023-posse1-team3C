@@ -1,4 +1,4 @@
-<!-- head読み込み -->
+<?php include_once('./components/sessionLogout.php')?>
 <?php
 include(dirname(__FILE__) . '/components/head.php');
 ?>
