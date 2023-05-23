@@ -673,6 +673,72 @@ include(dirname(__FILE__) . '/components/head.php');
                     </li>
                   </ul>
                 </div>
+                <h5 class="agent-type-title">文系・理系</h5>
+                <div class="agent-type-wrapper">
+                  <ul class="a-box">
+                    <li class="a-box-item">
+                      <label for="agent-type-19">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-19" class="checkbox" value="33">
+                        <span class="checkbox-fontas"></span>
+                        文系
+                      </label>
+                    </li>
+                    <li class="a-box-item">
+                      <label for="agent-type-20">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-20" class="checkbox" value="34">
+                        <span class="checkbox-fontas"></span>
+                        理系
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <h5 class="agent-type-title">特徴</h5>
+                <div class="agent-type-wrapper">
+                  <ul class="a-box">
+                    <li class="a-box-item">
+                      <label for="agent-type-21">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-21" class="checkbox" value="35">
+                        <span class="checkbox-fontas"></span>
+                        就活コミュニティあり
+                      </label>
+                    </li>
+                    <li class="a-box-item">
+                      <label for="agent-type-22">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-22" class="checkbox" value="36">
+                        <span class="checkbox-fontas"></span>
+                        業界研究あり
+                      </label>
+                    </li>
+                    <li class="a-box-item">
+                      <label for="agent-type-23">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-23" class="checkbox" value="37">
+                        <span class="checkbox-fontas"></span>
+                        インターンシップ紹介あり
+                      </label>
+                    </li>
+                    <li class="a-box-item">
+                      <label for="agent-type-24">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-24" class="checkbox" value="38">
+                        <span class="checkbox-fontas"></span>
+                        説明会あり
+                      </label>
+                    </li>
+                    <li class="a-box-item">
+                      <label for="agent-type-25">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-25" class="checkbox" value="39">
+                        <span class="checkbox-fontas"></span>
+                        面接練習あり
+                      </label>
+                    </li>
+                    <li class="a-box-item">
+                      <label for="agent-type-26">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-26" class="checkbox" value="40">
+                        <span class="checkbox-fontas"></span>
+                        ES添削あり
+                      </label>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
