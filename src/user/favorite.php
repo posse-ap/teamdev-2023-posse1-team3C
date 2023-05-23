@@ -22,9 +22,9 @@
 <main>
   
   <h2 class="top-favorite">お気に入り一覧</h2>
-  <div id="favoritesList">
-  <!-- お気に入り企業の情報がここに表示されます -->
-</div>
+  <!-- <div id="favoritesList">
+  お気に入り企業の情報がここに表示されます
+</div> -->
 
 
 <div class="lets-favorite">

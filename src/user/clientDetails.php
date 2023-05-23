@@ -235,7 +235,7 @@
       </a>
     </div>
     <div class="official-site">
-      <a href="" target="_blank">
+      <a href="<?php echo $company_details["URL"] ?>" target="_blank">
         <button class="official-site-btn">
           <span class="official-site-btn-text">
             公式サイトへ
