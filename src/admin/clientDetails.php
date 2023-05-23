@@ -1,3 +1,4 @@
+<?php include_once('./components/sessionLogout.php')?>
 <?php include('../dbconnect.php') ?>
 <?php include('./assets/php/clientList/clientDetails.php') ?>
 
@@ -144,6 +145,11 @@ include(dirname(__FILE__) . '/components/head.php');
             <select name="month" id="month" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-48 month-select">
               <option selected>月を選択してください</option>
               <option value="全期間">全期間</option>
+              <option value="2023-09">2023/09</option>
+              <option value="2023-08">2023/08</option>
+              <option value="2023-07">2023/07</option>
+              <option value="2023-06">2023/06</option>
+              <option value="2023-05">2023/05</option>
               <option value="2023-04">2023/04</option>
               <option value="2023-03">2023/03</option>
               <option value="2023-02">2023/02</option>
