@@ -628,6 +628,51 @@ include(dirname(__FILE__) . '/components/head.php');
                     </li>
                   </ul>
                 </div>
+                <h5 class="agent-type-title">対応可能日時</h5>
+                <div class="agent-type-wrapper">
+                  <ul class="a-box">
+                    <li class="a-box-item">
+                      <label for="agent-type-14">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-14" class="checkbox" value="28">
+                        <span class="checkbox-fontas"></span>
+                        土・日・祝日対応可
+                      </label>
+                    </li>
+                    <li class="a-box-item">
+                      <label for="agent-type-15">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-15" class="checkbox" value="29">
+                        <span class="checkbox-fontas"></span>
+                        平日18時まで対応可
+                      </label>
+                    </li>
+                    <li class="a-box-item">
+                      <label for="agent-type-16">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-16" class="checkbox" value="30">
+                        <span class="checkbox-fontas"></span>
+                        平日22時まで対応可
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <h5 class="agent-type-title">企業規模</h5>
+                <div class="agent-type-wrapper">
+                  <ul class="a-box">
+                    <li class="a-box-item">
+                      <label for="agent-type-17">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-17" class="checkbox" value="31">
+                        <span class="checkbox-fontas"></span>
+                        ベンチャー
+                      </label>
+                    </li>
+                    <li class="a-box-item">
+                      <label for="agent-type-18">
+                        <input type="checkbox" name="agent-type[]" id="agent-type-18" class="checkbox" value="32">
+                        <span class="checkbox-fontas"></span>
+                        大手
+                      </label>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
