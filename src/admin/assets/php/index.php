@@ -13,14 +13,12 @@ if (isset($_POST["studentDetailsButton"])) {
   header("Location: ../../../admin/studentDetails.php?id=" . $resultCompaniesStudentsLink_id["id"]);
 }
 
-$sql_CompaniesStudentsLink = "SELECT Name, Students.id as student_id, Students.registered_at, CompaniesStudentsLink.company_id, status, company, Statuses.id as status_id FROM `CompaniesStudentsLink` join Students on CompaniesStudentsLink.Student_id = Students.id 
-join Companies on Companies.id = CompaniesStudentsLink.company_id 
-join Statuses on Statuses.id = status_id
+$sql_CompaniesStudentsLink = "SELECT Students.Name, Students.id as student_id, Students.registered_at, CompaniesStudentsLink.company_id, status, company, Companies.id as company_id ,Statuses.id as status_id FROM `CompaniesStudentsLink` 
+inner join Students on CompaniesStudentsLink.Student_id = Students.id
+inner join Companies on CompaniesStudentsLink.company_id = Companies.id
+inner join Statuses on  CompaniesStudentsLink.status_id= Statuses.id 
 order by Students.registered_at desc";
 $CompaniesStudentsLink = $dbh->query($sql_CompaniesStudentsLink)->fetchAll(PDO::FETCH_ASSOC);
 
-// 学生名、学生id、登録日、企業名、statusを取得
-// echo "<pre>";
-// print_r($CompaniesStudentsLink);
-// echo "</pre>";
+
 

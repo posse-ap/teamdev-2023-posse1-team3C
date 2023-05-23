@@ -17,14 +17,14 @@ $CompaniesStudentsLink->bindValue(":id", $_GET["id"], PDO::PARAM_INT);
 $CompaniesStudentsLink->execute();
 
 // 企業毎に登録されている無効学生以外の数を取得
-$sql_countStudents = "SELECT COUNT(*) as totalStudents FROM `CompaniesStudentsLink` where company_id = :id and status_id !=3";
+$sql_countStudents = "SELECT COUNT(*) as totalStudents FROM `CompaniesStudentsLink` where company_id = :id and status_id !=2";
 $countStudents = $dbh->prepare($sql_countStudents);
 $countStudents->bindValue(":id", $_GET["id"], PDO::PARAM_INT);
 $countStudents->execute();
 $resultCountStudents = $countStudents->fetch();
 
 // 企業毎に登録されている無効な学生の数を取得
-$sql_countStudentsInvalid = "SELECT COUNT(*) as totalStudentsInvalid FROM `CompaniesStudentsLink` where company_id = :id and status_id = 3";
+$sql_countStudentsInvalid = "SELECT COUNT(*) as totalStudentsInvalid FROM `CompaniesStudentsLink` where company_id = :id and status_id = 2";
 $countStudentsInvalid = $dbh->prepare($sql_countStudentsInvalid);
 $countStudentsInvalid->bindValue(":id", $_GET["id"], PDO::PARAM_INT);
 $countStudentsInvalid->execute();
