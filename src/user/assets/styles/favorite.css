@@ -42,6 +42,9 @@ main {
   font-weight: 600;
   line-height: 2;
 }
+.service-wrapper {
+  min-height: 12vh;
+}
 .lets-talk {
   color: #2E79BA;
   font-size: 16px;
@@ -186,9 +189,15 @@ label{
   right: 10px;
 }
 @media screen and (max-width:768px) {
+  main {
+    margin-top: 60px;
+  }
   .container{
     width: 360px;
     height: 70px;
+  }
+  .service-wrapper {
+    min-height: 20vh;
   }
   .service-box {
     width: 360px;

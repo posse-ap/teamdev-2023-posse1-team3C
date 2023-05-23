@@ -90,7 +90,7 @@ for (let j = 0; j < counts.length; j++) {
     counts[j].innerHTML = new_element;
 }
 
-service_box.innerHTML = str;
+// service_box.innerHTML = str;
 
 // お気に入りボタンを押したら色が変わる、テキストが変更される
 let favorite_btns = document.querySelectorAll(".favorite-btn");

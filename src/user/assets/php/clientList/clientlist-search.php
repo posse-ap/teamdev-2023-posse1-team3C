@@ -97,7 +97,7 @@ foreach ($companies as $company) {
       </div>
       <div class="link-button">
         <!-- データベースのURLが正しくないから飛べないけど正しければ飛べるはず -->
-        <button type="button" class="favorite-btn" value="" id="favoriteButton" data-name="${companyName}" data-url="${companyURL}" data-id="${companyID}" onclick="addToFavorites(this)">
+        <button type="button" class="favorite-btn" value="" id="favoriteButton" data-name="'.$company["service"].'" data-url="'.$company["URL"].'" data-id="'.$company["id"].'" onclick="addToFavorites(this)">
           <span class="favorite-btn-text">
             お気に入りに追加
           </span>
