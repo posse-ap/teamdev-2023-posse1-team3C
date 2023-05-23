@@ -32,7 +32,7 @@
     <!-- エージェント企業名と画像 -->
     <div class="agent-name">
       <h2>
-        <?php echo $company_details["company"]; ?>
+        <?php echo $company_details["service"]; ?>
       </h2>
     </div>
     <div class="agent-img">
@@ -191,7 +191,7 @@
             <div class="swiper-slide">
             <div class="user-1-contents">
               <div class="user-1-img">
-                <img src="./assets/img/stories/<?php echo $company_details["company"] ?>/<?php echo $story["photo"]?>" alt="">
+                <img src="./assets/img/stories/<?php echo $company_details["service"] ?>/<?php echo $story["photo"]?>" alt="">
                 <div class="user-1-speed">
                   <?php echo $story["time"]?>で内定獲得！
                 </div>
@@ -235,7 +235,7 @@
       </a>
     </div>
     <div class="official-site">
-      <a href="" target="_blank">
+      <a href="<?php echo $company_details["URL"] ?>" target="_blank">
         <button class="official-site-btn">
           <span class="official-site-btn-text">
             公式サイトへ

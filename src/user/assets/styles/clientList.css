@@ -225,7 +225,7 @@ label {
 .search-details-contents {
   display: none;
   width: 720px;
-  height: 400px;
+  height: 640px;
   background-color: #ededed;
   margin-left: calc(50% - 360px);
   margin-top: 0;
@@ -242,6 +242,10 @@ label {
   display: block;
 }
 /* 詳細絞りこみ中身 */
+.error-list {
+  width: 720px;
+  margin-left: calc(50% - 360px);
+}
 .agent-type {
   margin-top: 0;
 }
@@ -337,8 +341,8 @@ h2::before {
   margin-top: 15px;
   width: 200px;
   height: 120px;
-  background-image: url(../img/success-story.png);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   margin-bottom: 25px;
   margin-left: calc(50% - 100px);
 }
@@ -375,21 +379,36 @@ td{
   font-size: 12px;
   text-align: left;
 }
-.link-button>button{
-  margin: 30px;
-}
 .button{
-  width: 140px;
+  width: 144px;
   height: 35px;
   line-height: 30px;
   text-align: center;
-  margin: 30px 5px;
+  margin: 15px 5px 15px 0;
   background-color: #2E79BA;
   border-radius: 7px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   padding-left: 10px;
+}
+.favorite-btn {
+  width: 144px;
+  height: 34px;
+  border-radius: 5px;
+  background-color: #fa4747;
+  color: #fff;
+  font-size: 14px;
+  border: #fa4747 solid 2px;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+.favorite-btn.active {
+  background-color: #ddd;
+  color: #636363;
+  border: #636363 solid 2px;
 }
 .button-p {
   text-decoration: none;
@@ -410,7 +429,7 @@ a{
   padding-left: 60px;
 }
 .list-sub-point {
-  height: 140px;
+  height: 190px;
 }
 .list-sub-point ul {
   padding-left: 25px;
@@ -419,6 +438,9 @@ a{
 .list-sub-point li {
   font-size: 13px;
   margin-bottom: 5px;
+}
+.list-sub-point-item {
+  list-style: circle;
 }
 .list-sub-point-title {
   margin-top: 0;
@@ -584,6 +606,10 @@ a{
   .clientlist-wrapper {
     padding-bottom: 30px;
   }
+  .error-list {
+    width: 360px;
+    margin-left: calc(50% - 180px);
+  }
   /* 企業リストの各内容 */
   .clientlist {
     padding: 2px;
@@ -591,11 +617,11 @@ a{
     margin-top: 20px;
     margin-bottom: 20px;
     width: 360px;
-    height: 280px;
+    height: 320px;
     border-radius: 10px;
   }
   .clientlist-contents {
-    height: 240px;
+    height: 260px;
     width: 340px;
     margin-top: 10px;
     margin-left: calc(50% - 170px);
@@ -603,7 +629,7 @@ a{
   }
   .list-img{
     width: 100px;
-    height: 60px;
+    height: 80px;
     margin-bottom: 10px;
     margin-left: 7.5px;
   }
@@ -643,21 +669,29 @@ a{
   .list-img{
     width: 150px;
   }
-  .link-button>button{
-    margin: 30px;
-  }
   .button{
-    width: 140px;
-    height: 35px;
-    line-height: 30px;
+    width: 144px;
+    height: 25px;
+    line-height: 25px;
     text-align: center;
-    margin: 30px 5px;
+    margin: 15px 5px 15px 0;
     background-color: #2E79BA;
     border-radius: 7px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     padding-left: 10px;
+    font-size: 12px;
+  }
+  .favorite-btn {
+    height: 25px;
+    border-radius: 5px;
+    font-size: 11px;
+  }
+  .favorite-btn.active {
+    background-color: #ddd;
+    color: #636363;
+    border: #636363 solid 2px;
   }
   .button-p{
     text-decoration: none;
@@ -667,24 +701,24 @@ a{
   }
   .button-i{
     color: white;
+    font-size: 12px;
   }
   .button {
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: -5px;
   }
   a{
     text-decoration: none;
   }
   .clientlist-sub {
     width: 165px;
-    padding-left: 20px;
+    padding-left: 10px;
   }
   .list-sub-point{
-    height: 90px;
+    height: 160px;
   }
   .list-sub-point ul{
-    padding-left: 20px;
+    padding-left: 10px;
     margin-top: 10px;
   }
   .list-sub-point li{
@@ -693,10 +727,10 @@ a{
   }
   .list-sub-point-title{
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
     border-left: #2E79BA solid 3px;
-    padding-left: 10px;
-    font-size: 14px;
+    padding-left: 6px;
+    font-size: 12px;
   }
 }
 

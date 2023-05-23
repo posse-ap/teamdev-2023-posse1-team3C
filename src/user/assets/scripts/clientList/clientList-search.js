@@ -1,86 +1,95 @@
-
-
 const checkboxes = document.querySelectorAll(".checkbox");
 const menubarSearch = document.getElementsByClassName("menubar-search");
 // 検索画面で押されたタグにこのクラスがついている。
 const activeCheckboxes = document.getElementsByClassName("check-active");
 // activeCheckboxesはHTMLCollectionなので配列に変換する。
 // チェックを一個しかつけられないようにする(卒業年度)
-$(function(){
-  $('input[name="graduate"]').change(function(){
-    var checked = $(this).prop('checked');
-    $('input[name="graduate"]').prop('checked', false);
+$(function () {
+  $('input[name="graduate"]').change(function () {
+    var checked = $(this).prop("checked");
+    $('input[name="graduate"]').prop("checked", false);
     // 選択肢の背景色を白にする
-    $('input[name="graduate"]').parent().parent().css('background-color', '#fff');
-    $(this).prop('checked', checked);
+    $('input[name="graduate"]')
+      .parent()
+      .parent()
+      .css("background-color", "#fff");
+    $(this).prop("checked", checked);
     if (checked) {
-      $(this).parent().parent().css('background-color', '#E7F5FD');
+      $(this).parent().parent().css("background-color", "#E7F5FD");
     } else {
-      $(this).parent().parent().css('background-color', '#fff');
+      $(this).parent().parent().css("background-color", "#fff");
     }
   });
 });
 // チェックを一個しかつけられないようにする(サポート形態)
-$(function(){
-  $('input[name="support"]').click(function(){
-    var checked = $(this).prop('checked');
-    $('input[name="support"]').prop('checked', false);
+$(function () {
+  $('input[name="support"]').click(function () {
+    var checked = $(this).prop("checked");
+    $('input[name="support"]').prop("checked", false);
     // 選択肢の背景色を白にする
-    $('input[name="support"]').parent().parent().css('background-color', '#fff');
-    $(this).prop('checked', checked);
+    $('input[name="support"]')
+      .parent()
+      .parent()
+      .css("background-color", "#fff");
+    $(this).prop("checked", checked);
     if (checked) {
-      $(this).parent().parent().css('background-color', '#E7F5FD');
+      $(this).parent().parent().css("background-color", "#E7F5FD");
     } else {
-      $(this).parent().parent().css('background-color', '#fff');
+      $(this).parent().parent().css("background-color", "#fff");
     }
   });
 });
 // チェックを一個しかつけられないようにする(お住まいの地域)
-$(function(){
-  $('input[name="your-area"]').click(function(){
-    var checked = $(this).prop('checked');
-    $('input[name="your-area"]').prop('checked', false);
+$(function () {
+  $('input[name="your-area"]').click(function () {
+    var checked = $(this).prop("checked");
+    $('input[name="your-area"]').prop("checked", false);
     // 選択肢の背景色を白にする
-    $('input[name="your-area"]').parent().parent().css('background-color', '#fff');
-    $(this).prop('checked', checked);
+    $('input[name="your-area"]')
+      .parent()
+      .parent()
+      .css("background-color", "#fff");
+    $(this).prop("checked", checked);
     if (checked) {
-      $(this).parent().parent().css('background-color', '#E7F5FD');
+      $(this).parent().parent().css("background-color", "#E7F5FD");
     } else {
-      $(this).parent().parent().css('background-color', '#fff');
+      $(this).parent().parent().css("background-color", "#fff");
     }
   });
 });
 // チェックをつけたら選択肢の背景色を#E7F5FDにする(総合型・特化型)
-$(function(){
-  $('input[name="agent-type[]"]').click(function(){
-    var checked = $(this).prop('checked');
+$(function () {
+  $('input[name="agent-type[]"]').click(function () {
+    var checked = $(this).prop("checked");
     if (checked) {
-      $(this).parent().parent().css('background-color', '#E7F5FD');
+      $(this).parent().parent().css("background-color", "#E7F5FD");
     } else {
-      $(this).parent().parent().css('background-color', '#fff');
+      $(this).parent().parent().css("background-color", "#fff");
     }
   });
 });
 // 詳細絞りこみを開く
-let searchDetailsTitle = document.querySelector('.search-details-title');
-const searchDetailsContents = document.querySelector('.search-details-contents');
-searchDetailsTitle.addEventListener('click', () => {
-  searchDetailsTitle.classList.toggle('active');
-  searchDetailsContents.classList.toggle('active');
+let searchDetailsTitle = document.querySelector(".search-details-title");
+const searchDetailsContents = document.querySelector(
+  ".search-details-contents"
+);
+searchDetailsTitle.addEventListener("click", () => {
+  searchDetailsTitle.classList.toggle("active");
+  searchDetailsContents.classList.toggle("active");
 });
 let tag = [[], [], [], []];
 // 検索画面で押されたタグが一覧画面で選択された状態にしておく。
 document.addEventListener("DOMContentLoaded", function () {
   let activeCheckboxesArray = [...activeCheckboxes];
-  console.log(activeCheckboxes) 
-  console.log(activeCheckboxesArray)
-activeCheckboxesArray.forEach(activeCheck => {
-  console.log(activeCheck.style)
-  activeCheck.style.backgroundColor = "red";
-  console.log(activeCheck.style.backgroundColor)
+  console.log(activeCheckboxes);
+  console.log(activeCheckboxesArray);
+  activeCheckboxesArray.forEach((activeCheck) => {
+    console.log(activeCheck.style);
+    activeCheck.style.backgroundColor = "red";
+    console.log(activeCheck.style.backgroundColor);
+  });
 });
-});
-console.log(tag)
+console.log(tag);
 checkboxes.forEach((checkbox) => {
   // 現在のURLからクエリパラメータを取得
   const queryString = window.location.search;
@@ -212,7 +221,7 @@ checkboxes.forEach((checkbox) => {
     // クエリパラメータの値がnullでなければ、配列に格納
     if (values[0][0] != null && !areArraysEqual(values, tag)) {
       tag = values;
-      console.log(tag)
+      console.log(tag);
       values[4] = [""];
     }
     if (!values[4] == [""]) {
@@ -242,6 +251,24 @@ checkboxes.forEach((checkbox) => {
             }
             counts[j].innerHTML = new_element;
           }
+          // お気に入りボタンを押したら色が変わる、テキストが変更される
+          let favorite_btns = document.querySelectorAll(".favorite-btn");
+          let favoriteTexts =
+            document.querySelectorAll(".favorite-btn-text");
+          favorite_btns.forEach((favorite_btn, index) => {
+            favorite_btn.addEventListener("click", function () {
+              if (favorite_btn.classList.contains("active")) {
+                favorite_btn.classList.remove("active");
+                favoriteTexts[index].textContent = "お気に入りに追加";
+                favorite_btn.value = 0;
+              } else {
+                favorite_btn.classList.add("active");
+                favoriteTexts[index].textContent = "お気に入り済み";
+                favorite_btn.value = 1;
+              }
+              // addToFavorites(favorite_btn);
+            });
+          });
         }
       }
     };

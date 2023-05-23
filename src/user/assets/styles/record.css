@@ -43,7 +43,7 @@ main {
   line-height: 2;
 }
 .service-wrapper {
-  min-height: 40vh;
+  min-height: 12vh;
 }
 .lets-talk {
   color: #2E79BA;
@@ -206,6 +206,9 @@ label{
   right: 10px;
 }
 @media screen and (max-width:768px) {
+  main {
+    margin-top: 60px;
+  }
   .container{
     width: 360px;
     height: 70px;
@@ -214,6 +217,9 @@ label{
     width: 360px;
     height: 140px;
     margin-left: calc(50% - 180px);
+  }
+  .service-wrapper {
+    min-height: 22vh;
   }
   .s-container {
     width: 320px;

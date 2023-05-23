@@ -13,7 +13,8 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         $row_cnt = $stmt->rowCount();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($row_cnt > 0 && password_verify($password, $result['password'])){
-            $_SESSION['unique_id'] = $result['id'];
+            session_regenerate_id(TRUE); //セッションidを再発行
+            $_SESSION['unique_email'] = $_POST['email'];
             echo 'success';
         } else {
             echo 'Eメールもしくはパスワードが、間違っています';

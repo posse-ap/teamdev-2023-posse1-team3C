@@ -1,4 +1,4 @@
-<!-- head読み込み -->
+<?php include_once('./components/sessionLogout.php')?>
 <?php
 include(dirname(__FILE__) . '/components/head.php');
 ?>
@@ -127,7 +127,7 @@ include(dirname(__FILE__) . '/components/head.php');
               <input type="hidden" name="id" value="<?php echo $resultStudentDetails["id"] ?>">
               <input type="hidden" name="company_id" value="<?php echo $resultStudentDetails["company_id"] ?>">
               <input type="hidden" name="student_id" value="<?php echo $resultStudentDetails["student_id"] ?>">
-              <button type="submit" name="invalidSubmit" id="invalidButton" class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">無効に</button>
+              <button type="submit" name="invalidSubmit" id="invalidButton" class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">無効</button>
             </form>
           </div>
           <!-- 戻るボタン -->

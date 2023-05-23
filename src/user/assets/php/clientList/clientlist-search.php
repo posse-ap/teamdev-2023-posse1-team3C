@@ -10,8 +10,8 @@ $placeholders = implode(',', array_fill(0, count($tagArrays), '?'));
 $error = "";
 if($placeholders == "") {
   $placeholders = "1 = 1";
-  $error = '<div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
-  <span class="font-medium ml-4">タグを選択してください</span> タグを選択しないと検索できません。
+  $error = '<div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 error-list" role="alert">
+  タグを選択してください。タグを選択しないと検索できません。
 </div>';
 }
 
@@ -97,12 +97,11 @@ foreach ($companies as $company) {
       </div>
       <div class="link-button">
         <!-- データベースのURLが正しくないから飛べないけど正しければ飛べるはず -->
-        <a href="' . $company['URL'] . '">
-          <div class="button official-link">
-            <p class="button-p">公式サイト</p>
-            <i class="fa-solid fa-arrow-up-right-from-square button-i"></i>
-          </div>
-        </a>
+        <button type="button" class="favorite-btn" value="" id="favoriteButton" data-name="'.$company["service"].'" data-url="'.$company["URL"].'" data-id="'.$company["id"].'" onclick="addToFavorites(this)">
+          <span class="favorite-btn-text">
+            お気に入りに追加
+          </span>
+        </button>
         <!-- 詳細に飛ぶ -->
         <a href="clientDetails.php?id= '.$company["id"].'">
           <div class="button detail-page">
