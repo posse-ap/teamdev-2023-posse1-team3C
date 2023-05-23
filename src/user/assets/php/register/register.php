@@ -24,16 +24,15 @@ if(isset($_POST["registerButton"])) {
 
   // 企業IDの配列を取得
   $company_ids = $_POST['company_id'];
-  $company_ids_array = explode(",", $company_ids);
+  print_r($company_ids);
 
   // CompaniesStudentsLink テーブルに企業ごとのデータを登録
   $sql_register_link = "INSERT INTO CompaniesStudentsLink (student_id, company_id, status_id) VALUES (:student_id, :company_id, :status_id)";
   $register = $dbh->prepare($sql_register_link);
 
 
-
   // 各企業IDごとに登録処理を行う
-  foreach ($company_ids_array as $company_id) {
+  foreach ($company_ids as $company_id) {
     $register->execute([
       ":student_id" => $student_id,
       ":company_id" => $company_id,
