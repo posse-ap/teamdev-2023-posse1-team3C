@@ -66,7 +66,7 @@ include(dirname(__FILE__) . '/components/head.php');
                   <input type="hidden" name="student_id" value="<?php echo $list["student_id"] ?>">
                   <input type="hidden" name="company_id" value="<?php echo $list["company_id"]; ?>">
                   <input type="hidden" name="status_id" value="<?php echo $list["status_id"] ?>">
-                  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 student-details-btn" name="studentDetailsButton">学生詳細へ
+                  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 student-details-btn" name="studentDetailsButton">学生詳細
                   </button>
                 </form>
               </td>
