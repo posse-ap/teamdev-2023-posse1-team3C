@@ -17,8 +17,10 @@ if (isset($_POST["submitButton"])) {
 
   $data = '';
   foreach ($get_companies_all as $get_companies) {
-    $data .= '<div class="block p-2 mb-1 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert"><input type="hidden" value='. $get_companies["id"].' name="company_id[]"> '.$get_companies["service"] .'
-  </div>';
+    $data .= '
+    <div class="block p-2 mb-1 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert"><input type="hidden" value=' . $get_companies["id"] . ' name="company_id[]"> ' . $get_companies["service"] . '
+  </div>
+  ';
   }
   echo $data;
 }
