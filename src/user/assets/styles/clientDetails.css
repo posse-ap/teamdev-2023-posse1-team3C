@@ -148,13 +148,13 @@ main {
   padding-top: 40px;
 }
 .success-story-title-text {
-  width: 60%;
+  width: 750px;
   height: 60px;
   color: #2E79BA;
-  margin-left: 20%;
+  margin-left: calc(50% - 375px);
   font-weight: 600;
-  font-size: 20px;
-  line-height: 3;
+  font-size: 18px;
+  line-height: 60px;
   background-color: #fff;
   border-radius: 10px;
   position: relative;
@@ -417,20 +417,20 @@ main {
     padding-top: 24px;
   }
   .success-story-title-text {
-    width: 300px;
+    width: 350px;
     height: 40px;
-    margin-left: calc(50% - 150px);
-    font-size: 16px;
-    line-height: 2.5;
+    margin-left: calc(50% - 175px);
+    font-size: 11px;
+    line-height: 40px;
     border-radius: 8px;
   }
   .success-story-title-text i {
-    font-size: 20px;
-    top: 10px;
-    left: 15px;
+    font-size: 18px;
+    top: 11px;
+    left: 10px;
   }
   .success-story-title-text p {
-    padding-left: 50px;
+    padding-left: 32px;
     margin-top: 0;
     margin-bottom: 0;
   }

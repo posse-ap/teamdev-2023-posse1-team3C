@@ -50,6 +50,7 @@ let favorite_btns = document.querySelectorAll(".favorite-btn");
 let favoriteTexts = document.querySelectorAll(".favorite-btn-text");
 
 favorite_btns.forEach((favorite_btn, index) => {
+  console.log(favorite_btn);
   favorite_btn.addEventListener("click", function () {
     if (favorite_btn.classList.contains("active")) {
       favorite_btn.classList.remove("active");
