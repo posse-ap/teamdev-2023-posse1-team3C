@@ -24,7 +24,7 @@ searchDetailsTitle.addEventListener('click', () => {
 });
 // チェックを一個しかつけられないようにする(卒業年度)
 $(function(){
-  $('input[name="graduate"]').change(function(){
+  $('input[name="graduate[]"]').change(function(){
     var checked = $(this).prop('checked');
     // $('input[name="graduate"]').prop('checked', false);
     
@@ -39,11 +39,11 @@ $(function(){
 });
 // チェックを一個しかつけられないようにする(サポート形態)
 $(function(){
-  $('input[name="support"]').click(function(){
+  $('input[name="support[]"]').click(function(){
     var checked = $(this).prop('checked');
-    $('input[name="support"]').prop('checked', false);
-    // 選択肢の背景色を白にする
-    $('input[name="support"]').parent().parent().css('background-color', '#fff');
+    $('input[name="support[]"]').prop('checked', false);
+    
+    $('input[name="support[]"]').parent().parent().css('background-color', '#fff');
     $(this).prop('checked', checked);
     if (checked) {
       $(this).parent().parent().css('background-color', '#E7F5FD');
@@ -52,9 +52,9 @@ $(function(){
     }
   });
 });
-チェックを一個しかつけられないようにする(お住まいの地域)
+// チェックを一個しかつけられないようにする(お住まいの地域)
 $(function(){
-  $('input[name="your-area"]').click(function(){
+  $('input[name="your-area[]"]').click(function(){
     var checked = $(this).prop('checked');
     // $('input[name="your-area"]').prop('checked', false);
     
@@ -67,7 +67,7 @@ $(function(){
     }
   });
 });
-// チェックをつけたら選択肢の背景色を#E7F5FDにする(総合型・特化型)
+
 $(function(){
   $('input[name="agent-type[]"]').click(function(){
     var checked = $(this).prop('checked');
