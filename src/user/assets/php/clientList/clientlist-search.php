@@ -103,7 +103,7 @@ foreach ($companies as $company) {
           </span>
         </button>
         <!-- 詳細に飛ぶ -->
-        <a href="clientDetails.php?id= '.$company["id"].'">
+        <a href="clientDetails.php?id='.$company["id"].'">
           <div class="button detail-page">
             <p class="button-p">詳細ページ</p>
             <i class="fa-solid fa-caret-right button-i"></i>

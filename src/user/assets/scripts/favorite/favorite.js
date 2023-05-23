@@ -38,3 +38,9 @@ favorites.forEach((favorite) => {
 });
 
 service_box.innerHTML = str;
+
+
+const checks = document.querySelectorAll('.checkbox');
+checks.forEach((check)=>{
+  check.checked = true;
+})
