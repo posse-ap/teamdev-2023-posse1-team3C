@@ -38,4 +38,3 @@ favorites.forEach((favorite) => {
 });
 
 service_box.innerHTML = str;
-localStorage.clear()

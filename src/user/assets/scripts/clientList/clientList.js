@@ -92,24 +92,7 @@ for (let j = 0; j < counts.length; j++) {
 
 // service_box.innerHTML = str;
 
-// お気に入りボタンを押したら色が変わる、テキストが変更される
-let favorite_btns = document.querySelectorAll(".favorite-btn");
-let favoriteTexts = document.querySelectorAll(".favorite-btn-text");
 
-favorite_btns.forEach((favorite_btn, index) => {
-  favorite_btn.addEventListener("click", function () {
-    if (favorite_btn.classList.contains("active")) {
-      favorite_btn.classList.remove("active");
-      favoriteTexts[index].textContent = "お気に入りに追加";
-      favorite_btn.value = 0;
-    } else {
-      favorite_btn.classList.add("active");
-      favoriteTexts[index].textContent = "お気に入り済み";
-      favorite_btn.value = 1;
-    }
-    // addToFavorites(favorite_btn);
-  });
-});
 
 function addToFavorites(button) {
   // 企業の情報（仮のデータ）
