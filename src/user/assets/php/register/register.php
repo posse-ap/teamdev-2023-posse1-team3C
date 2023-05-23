@@ -24,7 +24,6 @@ if(isset($_POST["registerButton"])) {
 
   // 企業IDの配列を取得
   $company_ids = $_POST['company_id'];
-  print_r($company_ids);
 
   // CompaniesStudentsLink テーブルに企業ごとのデータを登録
   $sql_register_link = "INSERT INTO CompaniesStudentsLink (student_id, company_id, status_id) VALUES (:student_id, :company_id, :status_id)";

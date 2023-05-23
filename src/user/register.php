@@ -28,7 +28,6 @@
       <h2 class="register-title">
         学生情報登録
       </h2>
-      <input type="hidden" name="company_id" value="">
       <div class="grid gap-6 mb-6 md:grid-cols-2 name-input">
         <div>
           <label for="last-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">姓</label>
