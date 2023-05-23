@@ -20,8 +20,8 @@
   <main>
     <form method="post" action="./assets/php/register/register.php">
       <div class="register-title-decoration block">
-        <div class="block gap-6 mb-6  name-input ">
-          <h2 class="p-2 gap-6 md:grid-cols-2">登録サービス</h2>
+        <div class="block gap-2 mb-6 w-9/12">
+          <h2 class="p-2 gap-2">登録サービス</h2>
           <?php include_once("./assets/php/register/showCompaniesForRegister.php") ?>
         </div>
       </div>
