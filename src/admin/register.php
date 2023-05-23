@@ -456,7 +456,7 @@ include(dirname(__FILE__) . '/components/head.php');
               </div>
             </div>
             <div class="your-area">
-              <h4>お住まいの地域</h4>
+              <h4>対応地域</h4>
               <div class="your-area-wrapper">
                 <ul class="y-box">
                   <li class="y-box-item">
