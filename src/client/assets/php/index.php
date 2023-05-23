@@ -2,6 +2,7 @@
 
   include_once('../dbconnect.php');
   $company_id = $_SESSION['unique_id'];
+  
   // 学生情報取得
   $stmt = $dbh->prepare("SELECT name, stu.id, stu.registered_at, link.company_id, status, sta.id as status_id FROM `CompaniesStudentsLink` as link
   join Students as stu on link.Student_id = stu.id 
@@ -16,7 +17,7 @@
   $stmt = $dbh->prepare("SELECT count(stu.id) from CompaniesStudentsLink as link
   join Students as stu on link.Student_id = stu.id
   join Statuses as sta on sta.id = link.status_id
-  where link.company_id = :id and (status = '請求予定' or status = '請求済み')");
+  where link.company_id = :id and (link.status_id = 1)");
   $stmt->execute([
     ':id' => $company_id
   ]);
@@ -26,7 +27,7 @@
   $stmt = $dbh->prepare("SELECT count(stu.id) from CompaniesStudentsLink as link
   join Students as stu on link.Student_id = stu.id
   join Statuses as sta on sta.id = link.status_id
-  where link.company_id = :id and status = '無効'");
+  where link.company_id = :id and link.status_id = 2");
   $stmt->execute([
     ':id' => $company_id
   ]);

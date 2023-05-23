@@ -57,3 +57,12 @@ document.getElementById('month-btn').addEventListener('click', function () {
 
 
 
+
+// ログアウトボタンがクリックされた時の処理
+document.getElementById("logoutButton").addEventListener("click", function() {
+
+  // ログアウト後のリダイレクト先URL
+  var redirectUrl = "assets/php/auth/signout.php";
+  // リダイレクトする
+  window.location.href = redirectUrl;
+});

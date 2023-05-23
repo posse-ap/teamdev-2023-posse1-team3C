@@ -1,4 +1,5 @@
-<?php session_start();
+<?php 
+session_start();
 if (!isset($_SESSION['unique_id'])) {
   header("location: auth/signin.php");
 }
@@ -10,19 +11,24 @@ if (!isset($_SESSION['unique_id'])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <?php include_once('components/link.php') ?>
   <title>clientトップページ</title>
 </head>
 
 <body>
-  <?php include_once('components/link.php') ?>
+
   <?php include_once('assets/php/index.php') ?>
-  <header class="sticky top-10 z-50">
-    <h1 class="my-1 mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center"><?php echo $company?> HOME</h1>
+  <header class="sticky top-0 z-50 bg-white mt-4">
+    <h1 class=" mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center columns-1">HOME</h1>
+    <div class="flex justify-center"> 
+    <p class='my-1 mb-4 text-xl text-gray-900 text-center'>ようこそ。<?php echo $company?>様。こちらでは学生情報を確認、CSVダウンロードを行うことができます。</p>
+    <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2  dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 columns-1 ml-24 mb-4" id="logoutButton" action="auth/signout.php" method="GET">ログアウト</button>
+    </div>
   </header>
 
   <section class="text-gray-600 body-font relative">
 
-    <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap w-4/5">
+    <div class="container px-5 py-2 mx-auto flex sm:flex-nowrap flex-wrap w-4/5">
       <div class="relative overflow-x-auto shadow-md sm:rounded-lg p-8">
         <div class="flex">
           <h3 class="text-xl">登録学生情報</h3>
@@ -95,7 +101,7 @@ if (!isset($_SESSION['unique_id'])) {
         <div class="flex justify-center my-7">
           <a href="http://localhost:8080/user/clientDetails.php?id=<?php echo $_SESSION["unique_id"] ?>" target="_blank">
             <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">登録内容確認</button></a>
-          <button class="bottom-0 ml-4 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lgounded text-lg">お問い合わせ</button>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScK_Y69STQGpeKfAcHh1zNIb6tiVVO-2ryhKq2UdzpDbIihJw/viewform" target="_blank"><button class="bottom-0 ml-4 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lgounded text-lg">お問い合わせ</button></a>
         </div>
       </div>
     </div>
