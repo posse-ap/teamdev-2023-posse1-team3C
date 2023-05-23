@@ -1,4 +1,5 @@
-<?php session_start();
+<?php 
+  session_start();
   if(!isset($_SESSION['unique_id'])){
     header("location: auth/signin.php");
   }

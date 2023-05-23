@@ -21,6 +21,7 @@ $(function () {
     }
   });
 });
+
 // チェックを一個しかつけられないようにする(サポート形態)
 $(function () {
   $('input[name="support"]').click(function () {
@@ -90,6 +91,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 console.log(tag);
+
+
 checkboxes.forEach((checkbox) => {
   // 現在のURLからクエリパラメータを取得
   const queryString = window.location.search;
@@ -113,7 +116,7 @@ checkboxes.forEach((checkbox) => {
         let data = xhr.responseText;
         list.innerHTML = data;
         let counts = document.querySelectorAll(".list-star-value");
-
+        //星表示
         for (let j = 0; j < counts.length; j++) {
           let cnt = counts[j].getAttribute("value");
           let new_element = "";
@@ -124,6 +127,7 @@ checkboxes.forEach((checkbox) => {
           }
           counts[j].innerHTML = new_element;
         }
+
       }
     }
   };
