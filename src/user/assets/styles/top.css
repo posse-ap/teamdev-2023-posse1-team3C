@@ -196,6 +196,9 @@ label {
   cursor: pointer;
   user-select: none;
 }
+.btn-search-for-agent button.disabled:hover {
+  background-color: #FAE17E;
+}
 .btn-search-for-agent button:hover {
   background-color: #fdd01b;
 }
