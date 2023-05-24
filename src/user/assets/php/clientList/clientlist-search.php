@@ -7,7 +7,6 @@ $placeholders = implode(',', array_fill(0, count($tagArrays), '?'));
 // var_dump($tagArrays);
 // var_dump($placeholders);
 // タグを一度押して、また外した時のバグ修正
-$error = "";
 if($placeholders == "") {
   $distinct = "DISTINCT";
   $placeholders = "1 = 1";
@@ -44,6 +43,13 @@ $companies = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $data = '';
 $i = 0;
+$error = "";
+if(empty($companies)) {
+  $error = '<div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 error-list" role="alert">
+  申し訳ございません。該当企業は存在しません。
+</div>';
+};
+
 print_r($error);
 foreach ($companies as $company) {
   $company_id = $company['id'];
