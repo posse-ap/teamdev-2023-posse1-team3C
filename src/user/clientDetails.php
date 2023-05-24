@@ -41,7 +41,7 @@
     <!-- エージェント企業の特徴 -->
     <div class="agent-feature">
       <h3 class="agent-feature-title">
-        <?php echo $company_details["company"] ?>の特徴
+        <?php echo $company_details["service"] ?>の特徴
       </h3>
       <div class="feature-container">
         <div id="chart"></div>
@@ -181,7 +181,7 @@
         <div class="success-story-title-text">
           <i class="fa-regular fa-tag"></i>
           <p>
-          <?php echo $company_details["company"] ?>のサクセスストーリー
+          <?php echo $company_details["service"] ?>のサクセスストーリー
           </p>
         </div>
       </div>
