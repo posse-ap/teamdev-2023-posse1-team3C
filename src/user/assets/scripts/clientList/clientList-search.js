@@ -153,7 +153,6 @@ checkboxes.forEach((checkbox) => {
             favorite_btn.value = 1;
           }
         });
-
         function addToFavorites(button) {
           // 企業の情報（仮のデータ）
           let companyName = button.getAttribute("data-name");
@@ -166,18 +165,18 @@ checkboxes.forEach((checkbox) => {
             // console.log(favorite_btn);
             // let companyID = favorite_btn.getAttribute('data-id');
             console.log(button);
-        
+
             console.log(companyID);
-        
+
             // ローカルストレージからお気に入り情報を取得
             const favorites = JSON.parse(localStorage.favorites);
-        
+
             if (button.value == 0) {
               // 既に同じIDの企業がローカルストレージ内に存在するかチェック
               const existingIndex = favorites.findIndex(
                 (item) => item.id === companyID
               );
-        
+
               if (existingIndex !== -1) {
                 // 同じIDの企業が既に登録されている場合は削除
                 favorites.splice(existingIndex, 1);
@@ -189,7 +188,7 @@ checkboxes.forEach((checkbox) => {
                 id: companyID,
                 time: currentTime,
               });
-        
+
               // ローカルストレージに保存
               localStorage.setItem("favorites", JSON.stringify(favorites));
             } else {
@@ -201,13 +200,15 @@ checkboxes.forEach((checkbox) => {
             }
           } else {
             // lcocalStorageにお気に入り情報がない場合
-            const favorites = [{
-              name: companyName,
-              url: companyURL,
-              id: companyID,
-              time: currentTime,
-            }];
-            localStorage.setItem("favorites", JSON.stringify((favorites)));
+            const favorites = [
+              {
+                name: companyName,
+                url: companyURL,
+                id: companyID,
+                time: currentTime,
+              },
+            ];
+            localStorage.setItem("favorites", JSON.stringify(favorites));
           }
         }
       }

@@ -9,21 +9,24 @@ $placeholders = implode(',', array_fill(0, count($tagArrays), '?'));
 // タグを一度押して、また外した時のバグ修正
 $error = "";
 if($placeholders == "") {
+  $distinct = "DISTINCT";
   $placeholders = "1 = 1";
-  $error = '<div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 error-list" role="alert">
-  タグを選択してください。タグを選択しないと検索できません。
-</div>';
-}
+  $newPlaceholders = $placeholders;
+//   $error = '<div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 error-list" role="alert">
+//   タグを選択してください。タグを選択しないと検索できません。
+// </div>';
+} else {
+  $distinct = "";
+  $newPlaceholders = "ctl.tag_id IN (" . $placeholders . ") GROUP BY c.id HAVING COUNT(DISTINCT ctl.tag_id) =" . count($tagArrays);
+};
 
 $sql_companies = "
-SELECT c.id, c.company, c.service, c.URL, cd.photo, ra.people, ra.support, ra.achievement, ra.speed, ra.amount
+SELECT $distinct c.id, c.company, c.service, c.URL, cd.photo, ra.people, ra.support, ra.achievement, ra.speed, ra.amount
 FROM `Companies` as c
 LEFT OUTER JOIN `CompaniesDetails` as cd ON cd.detail_id = c.id
 LEFT OUTER JOIN `CompaniesTagsLink` as ctl ON ctl.company_id = c.id
 LEFT OUTER JOIN `Ratings` as ra ON ra.rating_id = c.id
-WHERE ctl.tag_id IN ($placeholders)
-GROUP BY c.id
-HAVING COUNT(DISTINCT ctl.tag_id) = " . count($tagArrays);
+WHERE $newPlaceholders " ;
 
 $stmt = $dbh->prepare($sql_companies);
 $cnt = count($tagArrays);
@@ -116,3 +119,4 @@ foreach ($companies as $company) {
 
 }
 echo $data;
+
