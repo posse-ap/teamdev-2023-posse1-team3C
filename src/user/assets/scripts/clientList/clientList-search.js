@@ -92,7 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 console.log(tag);
 
-
 checkboxes.forEach((checkbox) => {
   // 現在のURLからクエリパラメータを取得
   const queryString = window.location.search;
@@ -127,33 +126,33 @@ checkboxes.forEach((checkbox) => {
           }
           counts[j].innerHTML = new_element;
         }
-        let favorite_btns = document.querySelectorAll('.favorite-btn');
-        favorite_btns.forEach((favorite_btn)=>{
-          let id = favorite_btn.getAttribute('data-id');
+        let favorite_btns = document.querySelectorAll(".favorite-btn");
+        favorite_btns.forEach((favorite_btn) => {
+          let id = favorite_btn.getAttribute("data-id");
           function checkIfIdExists(id) {
-             // ローカルストレージからデータを取得
-             const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-             
-             // データ内をループしてidの存在をチェック
-             for (const item of favorites) {
-               if (item.id === id) {
-                 // 指定したidが存在する場合
-                 return true;
-               }
-             }
-             // 指定したidが存在しない場合
-             return false;
-           }
-           let favoriteText = favorite_btn.querySelector('.favorite-btn-text');
-           
-           let idExists = checkIfIdExists(id);
-           if (idExists){
-             favorite_btn.classList.add("active");
-             favoriteText.textContent = "お気に入り済み";
-             favorite_btn.value = 1;
-           }
-        })
+            // ローカルストレージからデータを取得
+            const favorites =
+              JSON.parse(localStorage.getItem("favorites")) || [];
 
+            // データ内をループしてidの存在をチェック
+            for (const item of favorites) {
+              if (item.id === id) {
+                // 指定したidが存在する場合
+                return true;
+              }
+            }
+            // 指定したidが存在しない場合
+            return false;
+          }
+          let favoriteText = favorite_btn.querySelector(".favorite-btn-text");
+
+          let idExists = checkIfIdExists(id);
+          if (idExists) {
+            favorite_btn.classList.add("active");
+            favoriteText.textContent = "お気に入り済み";
+            favorite_btn.value = 1;
+          }
+        });
       }
     }
   };
@@ -269,8 +268,8 @@ checkboxes.forEach((checkbox) => {
         if (xhr.status === 200) {
           let data = xhr.responseText;
           list.innerHTML = data;
+          // 星評価
           let counts = document.querySelectorAll(".list-star-value");
-
           for (let j = 0; j < counts.length; j++) {
             let cnt = counts[j].getAttribute("value");
             let new_element = "";
@@ -281,11 +280,9 @@ checkboxes.forEach((checkbox) => {
             }
             counts[j].innerHTML = new_element;
           }
-          
-          // お気に入りボタンを押したら色が変わる、テキストが変更される
+          // お気に入りボタンを押したら色が変わり、テキストが変更される
           let favorite_btns = document.querySelectorAll(".favorite-btn");
-          let favoriteTexts =
-            document.querySelectorAll(".favorite-btn-text");
+          let favoriteTexts = document.querySelectorAll(".favorite-btn-text");
           favorite_btns.forEach((favorite_btn, index) => {
             favorite_btn.addEventListener("click", function () {
               if (favorite_btn.classList.contains("active")) {
@@ -299,31 +296,30 @@ checkboxes.forEach((checkbox) => {
               }
               // addToFavorites(favorite_btn);
             });
-            let id = favorite_btn.getAttribute('data-id');
+            let id = favorite_btn.getAttribute("data-id");
             function checkIfIdExists(id) {
-               // ローカルストレージからデータを取得
-               const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+              // ローカルストレージからデータを取得
+              const favorites =
+                JSON.parse(localStorage.getItem("favorites")) || [];
+              // データ内をループしてidの存在をチェック
+              for (const item of favorites) {
+                if (item.id === id) {
+                  // 指定したidが存在する場合
+                  return true;
+                }
+              }
+              // 指定したidが存在しない場合
+              return false;
+            }
+            let favoriteText = favorite_btn.querySelector(".favorite-btn-text");
 
-               // データ内をループしてidの存在をチェック
-               for (const item of favorites) {
-                 if (item.id === id) {
-                   // 指定したidが存在する場合
-                   return true;
-                 }
-               }
-               // 指定したidが存在しない場合
-               return false;
-             }
-             let favoriteText = favorite_btn.querySelector('.favorite-btn-text');
-
-             let idExists = checkIfIdExists(id);
-             if (idExists){
-               favorite_btn.classList.add("active");
-               favoriteText.textContent = "お気に入り済み";
-               favorite_btn.value = 1;
-             }
-           
-                 });
+            let idExists = checkIfIdExists(id);
+            if (idExists) {
+              favorite_btn.classList.add("active");
+              favoriteText.textContent = "お気に入り済み";
+              favorite_btn.value = 1;
+            }
+          });
         }
       }
     };
