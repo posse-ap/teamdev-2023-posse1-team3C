@@ -133,42 +133,52 @@ password: root
 
 ### [client](http://localhost:8080/client/auth/signin.php)
 ```
+企業名: レバレジーズ
 サービス名: キャリアチケット
 email: careerticket@gmail.com
 password: root
 
+企業名: マイナビ新卒紹介
 サービス名: マイナビ新卒紹介
 email: shinsotsu@gmail.com
 password: root
 
+企業名: irodas
 サービス名: irodas
 email: irodas@gmail.com
 password: root
 
+企業名: パーソルキャリア
 サービス名: doda新卒エージェント
 email: doda@gmail.com
 password: root
 
+企業名: リクナビ
 サービス名: リクナビ就職エージェント
 email: rikunabi@gmail.com
 password: root
 
+企業名: HRクラウド
 サービス名: JobSpring
 email: jobstring@gmail.com
 password: root
 
+企業名: ネオキャリア
 サービス名: 就職エージェントneo
 email: neo@gmail.com
 password: root
 
+企業名: NaS
 サービス名: DIG UP CAREER
 email: digupcareer@gmail.com
 password: root
 
+企業名: イングリウッド
 サービス名: シンアド就活
 email: syn@gmail.com
 password: root
 
+企業名: シンクエージェント
 サービス名: キャリセン就活エージェント
 email: careecen@gmail.com
 password: root
