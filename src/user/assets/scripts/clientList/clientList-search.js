@@ -210,6 +210,16 @@ checkboxes.forEach((checkbox) => {
             ];
             localStorage.setItem("favorites", JSON.stringify(favorites));
           }
+          // buttonを押した時、ボタンの文言、色を変える
+          if (button.classList.contains("active")) {
+            button.classList.remove("active");
+            checkText[1].innerText = "お気に入りに追加";
+            button.value = 0;
+          } else {
+            button.classList.add("active");
+            checkText[1].innerText = "お気に入り済み";
+            button.value = 1;
+          }
         }
       }
     }

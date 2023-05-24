@@ -100,14 +100,13 @@ function addToFavorites(button) {
   let companyURL = button.getAttribute("data-url");
   let companyID = button.getAttribute("data-id");
   let currentTime = new Date().toLocaleString();
+  let checkText = button.childNodes
   // localStorageお気に入り情報があるかどうかチェック
   if (localStorage.favorites !== undefined) {
     // let favorite_btn = document.querySelector('.favorite-btn');
     // console.log(favorite_btn);
     // let companyID = favorite_btn.getAttribute('data-id');
     console.log(button);
-
-    console.log(companyID);
 
     // ローカルストレージからお気に入り情報を取得
     const favorites = JSON.parse(localStorage.favorites);
@@ -148,5 +147,21 @@ function addToFavorites(button) {
       time: currentTime,
     }];
     localStorage.setItem("favorites", JSON.stringify((favorites)));
+  }
+
+  // buttonを押した時、ボタンの文言、色を変える
+  if (button.classList.contains("active")) {
+    button.classList.remove("active");
+    console.log(button.classList)
+    console.log(checkText[1])
+    checkText[1].innerText = "お気に入りに追加";
+    button.value = 0;
+  } else {
+    console.log("actieが付与される")
+    button.classList.add("active");
+    console.log(button.classList)
+    console.log(checkText[1])
+    checkText[1].innerText = "お気に入り済み";
+    button.value = 1;
   }
 }
