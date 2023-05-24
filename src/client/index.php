@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 if (!isset($_SESSION['unique_id'])) {
   header("location: auth/signin.php");
@@ -20,9 +20,9 @@ if (!isset($_SESSION['unique_id'])) {
   <?php include_once('assets/php/index.php') ?>
   <header class="sticky top-0 z-50 bg-white mt-4">
     <h1 class=" mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center columns-1">HOME</h1>
-    <div class="flex justify-center"> 
-    <p class='my-1 mb-4 text-xl text-gray-900 text-center'>ようこそ。<?php echo $company?>様。こちらでは学生情報を確認、CSVダウンロードを行うことができます。</p>
-    <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2  dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 columns-1 ml-24 mb-4" id="logoutButton" action="auth/signout.php" method="GET">ログアウト</button>
+    <div class="flex justify-center">
+      <p class='my-1 mb-4 text-xl text-gray-900 text-center'>ようこそ。<?php echo $company ?>様。こちらでは学生情報を確認、CSVダウンロードを行うことができます。</p>
+      <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2  dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 columns-1 ml-24 mb-4" id="logoutButton" action="auth/signout.php" method="GET">ログアウト</button>
     </div>
   </header>
 
@@ -44,15 +44,16 @@ if (!isset($_SESSION['unique_id'])) {
           <select id="month" name="month" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             <option value="20" selected>月を選択してください</option>
             <option value="2">全ての月を選択する</option>
-            <option value="2022-10">2022/10</option>
-            <option value="2022-11">2022/11</option>
-            <option value="2022-12">2022/12</option>
-            <option value="2023-01">2023/1</option>
-            <option value="2023-02">2023/2</option>
-            <option value="2023-03">2023/3</option>
-            <option value="2023-04">2023/4</option>
-            <option value="2023-05">2023/5</option>
+            
             <option value="2023-06">2023/6</option>
+            <option value="2023-05">2023/5</option>
+            <option value="2023-04">2023/4</option>
+            <option value="2023-03">2023/3</option>
+            <option value="2023-02">2023/2</option>
+            <option value="2023-01">2023/1</option>
+            <option value="2022-12">2022/12</option>
+            <option value="2022-11">2022/11</option>
+            <option value="2022-10">2022/10</option>
           </select>
           <input type="submit" value="Submit" id="month-btn">
         </form>
