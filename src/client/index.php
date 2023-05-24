@@ -44,7 +44,9 @@ if (!isset($_SESSION['unique_id'])) {
           <select id="month" name="month" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             <option value="20" selected>月を選択してください</option>
             <option value="2">全ての月を選択する</option>
-            
+            <option value="2023-09">2023/09</option>
+            <option value="2023-08">2023/08</option>
+            <option value="2023-07">2023/07</option>
             <option value="2023-06">2023/6</option>
             <option value="2023-05">2023/5</option>
             <option value="2023-04">2023/4</option>
