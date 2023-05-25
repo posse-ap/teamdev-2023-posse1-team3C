@@ -1,5 +1,5 @@
 const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-
+// localStorage.clear()
 // お気に入り企業の情報をHTMLに書き換え
 const service_box = document.getElementById("service-wrapper");
 
@@ -38,3 +38,9 @@ favorites.forEach((favorite) => {
 });
 
 service_box.innerHTML = str;
+
+
+const checks = document.querySelectorAll('.checkbox');
+checks.forEach((check)=>{
+  check.checked = true;
+})

@@ -1,7 +1,5 @@
 <link rel="stylesheet" href="../assets/styles/normalize.css">
 <link rel="stylesheet" href="../../dist/output.css">
-<link rel="stylesheet" href="../assets/styles/">
-<link rel="stylesheet" href="">
 
 
 <!-- fontawesome読み込み -->
