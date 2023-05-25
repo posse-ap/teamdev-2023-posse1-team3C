@@ -33,7 +33,7 @@
   チェックをつけて一括登録しよう！
 </div>
 
-<form id="favoriteForm" action="register.php" method="GET">
+<form id="favoriteForm" action="register.php" method="POST">
   <div class="service-wrapper" id="service-wrapper">
     <!-- お気に入り企業の一覧をここに表示する -->
   </div>

@@ -125,7 +125,7 @@ docker compose down
 ### [user](http://localhost:8080/user/index.php)
 
 
-### [admin](http://localhost:8080/admin/auth/login.php)
+### [admin](http://localhost:8080/admin/auth/signin.php)
 ```
 email: admin@example.com
 password: root
