@@ -7,23 +7,23 @@ $placeholders = implode(',', array_fill(0, count($tagArrays), '?'));
 // var_dump($tagArrays);
 // var_dump($placeholders);
 // タグを一度押して、また外した時のバグ修正
-$error = "";
 if($placeholders == "") {
+  // タグを何も押さなかったら、全ての企業を出す
+  $distinct = "DISTINCT";
   $placeholders = "1 = 1";
-  $error = '<div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 error-list" role="alert">
-  タグを選択してください。タグを選択しないと検索できません。
-</div>';
-}
+  $newPlaceholders = $placeholders;
+} else {
+  $distinct = "";
+  $newPlaceholders = "ctl.tag_id IN (" . $placeholders . ") GROUP BY c.id HAVING COUNT(DISTINCT ctl.tag_id) =" . count($tagArrays);
+};
 
 $sql_companies = "
-SELECT c.id, c.company, c.service, c.URL, cd.photo, ra.people, ra.support, ra.achievement, ra.speed, ra.amount
+SELECT $distinct c.id, c.company, c.service, c.URL, cd.photo, ra.people, ra.support, ra.achievement, ra.speed, ra.amount
 FROM `Companies` as c
 LEFT OUTER JOIN `CompaniesDetails` as cd ON cd.detail_id = c.id
 LEFT OUTER JOIN `CompaniesTagsLink` as ctl ON ctl.company_id = c.id
 LEFT OUTER JOIN `Ratings` as ra ON ra.rating_id = c.id
-WHERE ctl.tag_id IN ($placeholders)
-GROUP BY c.id
-HAVING COUNT(DISTINCT ctl.tag_id) = " . count($tagArrays);
+WHERE $newPlaceholders " ;
 
 $stmt = $dbh->prepare($sql_companies);
 $cnt = count($tagArrays);
@@ -41,6 +41,13 @@ $companies = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $data = '';
 $i = 0;
+$error = "";
+if(empty($companies)) {
+  $error = '<div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 error-list" role="alert">
+  申し訳ございません。該当企業は存在しません。
+</div>';
+};
+
 print_r($error);
 foreach ($companies as $company) {
   $company_id = $company['id'];
@@ -116,3 +123,4 @@ foreach ($companies as $company) {
 
 }
 echo $data;
+

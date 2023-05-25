@@ -9,7 +9,8 @@ $stmt = $dbh->prepare('SELECT name, stu.id, stu.registered_at, link.company_id, 
 join Students as stu on link.Student_id = stu.id 
 join Statuses as sta on sta.id = link.status_id
 where link.company_id= :id
-and stu.registered_at LIKE :month');
+and stu.registered_at LIKE :month
+order by registered_at desc');
 
 $stmt->execute([
     ':id' => $company_id,
