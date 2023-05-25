@@ -21,7 +21,6 @@
   } else {
     // お気に入りから飛んできた場合
     $company_ids = $_POST['company_id'];
-    print_r($company_ids);
   }
   ?>
   <main>
@@ -31,7 +30,6 @@
     <div class="register-title-decoration"></div>
     <form method="post" action="./assets/php/register/register.php">
       <?php
-      print_r($company_ids);
       foreach($company_ids as $company_id){
         echo '<input type="hidden" name="company_id[]" value='.$company_id.'>';
       }
