@@ -10,24 +10,32 @@
   <link rel="stylesheet" href="../dist/output.css">
   <link rel="stylesheet" href="./assets/styles/common.css">
   <link rel="stylesheet" href="./assets/styles/register.css">
-  <link rel="stylesheet" href="./assets/styles/favorite.css">
-  <script src="./assets/scripts/register/register.js" defer></script>
 </head>
 
 <body>
   <!-- ヘッダー -->
-  <?php include_once('components/header.php') ?>
+  <?php include_once('components/header.php')?>
+  <?php
+  $company_ids = [];
+  if(isset($_GET['company_id'])){
+    // 企業詳細から飛んできた場合
+    $company_ids[] = $_GET['company_id'];
+  } else {
+    // お気に入りから飛んできた場合
+    $company_ids = $_POST['company_id'];
+  }
+  ?>
   <main>
+    <h2 class="register-title">
+      学生情報登録
+    </h2>
+    <div class="register-title-decoration"></div>
     <form method="post" action="./assets/php/register/register.php">
-      <div class="register-title-decoration block">
-        <div class="block gap-2 mb-6 w-9/12">
-          <h2 class="p-2 gap-2">登録サービス</h2>
-          <?php include_once("./assets/php/register/showCompaniesForRegister.php") ?>
-        </div>
-      </div>
-      <h2 class="register-title">
-        学生情報登録
-      </h2>
+      <?php
+      foreach($company_ids as $company_id){
+        echo '<input type="hidden" name="company_id[]" value='.$company_id.'>';
+      }
+      ?>
       <div class="grid gap-6 mb-6 md:grid-cols-2 name-input">
         <div>
           <label for="last-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">姓</label>
@@ -150,6 +158,7 @@
       </button>
     </form>
   </main>
+  <script src="./assets/scripts/register/register.js" ></script>
 </body>
 
 </html>
