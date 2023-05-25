@@ -8,12 +8,10 @@ $placeholders = implode(',', array_fill(0, count($tagArrays), '?'));
 // var_dump($placeholders);
 // タグを一度押して、また外した時のバグ修正
 if($placeholders == "") {
+  // タグを何も押さなかったら、全ての企業を出す
   $distinct = "DISTINCT";
   $placeholders = "1 = 1";
   $newPlaceholders = $placeholders;
-//   $error = '<div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 error-list" role="alert">
-//   タグを選択してください。タグを選択しないと検索できません。
-// </div>';
 } else {
   $distinct = "";
   $newPlaceholders = "ctl.tag_id IN (" . $placeholders . ") GROUP BY c.id HAVING COUNT(DISTINCT ctl.tag_id) =" . count($tagArrays);

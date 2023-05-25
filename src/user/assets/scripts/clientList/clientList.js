@@ -149,19 +149,18 @@ function addToFavorites(button) {
     localStorage.setItem("favorites", JSON.stringify((favorites)));
   }
 
-  // buttonを押した時、ボタンの文言、色を変える
+  // 絞り込みがされてない時にbuttonを押したらボタンの文言、色を変える
   if (button.classList.contains("active")) {
     button.classList.remove("active");
-    console.log(button.classList)
-    console.log(checkText[1])
     checkText[1].innerText = "お気に入りに追加";
+    console.log(button.value);
     button.value = 0;
+    console.log(button.value);
   } else {
-    console.log("actieが付与される")
     button.classList.add("active");
-    console.log(button.classList)
-    console.log(checkText[1])
     checkText[1].innerText = "お気に入り済み";
+    console.log(button.value);
     button.value = 1;
+    console.log(button.value);
   }
 }

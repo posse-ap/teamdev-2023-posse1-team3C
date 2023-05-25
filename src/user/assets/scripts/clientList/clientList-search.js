@@ -214,11 +214,15 @@ checkboxes.forEach((checkbox) => {
           if (button.classList.contains("active")) {
             button.classList.remove("active");
             checkText[1].innerText = "お気に入りに追加";
+            console.log(button.value)
             button.value = 0;
+            console.log(button.value)
           } else {
             button.classList.add("active");
             checkText[1].innerText = "お気に入り済み";
+            console.log(button.value)
             button.value = 1;
+            console.log(button.value)
           }
         }
       }
@@ -334,6 +338,7 @@ checkboxes.forEach((checkbox) => {
     xhr.onreadystatechange = () => {
       if (xhr.readyState === XMLHttpRequest.DONE) {
         if (xhr.status === 200) {
+          // 絞り込んだあとのリストを表示
           let data = xhr.responseText;
           list.innerHTML = data;
           // 星評価
@@ -349,21 +354,10 @@ checkboxes.forEach((checkbox) => {
             counts[j].innerHTML = new_element;
           }
           // お気に入りボタンを押したら色が変わり、テキストが変更される
-          let favorite_btns = document.querySelectorAll(".favorite-btn");
-          let favoriteTexts = document.querySelectorAll(".favorite-btn-text");
-          favorite_btns.forEach((favorite_btn, index) => {
-            favorite_btn.addEventListener("click", function () {
-              if (favorite_btn.classList.contains("active")) {
-                favorite_btn.classList.remove("active");
-                favoriteTexts[index].textContent = "お気に入りに追加";
-                favorite_btn.value = 0;
-              } else {
-                favorite_btn.classList.add("active");
-                favoriteTexts[index].textContent = "お気に入り済み";
-                favorite_btn.value = 1;
-              }
-              // addToFavorites(favorite_btn);
-            });
+          let favorite_btns = document.getElementsByClassName("favorite-btn");
+          let favoriteTexts = document.getElementsByClassName("favorite-btn-text");
+          Array.from(favorite_btns).forEach((favorite_btn, index) => {
+            let favoriteText = favorite_btn.querySelector(".favorite-btn-text");
             let id = favorite_btn.getAttribute("data-id");
             function checkIfIdExists(id) {
               // ローカルストレージからデータを取得
@@ -379,8 +373,6 @@ checkboxes.forEach((checkbox) => {
               // 指定したidが存在しない場合
               return false;
             }
-            let favoriteText = favorite_btn.querySelector(".favorite-btn-text");
-
             let idExists = checkIfIdExists(id);
             if (idExists) {
               favorite_btn.classList.add("active");
