@@ -57,7 +57,7 @@ foreach ($companies as $company) {
     <h3 class="clientlist-name">' . $company['service'] . '</h3>
     <div class="clientlist-contents">
     <div class="clientlist-main">
-    <div class="list-img" style="background-image: url(../user/assets/img/heroes/' . $company["service"] . '/' . $company["photo"] . ');">
+    <div class="list-img" style="background-image: url(./assets/img/heroes/' . $company["service"] . '/' . $company["photo"] . ');">
     </div>
     <div class="list-star">
       <table class="list-star-table">
