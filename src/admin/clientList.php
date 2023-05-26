@@ -1,4 +1,4 @@
-<?php include_once('./components/sessionLogout.php')?>
+<?php include_once('./components/sessionLogout.php') ?>
 <?php include('../dbconnect.php') ?>
 <?php include('./assets/php/clientList/clientList.php') ?>
 <!-- head読み込み -->
@@ -6,7 +6,7 @@
 include(dirname(__FILE__) . '/components/head.php');
 ?>
 <title>admin画面企業一覧ページ</title>
-<?php include(dirname(__FILE__) . '/components/link.php')?>
+<?php include(dirname(__FILE__) . '/components/link.php') ?>
 <link rel="stylesheet" href="./assets/styles/clientList/clientList.css">
 </head>
 
@@ -20,6 +20,7 @@ include(dirname(__FILE__) . '/components/head.php');
       <!-- 掲載期間中の企業表 -->
       <div class="relative overflow-x-auto mb-5">
         <h3 class="w-4/5 text-center page-title">掲載中</h3>
+        <?php if(!empty($companiesUnfinish)) { ?>
         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 client-info-table">
           <thead class="text-xs text-gray-700 uppercase dark:text-gray-400 client-info-table-title">
             <tr>
@@ -58,10 +59,12 @@ include(dirname(__FILE__) . '/components/head.php');
             <?php } ?>
           </tbody>
         </table>
+        <?php }?>
       </div>
       <!-- 掲載期間終了した企業表 -->
       <div class="relative overflow-x-auto mb-5 text-center">
         <h3 class="w-4/5 text-center page-title">掲載終了企業</h3>
+        <?php if(!empty($companiesFinish)) {?>
         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 client-info-table">
           <thead class="text-xs text-gray-700 uppercase dark:text-gray-400 client-info-table-title">
             <tr>
@@ -100,10 +103,12 @@ include(dirname(__FILE__) . '/components/head.php');
             <?php } ?>
           </tbody>
         </table>
+        <?php }?>
       </div>
       <!-- 掲載期間がまだ始まってない企業表 -->
       <div class="relative overflow-x-auto mb-5">
         <h3 class="w-4/5 text-center page-title">掲載開始前企業</h3>
+        <?php if(!empty($companiesNotStart)){ ?>
         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 client-info-table">
           <thead class="text-xs text-gray-700 uppercase dark:text-gray-400 client-info-table-title">
             <tr>
@@ -142,6 +147,7 @@ include(dirname(__FILE__) . '/components/head.php');
             <?php } ?>
           </tbody>
         </table>
+        <?php } ?>
       </div>
     </main>
   </div>
