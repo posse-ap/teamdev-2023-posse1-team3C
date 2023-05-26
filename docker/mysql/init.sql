@@ -66,7 +66,7 @@ insert into Companies (company, service, URL, email, postcode, address, phoneNum
 ("ネオキャリア", "就職エージェントneo", "https://www.s-agent.jp/", "neo@gmail.com", "160-0023", "東京都新宿区西新宿１丁目２２−２ 新宿サンエービル 2F", "03-5908-8058", "対面", "平日9:30-18:30", "2022-12-01", "2023-07-30", "対応可"),
 ("NaS", "DIGUPCAREER", "https://digupcareer10.studio.site/", "digupcareer@gmail.com", "150-0011", "東京都渋谷区東３丁目１４−１５", "080-4618-2189", "対面・オンライン", "平日9:30-18:30", "2022-12-01", "2023-07-30", "対応可"),
 ("イングリウッド", "シンアド就活", "https://syn-ad.com/2024/", "syn@gmail.com", "150-0043", "東京都渋谷区道玄坂1-21-1 渋谷ソラスタ 13F", "03-6277-5117", "対面・オンライン", "平日9:30-18:30", "2022-12-01", "2023-04-30", "対応可"),
-("シンクエージェント", "キャリセン就活エージェント", "https://careecen-shukatsu-agent.com/", "careecen@gmail.com", "107-0052", "東京都港区赤坂4-8-14 赤坂坂東ビルディング5階", "03-5413-4975", "対面・オンライン", "平日9:30-18:30", "2023-05-27", "2023-08-31", "対応可");
+("シンクエージェント", "キャリセン就活エージェント", "https://careecen-shukatsu-agent.com/", "careecen@gmail.com", "107-0052", "東京都港区赤坂4-8-14 赤坂坂東ビルディング5階", "03-5413-4975", "対面・オンライン", "平日9:30-18:30", "2023-05-01", "2023-08-31", "対応可");
 DROP TABLE IF EXISTS CompaniesDetails;
 CREATE TABLE CompaniesDetails (
   detail_id INT AUTO_INCREMENT PRIMARY KEY,
