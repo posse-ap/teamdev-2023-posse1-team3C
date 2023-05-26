@@ -27,6 +27,9 @@ include(dirname(__FILE__) . '/components/head.php');
                 企業名
               </th>
               <th scope="col" class="px-6 py-3">
+                掲載期間開始日
+              </th>
+              <th scope="col" class="px-6 py-3">
                 掲載期間終了日
               </th>
               <th scope="col" class="px-6 py-3">
@@ -40,6 +43,9 @@ include(dirname(__FILE__) . '/components/head.php');
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-white dark:text-white dark:bg-gray-800">
                   <?php echo $company["Company"]; ?>
                 </th>
+                <td class="px-6 py-4 bg-white">
+                  <?php echo $company["started_at"]; ?>
+                </td>
                 <td class="px-6 py-4 bg-white">
                   <?php echo $company["finished_at"]; ?>
                 </td>
@@ -63,6 +69,9 @@ include(dirname(__FILE__) . '/components/head.php');
                 企業名
               </th>
               <th scope="col" class="px-6 py-3 ">
+                掲載期間開始日
+              </th>
+              <th scope="col" class="px-6 py-3 ">
                 掲載期間終了日
               </th>
               <th scope="col" class="px-6 py-3">
@@ -76,6 +85,9 @@ include(dirname(__FILE__) . '/components/head.php');
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-white dark:text-white dark:bg-gray-800">
                   <?php echo $company["Company"]; ?>
                 </th>
+                <td class="px-6 py-4 bg-white">
+                  <?php echo $company["started_at"]; ?>
+                </td>
                 <td class="px-6 py-4 bg-white">
                   <?php echo $company["finished_at"]; ?>
                 </td>
