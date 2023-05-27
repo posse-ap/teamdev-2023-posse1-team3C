@@ -24,17 +24,19 @@ main {
 .toppage-hero {
   width: 100%;
   aspect-ratio: 5/2;
-  background-color: rgb(2, 255, 154);
+  background-image: url(../img/S__360587268.jpg);
+  background-size: cover;
   position: relative;
 }
 .toppage-hero-comment h2 {
-  color: #fff;
+  color: #FAE17E;
   margin: 0;
   position: absolute;
-  bottom: 35%;
-  right: 6%;
+  bottom: 40%;
+  right: 2%;
   font-size: 3vw;
   transform: rotate(-13deg);
+  text-shadow: 1px 2px 3px #808080;
 }
 /* 絞りこみ */
 form {
@@ -891,7 +893,7 @@ label {
 }
 /* 使い方はこちらをタップ */
 .how-to-use {
-  width: 120px;
+  width: 200px;
   height: 80px;
   position: fixed;
   bottom: 12vh;
@@ -899,24 +901,25 @@ label {
   z-index: 50;
 }
 .how-to-use-btn {
-  width: 120px;
+  width: 200px;
   height: 60px;
   line-height: 1.4;
   font-size: 14px;
   font-weight: 600;
   border-width: 0;
   border-radius: 5px;
-  background-color: #F6E336;
-  color: #2E79BA;
+  background-color: #fdeb5e;
+  color: #52A0C2;
   cursor: pointer;
+  border: #52A0C2 solid 2px;
 }
 /* エージェントを探してみる(画面左下固定) */
 .search-agent {
   width: 200px;
   height: 80px;
   position: fixed;
-  bottom: 12vh;
-  left: 20px;
+  bottom: calc(12vh + 80px);
+  right: 20px;
   z-index: 50;
 }
 .search-agent-btn {
@@ -927,10 +930,17 @@ label {
   font-weight: 600;
   border-width: 0;
   border-radius: 5px;
-  background-color: #FAE17E;
-  color: #2E79BA;
-  border: #2E79BA solid 1px;
+  background-color: #fdd05e;
+  color: #52A0C2;
+  border: #52A0C2 solid 2px;
   cursor: pointer;
+  position: relative;
+}
+.search-agent-btn i {
+  position: absolute;
+  font-size: 20px;
+  top: 17px;
+  left: 10px;
 }
 /* レスポンシブ */
 @media screen and (max-width: 768px) {
@@ -939,7 +949,7 @@ label {
   }
   .toppage-hero {
     width: 100%;
-    height: 300px;
+    aspect-ratio: 5/3;
   }
   .toppage-hero-comment h2 {
     font-size: 20px;
@@ -1445,6 +1455,7 @@ label {
     width: 100px;
     height: 40px;
     bottom: 70px;
+    right: 20px;
   }
   .how-to-use-btn {
     width: 100px;
@@ -1457,12 +1468,18 @@ label {
     width: 100px;
     height: 40px;
     bottom: 70px;
+    left: 20px;
   }
   .search-agent-btn {
     width: 200px;
     height: 40px;
     font-size: 10px;
     border-radius: 5px;
+  }
+  .search-agent-btn i {
+    font-size: 16px;
+    top: 9px;
+    left: 10px;
   }
   /* フッター */
   footer {

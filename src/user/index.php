@@ -419,6 +419,7 @@
     <div class="search-agent">
       <a href="./clientList.php">
         <button class="search-agent-btn">
+        <i class="fa-solid fa-magnifying-glass"></i>
           エージェントを
           <br>
           探してみる
