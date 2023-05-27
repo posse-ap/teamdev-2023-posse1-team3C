@@ -43,11 +43,11 @@ main {
   line-height: 2;
 }
 .favorite-wrapper {
-  min-height: calc(100vh - 557px);
+  min-height: calc(100vh - 657px);
   margin-bottom: 80px;
 }
 .service-wrapper {
-  min-height: 12vh;
+  min-height: calc(100vh - 781px);
 }
 .lets-talk {
   color: #2E79BA;
@@ -205,16 +205,14 @@ label{
   font-family: Osaka;
   font-weight: 600;
   font-size: 16px;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   border-width: 0;
   position: relative;
   line-height: 50px;
   cursor: pointer;
-  position: fixed;
-  right: 20px;
+  margin-left: calc(50% - 110px);
   bottom: 20px;
-  z-index: 999;
-  border: 1px solid #87bdce;
 }
 .subscribe.disabled {
   background-color: #9CAEDC;
@@ -317,9 +315,11 @@ label{
     cursor: pointer;
     position: fixed;
     right: calc(50% - 110px);
-    bottom: 70px;
+    bottom: 74px;
     z-index: 999;
     border: 1px solid #87bdce;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   footer {
     height: 160px;
