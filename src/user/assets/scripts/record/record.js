@@ -52,7 +52,7 @@ if (histories.length === 0) {
 <div class="alert-area" role="alert">
   <div>
     <i class="fa-solid fa-circle-info info-mark"></i>
-    <span class="font-medium">チェックした企業が存在しません。</span><br>一覧から気になる企業をチェックしてみよう！
+    <span>チェックした企業が存在しません。</span><br>一覧から気になる企業をチェックしてみよう！
   </div>
 </div>
   `;

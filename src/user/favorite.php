@@ -8,7 +8,6 @@
   <title>CRAFT 企業詳細ページ</title>
   <link rel="stylesheet" href="./assets/styles/normalize.css">
   <link rel="stylesheet" href="./assets/styles/common.css">
-  <link rel="stylesheet" href="../../dist/output.css">
   <link rel="stylesheet" href="./assets/styles/favorite.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
@@ -31,12 +30,11 @@
 </div>
 
 <form id="favoriteForm" action="./register.php" method="POST">
-  <div id="service-alert" class="text-center flex justify-center"></div>
+  <div id="service-alert"></div>
   <div class="service-wrapper" id="service-wrapper">
     <!-- お気に入り企業の一覧をここに表示する -->
   </div>
 
-  <div class="lets-talk">\ 気になったエージェントと話してみよう /</div>
   <button class="subscribe" type="submit" name="submitButton" id="submit-button">一括登録する<i class="fa-solid fa-caret-right"></i>
 </button>
 </form>
