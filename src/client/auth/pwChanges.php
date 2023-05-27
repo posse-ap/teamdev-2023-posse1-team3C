@@ -19,23 +19,23 @@
       <form action="#">
         <div class="error-text"></div>
           <div class="field input">
-            <label for="">ログインID</label>
-            <input type="text" name="email" placeholder="ログインIDを入力してください">
+            <label for="loginID">ログインID</label>
+            <input type="email" name="email" placeholder="ログインIDを入力してください" id="loginID">
           </div>
           <div class="field input">
-            <label for="">現在のパスワード</label>
-            <input type="password" name="password" placeholder="現在のパスワードを入力してください">
-            <i class="fa-solid fa-eye"></i>
+            <label for="nowPassword">現在のパスワード</label>
+            <input type="password" name="password" placeholder="現在のパスワードを入力してください" id="nowPassword" class="nowPassword">
+            <i class="fa-solid fa-eye toggle-password-now" ></i>
           </div>
           <div class="field input">
-            <label for="">新しいパスワード</label>
-            <input type="password" name="newpassword" placeholder="新しいパスワードを入力してください">
-            <i class="fa-solid fa-eye"></i>
+            <label for="newPassword">新しいパスワード</label>
+            <input type="password" name="newpassword" placeholder="新しいパスワードを入力してください" id="newPassword" class="newPassword">
+            <i class="fa-solid fa-eye toggle-password-new" ></i>
           </div>
           <div class="field input">
-            <label for="">新しいパスワード(確認)</label>
-            <input type="password" name="confirmpassword" placeholder="もう一度パスワードを入力してください">
-            <i class="fa-solid fa-eye"></i>
+            <label for="confirmPassword">新しいパスワード(確認)</label>
+            <input type="password" name="confirmpassword" placeholder="もう一度パスワードを入力してください" id="confirmPassword" class="confirmPassword">
+            <i class="fa-solid fa-eye toggle-password-confirm" ></i>
           </div>
           <div class="field button">
             <input type="submit" value="再設定する">

@@ -20,7 +20,7 @@ continueBtn.onclick = ()=>{
       if(xhr.status === 200){
         let data = xhr.response;
         if(data.trim() === "success"){
-          location.href = '../index.php';
+          location.href = '../auth/signin.php';
         }else{
           errorText.textContent = data;
           errorText.style.display = 'block';
