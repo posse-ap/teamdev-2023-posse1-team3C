@@ -343,6 +343,7 @@ h2::before {
   height: 120px;
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   margin-bottom: 25px;
   margin-left: calc(50% - 100px);
 }
