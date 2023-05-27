@@ -196,12 +196,11 @@ label{
 }
 /* ボタン */
 .subscribe {
-  margin-left: calc(50% - 100px);
   color: white;
   background-color: #4591d3;
   border-radius: 15px;
   text-align: center;
-  height: 60px;
+  height: 50px;
   width: 220px;
   font-family: Osaka;
   font-weight: 600;
@@ -212,7 +211,8 @@ label{
   line-height: 50px;
   cursor: pointer;
   position: fixed;
-  bottom: 10px;
+  right: 20px;
+  bottom: 20px;
   z-index: 999;
   border: 1px solid #87bdce;
 }
@@ -237,10 +237,10 @@ label{
     height: 70px;
   }
   .favorite-wrapper {
-    min-height: calc(100vh - 457px);
+    min-height: calc(100vh - 517px);
   }
   .service-wrapper {
-    min-height: calc(100vh - 555px);
+    min-height: calc(100vh - 615px);
   }
   .service-box {
     width: 360px;
@@ -301,11 +301,27 @@ label{
     top: 11.5px;
     right: 8px;
   }
-}
-
-@media screen and (max-width:768px) {
-  .subscribe{
+  .subscribe {
+    color: white;
+    background-color: #4591d3;
+    border-radius: 15px;
+    text-align: center;
+    height: 50px;
+    width: 220px;
+    font-family: Osaka;
+    font-weight: 600;
+    font-size: 16px;
+    border-width: 0;
+    position: relative;
+    line-height: 50px;
+    cursor: pointer;
+    position: fixed;
+    right: calc(50% - 110px);
     bottom: 70px;
+    z-index: 999;
+    border: 1px solid #87bdce;
   }
-
+  footer {
+    height: 160px;
+  }
 }

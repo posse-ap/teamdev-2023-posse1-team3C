@@ -37,7 +37,9 @@
   </div>
   </div>
 
-  <button class="subscribe" type="submit" name="submitButton" id="submit-button">一括登録する<i class="fa-solid fa-caret-right"></i>
+  <button class="subscribe" type="submit" name="submitButton" id="submit-button">
+    一括登録する
+    <i class="fa-solid fa-caret-right"></i>
 </button>
 </form>
 
