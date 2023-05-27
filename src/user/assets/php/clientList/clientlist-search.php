@@ -23,7 +23,7 @@ FROM `Companies` as c
 LEFT OUTER JOIN `CompaniesDetails` as cd ON cd.detail_id = c.id
 LEFT OUTER JOIN `CompaniesTagsLink` as ctl ON ctl.company_id = c.id
 LEFT OUTER JOIN `Ratings` as ra ON ra.rating_id = c.id
-WHERE $newPlaceholders " ;
+WHERE finished_at > now() and started_at < now() and $newPlaceholders " ;
 
 $stmt = $dbh->prepare($sql_companies);
 $cnt = count($tagArrays);
