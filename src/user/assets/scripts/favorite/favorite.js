@@ -42,6 +42,9 @@ favorites.forEach((favorite) => {
 service_box.innerHTML = str;
 // localStorage.clear()
 
+// HTMLのチェックボックスと登録ボタンの要素を取得 
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+const submitButton = document.getElementById('submit-button');
 // お気に入り企業がなかった場合の処理
 const favoriteAlert = document.getElementById("service-alert");
 let favoriteAlertStr = '';
@@ -54,6 +57,8 @@ if (favorites.length === 0) {
   </div>
 </div>
   `;
+  submitButton.disabled = true;
+  submitButton.classList.add('disabled');
 }
 favoriteAlert.innerHTML = favoriteAlertStr;
 
@@ -63,9 +68,6 @@ checks.forEach((check)=>{
   check.checked = true;
 })
 
-// HTMLのチェックボックスと登録ボタンの要素を取得 
-const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-const submitButton = document.getElementById('submit-button');
 // チェックボックスの状態を監視するためのイベントリスナーを追加
 checkboxes.forEach(checkbox => {
   checkbox.addEventListener('change', updateSubmitButtonStatus);
