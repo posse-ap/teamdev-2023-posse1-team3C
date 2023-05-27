@@ -171,7 +171,7 @@ if (isset($_POST["registerButton"])) {
   $to = $_POST["email"];
   $subject = "パスワード設定のお知らせ";
   $from = "admin@example.com";
-  $message = '<html><body><p>パスワードを設定しました。</p><p>設定したのパスワードは <b>' . $password . '</b> です。</p><p><a href="http://localhost:8080/client/auth/signin.php">こちら</a>からログインしてください。</p></body></html>' ;
+  $message = '<html><body><p>パスワードを設定しました。</p><p>設定したのパスワードは <b>' . $password . '</b> です。</p><p><a href="http://localhost:8080/client/auth/pwchanges.php">こちら</a>でパスワードを再設定してください。</p></body></html>' ;
   $headers = "MIME-Version: 1.0\r\n";
   $headers .= "From: $from  \r\n";
   $headers .= "Content-Type: text/html; charset=UTF-8" . "\r\n" . "Content-Transfer-Encoding: base64\r\n";

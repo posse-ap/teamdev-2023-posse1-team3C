@@ -11,7 +11,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     if (!empty($email) && !empty($password) &&!empty($newpassword) && !empty($confirmpassword)) {
       // 全部に値が入力してあるか true
         // メール一致したユーザーを取得
-        $stmt = $dbh->prepare('SELECT * FROM ClientUsers WHERE mail = :email');
+        $stmt = $dbh->prepare('SELECT * FROM ClientUsers WHERE email = :email');
         $stmt->bindValue(':email', $email);
         $stmt->execute();
         $row_cnt = $stmt->rowCount();
@@ -22,7 +22,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
             // 現在のパスワードが正しいか　True
             // セッション管理するためにidを入れる、新しいパスワードを入力する
             $_SESSION['unique_id'] = $result['id'];
-            $stmt = $dbh->prepare('UPDATE ClientUsers SET password = :password WHERE mail = :email');
+            $stmt = $dbh->prepare('UPDATE ClientUsers SET password = :password WHERE email = :email');
             $stmt->bindValue(':email', $email);
             $stmt->bindValue(':password', password_hash($newpassword,PASSWORD_DEFAULT));
             $stmt->execute();
@@ -35,7 +35,6 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
           // 新しいパスワードが確認用とあっているかどうか　False
           echo '確認用パスワードが入力したパスワードと異なっています';
         }
-        
     } else {
       // 全部に値が入力してあるか false
         echo '全て入力してください';
