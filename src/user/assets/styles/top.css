@@ -236,7 +236,8 @@ label {
 .step-1-img {
   width: 80%;
   aspect-ratio: 4/3;
-  background-color: #fff;
+  background-image: url(../img/searchAgents.jpg);
+  background-size: contain;
   margin-left: 10%;
   margin-top: 40px;
   border-radius: 15px;
@@ -254,7 +255,7 @@ label {
   color: #7A7A7A;
   margin-left: 20px;
 }
-.step-1-title span {
+.step-1-number {
   position: absolute;
   font-size: 16px;
   font-weight: 600;
@@ -266,6 +267,15 @@ label {
   width: 24px;
   height: 24px;
   border-radius: 12px;
+}
+.step-1-title .step-1-text {
+  font-size: 14px;
+  line-height: 1.5;
+  padding-bottom: 10px;
+  text-align: left;
+}
+.step-1-title .step-1-text span {
+  color: red;
 }
 /* ステップ2 */
 .step-2-img {
@@ -302,6 +312,11 @@ label {
   height: 24px;
   border-radius: 12px;
 }
+.step-2-title .step-2-text {
+  font-size: 13px;
+  line-height: 16px;
+  padding-bottom: 10px;
+}
 /* ステップ3 */
 .step-3-img {
   width: 80%;
@@ -336,6 +351,11 @@ label {
   width: 24px;
   height: 24px;
   border-radius: 12px;
+}
+.step-3-title .step-3-text {
+  font-size: 13px;
+  line-height: 16px;
+  padding-bottom: 10px;
 }
 /* エージェント一覧ページボタン */
 .btn-agent-list {
@@ -1044,7 +1064,7 @@ label {
     margin-top: 20px;
   }
   .step {
-    height: 200px;
+    height: 300px;
     width: 360px;
     margin-left: calc(50% - 180px);
   }

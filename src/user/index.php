@@ -181,8 +181,13 @@
           </div>
           <div class="step-1-title">
             <p>
-              <span>1</span>
-              最終的な申込までのフローに依存
+              <span class="step-1-number">1</span>
+              自分に合ったエージェントを
+              <br>
+              探してみよう
+            </p>
+            <p class="step-1-text">
+              CRAFTでは、<span>絞りこみ検索</span>を使って、自分に合ったエージェントを探すことができます。
             </p>
           </div>
         </div>
@@ -195,6 +200,9 @@
               <span>2</span>
               最終的な申込までのフローに依存
             </p>
+            <p class="step-2-text">
+            詳しい説明はここでします。詳しい説明はここでします。詳しい説明はここでします。
+            </p>
           </div>
         </div>
         <div class="step step-3">
@@ -205,6 +213,9 @@
             <p>
               <span>3</span>
               最終的な申込までのフローに依存
+            </p>
+            <p class="step-3-text">
+            詳しい説明はここでします。詳しい説明はここでします。詳しい説明はここでします。
             </p>
           </div>
         </div>
