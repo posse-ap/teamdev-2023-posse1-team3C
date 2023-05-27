@@ -8,6 +8,7 @@
   <title>CRAFT 企業詳細ページ</title>
   <link rel="stylesheet" href="./assets/styles/normalize.css">
   <link rel="stylesheet" href="./assets/styles/common.css">
+  <link rel="stylesheet" href="../../dist/output.css">
   <link rel="stylesheet" href="./assets/styles/favorite.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
@@ -30,6 +31,7 @@
 </div>
 
 <form id="favoriteForm" action="./register.php" method="POST">
+  <div id="service-alert" class="text-center flex justify-center"></div>
   <div class="service-wrapper" id="service-wrapper">
     <!-- お気に入り企業の一覧をここに表示する -->
   </div>
@@ -42,6 +44,7 @@
 <!-- フッター -->
 <?php include_once('components/footer.php') ?>
   <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
 </body>
 
 </html>
