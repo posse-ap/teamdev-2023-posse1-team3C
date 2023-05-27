@@ -76,7 +76,7 @@ main {
   border-style: solid;
   margin-top: 60px;
   margin-bottom: 20px;
-  margin-left: calc(50% - 240px);
+  margin-left: calc(50% - 261.5px);
   padding-left: 40px;
   padding-top: 15px;
   line-height: 1.5;
@@ -214,10 +214,22 @@ main {
     margin-left: calc(50% - 180px);
   }
   .service-wrapper {
-    min-height: 22vh;
+    min-height: calc(100vh - 493px);
   }
   .s-container {
     width: 320px;
+  }
+  .alert-area {
+    width: 320px;
+    height: 60px;
+    margin-top: 30px;
+    margin-left: calc(50% - 181.5px);
+  }
+  .info-mark {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    font-size: 20px;
   }
   .service-name {
     font-size: 14px;
