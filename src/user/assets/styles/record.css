@@ -66,6 +66,30 @@ main {
   width: 420px;
   margin-bottom: 30px;
 }
+.alert-area {
+  width: 480px;
+  height: 60px;
+  border-radius: 5px;
+  background-color: #ffb0b0;
+  border-color: rgb(255, 57, 57);
+  border-style: solid;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: calc(50% - 240px);
+  padding-left: 40px;
+  padding-top: 15px;
+  line-height: 1.5;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(255, 57, 57);
+  position: relative;
+}
+.info-mark {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  font-size: 20px;
+}
 .service-name{
   font-family: 游ゴシック;
   font-weight: 900;
