@@ -1,10 +1,10 @@
 /*===========================================================*/
 /*パスワードの目隠し*/
 /*===========================================================*/
-const pswrdField = document.querySelectorAll(".form .field input[type='password']");
+// const pswrdField = document.querySelectorAll(".form .field input[type='password']");
 // .formの中の.fieldのinputのtype=がpasswordになってるやつ
 
-function showPassword(togglebutton) {
+function showPassword(togglebutton , pswrdField) {
   if (pswrdField.type == "password") {
     pswrdField.type = "text";
     togglebutton.classList.add("active");
@@ -14,17 +14,20 @@ function showPassword(togglebutton) {
   }
 };
 
-togglebuttonNow = document.querySelector(".form .fa-solid.fa-eye .toggle-password-now");
+togglebuttonNow = document.querySelector(".toggle-password-now");
+nowPassword = document.querySelector(".nowPassword");
 togglebuttonNow.addEventListener("click", function () {
-  showPassword(togglebuttonNow);
+  showPassword(togglebuttonNow, nowPassword);
 } );
 
-togglebuttonNew = document.querySelector(".form .fa-solid.fa-eye .toggle-password-new");
+togglebuttonNew = document.querySelector(".toggle-password-new");
+newPassword = document.querySelector(".newPassword");
 togglebuttonNew.addEventListener("click", function () {
-  showPassword(togglebuttonNew);
+  showPassword(togglebuttonNew, newPassword);
 } );
 
-togglebuttonConfirm = document.querySelector(".form .fa-solid.fa-eye .toggle-password-confirm");
+togglebuttonConfirm = document.querySelector(".toggle-password-confirm");
+confirmPassword = document.querySelector(".confirmPassword");
 togglebuttonConfirm.addEventListener("click", function () {
-  showPassword(togglebuttonConfirm);
+  showPassword(togglebuttonConfirm, confirmPassword);
 } );
