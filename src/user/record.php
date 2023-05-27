@@ -28,9 +28,10 @@
 
 
   <div class="lets-favorite">\ あなたがチェックした企業はこちら /</div>
-
+  <div class="record-wrapper">
   <div id="service-alert" class="text-center flex justify-center"></div>
   <div class="service-wrapper" id='service-wrapper'></div>
+  </div>
 
 </main>
 <!-- フッター -->

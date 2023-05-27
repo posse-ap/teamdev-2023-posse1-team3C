@@ -1,6 +1,6 @@
 // 履歴の情報をローカルストレージから取得
 const histories = JSON.parse(localStorage.getItem("histories")) || [];
-localStorage.clear();
+// localStorage.clear();
 // お気に入り企業の情報をHTMLに書き換え
 const service_box = document.getElementById("service-wrapper");
 

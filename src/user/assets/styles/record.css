@@ -42,6 +42,9 @@ main {
   font-weight: 600;
   line-height: 2;
 }
+.record-wrapper {
+  min-height: calc(100vh - 443px);
+}
 .service-wrapper {
   min-height: calc(100vh - 683px);
   margin-bottom: 40px;
@@ -74,7 +77,7 @@ main {
   background-color: #FEF1F2;
   border-color: rgb(255, 57, 57);
   border-style: solid;
-  margin-top: 120px;
+  margin-top: 20px;
   margin-bottom: 20px;
   margin-left: calc(50% - 261.5px);
   padding-left: 40px;
