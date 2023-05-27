@@ -187,7 +187,9 @@
               探してみよう
             </p>
             <p class="step-1-text">
-              CRAFTでは、<span>絞りこみ検索</span>を使って、自分に合ったエージェントを探すことができます。
+              <span>絞りこみ検索</span>を使って、自分に合ったエージェントを探すことができます。
+              <br>
+              また、<span>詳細絞りこみ</span>を使って、さらに絞りこみをすることができます。
             </p>
           </div>
         </div>
@@ -197,11 +199,15 @@
           </div>
           <div class="step-2-title">
             <p>
-              <span>2</span>
-              最終的な申込までのフローに依存
+              <span class="step-2-number">2</span>
+              気になるエージェントについて
+              <br>
+              詳しく見てみよう
             </p>
             <p class="step-2-text">
-            詳しい説明はここでします。詳しい説明はここでします。詳しい説明はここでします。
+            企業一覧で気になったエージェントの<span>詳細ページ</span>に飛んでみよう！
+            <br>
+            <span>お気に入りに追加</span>しておけば、簡単に見返したり、一括で申し込むことができます。
             </p>
           </div>
         </div>
@@ -211,11 +217,15 @@
           </div>
           <div class="step-3-title">
             <p>
-              <span>3</span>
-              最終的な申込までのフローに依存
+              <span class="step-3-number">3</span>
+              申し込みを完了して、
+              <br>
+              実際に話をしてみよう！
             </p>
             <p class="step-3-text">
-            詳しい説明はここでします。詳しい説明はここでします。詳しい説明はここでします。
+            実際に話してみないと、<span>本当に自分に合っているか</span>はわからない！
+            <br>
+            就活において、とても重要になるエージェントとの相性を確認してみよう！
             </p>
           </div>
         </div>
@@ -425,6 +435,17 @@
         <br>
         こちらをタップ
       </button>
+    </div>
+    <!-- エージェントを探してみる(画面左下固定) -->
+    <div class="search-agent">
+      <a href="./clientList.php">
+        <button class="search-agent-btn">
+        <i class="fa-solid fa-magnifying-glass"></i>
+          エージェントを
+          <br>
+          探してみる
+        </button>
+      </a>
     </div>
   </main>
   <!-- フッター -->
