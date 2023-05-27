@@ -31,6 +31,7 @@
   <div class="service-wrapper" id='service-wrapper'>
     
   </div>
+
 </main>
 <!-- フッター -->
 <?php include_once('components/footer.php') ?>

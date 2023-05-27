@@ -16,8 +16,8 @@ main {
   color: #2E79BA;
 }
 .top-favorite {
-  padding-top: 60px;
-  margin-bottom: 60px;
+  padding-top: 20px;
+  margin-bottom: 30px;
   font-size: 20px;
   text-align: center;
   position: relative;
@@ -36,8 +36,8 @@ main {
   color: #2E79BA  ;
   font-size: 16px;
   text-align: center;
-  margin-top: 70px;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   font-family: 游ゴシック;
   font-weight: 600;
   line-height: 2;
@@ -170,19 +170,23 @@ label{
 .subscribe {
   margin-left: calc(50% - 100px);
   color: white;
-  background-color: #2E79BA;
+  background-color: #4591d3;
   border-radius: 15px;
   text-align: center;
-  height: 50px;
-  width: 200px;
+  height: 60px;
+  width: 220px;
   font-family: Osaka;
   font-weight: 600;
   font-size: 16px;
-  margin-bottom: 100px;
+  margin-bottom: 0px;
   border-width: 0;
   position: relative;
   line-height: 50px;
   cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  z-index: 999;
+  border: 1px solid #87bdce;
 }
 .subscribe.disabled {
   background-color: #9CAEDC;
@@ -253,4 +257,11 @@ label{
     top: 11.5px;
     right: 8px;
   }
+}
+
+@media screen and (max-width:768px) {
+  .subscribe{
+    bottom: 70px;
+  }
+
 }
