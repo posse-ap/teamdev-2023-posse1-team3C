@@ -910,6 +910,27 @@ label {
   color: #2E79BA;
   cursor: pointer;
 }
+/* エージェントを探してみる(画面左下固定) */
+.search-agent {
+  width: 200px;
+  height: 80px;
+  position: fixed;
+  bottom: 12vh;
+  left: 20px;
+  z-index: 50;
+}
+.search-agent-btn {
+  width: 200px;
+  height: 60px;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 600;
+  border-width: 0;
+  border-radius: 5px;
+  background-color: #f69336;
+  color: #2E79BA;
+  cursor: pointer;
+}
 /* レスポンシブ */
 @media screen and (max-width: 768px) {
   main {

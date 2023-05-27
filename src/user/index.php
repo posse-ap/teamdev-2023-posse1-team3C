@@ -415,6 +415,16 @@
         こちらをタップ
       </button>
     </div>
+    <!-- エージェントを探してみる(画面左下固定) -->
+    <div class="search-agent">
+      <a href="./clientList.php">
+        <button class="search-agent-btn">
+          エージェントを
+          <br>
+          探してみる
+        </button>
+      </a>
+    </div>
   </main>
   <!-- フッター -->
   <?php include_once('components/footer.php')?>
