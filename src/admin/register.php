@@ -434,21 +434,21 @@ include(dirname(__FILE__) . '/components/head.php');
                 <ul class="s-box">
                   <li class="s-box-item">
                     <label for="s-box-item-1">
-                      <input type="checkbox" name="support" id="s-box-item-1" class="checkbox" value="4" type-data="s-support">
+                      <input type="checkbox" name="support[]" id="s-box-item-1" class="checkbox" value="4" type-data="s-support">
                       <span class="checkbox-fontas checkbox-fontas-4"></span>
                       オンラインのみ
                     </label>
                   </li>
                   <li class="s-box-item">
                     <label for="s-box-item-2">
-                      <input type="checkbox" name="support" id="s-box-item-2" class="checkbox" value="5" type-data="s-support">
+                      <input type="checkbox" name="support[]" id="s-box-item-2" class="checkbox" value="5" type-data="s-support">
                       <span class="checkbox-fontas checkbox-fontas-5"></span>
                       対面のみ
                     </label>
                   </li>
                   <li class="s-box-item">
                     <label for="s-box-item-3">
-                      <input type="checkbox" name="support" id="s-box-item-3" class="checkbox" value="6" type-data="s-support">
+                      <input type="checkbox" name="support[]" id="s-box-item-3" class="checkbox" value="6" type-data="s-support">
                       <span class="checkbox-fontas checkbox-fontas-6"></span>
                       両方可
                     </label>

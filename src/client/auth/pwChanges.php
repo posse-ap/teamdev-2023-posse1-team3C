@@ -20,7 +20,7 @@
         <div class="error-text"></div>
           <div class="field input">
             <label for="">ログインID</label>
-            <input type="text" name="email" placeholder="ログインIDを入力してください">
+            <input type="email" name="email" placeholder="ログインIDを入力してください">
           </div>
           <div class="field input">
             <label for="">現在のパスワード</label>

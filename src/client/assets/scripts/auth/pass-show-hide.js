@@ -2,7 +2,7 @@
 /*パスワードの目隠し*/
 /*===========================================================*/
 const pswrdField = document.querySelector(".form .field input[type='password']"),
-togglebutton = document.querySelector(".form .fa-solid.fa-eye")
+togglebutton = document.querySelectorAll(".form .fa-solid.fa-eye")
 // .formの中の.fieldのinputのtype=がpasswordになってるやつ
 
 togglebutton.onclick = ()=>{
