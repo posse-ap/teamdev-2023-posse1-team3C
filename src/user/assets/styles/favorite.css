@@ -42,6 +42,10 @@ main {
   font-weight: 600;
   line-height: 2;
 }
+.favorite-wrapper {
+  min-height: calc(100vh - 557px);
+  margin-bottom: 80px;
+}
 .service-wrapper {
   min-height: 12vh;
 }
@@ -83,7 +87,7 @@ main {
   border-style: solid;
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-left: calc(50% - 240px);
+  margin-left: calc(50% - 261.5px);
   padding-left: 40px;
   padding-top: 15px;
   line-height: 1.5;
@@ -232,8 +236,11 @@ label{
     width: 360px;
     height: 70px;
   }
+  .favorite-wrapper {
+    min-height: calc(100vh - 457px);
+  }
   .service-wrapper {
-    min-height: 20vh;
+    min-height: calc(100vh - 555px);
   }
   .service-box {
     width: 360px;
@@ -241,6 +248,19 @@ label{
   }
   .s-container {
     width: 320px;
+  }
+  .alert-area {
+    width: 320px;
+    height: 60px;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-left: calc(50% - 181.5px);
+  }
+  .info-mark {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    font-size: 20px;
   }
   .checkbox-fontas {
     font-size: 20px;
