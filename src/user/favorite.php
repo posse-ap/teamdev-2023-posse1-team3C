@@ -20,11 +20,7 @@
 
 
 <main>
-  
   <h2 class="top-favorite">お気に入り一覧</h2>
-  <!-- <div id="favoritesList">
-  お気に入り企業の情報がここに表示されます
-</div> -->
 
 
 <div class="lets-favorite">
@@ -33,13 +29,13 @@
   チェックをつけて一括登録しよう！
 </div>
 
-<form id="favoriteForm" action="register.php" method="POST">
+<form id="favoriteForm" action="./register.php" method="POST">
   <div class="service-wrapper" id="service-wrapper">
     <!-- お気に入り企業の一覧をここに表示する -->
   </div>
 
   <div class="lets-talk">\ 気になったエージェントと話してみよう /</div>
-  <button class="subscribe" type="submit">一括登録する<i class="fa-solid fa-caret-right"></i></button>
+  <button class="subscribe" type="submit" name="submitButton" id="submit-button">一括登録する<i class="fa-solid fa-caret-right"></i></button>
 </form>
 
 </main>

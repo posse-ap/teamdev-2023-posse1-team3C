@@ -21,12 +21,11 @@ main {
   margin: 0;
 }
 .agent-img {
-  width: 50%;
-  aspect-ratio: 5/3;
-  margin-left: 25%;
-  padding-top: 40px;
-  margin-bottom: 20px;
-  padding-top: 20px;
+  width: 360px;
+  max-height: 360px;
+  margin-left: calc(50% - 180px);
+  margin-top: 60px;
+  margin-bottom: 80px;
 }
 .agent-img img {
   width: 100%;
@@ -333,9 +332,11 @@ main {
     font-size: 20px;
   }
   .agent-img {
-    width: 70%;
-    margin-left: 15%;
-    padding-top: 20px;
+    width: 200px;
+    max-height: 200px;
+    margin-left: calc(50% - 100px);
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
   /* エージェント企業の特徴 */
   .agent-feature {

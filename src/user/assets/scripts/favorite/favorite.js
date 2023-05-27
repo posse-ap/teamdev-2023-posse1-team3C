@@ -38,9 +38,32 @@ favorites.forEach((favorite) => {
 });
 
 service_box.innerHTML = str;
+// localStorage.clear()
 
 
 const checks = document.querySelectorAll('.checkbox');
 checks.forEach((check)=>{
   check.checked = true;
 })
+
+// HTMLのチェックボックスと登録ボタンの要素を取得 
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+const submitButton = document.getElementById('submit-button');
+// チェックボックスの状態を監視するためのイベントリスナーを追加
+checkboxes.forEach(checkbox => {
+  checkbox.addEventListener('change', updateSubmitButtonStatus);
+});
+// 登録ボタンの活性状態を更新する関数
+function updateSubmitButtonStatus() {
+  // チェックされていないチェックボックスの数をカウント
+  const uncheckedCount = Array.from(checkboxes).filter(checkbox => !checkbox.checked).length;
+
+  // すべてのチェックボックスが外れている場合、登録ボタンを非活性化
+  if (uncheckedCount === checkboxes.length) {
+    submitButton.disabled = true;
+    submitButton.classList.add('disabled');
+  } else {
+    submitButton.disabled = false;
+    submitButton.classList.remove('disabled');
+  }
+}
