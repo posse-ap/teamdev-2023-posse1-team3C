@@ -29,9 +29,9 @@ include(dirname(__FILE__) . '/components/head.php');
       </section>
       <section class="flex status-container">
         <h3 class="status-title">掲載状況</h3>
-        <!-- 今日の日付と比較して、終了日を過ぎていないなら -->
+        <!-- 今日の日付と比較して、掲載開始日をすぎていてかつ終了日を過ぎていないなら -->
         <div class="status-now">
-          <?php if (strtotime(date("Y/m/d")) < strtotime($resultcompany["finished_at"])) { ?>
+          <?php if (strtotime(date("Y/m/d")) < strtotime($resultcompany["finished_at"]) && strtotime(date("Y/m/d")) >= strtotime($resultcompany["started_at"])) { ?>
             <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 h-6">掲載中</span>
           <?php } else { ?>
             <!-- 今日の日付と比較して、終了日を過ぎているなら -->
