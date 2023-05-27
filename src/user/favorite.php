@@ -35,7 +35,8 @@
   </div>
 
   <div class="lets-talk">\ 気になったエージェントと話してみよう /</div>
-  <button class="subscribe" type="submit" name="submitButton" id="submit-button">一括登録する<i class="fa-solid fa-caret-right"></i></button>
+  <button class="subscribe" type="submit" name="submitButton" id="submit-button">一括登録する<i class="fa-solid fa-caret-right"></i>
+</button>
 </form>
 
 </main>

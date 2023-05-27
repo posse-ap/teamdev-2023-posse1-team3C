@@ -17,8 +17,7 @@ favorites.forEach((favorite) => {
   <div class="service-box" id="service_box">
   <div class="container">
   <label>
-    <input type="checkbox" class="checkbox">
-    <span class="checkbox-fontas"></span>
+    <span class=""></span>
   </label>
   <div class="s-container">
     <div class="service-name">${companyName}</div>
