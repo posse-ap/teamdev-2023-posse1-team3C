@@ -395,7 +395,7 @@
           <div class="clientlist-contents">
             <div class="clientlist-main">
               <!-- 画像登録してどういう名前で登録されるかわからなかったので修正必要 -->
-              <div class="list-img" style="background-image: url(../user/assets/img/heroes/<?php echo $company["service"] ?>/<?php echo $company["photo"] ?>);">
+              <div class="list-img" style="background-image: url(./assets/img/heroes/<?php echo $company["service"] ?>/<?php echo $company["photo"] ?>);">
               </div>
               <!-- 星の生成 -->
               <div class="list-star">
