@@ -450,7 +450,47 @@ a{
   padding-left: 10px;
   font-weight: 600;
 }
+.subscribe{
+  height:   70px;
+  position:fixed;
+  bottom: 60px;
+  background-color: #FAE17E;
+  font-size: small;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	margin: auto;
+	font-weight: bold;
+	border-radius: 0.3rem;
+	border-bottom: 7px solid #0686b2;
+	background: #27acd9;
+	color: #fff;
+  width: 15%;
+  right: 20px;
+  bottom: 10px;
+}
+.subscribe:hover{
+  margin-top: 6px;
+	border-bottom: 1px solid #0686b2;
+	color: #fff;
+}
+.subscribe:disabled{
+  background-color: #adacab;
+}
+.apply{
+  color: white;
+  margin-left: 10px;
+}
 @media screen and (max-width:768px) {
+  .subscribe{
+    height: 45px;
+    width: 40%;
+    right: 0;
+    bottom: 60px;
+  }
+  .apply{
+    color: white;
+  }
   /* ヒーロー */
   .cl-mainvisual {
     margin-top: 60px;

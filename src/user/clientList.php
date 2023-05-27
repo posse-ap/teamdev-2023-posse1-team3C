@@ -386,86 +386,22 @@
     </div>
     <!-- 一覧 -->
     <h2>エージェント一覧</h2>
-    <div class="clientlist-wrapper" id='client-list'>
-      <!-- 企業ごとに情報出力 -->
-      <?php foreach ($companies as $company) { ?>
-        <?php $company_id = $company['id']; ?>
-        <div class="clientlist">
-          <h3 class="clientlist-name"><?php echo $company['service'] ?></h3>
-          <div class="clientlist-contents">
-            <div class="clientlist-main">
-              <!-- 画像登録してどういう名前で登録されるかわからなかったので修正必要 -->
-              <div class="list-img" style="background-image: url(./assets/img/heroes/<?php echo $company["service"] ?>/<?php echo $company["photo"] ?>);">
-              </div>
-              <!-- 星の生成 -->
-              <div class="list-star">
-                <table class="list-star-table">
-                  <tr>
-                    <th>求人数</th>
-                    <td class="list-star-value" value="<?= $company['people'] ?>"></td>
-                  </tr>
-                  <tr>
-                    <th>サポート力</th>
-                    <td class="list-star-value" value="<?= $company['support'] ?>"></td>
-                  </tr>
-                  <tr>
-                    <th>内定獲得実績</th>
-                    <td class="list-star-value" value="<?= $company['achievement'] ?>"> </td>
-                  </tr>
-                  <tr>
-                    <th>内定速度</th>
-                    <td class="list-star-value" value='<?= $company['speed'] ?>'></td>
-                  </tr>
-                  <tr>
-                    <th>取り扱い業界</th>
-                    <td class="list-star-value" value="<?= $company['amount'] ?>"></td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-            <!-- 推しポイントのデータ取得 -->
-            <?php include('assets/php/clientList/clientlist-point.php') ?>
-            <div class="clientlist-sub">
-              <div class="list-sub-point">
-                <h4 class="list-sub-point-title">ポイント</h4>
-                <ul>
-                  <!-- それぞれ個数が違うためforeachで出力 -->
-                  <?php foreach ($points_data as $goodpoint) { ?>
-                    <li><?= $goodpoint['GoodPoint'] ?></li>
-                  <?php } ?>
-                </ul>
-              </div>
-              <div class="link-button">
-                <!-- データベースのURLが正しくないから飛べないけど正しければ飛べるはず -->
-                <a href="./register.php?company_id[]=<?php echo $company_id ?>">
-                  <div class="button official-link">
-                    <p class="button-p">申し込みする</p>
-                    <i class="fa-solid fa-caret-right button-i"></i>
-                  </div>
-                </a>
-                <!-- 詳細に飛ぶ -->
-                <a href="clientDetails.php?id=<?= $company_id ?>">
-                  <div class="button detail-page">
-                    <p class="button-p">詳細ページ</p>
-                    <i class="fa-solid fa-caret-right button-i"></i>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
 
-      <?php } ?>
+    <form action="./register.php" method="POST">
+      <div class="clientlist-wrapper" id='client-list'>
+              <!-- 企業ごとに情報出力 -->
+      </div>
 
 
-    </div>
 
-    </h3>
+    <button class="subscribe" type="submit" name="submitButton" id="submit-button">まとめて申し込み<i class="fa-solid fa-caret-right apply"></i></button>
+    </form>
   </main>
   <!-- フッター -->
   <?php include_once('components/footer.php') ?>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="./assets/scripts/clientList/clientList-search.js"></script>
+  <script src="./assets/scripts/clientList/client-register.js"></script>
 </body>
 
 </html>

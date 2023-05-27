@@ -54,7 +54,11 @@ foreach ($companies as $company) {
   include('clientlist-point2.php');
   $data .=
   '<div class="clientlist">
-    <h3 class="clientlist-name">' . $company['service'] . '</h3>
+  <label>
+    <h3 class="clientlist-name" id="clientlist-name">' .'
+    <input type="checkbox" class="checkbox client-btn" name="company_id[]" value="'.$company_id.'">
+    <span class="checkbox-fontas"></span>
+ '. $company['service'] . '</h3> </label>
     <div class="clientlist-contents">
     <div class="clientlist-main">
     <div class="list-img" style="background-image: url(./assets/img/heroes/' . $company["service"] . '/' . $company["photo"] . ');">
