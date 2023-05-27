@@ -183,7 +183,7 @@ label{
   border: #636363 solid 2px;
 }
 /* ボタン */
-.subscribe{
+.subscribe {
   margin-left: calc(50% - 100px);
   color: white;
   background-color: #2E79BA;

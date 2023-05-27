@@ -26,15 +26,11 @@
 </div>
 
 
-  <div class="lets-favorite">あなたがチェックした企業はこちら</div>
+  <div class="lets-favorite">\ あなたがチェックした企業はこちら /</div>
 
   <div class="service-wrapper" id='service-wrapper'>
     
   </div>
-
-  <div class="lets-talk">＼気になったエージェントと話してみよう／</div>
-  <div class="subscribe">一括登録する<i class="fa-solid fa-caret-right"></i></div>
-
 </main>
 <!-- フッター -->
 <?php include_once('components/footer.php') ?>
