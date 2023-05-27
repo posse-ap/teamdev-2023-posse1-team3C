@@ -45,16 +45,6 @@ main {
 .service-wrapper {
   min-height: 12vh;
 }
-.lets-talk {
-  color: #2E79BA;
-  font-size: 16px;
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 20px;
-  font-family: 游ゴシック;
-  font-weight: 600;
-  line-height: 2;
-}
 .service-box{
   width: 480px;
   height: 160px;
@@ -76,33 +66,13 @@ main {
   width: 420px;
   margin-bottom: 30px;
 }
-/* チェックボックス */
-.checkbox {
-  display: none;
-}
-.checkbox-fontas {
-  position: relative;
-  vertical-align: middle;
-  font-size: 30px;
-}
-.checkbox + .checkbox-fontas:before {
-  font-weight: 900;
-  font-family: "Font Awesome 5 Free";
-  content: '\f058';
-  color: #ccc;
-}
-.checkbox:checked + .checkbox-fontas:before {
-  color: #2E79BA;
-}
-label{
-  margin: 15px 15px 15px 20px;
-}
 .service-name{
   font-family: 游ゴシック;
   font-weight: 900;
   font-size: 16px;
   margin-top: 22px;
   width: 190px;
+  margin-left: 40px;
 }
 .browsing-history{
   font-family: 游ゴシック;
@@ -183,7 +153,7 @@ label{
   border: #636363 solid 2px;
 }
 /* ボタン */
-.subscribe{
+.subscribe {
   margin-left: calc(50% - 100px);
   color: white;
   background-color: #2E79BA;
@@ -224,16 +194,11 @@ label{
   .s-container {
     width: 320px;
   }
-  .checkbox-fontas {
-    font-size: 20px;
-  }
-  label {
-    margin: 10px;
-  }
   .service-name {
     font-size: 14px;
     margin-top: 14px;
     width: 150px;
+    margin-left: 20px;
   }
   .browsing-history {
     font-size: 12px;
