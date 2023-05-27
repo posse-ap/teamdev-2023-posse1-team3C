@@ -214,7 +214,7 @@ main {
     margin-left: calc(50% - 180px);
   }
   .service-wrapper {
-    min-height: calc(100vh - 493px);
+    min-height: calc(100vh - 543px);
   }
   .s-container {
     width: 320px;
@@ -222,7 +222,7 @@ main {
   .alert-area {
     width: 320px;
     height: 60px;
-    margin-top: 30px;
+    margin-top: 80px;
     margin-left: calc(50% - 181.5px);
   }
   .info-mark {
