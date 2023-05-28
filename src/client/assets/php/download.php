@@ -15,7 +15,7 @@ header('Content-Disposition: attachment; filename="data.csv"');
 
 // CSVファイルのヘッダー行を書き込む
 $fp = fopen('php://output', 'w');
-$ww = array('id','登録学生氏名', 'ふりがな', '性別','卒業年度','大学','学部','学科','都道府県','電話番号','メールアドレス','登録日','ステータス');
+$ww = array('id','登録学生氏名', 'ふりがな', '性別','大学','学部','学科','卒業年度','都道府県','電話番号','メールアドレス','登録日','ステータス');
 $row2 = array_map('convertToShiftJIS', $ww);
 fputcsv($fp,$row2);
 
