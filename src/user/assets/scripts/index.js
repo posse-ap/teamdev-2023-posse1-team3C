@@ -103,6 +103,13 @@ q7Question.addEventListener('click', () => {
   q7Question.classList.toggle('active');
   q7Answer.classList.toggle('active');
 })
+// Q8
+const q8Question = document.getElementById('q8-question');
+const q8Answer = document.getElementById('q8-answer');
+q8Question.addEventListener('click', () => {
+  q8Question.classList.toggle('active');
+  q8Answer.classList.toggle('active');
+})
 
 
 // チェックを一個しかつけられないようにする(卒業年度)

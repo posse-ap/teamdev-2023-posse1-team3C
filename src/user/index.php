@@ -404,7 +404,7 @@
             A.
           </span>
           <p class="answer-contents">
-            いいえ、エージェント企業を利用するのに料金は発生しません。エージェント企業は企業から報酬を受け取ることで運営されています。また、CRAFTでの登録などにも料金は発生しません。
+            いいえ、エージェント企業を利用するのに料金は発生しません。エージェント企業は企業から報酬を受け取ることで運営されています。また、CRAFT上での登録などにも料金は発生しません。
           </p>
         </div>
       </div>
@@ -424,6 +424,25 @@
           </span>
           <p class="answer-contents">
             はい、あります。エージェント企業の詳細ページには、得意な業界や職種が記載されています。また、企業一覧ページの詳細絞りこみ検索から、得意な業界や職種を選択することで、自分に求めている業界に強いエージェント企業を探すことができます。
+          </p>
+        </div>
+      </div>
+      <div class="question-8">
+        <div class="question-title" id="q8-question">
+          <span class="question-icon">
+            Q.
+          </span>
+          <p class="question-contents">
+            就活エージェントは1社に絞って利用するのがいいですか？
+          </p>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <div class="question-answer" id="q8-answer">
+          <span class="answer-icon">
+            A.
+          </span>
+          <p class="answer-contents">
+            いいえ、複数のエージェント企業を併用することで、より多くの企業と面談を行うことができたり、各エージェントの強みをバランスよく利用して、より良い就職活動を行うことができます。
           </p>
         </div>
       </div>
