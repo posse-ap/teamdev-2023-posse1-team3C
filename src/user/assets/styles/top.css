@@ -1360,6 +1360,10 @@ a{
     top: 14px;
     left: 14px;
   }
+  .question-icon span {
+    font-size: 12px;
+    padding-right: 1px;
+  }
   .question-contents {
     font-size: 12px;
     padding-bottom: 20px;
