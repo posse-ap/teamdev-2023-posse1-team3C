@@ -188,7 +188,7 @@ if (isset($_POST["registerButton"])) {
       <li>電話番号：" . $_POST['phoneNumber'] . "</li>
       <li>メールアドレス：" . $_POST['email'] . "</li>
       <li>対応可能日時：" . $_POST['date'] . "</li>
-      <li>サービスのURl：<a href = " . $_POST['url'] . " ></a></li>
+      <li>サービスのURl：<a href = " . $_POST['url'] . " >こちらをクリック</a></li>
       <li>オンライン対応：" . $_POST['online'] . "</li>
       <li>お問い合わせ方法：" . $_POST['contactType'] . "</li>
       <li>掲載開始日：" . $_POST['start'] . "</li>
@@ -198,6 +198,7 @@ if (isset($_POST["registerButton"])) {
     <a href= 'https://docs.google.com/forms/d/e/1FAIpQLScK_Y69STQGpeKfAcHh1zNIb6tiVVO-2ryhKq2UdzpDbIihJw/viewform'>こちら</a>
     から連絡をして頂けると幸いです</p>
     <p>また、以下の仮パスワードでパスワードを再設定後、ログインしてください</p>
+    <p>ログインID：" . $_POST["email"]. "</p>
     <p>パスワード：" . $password . "</p>
     <p>再設定画面は<a href='http://localhost:8080/client/auth/pwchanges.php'>こちら</a>です。</p>
     <p>引き続き、【株式会社CRAFT】をよろしくお願いいたします。</p>
