@@ -1,3 +1,15 @@
+.g-box{
+  color: #5a534e;
+}
+
+.s-box{
+  color: #5a534e;
+}
+
+.y-box{
+  color: #5a534e;
+}
+
 body {
   position: relative;
 }
@@ -46,7 +58,7 @@ form {
 .search {
   width: 720px;
   height: 450px;
-  background-color: #2E79BC;
+  background-color: #6798c0;
   margin-left: calc(50% - 360px);
   margin-top: 0;
   margin-bottom: 20px;
@@ -231,7 +243,7 @@ label {
 }
 .step {
   width: calc(80% / 3);
-  background-color: #FCC066;
+  background-color: #FAE17E;
   border-radius: 15px;
 }
 /* ステップ1 */
@@ -254,7 +266,7 @@ label {
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
-  color: #000000;
+  color: #5c5c5c;
   margin-left: 20px;
 }
 .step-1-number {
@@ -278,7 +290,7 @@ label {
   color: #7A7A7A;
 }
 .step-1-title .step-1-text span {
-  color: red;
+  color: rgb(252, 139, 10);
 }
 /* ステップ2 */
 .step-2-img {
@@ -300,7 +312,7 @@ label {
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
-  color: #000000;
+  color: #5c5c5c;
   margin-left: 20px;
 }
 .step-2-number {
@@ -324,7 +336,7 @@ label {
   color: #7A7A7A;
 }
 .step-2-title .step-2-text span {
-  color: red;
+  color: rgb(252, 139, 10);
 }
 /* ステップ3 */
 .step-3-img {
@@ -346,7 +358,7 @@ label {
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
-  color: #000000;
+  color: #5c5c5c;
   margin-left: 20px;
 }
 .step-3-number {
@@ -370,7 +382,7 @@ label {
   color: #7A7A7A;
 }
 .step-3-title .step-3-text span {
-  color: red;
+  color: rgb(252, 139, 10);
 }
 /* エージェント一覧ページボタン */
 .btn-agent-list {
@@ -677,7 +689,7 @@ label {
   padding: 20px 40px 20px 40px;
   font-size: 15px;
   line-height: 1.4;
-  color: #000000;
+  color: #575757;
   text-align: center;
   margin-top: 10px;
   margin-left: calc(20% - 40px);
@@ -781,7 +793,7 @@ label {
   padding: 20px 40px 20px 40px;
   font-size: 15px;
   line-height: 1.4;
-  color: #000000;
+  color: #575757;
   text-align: center;
   margin-top: 10px;
   margin-left: calc(20% - 40px);
@@ -888,7 +900,7 @@ label {
   padding: 20px 40px 20px 40px;
   font-size: 15px;
   line-height: 1.4;
-  color: #000000;
+  color: #3a3a3a;
   text-align: center;
   margin-top: 0;
   margin-left: calc(20% - 40px);
@@ -944,7 +956,7 @@ label {
   background-color: #fdeb5e;
   color: #52A0C2;
   cursor: pointer;
-  border: #52A0C2 solid 2px;
+  border: #99cde4 solid 1px;
 }
 /* エージェントを探してみる(画面左下固定) */
 .search-agent {
@@ -965,7 +977,7 @@ label {
   border-radius: 5px;
   background-color: #fdd05e;
   color: #52A0C2;
-  border: #52A0C2 solid 2px;
+  border: #99cde4 solid 1px;
   cursor: pointer;
   position: relative;
 }
