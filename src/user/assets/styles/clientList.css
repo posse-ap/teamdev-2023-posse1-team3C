@@ -786,11 +786,17 @@ footer {
     padding-left: 6px;
     font-size: 12px;
   }
-  .subscribe {
+  .btn-wrapper {
     position: fixed;
+    bottom: 60px;
+  }
+  .btn-wrapper .subscribe {
     width: 200px;
     left: calc(50% - 100px);
-    bottom: 74px;
+    border: 0;
+  }
+  .subscribe i {
+    color: #fff;
   }
   footer {
     height: 160px;
