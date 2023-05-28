@@ -587,6 +587,10 @@ label {
   color: #FBA82C;
   user-select: none;
 }
+.question-icon span {
+  font-size: 17px;
+  padding-right: 2px;
+}
 .question-contents {
   font-size: 16px;
   line-height: 1.4;
@@ -847,6 +851,13 @@ label {
   color: #fff;
 }
 /* ポップ(3ページ目) */
+.search-client{
+  margin:0;
+  color: #E2DFDD;
+}
+a{
+  text-decoration: none;
+}
 .pop-3 {
   display: none;
   position: absolute;
@@ -872,6 +883,23 @@ label {
   border-radius: 10px;
   background-color: #FAE17E;
   z-index: 200;
+}
+.modal-close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #fff;
+}
+.modal-close-button i {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 36px;
+  margin-left: 11px;
+  color: #5b5b5a;
 }
 .pop-3-number {
   font-size: 16px;
@@ -940,10 +968,14 @@ label {
   background-color: #2E79BA;
   color: #fff;
 }
+.pop-3-btn button p {
+  color: #fff;
+}
 .pop-3-btn button i {
   position: absolute;
   top: 10px;
   right: 10px;
+  color: #fff;
 }
 /* 使い方はこちらをタップ */
 .how-to-use {
@@ -1349,6 +1381,10 @@ label {
     top: 14px;
     left: 14px;
   }
+  .question-icon span {
+    font-size: 12px;
+    padding-right: 1px;
+  }
   .question-contents {
     font-size: 12px;
     padding-bottom: 20px;
@@ -1483,6 +1519,23 @@ label {
     left: 10%;
     width: 80%;
     height: 400px;
+  }
+  .modal-close-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 20px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+  .modal-close-button i {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 30px;
+    margin-left: 8px;
+    color: #5b5b5a;
   }
   .pop-3-number {
     font-size: 14px;
