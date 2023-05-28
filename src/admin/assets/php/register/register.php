@@ -185,10 +185,10 @@ if (isset($_POST["registerButton"])) {
       <li>サービス名：" . $_POST["service"] . "</li>
       <li>郵便番号：" . $_POST['postcode'] . "</li>
       <li>住所：" . $_POST['address'] . "</li>
-      <li>電話番号" . $_POST['phoneNumber'] . "</li>
+      <li>電話番号：" . $_POST['phoneNumber'] . "</li>
       <li>メールアドレス：" . $_POST['email'] . "</li>
       <li>対応可能日時：" . $_POST['date'] . "</li>
-      <li>サービスのURl：" . $_POST['url'] . "</li>
+      <li>サービスのURl：<a href = " . $_POST['url'] . " ></a></li>
       <li>オンライン対応：" . $_POST['online'] . "</li>
       <li>お問い合わせ方法：" . $_POST['contactType'] . "</li>
       <li>掲載開始日：" . $_POST['start'] . "</li>
