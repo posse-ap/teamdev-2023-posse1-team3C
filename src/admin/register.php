@@ -181,9 +181,13 @@ include(dirname(__FILE__) . '/components/head.php');
               <label for="scale" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">対応企業の規模</label>
               <input type="text" id="scale" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="scale" required="required">
             </div>
-            <div class="mb-6">
-              <label for="search" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">業界研究</label>
-              <input type="text" id="search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="search" required="required">
+            <div class="flex gap-5 justify-end info-details-content">
+              <label for="search" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white info-details-title">業界研究</label>
+              <select id="search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 info-details-input" name="search" required="required">
+                <option selected></option>
+                <option value="あり">あり</option>
+                <option value="なし">なし</option>
+              </select>
             </div>
             <div class="flex gap-5 justify-end info-details-content">
               <label for="ES" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white info-details-title">ES添削</label>
