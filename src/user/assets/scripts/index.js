@@ -39,6 +39,11 @@ const howToUseBtn = document.querySelector('.how-to-use-btn');
 howToUseBtn.addEventListener('click', () => {
   pop1.classList.add('active');
 });
+// モーダルクローズボタンを押したら、ポップを閉じる
+const popCloseBtn = document.querySelector('.modal-close-button');
+popCloseBtn.addEventListener('click', () => {
+  pop3.classList.remove('active');
+});
 // 利用者の声のスライドショー
 let mySwiper = new Swiper ('.swiper', {
   loop: true,
@@ -52,6 +57,7 @@ let mySwiper = new Swiper ('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
 
 // Dropdownでよくあるご質問の回答を表示
 // Q1
