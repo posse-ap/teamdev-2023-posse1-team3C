@@ -291,7 +291,7 @@
       <div class="question-1">
         <div class="question-title" id="q1-question">
           <span class="question-icon">
-            Q.
+            <span>Q</span>1
           </span>
           <p class="question-contents">
             申し込みをするとエージェントに登録ができるのでしょうか？
@@ -310,7 +310,7 @@
       <div class="question-2">
         <div class="question-title" id="q2-question">
           <span class="question-icon">
-            Q.
+          <span>Q</span>2
           </span>
           <p class="question-contents">
             自分が追加したお気に入りを見るにはどうしたら良いですか？？
@@ -329,7 +329,7 @@
       <div class="question-3">
         <div class="question-title" id="q3-question">
           <span class="question-icon">
-            Q.
+          <span>Q</span>3
           </span>
           <p class="question-contents">
             自分に合った時間帯に相談できる就職エージェントを探したいです。どうしたらいいですか？
@@ -348,7 +348,7 @@
       <div class="question-4">
         <div class="question-title" id="q4-question">
           <span class="question-icon">
-            Q.
+          <span>Q</span>4
           </span>
           <p class="question-contents">
             履歴を見るにはどうしたら良いですか？？
@@ -367,7 +367,7 @@
       <div class="question-5">
         <div class="question-title" id="q5-question">
           <span class="question-icon">
-            Q.
+          <span>Q</span>5
           </span>
           <p class="question-contents">
             サイト上での申し込み後、エージェント企業との話し合いはどのように進められますか？
@@ -386,7 +386,7 @@
       <div class="question-6">
         <div class="question-title" id="q6-question">
           <span class="question-icon">
-            Q.
+          <span>Q</span>6
           </span>
           <p class="question-contents">
             エージェント企業を利用するのに料金は発生しますか？
@@ -405,7 +405,7 @@
       <div class="question-7">
         <div class="question-title" id="q7-question">
           <span class="question-icon">
-            Q.
+          <span>Q</span>7
           </span>
           <p class="question-contents">
             エージェント企業によって、得意な業界や職種はありますか？
@@ -424,7 +424,7 @@
       <div class="question-8">
         <div class="question-title" id="q8-question">
           <span class="question-icon">
-            Q.
+          <span>Q</span>8
           </span>
           <p class="question-contents">
             就活エージェントは1社に絞って利用するのがいいですか？

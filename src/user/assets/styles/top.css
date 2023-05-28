@@ -587,6 +587,10 @@ label {
   color: #FBA82C;
   user-select: none;
 }
+.question-icon span {
+  font-size: 17px;
+  padding-right: 2px;
+}
 .question-contents {
   font-size: 16px;
   line-height: 1.4;
