@@ -847,6 +847,13 @@ label {
   color: #fff;
 }
 /* ポップ(3ページ目) */
+.search-client{
+  margin:0;
+  color: #E2DFDD;
+}
+a{
+  text-decoration: none;
+}
 .pop-3 {
   display: none;
   position: absolute;

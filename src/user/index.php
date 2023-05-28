@@ -511,8 +511,10 @@
         </div>
         <div class="pop-3-btn">
           <button>
-            エージェントを探す
+            <a href="./clientList.php">
+            <p class="search-client">エージェントを探す</p>
             <i class="fa-solid fa-caret-right"></i>
+            </a>
           </button>
         </div>
       </div>
