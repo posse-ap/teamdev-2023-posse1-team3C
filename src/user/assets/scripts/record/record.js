@@ -1,12 +1,12 @@
 // 履歴の情報をローカルストレージから取得
-const favorites = JSON.parse(localStorage.getItem("histories")) || [];
+const histories = JSON.parse(localStorage.getItem("histories")) || [];
 // localStorage.clear();
 // お気に入り企業の情報をHTMLに書き換え
 const service_box = document.getElementById("service-wrapper");
 
 let str = "";
 
-favorites.forEach((favorite) => {
+histories.forEach((favorite) => {
   const companyName = favorite.name;
   const companyURL = favorite.url;
   const companytime = favorite.time;
@@ -43,6 +43,21 @@ favorites.forEach((favorite) => {
 });
 
 service_box.innerHTML = str;
+
+// 履歴に企業がなかった場合の処理
+const historiesAlert = document.getElementById("service-alert");
+let historiesAlertStr = "";
+if (histories.length === 0) {
+  historiesAlertStr += `
+<div class="alert-area" role="alert">
+  <div>
+    <i class="fa-solid fa-circle-info info-mark"></i>
+    <span>チェックした企業が存在しません。</span><br>一覧から気になる企業をチェックしてみよう！
+  </div>
+</div>
+  `;
+}
+historiesAlert.innerHTML = historiesAlertStr;
 
 // お気に入りボタンを押したら色が変わる、テキストが変更される
 let favorite_btns = document.querySelectorAll(".favorite-btn");
@@ -111,17 +126,17 @@ function addToFavorites(button) {
     }
   } else {
     // lcocalStorageにお気に入り情報がない場合
-    const favorites = [{
-      name: companyName,
-      url: companyURL,
-      id: companyID,
-      time: currentTime,
-    }];
-    localStorage.setItem("favorites", JSON.stringify((favorites)));
+    const favorites = [
+      {
+        name: companyName,
+        url: companyURL,
+        id: companyID,
+        time: currentTime,
+      },
+    ];
+    localStorage.setItem("favorites", JSON.stringify(favorites));
   }
 }
-
-
 
 // function checkIfIdExists(id) {
 //   // ローカルストレージからデータを取得
@@ -150,32 +165,31 @@ function addToFavorites(button) {
 //   });
 // }
 
-window.addEventListener('load',()=>{
-   let favorite_btns = document.querySelectorAll('.favorite-btn');
-   favorite_btns.forEach((favorite_btn)=>{
-     let id = favorite_btn.getAttribute('data-id');
-     function checkIfIdExists(id) {
-        // ローカルストレージからデータを取得
-        const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-        
-        // データ内をループしてidの存在をチェック
-        for (const item of favorites) {
-          if (item.id === id) {
-            // 指定したidが存在する場合
-            return true;
-          }
-        }
-        // 指定したidが存在しない場合
-        return false;
-      }
-      let favoriteText = favorite_btn.querySelector('.favorite-btn-text');
-      
-      let idExists = checkIfIdExists(id);
-      if (idExists){
-        favorite_btn.classList.add("active");
-        favoriteText.textContent = "お気に入り済み";
-        favorite_btn.value = 1;
-      }
-   })
+window.addEventListener("load", () => {
+  let favorite_btns = document.querySelectorAll(".favorite-btn");
+  favorite_btns.forEach((favorite_btn) => {
+    let id = favorite_btn.getAttribute("data-id");
+    function checkIfIdExists(id) {
+      // ローカルストレージからデータを取得
+      const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
-})
+      // データ内をループしてidの存在をチェック
+      for (const item of favorites) {
+        if (item.id === id) {
+          // 指定したidが存在する場合
+          return true;
+        }
+      }
+      // 指定したidが存在しない場合
+      return false;
+    }
+    let favoriteText = favorite_btn.querySelector(".favorite-btn-text");
+
+    let idExists = checkIfIdExists(id);
+    if (idExists) {
+      favorite_btn.classList.add("active");
+      favoriteText.textContent = "お気に入り済み";
+      favorite_btn.value = 1;
+    }
+  });
+});
