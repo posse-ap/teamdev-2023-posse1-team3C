@@ -30,10 +30,12 @@
 </div>
 
 <form id="favoriteForm" action="./register.php" method="POST">
-  <button class="subscribe" type="submit" name="submitButton" id="submit-button">
-    一括登録する
-    <i class="fa-solid fa-caret-right"></i>
-  </button>
+  <div class="btn-wrapper">
+    <button class="subscribe" type="submit" name="submitButton" id="submit-button">
+      一括登録する
+      <i class="fa-solid fa-caret-right"></i>
+    </button>
+  </div>
   <div class="favorite-wrapper">
   <div id="service-alert"></div>
   <div class="service-wrapper" id="service-wrapper">

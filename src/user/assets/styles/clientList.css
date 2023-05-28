@@ -452,22 +452,16 @@ a{
 }
 .subscribe{
   height:   70px;
-  position:fixed;
-  bottom: 60px;
   background-color: #FAE17E;
   font-size: small;
 	text-align: center;
 	vertical-align: middle;
 	text-decoration: none;
-	margin: auto;
 	font-weight: bold;
 	border-radius: 0.3rem;
-	border-bottom: 7px solid #0686b2;
+	border-bottom: 7px solid #27acd9;
 	background: #27acd9;
 	color: #fff;
-  width: 15%;
-  right: 20px;
-  bottom: 10px;
 }
 .subscribe:hover{
   margin-top: 6px;
@@ -772,6 +766,15 @@ a{
     border-left: #2E79BA solid 3px;
     padding-left: 6px;
     font-size: 12px;
+  }
+  .subscribe {
+    position: fixed;
+    width: 200px;
+    left: calc(50% - 100px);
+    bottom: 74px;
+  }
+  footer {
+    height: 160px;
   }
 }
 
