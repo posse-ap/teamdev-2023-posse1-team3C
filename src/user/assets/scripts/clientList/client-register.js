@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   const checkboxes_list = document.querySelectorAll('#clientlist-name input[type="checkbox"]');
+  console.log(checkboxes_list);
   const submitButton = document.getElementById('submit-button');
 
   // チェックボックスの状態が変更された時の処理
@@ -23,4 +24,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // ページ読み込み時にボタンを非アクティブ化
   handleCheckboxChange();
+  checkedCount = 0;
 });
