@@ -450,30 +450,49 @@ a{
   padding-left: 10px;
   font-weight: 600;
 }
-.subscribe{
-  height:   70px;
-  background-color: #FAE17E;
+.btn-wrapper {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 70px;
+  background-color: rgba(0, 0, 0, .25);
+}
+.btn-wrapper .subscribe {
+  height: 50px;
+  width: 200px;
+  background-color: #0762f3;
   font-size: small;
 	text-align: center;
 	vertical-align: middle;
 	text-decoration: none;
 	font-weight: bold;
 	border-radius: 0.3rem;
-	border-bottom: 7px solid #27acd9;
-	background: #27acd9;
+  border-right: 3px solid #276bd9;
+	border-bottom: 3px solid #276bd9;
 	color: #fff;
+  margin-top: 13px;
+  margin-left: calc(50% - 100px);
+  cursor: pointer;
 }
 .subscribe:hover{
-  margin-top: 6px;
-	border-bottom: 1px solid #0686b2;
+  margin-top: 10px;
+  border-right: 1px solid #276bd9;
+	border-bottom: 1px solid #276bd9;
 	color: #fff;
 }
 .subscribe:disabled{
-  background-color: #adacab;
+  background-color: #9CAEDC;
+  border: 0;
+}
+.subscribe:disabled:hover{
+  margin-top: 13px;
 }
 .apply{
   color: white;
   margin-left: 10px;
+}
+footer {
+  height: 270px;
 }
 @media screen and (max-width:768px) {
   .subscribe{

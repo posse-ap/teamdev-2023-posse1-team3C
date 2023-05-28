@@ -392,9 +392,12 @@
               <!-- 企業ごとに情報出力 -->
       </div>
 
-
-
-    <button class="subscribe" type="submit" name="submitButton" id="submit-button">まとめて申し込み<i class="fa-solid fa-caret-right apply"></i></button>
+      <div class="btn-wrapper">
+        <button class="subscribe" type="submit" name="submitButton" id="submit-button">
+          まとめて申し込み
+          <i class="fa-solid fa-caret-right apply"></i>
+        </button>
+      </div>
     </form>
   </main>
   <!-- フッター -->
