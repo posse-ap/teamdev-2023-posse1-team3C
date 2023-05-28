@@ -182,7 +182,9 @@
           <div class="step-1-title">
             <p>
               <span class="step-1-number">1</span>
-              自分に合ったエージェントを探してみよう
+              自分に合ったエージェントを
+              <br>
+              探してみよう
             </p>
             <p class="step-1-text">
               <span>絞りこみ検索</span>を使って、自分に合ったエージェントを探すことができます。
@@ -198,7 +200,9 @@
           <div class="step-2-title">
             <p>
               <span class="step-2-number">2</span>
-              気になるエージェントについて詳しく見てみよう
+              気になるエージェントについて
+              <br>
+              詳しく見てみよう
             </p>
             <p class="step-2-text">
             企業一覧で気になったエージェントの<span>詳細ページ</span>に飛んでみよう！
@@ -214,7 +218,9 @@
           <div class="step-3-title">
             <p>
               <span class="step-3-number">3</span>
-              申し込みを完了して、実際に話をしてみよう！
+              申し込みを完了して、
+              <br>
+              実際に話をしてみよう！
             </p>
             <p class="step-3-text">
             実際に話してみないと、<span>本当に自分に合っているか</span>はわからない！
@@ -235,7 +241,7 @@
           <div class="swiper-slide">
             <div class="user-1-contents">
               <div class="user-1-img">
-                <img src="./assets/img/S__354615303.jpg" alt="">
+                <img src="./assets/img/user-1.jpg" alt="">
               </div>
               <div class="user-1-comment">
                 <h4>
@@ -250,14 +256,14 @@
           <div class="swiper-slide">
             <div class="user-2-contents">
               <div class="user-2-img">
-                <img src="./assets/img/S__354615303.jpg" alt="">
+                <img src="./assets/img/user-2.jpg" alt="">
               </div>
               <div class="user-2-comment">
                 <h4>
-                  A.Uさん
+                  K.Iさん
                 </h4>
                 <p>
-                エージェントとの相性が本当に自分に合っているかわからなかったので、CRAFTでいろんなエージェントの方とお話しして自分に合うエージェントを選びました。<span>実際に会って話すことができ、事前にエージェントやアドバイザーの方の雰囲気がわかった</span>ので、自分にあったアドバイザーの人と二人三脚で無事就活を乗り越えることができました！
+                就活がうまくいかなかった私は、時間の制約もある中、CRAFTを利用して<span>内定のスピードや面接対策に重点</span>を置いた最適な就活エージェントを見つけることができました。さらに、エージェント企業の対応時間も比較することができたため、<span>平日の日中が忙しい私にも合ったエージェント</span>を見つけることができました。就活においては、エージェント企業に相談してからわずか3週間で内定を得ることができました。
                 </p>
               </div>
             </div>
@@ -265,14 +271,14 @@
           <div class="swiper-slide">
             <div class="user-3-contents">
               <div class="user-3-img">
-                <img src="./assets/img/S__354615303.jpg" alt="">
+                <img src="./assets/img/user-3.jpg" alt="">
               </div>
               <div class="user-3-comment">
                 <h4>
-                  K.Iさん
+                  A.Uさん
                 </h4>
                 <p>
-                エージェントとの相性が本当に自分に合っているかわからなかったので、CRAFTでいろんなエージェントの方とお話しして自分に合うエージェントを選びました。<span>実際に会って話すことができ、事前にエージェントやアドバイザーの方の雰囲気がわかった</span>ので、自分にあったアドバイザーの人と二人三脚で無事就活を乗り越えることができました！
+                元々<span>コミュニケーションや言語化が苦手</span>な私はES添削や面接対策などのサポートが手厚い企業を探していました。CRAFTではさまざまな項目を比較した上、<span>実際に話をする</span>ことで、本当に自分に合ったエージェントを選ぶことができました。その結果、苦手意識のあった面接でも手応えを感じ、第一志望の企業から内定をいただくことができました！
                 </p>
               </div>
             </div>
@@ -313,7 +319,7 @@
             Q.
           </span>
           <p class="question-contents">
-          履歴を見るにはどうしたら良いですか？？
+            自分が追加したお気に入りを見るにはどうしたら良いですか？？
           </p>
           <i class="fa-solid fa-caret-down"></i>
         </div>
@@ -322,7 +328,7 @@
             A.
           </span>
           <p class="answer-contents">
-            画面下部(PC版の場合は画面上部)のメニューバーにある「HISTORY」をクリックすると、企業詳細ページを閲覧した企業の履歴一覧を見ることができます。
+            画面下部(PC版の場合は画面上部)のメニューバーにある「FAVORITE」をクリックすると、お気に入りに追加した企業の一覧を見ることができます。お気に入り一覧からは一括で登録することができます。
           </p>
         </div>
       </div>
@@ -332,7 +338,7 @@
             Q.
           </span>
           <p class="question-contents">
-          内定速度のはやい就職エージェントを探したいです。どうしたらいいですか？
+            自分に合った時間帯に相談できる就職エージェントを探したいです。どうしたらいいですか？
           </p>
           <i class="fa-solid fa-caret-down"></i>
         </div>
@@ -341,7 +347,102 @@
             A.
           </span>
           <p class="answer-contents">
-          画面下の右端の検索マークをタップして、検索から内定速度早い順に並べるをタップすると内定速度の早い順に並べ替えることができます。
+            企業一覧ページの詳細絞りこみ検索から、「対応可能日時」の項目から、自分の希望する時間帯を選択することができます。
+          </p>
+        </div>
+      </div>
+      <div class="question-4">
+        <div class="question-title" id="q4-question">
+          <span class="question-icon">
+            Q.
+          </span>
+          <p class="question-contents">
+            履歴を見るにはどうしたら良いですか？？
+          </p>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <div class="question-answer" id="q4-answer">
+          <span class="answer-icon">
+            A.
+          </span>
+          <p class="answer-contents">
+            画面下部(PC版の場合は画面上部)のメニューバーにある「HISTORY」をクリックすると、企業詳細ページを閲覧した企業の履歴一覧を見ることができます。
+          </p>
+        </div>
+      </div>
+      <div class="question-5">
+        <div class="question-title" id="q5-question">
+          <span class="question-icon">
+            Q.
+          </span>
+          <p class="question-contents">
+            サイト上での申し込み後、エージェント企業との話し合いはどのように進められますか？
+          </p>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <div class="question-answer" id="q5-answer">
+          <span class="answer-icon">
+            A.
+          </span>
+          <p class="answer-contents">
+            登録されたメールなどの連絡先に登録企業から連絡が来ますので、そちらからエージェント企業とコンタクトをとることができます。その後、お互いの都合の良い日時を決めて、面談を行うことで、本当に自分に合ったエージェント企業か確かめることができます。
+          </p>
+        </div>
+      </div>
+      <div class="question-6">
+        <div class="question-title" id="q6-question">
+          <span class="question-icon">
+            Q.
+          </span>
+          <p class="question-contents">
+            エージェント企業を利用するのに料金は発生しますか？
+          </p>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <div class="question-answer" id="q6-answer">
+          <span class="answer-icon">
+            A.
+          </span>
+          <p class="answer-contents">
+            いいえ、エージェント企業を利用するのに料金は発生しません。エージェント企業は企業から報酬を受け取ることで運営されています。また、CRAFT上での登録などにも料金は発生しません。
+          </p>
+        </div>
+      </div>
+      <div class="question-7">
+        <div class="question-title" id="q7-question">
+          <span class="question-icon">
+            Q.
+          </span>
+          <p class="question-contents">
+            エージェント企業によって、得意な業界や職種はありますか？
+          </p>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <div class="question-answer" id="q7-answer">
+          <span class="answer-icon">
+            A.
+          </span>
+          <p class="answer-contents">
+            はい、あります。エージェント企業の詳細ページには、得意な業界や職種が記載されています。また、企業一覧ページの詳細絞りこみ検索から、得意な業界や職種を選択することで、自分に求めている業界に強いエージェント企業を探すことができます。
+          </p>
+        </div>
+      </div>
+      <div class="question-8">
+        <div class="question-title" id="q8-question">
+          <span class="question-icon">
+            Q.
+          </span>
+          <p class="question-contents">
+            就活エージェントは1社に絞って利用するのがいいですか？
+          </p>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <div class="question-answer" id="q8-answer">
+          <span class="answer-icon">
+            A.
+          </span>
+          <p class="answer-contents">
+            いいえ、複数のエージェント企業を併用することで、より多くの企業と面談を行うことができたり、各エージェントの強みをバランスよく利用して、より良い就職活動を行うことができます。
           </p>
         </div>
       </div>
