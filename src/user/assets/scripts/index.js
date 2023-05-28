@@ -75,6 +75,34 @@ q3Question.addEventListener('click', () => {
   q3Question.classList.toggle('active');
   q3Answer.classList.toggle('active');
 })
+// Q4
+const q4Question = document.getElementById('q4-question');
+const q4Answer = document.getElementById('q4-answer');
+q4Question.addEventListener('click', () => {
+  q4Question.classList.toggle('active');
+  q4Answer.classList.toggle('active');
+})
+// Q5
+const q5Question = document.getElementById('q5-question');
+const q5Answer = document.getElementById('q5-answer');
+q5Question.addEventListener('click', () => {
+  q5Question.classList.toggle('active');
+  q5Answer.classList.toggle('active');
+})
+// Q6
+const q6Question = document.getElementById('q6-question');
+const q6Answer = document.getElementById('q6-answer');
+q6Question.addEventListener('click', () => {
+  q6Question.classList.toggle('active');
+  q6Answer.classList.toggle('active');
+})
+// Q7
+const q7Question = document.getElementById('q7-question');
+const q7Answer = document.getElementById('q7-answer');
+q7Question.addEventListener('click', () => {
+  q7Question.classList.toggle('active');
+  q7Answer.classList.toggle('active');
+})
 
 
 // チェックを一個しかつけられないようにする(卒業年度)
