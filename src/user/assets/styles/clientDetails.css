@@ -24,8 +24,8 @@ main {
   width: 360px;
   max-height: 360px;
   margin-left: calc(50% - 180px);
-  margin-top: 60px;
-  margin-bottom: 80px;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 .agent-img img {
   width: 100%;
@@ -335,8 +335,8 @@ main {
     width: 200px;
     max-height: 200px;
     margin-left: calc(50% - 100px);
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   /* エージェント企業の特徴 */
   .agent-feature {

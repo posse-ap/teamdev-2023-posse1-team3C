@@ -182,9 +182,7 @@
           <div class="step-1-title">
             <p>
               <span class="step-1-number">1</span>
-              自分に合ったエージェントを
-              <br>
-              探してみよう
+              自分に合ったエージェントを探してみよう
             </p>
             <p class="step-1-text">
               <span>絞りこみ検索</span>を使って、自分に合ったエージェントを探すことができます。
@@ -200,9 +198,7 @@
           <div class="step-2-title">
             <p>
               <span class="step-2-number">2</span>
-              気になるエージェントについて
-              <br>
-              詳しく見てみよう
+              気になるエージェントを詳しく見てみよう
             </p>
             <p class="step-2-text">
             企業一覧で気になったエージェントの<span>詳細ページ</span>に飛んでみよう！
@@ -218,9 +214,7 @@
           <div class="step-3-title">
             <p>
               <span class="step-3-number">3</span>
-              申し込みを完了して、
-              <br>
-              実際に話をしてみよう！
+              申し込みして実際に話をしてみよう！
             </p>
             <p class="step-3-text">
             実際に話してみないと、<span>本当に自分に合っているか</span>はわからない！
