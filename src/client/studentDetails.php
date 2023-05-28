@@ -118,7 +118,9 @@
 
         <div class="p-2 w-full flex">
         <a href="../client/index.php"><button class="my-12  mx-4 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">戻る</button></a>
-        <button class="my-12  ml-44 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">無効申請フォームはこちら</button>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScK_Y69STQGpeKfAcHh1zNIb6tiVVO-2ryhKq2UdzpDbIihJw/viewform">
+          <button class="my-12  ml-44 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">無効申請フォームはこちら</button>
+        </a>
           
         </div>
         </div>
