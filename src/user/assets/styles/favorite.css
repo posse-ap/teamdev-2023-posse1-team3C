@@ -277,6 +277,9 @@ footer {
   .checkbox-fontas {
     font-size: 20px;
   }
+  .check-1 {
+    margin-top: 10px;
+  }
   label {
     margin: 10px;
   }
