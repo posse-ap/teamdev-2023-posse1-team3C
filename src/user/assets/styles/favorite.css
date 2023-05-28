@@ -42,8 +42,12 @@ main {
   font-weight: 600;
   line-height: 2;
 }
+.favorite-wrapper {
+  min-height: calc(100vh - 637px);
+  margin-bottom: 80px;
+}
 .service-wrapper {
-  min-height: 12vh;
+  min-height: calc(100vh - 761px);
 }
 .lets-talk {
   color: #2E79BA;
@@ -73,6 +77,30 @@ main {
   flex-basis: 420px;
   width: 420px;
   margin-bottom: 30px;
+}
+.alert-area {
+  width: 480px;
+  height: 60px;
+  border-radius: 5px;
+  background-color: #FEF1F2;
+  border-color: rgb(255, 57, 57);
+  border-style: solid;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: calc(50% - 261.5px);
+  padding-left: 40px;
+  padding-top: 15px;
+  line-height: 1.5;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(255, 57, 57);
+  position: relative;
+}
+.info-mark {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  font-size: 20px;
 }
 /* チェックボックス */
 .checkbox {
@@ -167,38 +195,46 @@ label{
   right: 10px;
 }
 /* ボタン */
-.subscribe {
-  margin-left: calc(50% - 100px);
+.btn-wrapper {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  height: 80px;
+  background-color: rgba(0, 0, 0, .25);
+}
+.btn-wrapper .subscribe {
   color: white;
   background-color: #4591d3;
   border-radius: 15px;
   text-align: center;
-  height: 60px;
+  height: 50px;
   width: 220px;
   font-family: Osaka;
   font-weight: 600;
   font-size: 16px;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
   border-width: 0;
   position: relative;
   line-height: 50px;
   cursor: pointer;
-  position: fixed;
-  bottom: 10px;
-  z-index: 999;
-  border: 1px solid #87bdce;
+  margin-left: calc(50% - 110px);
+  margin-top: 15px;
 }
-.subscribe.disabled {
+.btn-wrapper .subscribe.disabled {
   background-color: #9CAEDC;
 }
-.subscribe.disabled:hover {
+.btn-wrapper .subscribe.disabled:hover {
   background-color: #9CAEDC;
 }
-.subscribe i{
+.btn-wrapper .subscribe i{
   font-size: 16px;
   position: absolute;
   top: 17px;
   right: 10px;
+}
+footer {
+  height: 280px;
 }
 @media screen and (max-width:768px) {
   main {
@@ -208,8 +244,11 @@ label{
     width: 360px;
     height: 70px;
   }
+  .favorite-wrapper {
+    min-height: calc(100vh - 527px);
+  }
   .service-wrapper {
-    min-height: 20vh;
+    min-height: calc(100vh - 625px);
   }
   .service-box {
     width: 360px;
@@ -217,6 +256,19 @@ label{
   }
   .s-container {
     width: 320px;
+  }
+  .alert-area {
+    width: 320px;
+    height: 60px;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-left: calc(50% - 181.5px);
+  }
+  .info-mark {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    font-size: 20px;
   }
   .checkbox-fontas {
     font-size: 20px;
@@ -257,11 +309,33 @@ label{
     top: 11.5px;
     right: 8px;
   }
-}
-
-@media screen and (max-width:768px) {
-  .subscribe{
-    bottom: 70px;
+  .btn-wrapper {
+    width: 100%;
+    position: fixed;
+    bottom: 60px;
+    z-index: 999;
+    height: 80px;
+    background-color: rgba(0, 0, 0, .25);
   }
-
+  .btn-wrapper .subscribe {
+    color: white;
+    background-color: #4591d3;
+    border-radius: 15px;
+    text-align: center;
+    height: 50px;
+    width: 220px;
+    font-family: Osaka;
+    font-weight: 600;
+    font-size: 16px;
+    border-width: 0;
+    position: relative;
+    line-height: 50px;
+    cursor: pointer;
+    border: 1px solid #87bdce;
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+  footer {
+    height: 170px;
+  }
 }

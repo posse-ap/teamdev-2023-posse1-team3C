@@ -1,8 +1,10 @@
 const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+// console.log(favorites);
 // localStorage.clear()
 // お気に入り企業の情報をHTMLに書き換え
 const service_box = document.getElementById("service-wrapper");
 
+// お気に入り企業の情報をHTMLに書き換え
 let str = '';
 
 favorites.forEach((favorite) => {
@@ -40,15 +42,32 @@ favorites.forEach((favorite) => {
 service_box.innerHTML = str;
 // localStorage.clear()
 
+// HTMLのチェックボックスと登録ボタンの要素を取得 
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+const submitButton = document.getElementById('submit-button');
+// お気に入り企業がなかった場合の処理
+const favoriteAlert = document.getElementById("service-alert");
+let favoriteAlertStr = '';
+if (favorites.length === 0) {
+  favoriteAlertStr += `
+<div class="alert-area" role="alert">
+  <div>
+    <i class="fa-solid fa-circle-info info-mark"></i>
+    <span>お気に入り登録されている企業がありません。</span><br>お気に入りしたい企業を検索して登録してみよう！
+  </div>
+</div>
+  `;
+  submitButton.disabled = true;
+  submitButton.classList.add('disabled');
+}
+favoriteAlert.innerHTML = favoriteAlertStr;
 
+// 全ての企業にチェックを入れる
 const checks = document.querySelectorAll('.checkbox');
 checks.forEach((check)=>{
   check.checked = true;
 })
 
-// HTMLのチェックボックスと登録ボタンの要素を取得 
-const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-const submitButton = document.getElementById('submit-button');
 // チェックボックスの状態を監視するためのイベントリスナーを追加
 checkboxes.forEach(checkbox => {
   checkbox.addEventListener('change', updateSubmitButtonStatus);
