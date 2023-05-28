@@ -691,6 +691,7 @@ footer {
     margin-bottom: 5px;
     margin-top: 15px;
     font-size: 16px;
+    margin-left: 15px;
   }
   .list-star {
     background-color: white;
@@ -725,7 +726,7 @@ footer {
   }
   .button{
     width: 144px;
-    height: 25px;
+    height: 35px;
     line-height: 25px;
     text-align: center;
     margin: 15px 5px 15px 0;
@@ -738,7 +739,7 @@ footer {
     font-size: 12px;
   }
   .favorite-btn {
-    height: 25px;
+    height: 35px;
     border-radius: 5px;
     font-size: 11px;
   }
@@ -758,7 +759,7 @@ footer {
     font-size: 12px;
   }
   .button {
-    margin-top: 20px;
+    margin-top: 15px;
     margin-bottom: 20px;
   }
   a{
@@ -767,6 +768,7 @@ footer {
   .clientlist-sub {
     width: 165px;
     padding-left: 10px;
+    margin-top: -5px;
   }
   .list-sub-point{
     height: 160px;
