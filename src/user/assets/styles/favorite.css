@@ -42,15 +42,12 @@ main {
   font-weight: 600;
   line-height: 2;
 }
-.btn-wrapper .subscribe {
-  margin-top: 40px;
-}
 .favorite-wrapper {
-  min-height: calc(100vh - 677px);
+  min-height: calc(100vh - 637px);
   margin-bottom: 80px;
 }
 .service-wrapper {
-  min-height: calc(100vh - 801px);
+  min-height: calc(100vh - 761px);
 }
 .lets-talk {
   color: #2E79BA;
@@ -198,6 +195,14 @@ label{
   right: 10px;
 }
 /* ボタン */
+.btn-wrapper {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  height: 80px;
+  background-color: rgba(0, 0, 0, .25);
+}
 .btn-wrapper .subscribe {
   color: white;
   background-color: #4591d3;
@@ -214,7 +219,7 @@ label{
   line-height: 50px;
   cursor: pointer;
   margin-left: calc(50% - 110px);
-  bottom: 20px;
+  margin-top: 15px;
 }
 .btn-wrapper .subscribe.disabled {
   background-color: #9CAEDC;
@@ -227,6 +232,9 @@ label{
   position: absolute;
   top: 17px;
   right: 10px;
+}
+footer {
+  height: 280px;
 }
 @media screen and (max-width:768px) {
   main {
@@ -324,7 +332,7 @@ label{
     line-height: 50px;
     cursor: pointer;
     border: 1px solid #87bdce;
-    margin-top: 35px;
+    margin-top: 15px;
     margin-bottom: 0;
   }
   footer {
