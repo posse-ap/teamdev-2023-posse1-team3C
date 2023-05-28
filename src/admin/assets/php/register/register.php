@@ -2,11 +2,12 @@
 if (isset($_POST["registerButton"])) {
   // 入力サれた企業基本情報をcompaniesテーブルに格納
   include("../../../../dbconnect.php");
-  $sql_register_basic = "INSERT INTO Companies (company, email, address, service, phoneNumber, registered_at, date, url, contactType, online, started_at, finished_at) VALUES (:company, :email, :address, :service, :phoneNumber, :registered_at ,:date, :url, :contactType, :online, :started_at, :finished_at)";
+  $sql_register_basic = "INSERT INTO Companies (company, email, postcode, address, service, phoneNumber, registered_at, date, url, contactType, online, started_at, finished_at) VALUES (:company, :email, :postcode ,:address, :service, :phoneNumber, :registered_at ,:date, :url, :contactType, :online, :started_at, :finished_at)";
   $register = $dbh->prepare($sql_register_basic);
   $register->execute([
     ":company" => $_POST["company"],
     ":service" => $_POST["service"],
+    ":postcode" => $_POST["postcode"],
     ":address" => $_POST["address"],
     ":phoneNumber" => $_POST["phoneNumber"],
     ":email" => $_POST["email"],
@@ -169,9 +170,40 @@ if (isset($_POST["registerButton"])) {
 
   // 生成したパスワードをメールで送信
   $to = $_POST["email"];
-  $subject = "パスワード設定のお知らせ";
+  $subject = "【株式会社CRAFT】企業情報登録完了のお知らせ";
   $from = "admin@example.com";
-  $message = '<html><body><p>パスワードを設定しました。</p><p>設定したのパスワードは <b>' . $password . '</b> です。</p><p><a href="http://localhost:8080/client/auth/pwchanges.php">こちら</a>でパスワードを再設定してください。</p></body></html>' ;
+  $message = "
+  <html>
+  <head>
+    <title>企業情報登録完了のお知らせ</title>
+  </head>
+  <body>
+    <p>この度は、就活サイトにご登録いただきありがとうございます。</p>
+    <p>以下の内容で登録が完了したことをお知らせします。</p>
+    <ul>
+      <li>企業名：" . $_POST["company"] . "</li>
+      <li>サービス名：" . $_POST["service"] . "</li>
+      <li>郵便番号：" . $_POST['postcode'] . "</li>
+      <li>住所：" . $_POST['address'] . "</li>
+      <li>電話番号：" . $_POST['phoneNumber'] . "</li>
+      <li>メールアドレス：" . $_POST['email'] . "</li>
+      <li>対応可能日時：" . $_POST['date'] . "</li>
+      <li>サービスのURl：<a href = " . $_POST['url'] . " >こちらをクリック</a></li>
+      <li>オンライン対応：" . $_POST['online'] . "</li>
+      <li>お問い合わせ方法：" . $_POST['contactType'] . "</li>
+      <li>掲載開始日：" . $_POST['start'] . "</li>
+      <li>掲載終了日：" . $_POST['end'] . "</li>
+    </ul>
+    <p>以上の内容に誤り等がございましたら、申し訳ございませんが
+    <a href= 'https://docs.google.com/forms/d/e/1FAIpQLScK_Y69STQGpeKfAcHh1zNIb6tiVVO-2ryhKq2UdzpDbIihJw/viewform'>こちら</a>
+    から連絡をして頂けると幸いです</p>
+    <p>また、以下の仮パスワードでパスワードを再設定後、ログインしてください</p>
+    <p>ログインID：" . $_POST["email"]. "</p>
+    <p>パスワード：" . $password . "</p>
+    <p>再設定画面は<a href='http://localhost:8080/client/auth/pwchanges.php'>こちら</a>です。</p>
+    <p>引き続き、【株式会社CRAFT】をよろしくお願いいたします。</p>
+  </body>
+  </html>";
   $headers = "MIME-Version: 1.0\r\n";
   $headers .= "From: $from  \r\n";
   $headers .= "Content-Type: text/html; charset=UTF-8" . "\r\n" . "Content-Transfer-Encoding: base64\r\n";

@@ -74,7 +74,14 @@ include(dirname(__FILE__) . '/components/head.php');
                 </td>
               </tr>
               <tr class="border-b border-gray-200 dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800 client-info-title">所在地
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800 client-info-title">郵便番号
+                </th>
+                <td class="px-6 py-4 bg-white">
+                  <?php echo $resultcompany["postcode"] ?>
+                </td>
+              </tr>
+              <tr class="border-b border-gray-200 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800 client-info-title">住所
                 </th>
                 <td class="px-6 py-4 bg-white">
                   <?php echo $resultcompany["address"] ?>
