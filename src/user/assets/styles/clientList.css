@@ -1,25 +1,25 @@
 /* メイン */
 main {
   width: 100%;
-  overflow:hidden;
+  overflow: hidden;
   color: #545454;
 }
-.fas.fa-star{
+.fas.fa-star {
   color: #ffcc00;
 }
 /* メニューバー */
 .menubar-search {
-  background-color: #D6EAF8;
+  background-color: #d6eaf8;
   border-radius: 5px;
 }
 .menubar-search:hover {
-  background-color: #D6EAF8;
+  background-color: #d6eaf8;
 }
 .menubar-search .menubar-link-text {
-  color: #2E79BA;
+  color: #2e79ba;
 }
 .menubar-search i {
-  color: #2E79BA;
+  color: #2e79ba;
 }
 /* ヒーロー */
 .cl-mainvisual {
@@ -28,33 +28,33 @@ main {
   height: 160px;
   background-image: url(../img/success-story.jpg);
   background-size: cover;
-  position:relative;
+  position: relative;
 }
 .cl-mainvisual-contents {
   position: absolute;
   height: 100px;
-  background-color: #FAE17E;
-  margin:0 10%;
+  background-color: #fae17e;
+  margin: 0 10%;
   bottom: 30px;
   text-align: center;
   width: 80%;
   border-radius: 16px;
 }
-.title{
+.title {
   margin-top: 20px;
   margin-bottom: 5px;
 }
-.fa-solid{
+.fa-solid {
   display: inline;
-  color: #2E79BA;
+  color: #2e79ba;
 }
 .cl-p {
   line-height: 1.4;
   font-size: 12px;
-  color: #7A7A7A;
+  color: #7a7a7a;
 }
 .cl-h3 {
-  color: #2E79BA;
+  color: #2e79ba;
   font-size: 18px;
   display: inline;
   margin: 20px 0;
@@ -79,7 +79,7 @@ main {
   font-size: 26px;
   font-weight: 600;
   padding-top: 18px;
-  color: #2E79BC;
+  color: #2e79bc;
 }
 .search-title h3 {
   font-size: 18px;
@@ -186,11 +186,11 @@ label {
 .checkbox + .checkbox-fontas:before {
   font-weight: 900;
   font-family: "Font Awesome 5 Free";
-  content: '\f058';
+  content: "\f058";
   color: #ccc;
 }
 .checkbox:checked + .checkbox-fontas:before {
-  color: #2E79BC;
+  color: #2e79bc;
 }
 
 /* 詳細絞りこみ */
@@ -220,7 +220,7 @@ label {
   position: absolute;
   top: 12px;
   right: 20px;
-  color: #81766E;
+  color: #81766e;
 }
 .search-details-contents {
   display: none;
@@ -308,7 +308,7 @@ h2 {
   color: #545454;
 }
 h2::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -12px;
   left: calc(50% - 60px);
@@ -318,9 +318,9 @@ h2::before {
 }
 /* 企業リストの各内容 */
 .clientlist {
-  background-color: #E7F5FD;
+  background-color: #e7f5fd;
   padding: 3px;
-  border: 1px solid #A7D6FF;
+  border: 1px solid #a7d6ff;
   bottom: 30px;
   width: 720px;
   margin-left: calc(50% - 360px);
@@ -354,7 +354,7 @@ h2::before {
   height: 120px;
   padding-top: 10px;
 }
-.list-star-table{
+.list-star-table {
   padding: 20px 2px;
   width: 240px;
   height: 15px;
@@ -371,22 +371,22 @@ h3 {
   margin-bottom: 15px;
   font-weight: 600;
 }
-th{
+th {
   font-size: 12px;
   text-align: left;
-  color: #7A7A7A;
+  color: #7a7a7a;
 }
-td{
+td {
   font-size: 12px;
   text-align: left;
 }
-.button{
+.button {
   width: 144px;
   height: 35px;
   line-height: 30px;
   text-align: center;
   margin: 15px 5px 15px 0;
-  background-color: #2E79BA;
+  background-color: #2e79ba;
   border-radius: 7px;
   display: flex;
   align-items: center;
@@ -414,15 +414,14 @@ td{
 .button-p {
   text-decoration: none;
   color: white;
-
 }
 .button-i {
   color: white;
 }
 .button.detail-page {
-  background-color: #3B93C5;
+  background-color: #3b93c5;
 }
-a{
+a {
   text-decoration: none;
 }
 .clientlist-sub {
@@ -446,7 +445,7 @@ a{
 .list-sub-point-title {
   margin-top: 0;
   margin-bottom: 15px;
-  border-left: #2E79BA solid 3px;
+  border-left: #2e79ba solid 3px;
   padding-left: 10px;
   font-weight: 600;
 }
@@ -455,82 +454,82 @@ a{
   width: 100%;
   bottom: 0;
   height: 70px;
-  background-color: rgba(0, 0, 0, .25);
+  background-color: rgba(0, 0, 0, 0.25);
 }
 .btn-wrapper .subscribe {
   height: 50px;
   width: 200px;
   background-color: #0762f3;
   font-size: small;
-	text-align: center;
-	vertical-align: middle;
-	text-decoration: none;
-	font-weight: bold;
-	border-radius: 0.3rem;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0.3rem;
   border-right: 3px solid #276bd9;
-	border-bottom: 3px solid #276bd9;
-	color: #fff;
+  border-bottom: 3px solid #276bd9;
+  color: #fff;
   margin-top: 13px;
   margin-left: calc(50% - 100px);
   cursor: pointer;
 }
-.subscribe:hover{
+.subscribe:hover {
   margin-top: 10px;
   border-right: 1px solid #276bd9;
-	border-bottom: 1px solid #276bd9;
-	color: #fff;
+  border-bottom: 1px solid #276bd9;
+  color: #fff;
 }
-.subscribe:disabled{
-  background-color: #9CAEDC;
+.subscribe:disabled {
+  background-color: #9caedc;
   border: 0;
 }
-.subscribe:disabled:hover{
+.subscribe:disabled:hover {
   margin-top: 13px;
 }
-.apply{
+.apply {
   color: white;
   margin-left: 10px;
 }
 footer {
   height: 270px;
 }
-@media screen and (max-width:768px) {
-  .subscribe{
+@media screen and (max-width: 768px) {
+  .subscribe {
     height: 45px;
     width: 40%;
     right: 0;
     bottom: 60px;
   }
-  .apply{
+  .apply {
     color: white;
   }
   /* ヒーロー */
   .cl-mainvisual {
     margin-top: 60px;
-    position:relative;
+    position: relative;
   }
-  .cl-mainvisual-contents{
-    background-color: #FAE17E;
-    margin:0 4%;
+  .cl-mainvisual-contents {
+    background-color: #fae17e;
+    margin: 0 4%;
     bottom: 30px;
     text-align: center;
     width: 92%;
     border-radius: 16px;
   }
-  .title{
+  .title {
     margin-top: 20px;
   }
-  .fa-solid{
+  .fa-solid {
     display: inline;
-    color: #2E79BA;
+    color: #2e79ba;
   }
-  .cl-p{
-    margin:10px;
+  .cl-p {
+    margin: 10px;
     font-size: 10px;
-    color: #7A7A7A;
+    color: #7a7a7a;
   }
-  .cl-h3{
-    color: #2E79BA;
+  .cl-h3 {
+    color: #2e79ba;
     font-size: 14px;
     display: inline;
     margin: 20px 0;
@@ -681,13 +680,13 @@ footer {
     margin-left: calc(50% - 170px);
     gap: 10px;
   }
-  .list-img{
+  .list-img {
     width: 100px;
     height: 80px;
     margin-bottom: 10px;
     margin-left: 7.5px;
   }
-  .clientlist-name{
+  .clientlist-name {
     margin-bottom: 5px;
     margin-top: 15px;
     font-size: 16px;
@@ -699,38 +698,38 @@ footer {
     margin-top: 20px;
     padding-top: 15px;
   }
-  .list-star-table{
+  .list-star-table {
     padding: 20px 2px;
     margin: 0 20px;
     width: 150px;
     margin-left: 10px;
   }
-  .clientlist-main{
+  .clientlist-main {
     width: 165px;
   }
-  h3{
+  h3 {
     margin-left: 30px;
     margin-top: 20px;
   }
-  th{
+  th {
     font-size: 6px;
   }
-  td{
+  td {
     font-size: 8px;
   }
-  table{
+  table {
     margin: 10px 0px;
   }
-  .list-img{
+  .list-img {
     width: 150px;
   }
-  .button{
+  .button {
     width: 144px;
     height: 35px;
     line-height: 25px;
     text-align: center;
     margin: 15px 5px 15px 0;
-    background-color: #2E79BA;
+    background-color: #2e79ba;
     border-radius: 7px;
     display: flex;
     align-items: center;
@@ -748,13 +747,13 @@ footer {
     color: #636363;
     border: #636363 solid 2px;
   }
-  .button-p{
+  .button-p {
     text-decoration: none;
     color: white;
     margin-top: 0;
     margin-bottom: 0;
   }
-  .button-i{
+  .button-i {
     color: white;
     font-size: 12px;
   }
@@ -762,7 +761,7 @@ footer {
     margin-top: 15px;
     margin-bottom: 20px;
   }
-  a{
+  a {
     text-decoration: none;
   }
   .clientlist-sub {
@@ -770,21 +769,21 @@ footer {
     padding-left: 10px;
     margin-top: -5px;
   }
-  .list-sub-point{
+  .list-sub-point {
     height: 160px;
   }
-  .list-sub-point ul{
+  .list-sub-point ul {
     padding-left: 10px;
     margin-top: 10px;
   }
-  .list-sub-point li{
+  .list-sub-point li {
     font-size: 10px;
     margin-bottom: 3px;
   }
-  .list-sub-point-title{
+  .list-sub-point-title {
     margin-top: 0;
     margin-bottom: 3px;
-    border-left: #2E79BA solid 3px;
+    border-left: #2e79ba solid 3px;
     padding-left: 6px;
     font-size: 12px;
   }
@@ -804,4 +803,3 @@ footer {
     height: 160px;
   }
 }
-

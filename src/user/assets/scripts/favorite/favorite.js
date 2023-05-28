@@ -1,12 +1,10 @@
 const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 favorites.sort((a, b) => new Date(b.time) - new Date(a.time));
-// console.log(favorites);
 // localStorage.clear()
 // お気に入り企業の情報をHTMLに書き換え
 const service_box = document.getElementById("service-wrapper");
-
 // お気に入り企業の情報をHTMLに書き換え
-let str = '';
+let str = "";
 
 favorites.forEach((favorite) => {
   const companyName = favorite.name;
@@ -47,12 +45,12 @@ favorites.forEach((favorite) => {
 service_box.innerHTML = str;
 // localStorage.clear()
 
-// HTMLのチェックボックスと登録ボタンの要素を取得 
+// HTMLのチェックボックスと登録ボタンの要素を取得
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-const submitButton = document.getElementById('submit-button');
+const submitButton = document.getElementById("submit-button");
 // お気に入り企業がなかった場合の処理
 const favoriteAlert = document.getElementById("service-alert");
-let favoriteAlertStr = '';
+let favoriteAlertStr = "";
 if (favorites.length === 0) {
   favoriteAlertStr += `
 <div class="alert-area" role="alert">
@@ -63,31 +61,32 @@ if (favorites.length === 0) {
 </div>
   `;
   submitButton.disabled = true;
-  submitButton.classList.add('disabled');
+  submitButton.classList.add("disabled");
 }
 favoriteAlert.innerHTML = favoriteAlertStr;
 
 // 全ての企業にチェックを入れる
-const checks = document.querySelectorAll('.checkbox');
-checks.forEach((check)=>{
+const checks = document.querySelectorAll(".checkbox");
+checks.forEach((check) => {
   check.checked = true;
-})
+});
 
 // チェックボックスの状態を監視するためのイベントリスナーを追加
-checkboxes.forEach(checkbox => {
-  checkbox.addEventListener('change', updateSubmitButtonStatus);
+checkboxes.forEach((checkbox) => {
+  checkbox.addEventListener("change", updateSubmitButtonStatus);
 });
 // 登録ボタンの活性状態を更新する関数
 function updateSubmitButtonStatus() {
   // チェックされていないチェックボックスの数をカウント
-  const uncheckedCount = Array.from(checkboxes).filter(checkbox => !checkbox.checked).length;
-
+  const uncheckedCount = Array.from(checkboxes).filter(
+    (checkbox) => !checkbox.checked
+  ).length;
   // すべてのチェックボックスが外れている場合、登録ボタンを非活性化
   if (uncheckedCount === checkboxes.length) {
     submitButton.disabled = true;
-    submitButton.classList.add('disabled');
+    submitButton.classList.add("disabled");
   } else {
     submitButton.disabled = false;
-    submitButton.classList.remove('disabled');
+    submitButton.classList.remove("disabled");
   }
 }

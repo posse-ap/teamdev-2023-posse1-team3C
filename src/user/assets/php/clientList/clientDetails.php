@@ -31,4 +31,3 @@ $stmt->execute([
   ':company_id' => $company_id
 ]);
 $ratings = $stmt->fetch(PDO::FETCH_ASSOC);
-

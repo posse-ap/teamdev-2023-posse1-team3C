@@ -76,7 +76,6 @@ favorite_btns.forEach((favorite_btn, index) => {
       favoriteTexts[index].textContent = "お気に入り済み";
       favorite_btn.value = 1;
     }
-    // addToFavorites(favorite_btn);
   });
 });
 
@@ -88,22 +87,13 @@ function addToFavorites(button) {
   let currentTime = new Date().toLocaleString();
   // localStorageお気に入り情報があるかどうかチェック
   if (localStorage.favorites !== undefined) {
-    // let favorite_btn = document.querySelector('.favorite-btn');
-    // console.log(favorite_btn);
-    // let companyID = favorite_btn.getAttribute('data-id');
-    console.log(button);
-
-    console.log(companyID);
-
     // ローカルストレージからお気に入り情報を取得
     const favorites = JSON.parse(localStorage.favorites);
-
     if (button.value == 0) {
       // 既に同じIDの企業がローカルストレージ内に存在するかチェック
       const existingIndex = favorites.findIndex(
         (item) => item.id === companyID
       );
-
       if (existingIndex !== -1) {
         // 同じIDの企業が既に登録されている場合は削除
         favorites.splice(existingIndex, 1);
@@ -115,7 +105,6 @@ function addToFavorites(button) {
         id: companyID,
         time: currentTime,
       });
-
       // ローカルストレージに保存
       localStorage.setItem("favorites", JSON.stringify(favorites));
     } else {
@@ -138,33 +127,6 @@ function addToFavorites(button) {
     localStorage.setItem("favorites", JSON.stringify(favorites));
   }
 }
-
-// function checkIfIdExists(id) {
-//   // ローカルストレージからデータを取得
-//   const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-
-//   // データ内をループしてidの存在をチェック
-//   for (const item of favorites) {
-//     if (item.id === id) {
-//       // 指定したidが存在する場合
-//       return true;
-//     }
-//   }
-//   // 指定したidが存在しない場合
-//   return false;
-// }
-
-// const idExists = checkIfIdExists(id);
-
-// if (idExists) {
-//   favorite_btns.forEach((favorite_btn, index) => {
-//     if (favorite_btn.getAttribute('data-id') === id) {
-//       favorite_btn.classList.add('active');
-//       favoriteTexts[index].textContent = 'お気に入り済み';
-//       favorite_btn.value = 1;
-//     }
-//   });
-// }
 
 window.addEventListener("load", () => {
   let favorite_btns = document.querySelectorAll(".favorite-btn");

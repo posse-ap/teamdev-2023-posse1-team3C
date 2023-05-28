@@ -2,7 +2,7 @@
 header {
   height: 60px;
   width: 100%;
-  background-color: #2E79BA;
+  background-color: #2e79ba;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,7 +36,7 @@ header {
 .menubar-contents {
   width: 100%;
   height: 100%;
-  background-color: #2E79BA;
+  background-color: #2e79ba;
 }
 .menubar-list {
   display: flex;
@@ -64,7 +64,7 @@ header {
   margin-right: 12px;
 }
 .menubar-link-content:hover {
-  background-color: #1E5C9E;
+  background-color: #1e5c9e;
   border-radius: 5px;
 }
 .menubar-item:last-child {
@@ -84,13 +84,13 @@ header {
 /* フッター */
 footer {
   height: 200px;
-  background-color: #2E79BA;
+  background-color: #2e79ba;
 }
 .footer-boozer-logo {
   width: 200px;
   height: auto;
   margin: auto;
-  padding-top: 20px
+  padding-top: 20px;
 }
 .footer-boozer-logo img {
   width: 100%;
@@ -111,7 +111,7 @@ footer {
 }
 .footer-craft {
   font-size: 12px;
-  color: #B8BABA;
+  color: #b8baba;
   font-weight: 600;
   margin-top: 40px;
   text-align: center;
@@ -142,7 +142,7 @@ footer {
   }
   .footer-boozer-logo {
     width: 100px;
-    padding-top: 10px
+    padding-top: 10px;
   }
   .footer-link-list {
     gap: 10px;

@@ -12,10 +12,7 @@
   <link rel="stylesheet" href="./assets/styles/common.css">
   <link rel="stylesheet" href="./assets/styles/clientDetails.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
   <script src="https://unpkg.com/apexcharts/dist/apexcharts.min.js" defer></script>
@@ -26,7 +23,7 @@
 <body>
   <!-- ヘッダー -->
   <?php include_once('components/header.php') ?>
-  <?php include_once('components/menubar.php')?>
+  <?php include_once('components/menubar.php') ?>
   <!-- メイン -->
   <main>
     <!-- エージェント企業名と画像 -->
@@ -181,40 +178,40 @@
         <div class="success-story-title-text">
           <i class="fa-regular fa-tag"></i>
           <p>
-          <?php echo $company_details["service"] ?>のサクセスストーリー
+            <?php echo $company_details["service"] ?>のサクセスストーリー
           </p>
         </div>
       </div>
       <div class="swiper">
         <div class="swiper-wrapper">
-          <?php foreach ($stories as $story) {?>
+          <?php foreach ($stories as $story) { ?>
             <div class="swiper-slide">
-            <div class="user-1-contents">
-              <div class="user-1-img">
-                <img src="./assets/img/stories/<?php echo $company_details["service"] ?>/<?php echo $story["photo"]?>" alt="">
-                <div class="user-1-speed">
-                  <?php echo $story["time"]?>で内定獲得！
-                </div>
-              </div>
-              <div class="user-1-comment">
-                <h4>
-                  <?php echo $story["title"]?>
-                </h4>
-                <div class="user-1-info">
-                  <div class="user-1-info-univ">
-                    <?php echo $story["university"]?>
-                  </div>
-                  <div class="user-1-info-name">
-                    <?php echo $story["name"]?>
+              <div class="user-1-contents">
+                <div class="user-1-img">
+                  <img src="./assets/img/stories/<?php echo $company_details["service"] ?>/<?php echo $story["photo"] ?>" alt="">
+                  <div class="user-1-speed">
+                    <?php echo $story["time"] ?>で内定獲得！
                   </div>
                 </div>
-                <div class="user-1-comments">
-                  <?php echo $story["story"]?>
+                <div class="user-1-comment">
+                  <h4>
+                    <?php echo $story["title"] ?>
+                  </h4>
+                  <div class="user-1-info">
+                    <div class="user-1-info-univ">
+                      <?php echo $story["university"] ?>
+                    </div>
+                    <div class="user-1-info-name">
+                      <?php echo $story["name"] ?>
+                    </div>
+                  </div>
+                  <div class="user-1-comments">
+                    <?php echo $story["story"] ?>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <?php }?>
+          <?php } ?>
         </div>
         <div class="swiper-pagination"></div>
         <div class="swiper-button-prev"></div>
@@ -223,9 +220,9 @@
     </div>
     <!-- リンク -->
     <div class="access">
-      <a href="./register.php?company_id=<?php echo $company_details["id"]?>">
+      <a href="./register.php?company_id=<?php echo $company_details["id"] ?>">
         <button class="access-btn">
-        <i class="fa-regular fa-pen-to-square"></i>
+          <i class="fa-regular fa-pen-to-square"></i>
           <span class="access-btn-text">
             申し込みは
             <br>
@@ -245,7 +242,7 @@
       </a>
     </div>
     <div class="favorite">
-      <button type="button" class="favorite-btn" value="" id="favoriteButton" data-name="<?= $company_details["service"]?>" data-url="<?= $company_details["URL"]?>" data-id="<?= $company_details["id"]?>"onclick="addToFavorites()">
+      <button type="button" class="favorite-btn" value="" id="favoriteButton" data-name="<?= $company_details["service"] ?>" data-url="<?= $company_details["URL"] ?>" data-id="<?= $company_details["id"] ?>" onclick="addToFavorites()">
         <span class="favorite-btn-text">
           お気に入りに追加
         </span>

@@ -14,10 +14,10 @@
 
 <body>
   <!-- ヘッダー -->
-  <?php include_once('components/header.php')?>
+  <?php include_once('components/header.php') ?>
   <?php
   $company_ids = [];
-  if(isset($_GET['company_id'])){
+  if (isset($_GET['company_id'])) {
     // 企業詳細から飛んできた場合
     $company_ids[] = $_GET['company_id'];
   } else {
@@ -32,8 +32,8 @@
     <div class="register-title-decoration"></div>
     <form method="post" action="./assets/php/register/register.php">
       <?php
-      foreach($company_ids as $company_id){
-        echo '<input type="hidden" name="company_id[]" value='.$company_id.'>';
+      foreach ($company_ids as $company_id) {
+        echo '<input type="hidden" name="company_id[]" value=' . $company_id . '>';
       }
       ?>
       <div class="grid gap-6 mb-6 md:grid-cols-2 name-input">
@@ -158,7 +158,7 @@
       </button>
     </form>
   </main>
-  <script src="./assets/scripts/register/register.js" ></script>
+  <script src="./assets/scripts/register/register.js"></script>
 </body>
 
 </html>

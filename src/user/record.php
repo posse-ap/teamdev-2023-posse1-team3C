@@ -15,27 +15,27 @@
 </head>
 
 <body>
-<?php include_once('components/header.php') ?>
-<?php include_once('components/menubar.php')?>
+  <?php include_once('components/header.php') ?>
+  <?php include_once('components/menubar.php') ?>
 
 
-<main>
-  
-  <h2 class="top-favorite">履歴一覧</h2>
-  <div id="favoritesList">
-  <!-- お気に入り企業の情報がここに表示されます -->
-</div>
+  <main>
+
+    <h2 class="top-favorite">履歴一覧</h2>
+    <div id="favoritesList">
+      <!-- お気に入り企業の情報がここに表示されます -->
+    </div>
 
 
-  <div class="lets-favorite">\ あなたがチェックした企業はこちら /</div>
-  <div class="record-wrapper">
-  <div id="service-alert" class="text-center flex justify-center"></div>
-  <div class="service-wrapper" id='service-wrapper'></div>
-  </div>
+    <div class="lets-favorite">\ あなたがチェックした企業はこちら /</div>
+    <div class="record-wrapper">
+      <div id="service-alert" class="text-center flex justify-center"></div>
+      <div class="service-wrapper" id='service-wrapper'></div>
+    </div>
 
-</main>
-<!-- フッター -->
-<?php include_once('components/footer.php') ?>
+  </main>
+  <!-- フッター -->
+  <?php include_once('components/footer.php') ?>
   <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous"></script>
   <script src="./assets/scripts/record/record.js"></script>
 
