@@ -6,8 +6,8 @@
   margin-bottom: 40px;
   position: relative;
 }
-.page-title::before{
-  content: '';
+.page-title::before {
+  content: "";
   position: absolute;
   bottom: -10px;
   left: calc(50% - 40px);
@@ -26,7 +26,7 @@
   font-size: 12px;
 }
 .student-info-table-title {
-  background-color: #DEECEF;
+  background-color: #deecef;
 }
 /* ボタン */
 .btn-list {

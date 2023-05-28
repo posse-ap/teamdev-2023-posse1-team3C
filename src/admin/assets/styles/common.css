@@ -1,5 +1,5 @@
 body {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
 .header-title {
   left: 45%;
@@ -20,7 +20,7 @@ form {
   opacity: 1;
 }
 #logo-sidebar {
-  background-color: #0060AF;
+  background-color: #0060af;
 }
 .menu-item {
   margin: 10px;

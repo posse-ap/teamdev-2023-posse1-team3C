@@ -6,8 +6,8 @@
   margin-bottom: 60px;
   position: relative;
 }
-.page-title::before{
-  content: '';
+.page-title::before {
+  content: "";
   position: absolute;
   bottom: -10px;
   left: calc(50% - 40px);
@@ -22,7 +22,7 @@
   margin-bottom: 40px;
 }
 .client-info-table-title {
-  background-color: #DEECEF;
+  background-color: #deecef;
 }
 
 label {
@@ -39,11 +39,11 @@ label {
 .checkbox + .checkbox-fontas:before {
   font-weight: 900;
   font-family: "Font Awesome 5 Free";
-  content: '\f058';
+  content: "\f058";
   color: #ccc;
 }
 .checkbox:checked + .checkbox-fontas:before {
-  color: #2E79BC;
+  color: #2e79bc;
 }
 
 /* 詳細絞りこみ */
@@ -73,7 +73,7 @@ label {
   position: absolute;
   top: 12px;
   right: 20px;
-  color: #81766E;
+  color: #81766e;
 }
 .search-details-contents {
   display: none;
