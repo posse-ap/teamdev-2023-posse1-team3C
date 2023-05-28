@@ -182,20 +182,27 @@ if (isset($_POST["registerButton"])) {
     <p>以下の内容で登録が完了したことをお知らせします。</p>
     <ul>
       <li>企業名：" . $_POST["company"] . "</li>
-      <li>サービス名：" . $_POST["service"]. "</li>
-      <li>電話番号：" . $_POST['phoneNumber'] . "</li>
+      <li>サービス名：" . $_POST["service"] . "</li>
+      <li>郵便番号：" . $_POST['postcode'] . "</li>
+      <li>住所：" . $_POST['address'] . "</li>
+      <li>電話番号" . $_POST['phoneNumber'] . "</li>
       <li>メールアドレス：" . $_POST['email'] . "</li>
-      <li>住まいの都道府県：" . $_POST['prefecture'] . "</li>
-      <li>卒業年度：" . $_POST['graduated_year'] . "</li>
-      <li>大学名：" . $_POST['university'] . "</li>
-      <li>学部学科：" . $_POST['faculty'] . $_POST['department'] . "</li>
+      <li>対応可能日時：" . $_POST['date'] . "</li>
+      <li>サービスのURl：" . $_POST['url'] . "</li>
+      <li>オンライン対応：" . $_POST['online'] . "</li>
+      <li>お問い合わせ方法：" . $_POST['contactType'] . "</li>
+      <li>掲載開始日：" . $_POST['start'] . "</li>
+      <li>掲載終了日：" . $_POST['end'] . "</li>
     </ul>
-    <p>登録したサービスは以下の通りです。</p>
-    <ul>
-      <li>" . implode("</li><li>", $company_names) . "</li>
-    </ul>
+    <p>以上の内容に誤り等がございましたら、申し訳ございませんが
+    <a href= 'https://docs.google.com/forms/d/e/1FAIpQLScK_Y69STQGpeKfAcHh1zNIb6tiVVO-2ryhKq2UdzpDbIihJw/viewform'>こちら</a>
+    から連絡をして頂けると幸いです</p>
+    <p>また、以下の仮パスワードでパスワードを再設定後、ログインしてください</p>
+    <p>パスワード：" . $password . "</p>
+    <p>再設定画面は<a href='http://localhost:8080/client/auth/pwchanges.php'>こちら</a>です。</p>
+    <p>引き続き、【株式会社CRAFT】をよろしくお願いいたします。</p>
   </body>
-  </html>" ;
+  </html>";
   $headers = "MIME-Version: 1.0\r\n";
   $headers .= "From: $from  \r\n";
   $headers .= "Content-Type: text/html; charset=UTF-8" . "\r\n" . "Content-Transfer-Encoding: base64\r\n";
