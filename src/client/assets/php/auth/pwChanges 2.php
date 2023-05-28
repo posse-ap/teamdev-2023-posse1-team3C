@@ -35,10 +35,8 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
           // 新しいパスワードが確認用とあっているかどうか　False
           echo '確認用パスワードが入力したパスワードと異なっています';
         }
-        
     } else {
       // 全部に値が入力してあるか false
         echo '全て入力してください';
     }
 }
-?>

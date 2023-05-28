@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,23 +10,24 @@
   <link rel="stylesheet" href="./assets/styles/common.css">
   <link rel="stylesheet" href="./assets/styles/top.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
   <script src="./assets/scripts/index.js" defer></script>
 </head>
+
 <body>
   <!-- ヘッダー -->
-  <?php include_once('components/header.php')?>
-  <?php include_once('components/menubar.php')?>
+  <?php include_once('components/header.php') ?>
+  <?php include_once('components/menubar.php') ?>
   <main>
     <!-- ヒーロー -->
     <div class="toppage-hero">
       <div class="toppage-hero-comment">
         <h2>
-        あなたにあった就活エージェント
-        <br>
-        選びを。まずは企業と話してみよう。
+          あなたにあった就活エージェント
+          <br>
+          選びを。まずは企業と話してみよう。
         </h2>
       </div>
     </div>
@@ -100,7 +102,7 @@
                 <label for="y-box-item-1">
                   <input type="checkbox" name="your-area" id="y-box-item-1" class="checkbox" value="7" type-data="s-area">
                   <span class="checkbox-fontas"></span>
-                
+
                   北海道
                 </label>
               </li>
@@ -165,19 +167,19 @@
         </div>
       </div>
     </form>
-    
+
     <!-- 申し込みするための３ステップ -->
     <div class="step-explanation-contents">
       <h3>
-      \ 申し込みするための３ステップ /
+        \ 申し込みするための３ステップ /
       </h3>
       <p>
-      選んだ企業に申し込んで、会社が自分にあっているか話してみよう！
+        選んだ企業に申し込んで、会社が自分にあっているか話してみよう！
       </p>
       <div class="step-container">
         <div class="step step-1">
           <div class="step-1-img">
-            
+
           </div>
           <div class="step-1-title">
             <p>
@@ -193,7 +195,7 @@
         </div>
         <div class="step step-2">
           <div class="step-2-img">
-            
+
           </div>
           <div class="step-2-title">
             <p>
@@ -201,15 +203,15 @@
               気になるエージェントを詳しく見てみよう
             </p>
             <p class="step-2-text">
-            企業一覧で気になったエージェントの<span>詳細ページ</span>に飛んでみよう！
-            <br>
-            <span>お気に入りに追加</span>しておけば、簡単に見返したり、一括で申し込むことができます。
+              企業一覧で気になったエージェントの<span>詳細ページ</span>に飛んでみよう！
+              <br>
+              <span>お気に入りに追加</span>しておけば、簡単に見返したり、一括で申し込むことができます。
             </p>
           </div>
         </div>
         <div class="step step-3">
           <div class="step-3-img">
-            
+
           </div>
           <div class="step-3-title">
             <p>
@@ -217,9 +219,9 @@
               申し込みして実際に話をしてみよう！
             </p>
             <p class="step-3-text">
-            実際に話してみないと、<span>本当に自分に合っているか</span>はわからない！
-            <br>
-            就活において、とても重要になるエージェントとの相性を確認してみよう！
+              実際に話してみないと、<span>本当に自分に合っているか</span>はわからない！
+              <br>
+              就活において、とても重要になるエージェントとの相性を確認してみよう！
             </p>
           </div>
         </div>
@@ -228,7 +230,7 @@
     <!-- 利用者の声 -->
     <div class="user-voice-contents">
       <h3>
-      \ 利用者の声 /
+        \ 利用者の声 /
       </h3>
       <div class="swiper">
         <div class="swiper-wrapper">
@@ -242,7 +244,7 @@
                   K.Tさん
                 </h4>
                 <p>
-                エージェントやアドバイザーの人たちとの相性を確認したかったので、CRAFTでいろんなエージェントの方とお話しして自分に合うエージェントを選びました。<span>内定速度や業界特化など様々な観点から比較できた</span>ので、自分にあったアドバイザーの人と出会うことができて無事就活を乗り越えることができました！
+                  エージェントやアドバイザーの人たちとの相性を確認したかったので、CRAFTでいろんなエージェントの方とお話しして自分に合うエージェントを選びました。<span>内定速度や業界特化など様々な観点から比較できた</span>ので、自分にあったアドバイザーの人と出会うことができて無事就活を乗り越えることができました！
                 </p>
               </div>
             </div>
@@ -257,7 +259,7 @@
                   K.Iさん
                 </h4>
                 <p>
-                就活がうまくいかなかった私は、時間の制約もある中、CRAFTを利用して<span>内定のスピードや面接対策に重点</span>を置いた最適な就活エージェントを見つけることができました。さらに、エージェント企業の対応時間も比較することができたため、<span>平日の日中が忙しい私にも合ったエージェント</span>を見つけることができました。就活においては、エージェント企業に相談してからわずか3週間で内定を得ることができました。
+                  就活がうまくいかなかった私は、時間の制約もある中、CRAFTを利用して<span>内定のスピードや面接対策に重点</span>を置いた最適な就活エージェントを見つけることができました。さらに、エージェント企業の対応時間も比較することができたため、<span>平日の日中が忙しい私にも合ったエージェント</span>を見つけることができました。就活においては、エージェント企業に相談してからわずか3週間で内定を得ることができました。
                 </p>
               </div>
             </div>
@@ -272,7 +274,7 @@
                   A.Uさん
                 </h4>
                 <p>
-                元々<span>コミュニケーションや言語化が苦手</span>な私はES添削や面接対策などのサポートが手厚い企業を探していました。CRAFTではさまざまな項目を比較した上、<span>実際に話をする</span>ことで、本当に自分に合ったエージェントを選ぶことができました。その結果、苦手意識のあった面接でも手応えを感じ、第一志望の企業から内定をいただくことができました！
+                  元々<span>コミュニケーションや言語化が苦手</span>な私はES添削や面接対策などのサポートが手厚い企業を探していました。CRAFTではさまざまな項目を比較した上、<span>実際に話をする</span>ことで、本当に自分に合ったエージェントを選ぶことができました。その結果、苦手意識のあった面接でも手応えを感じ、第一志望の企業から内定をいただくことができました！
                 </p>
               </div>
             </div>
@@ -286,7 +288,7 @@
     <!-- よくあるご質問 -->
     <div class="common-question-contents">
       <h3>
-      よくあるご質問
+        よくあるご質問
       </h3>
       <div class="question-1">
         <div class="question-title" id="q1-question">
@@ -310,7 +312,7 @@
       <div class="question-2">
         <div class="question-title" id="q2-question">
           <span class="question-icon">
-          <span>Q</span>2
+            <span>Q</span>2
           </span>
           <p class="question-contents">
             自分が追加したお気に入りを見るにはどうしたら良いですか？？
@@ -329,7 +331,7 @@
       <div class="question-3">
         <div class="question-title" id="q3-question">
           <span class="question-icon">
-          <span>Q</span>3
+            <span>Q</span>3
           </span>
           <p class="question-contents">
             自分に合った時間帯に相談できる就職エージェントを探したいです。どうしたらいいですか？
@@ -348,7 +350,7 @@
       <div class="question-4">
         <div class="question-title" id="q4-question">
           <span class="question-icon">
-          <span>Q</span>4
+            <span>Q</span>4
           </span>
           <p class="question-contents">
             履歴を見るにはどうしたら良いですか？？
@@ -367,7 +369,7 @@
       <div class="question-5">
         <div class="question-title" id="q5-question">
           <span class="question-icon">
-          <span>Q</span>5
+            <span>Q</span>5
           </span>
           <p class="question-contents">
             サイト上での申し込み後、エージェント企業との話し合いはどのように進められますか？
@@ -386,7 +388,7 @@
       <div class="question-6">
         <div class="question-title" id="q6-question">
           <span class="question-icon">
-          <span>Q</span>6
+            <span>Q</span>6
           </span>
           <p class="question-contents">
             エージェント企業を利用するのに料金は発生しますか？
@@ -405,7 +407,7 @@
       <div class="question-7">
         <div class="question-title" id="q7-question">
           <span class="question-icon">
-          <span>Q</span>7
+            <span>Q</span>7
           </span>
           <p class="question-contents">
             エージェント企業によって、得意な業界や職種はありますか？
@@ -424,7 +426,7 @@
       <div class="question-8">
         <div class="question-title" id="q8-question">
           <span class="question-icon">
-          <span>Q</span>8
+            <span>Q</span>8
           </span>
           <p class="question-contents">
             就活エージェントは1社に絞って利用するのがいいですか？
@@ -480,7 +482,7 @@
           <img src="./assets/img/1126.png" alt="">
         </div>
         <div class="pop-2-content">
-        エージェントによって特徴が違うため、<span>自分にあった</span>就活エージェント選びが非常に重要です。
+          エージェントによって特徴が違うため、<span>自分にあった</span>就活エージェント選びが非常に重要です。
         </div>
         <div class="pop-2-btn">
           <div class="pop-2-skip-btn">
@@ -510,13 +512,13 @@
           <img src="./assets/img/approach.png" alt="">
         </div>
         <div class="pop-3-content">
-        CRAFTで登録後に、エージェントから連絡がきて話をすることができます。
+          CRAFTで登録後に、エージェントから連絡がきて話をすることができます。
         </div>
         <div class="pop-3-btn">
           <button>
             <a href="./clientList.php">
-            <p class="search-client">エージェントを探す</p>
-            <i class="fa-solid fa-caret-right"></i>
+              <p class="search-client">エージェントを探す</p>
+              <i class="fa-solid fa-caret-right"></i>
             </a>
           </button>
         </div>
@@ -534,7 +536,7 @@
     <div class="search-agent">
       <a href="./clientList.php">
         <button class="search-agent-btn">
-        <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-magnifying-glass"></i>
           エージェントを
           <br>
           探してみる
@@ -543,6 +545,7 @@
     </div>
   </main>
   <!-- フッター -->
-  <?php include_once('components/footer.php')?>
+  <?php include_once('components/footer.php') ?>
 </body>
+
 </html>

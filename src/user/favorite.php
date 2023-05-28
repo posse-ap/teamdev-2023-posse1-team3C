@@ -15,38 +15,38 @@
 </head>
 
 <body>
-<?php include_once('components/header.php') ?>
-<?php include_once('components/menubar.php')?>
+  <?php include_once('components/header.php') ?>
+  <?php include_once('components/menubar.php') ?>
 
 
-<main>
-  <h2 class="top-favorite">お気に入り一覧</h2>
+  <main>
+    <h2 class="top-favorite">お気に入り一覧</h2>
 
 
-<div class="lets-favorite">
-  \ 現在のあなたのお気に入り一覧はこちら /
-  <br>
-  チェックをつけて一括登録しよう！
-</div>
+    <div class="lets-favorite">
+      \ 現在のあなたのお気に入り一覧はこちら /
+      <br>
+      チェックをつけて一括登録しよう！
+    </div>
 
-<form id="favoriteForm" action="./register.php" method="POST">
-  <div class="favorite-wrapper">
-  <div id="service-alert"></div>
-  <div class="service-wrapper" id="service-wrapper">
-    <!-- お気に入り企業の一覧をここに表示する -->
-  </div>
-  </div>
-  <div class="btn-wrapper">
-    <button class="subscribe" type="submit" name="submitButton" id="submit-button">
-      一括登録する
-      <i class="fa-solid fa-caret-right"></i>
-    </button>
-  </div>
-</form>
+    <form id="favoriteForm" action="./register.php" method="POST">
+      <div class="favorite-wrapper">
+        <div id="service-alert"></div>
+        <div class="service-wrapper" id="service-wrapper">
+          <!-- お気に入り企業の一覧をここに表示する -->
+        </div>
+      </div>
+      <div class="btn-wrapper">
+        <button class="subscribe" type="submit" name="submitButton" id="submit-button">
+          一括登録する
+          <i class="fa-solid fa-caret-right"></i>
+        </button>
+      </div>
+    </form>
 
-</main>
-<!-- フッター -->
-<?php include_once('components/footer.php') ?>
+  </main>
+  <!-- フッター -->
+  <?php include_once('components/footer.php') ?>
   <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
 </body>

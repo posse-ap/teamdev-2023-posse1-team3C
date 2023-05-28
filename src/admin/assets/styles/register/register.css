@@ -1,5 +1,5 @@
 body {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
 .page-title {
   font-size: 20px;
@@ -8,8 +8,8 @@ body {
   margin-bottom: 40px;
   position: relative;
 }
-.page-title::before{
-  content: '';
+.page-title::before {
+  content: "";
   position: absolute;
   bottom: -10px;
   left: calc(50% - 50px);
@@ -70,7 +70,7 @@ h5 {
 }
 .area-container-title {
   margin-top: 40px;
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   margin-bottom: 8px;
 }
@@ -99,7 +99,7 @@ h5 {
 }
 .year-container-title {
   margin-top: 40px;
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   margin-bottom: 8px;
 }

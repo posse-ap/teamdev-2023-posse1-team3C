@@ -33,5 +33,3 @@ fclose($fp);
 function convertToShiftJIS($str) {
   return mb_convert_encoding($str, 'Shift-JIS', 'UTF-8');
 }
-
-?>

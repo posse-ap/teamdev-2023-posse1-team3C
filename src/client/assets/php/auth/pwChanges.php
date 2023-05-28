@@ -40,4 +40,3 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         echo '全て入力してください';
     }
 }
-?>

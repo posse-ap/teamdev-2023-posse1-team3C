@@ -82,15 +82,10 @@ let tag = [[], [], [], []];
 // 検索画面で押されたタグが一覧画面で選択された状態にしておく。
 document.addEventListener("DOMContentLoaded", function () {
   let activeCheckboxesArray = [...activeCheckboxes];
-  console.log(activeCheckboxes);
-  console.log(activeCheckboxesArray);
   activeCheckboxesArray.forEach((activeCheck) => {
-    console.log(activeCheck.style);
     activeCheck.style.backgroundColor = "red";
-    console.log(activeCheck.style.backgroundColor);
   });
 });
-console.log(tag);
 
 checkboxes.forEach((checkbox) => {
   // 現在のURLからクエリパラメータを取得
@@ -161,13 +156,6 @@ checkboxes.forEach((checkbox) => {
           let currentTime = new Date().toLocaleString();
           // localStorageお気に入り情報があるかどうかチェック
           if (localStorage.favorites !== undefined) {
-            // let favorite_btn = document.querySelector('.favorite-btn');
-            // console.log(favorite_btn);
-            // let companyID = favorite_btn.getAttribute('data-id');
-            console.log(button);
-
-            console.log(companyID);
-
             // ローカルストレージからお気に入り情報を取得
             const favorites = JSON.parse(localStorage.favorites);
 
@@ -214,38 +202,37 @@ checkboxes.forEach((checkbox) => {
           if (button.classList.contains("active")) {
             button.classList.remove("active");
             checkText[1].innerText = "お気に入りに追加";
-            console.log(button.value)
             button.value = 0;
-            console.log(button.value)
           } else {
             button.classList.add("active");
             checkText[1].innerText = "お気に入り済み";
-            console.log(button.value)
             button.value = 1;
-            console.log(button.value)
           }
         }
 
-        const checkboxes_list = document.querySelectorAll('#clientlist-name input[type="checkbox"]');
-          const submitButton = document.getElementById('submit-button');
-          // チェックボックスの状態が変更された時の処理
-          function handleCheckboxChange() {
-            // 選択されたチェックボックスの数をカウント
-            const checkedCount = Array.from(checkboxes_list).filter       (checkbox => checkbox.checked).length;
-          
-            // ボタンの状態を変更
-            if (checkedCount > 0) {
-              submitButton.disabled = false; // ボタンを活性化
-            } else {
-              submitButton.disabled = true; // ボタンを非活性化
-            }
-            console.log('aaa');
+        const checkboxes_list = document.querySelectorAll(
+          '#clientlist-name input[type="checkbox"]'
+        );
+        const submitButton = document.getElementById("submit-button");
+        // チェックボックスの状態が変更された時の処理
+        function handleCheckboxChange() {
+          // 選択されたチェックボックスの数をカウント
+          const checkedCount = Array.from(checkboxes_list).filter(
+            (checkbox) => checkbox.checked
+          ).length;
+
+          // ボタンの状態を変更
+          if (checkedCount > 0) {
+            submitButton.disabled = false; // ボタンを活性化
+          } else {
+            submitButton.disabled = true; // ボタンを非活性化
           }
-        
-          // チェックボックスの状態変更イベントを監視
-          checkboxes_list.forEach(checkbox => {
-            checkbox.addEventListener('change', handleCheckboxChange);
-          });
+        }
+
+        // チェックボックスの状態変更イベントを監視
+        checkboxes_list.forEach((checkbox) => {
+          checkbox.addEventListener("change", handleCheckboxChange);
+        });
       }
     }
   };
@@ -302,16 +289,6 @@ checkboxes.forEach((checkbox) => {
     } else if (checkbox.value >= 15 && !tag.includes(checkbox.value)) {
       tag[3].push(checkbox.value);
     }
-    // for (let j = 0; j < counts.length; j++) {
-    //   let cnt = counts[j].getAttribute("value");
-    //   let new_element = "";
-    //   for (let i = 0; i < 5; i++) {
-    //     if (i < cnt) {
-    //       new_element += '<i class="fas fa-star"></i>';
-    //     }
-    //   }
-    //   counts[j].innerHTML = new_element;
-    // }
 
     // 配列の要素ごとに比較
     function areArraysEqual(arr1, arr2) {
@@ -332,23 +309,15 @@ checkboxes.forEach((checkbox) => {
       }
       return true;
     }
-
-    console.log(tag);
-    console.log(values);
-    console.log(areArraysEqual(values, tag));
     // tagの中身を保存
     getTag = tag;
-    console.log(getTag);
-
     // クエリパラメータの値がnullでなければ、配列に格納
     if (values[0][0] != null && !areArraysEqual(values, tag)) {
       tag = values;
-      console.log(tag);
       values[4] = [""];
     }
     if (!values[4] == [""]) {
       tag = getTag;
-      console.log(tag);
     }
     // console.log(values);
     console.log(tag);
@@ -376,7 +345,8 @@ checkboxes.forEach((checkbox) => {
           }
           // お気に入りボタンを押したら色が変わり、テキストが変更される
           let favorite_btns = document.getElementsByClassName("favorite-btn");
-          let favoriteTexts = document.getElementsByClassName("favorite-btn-text");
+          let favoriteTexts =
+            document.getElementsByClassName("favorite-btn-text");
           Array.from(favorite_btns).forEach((favorite_btn, index) => {
             let favoriteText = favorite_btn.querySelector(".favorite-btn-text");
             let id = favorite_btn.getAttribute("data-id");
@@ -401,32 +371,32 @@ checkboxes.forEach((checkbox) => {
               favorite_btn.value = 1;
             }
           });
-
-          const checkboxes_list = document.querySelectorAll('#clientlist-name input[type="checkbox"]');
-          const submitButton = document.getElementById('submit-button');
+          const checkboxes_list = document.querySelectorAll(
+            '#clientlist-name input[type="checkbox"]'
+          );
+          const submitButton = document.getElementById("submit-button");
           // チェックボックスの状態が変更された時の処理
           function handleCheckboxChange() {
             // 選択されたチェックボックスの数をカウント
-            const checkedCount = Array.from(checkboxes_list).filter       (checkbox => checkbox.checked).length;
-          
+            const checkedCount = Array.from(checkboxes_list).filter(
+              (checkbox) => checkbox.checked
+            ).length;
             // ボタンの状態を変更
             if (checkedCount > 0) {
               submitButton.disabled = false; // ボタンを活性化
             } else {
               submitButton.disabled = true; // ボタンを非活性化
             }
-            console.log('aaa');
+            console.log("aaa");
           }
-        
           // チェックボックスの状態変更イベントを監視
-          checkboxes_list.forEach(checkbox => {
-            checkbox.addEventListener('change', handleCheckboxChange);
+          checkboxes_list.forEach((checkbox) => {
+            checkbox.addEventListener("change", handleCheckboxChange);
           });
         }
       }
     };
     let params = `tag=${tag}`;
     xhr.send(params);
-    console.log(params);
   });
 });

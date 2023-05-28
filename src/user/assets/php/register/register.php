@@ -42,7 +42,7 @@ if (isset($_POST["registerButton"])) {
   // 各企業idから企業名を取得
   $sql_get_company_name = "SELECT service FROM Companies WHERE id = :company_id";
   $get_company_name = $dbh->prepare($sql_get_company_name);
-  foreach($company_ids as $company_id) {
+  foreach ($company_ids as $company_id) {
     $get_company_name->execute([
       ":company_id" => $company_id
     ]);
@@ -80,12 +80,8 @@ if (isset($_POST["registerButton"])) {
   $headers = "MIME-Version: 1.0\r\n";
   $headers .= "From: $from\r\n";
   $headers .= "Content-Type: text/html; charset=UTF-8" . "\r\n" . "Content-Transfer-Encoding: base64\r\n";
-  
   // メール送信
   mb_send_mail($to, $subject, $message, $headers);
-
-
-
 
   // 申し込み完了画面にリダイレクト
   header("Location: ../../../../user/complete.php");

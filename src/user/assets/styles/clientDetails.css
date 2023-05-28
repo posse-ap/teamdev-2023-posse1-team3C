@@ -14,7 +14,7 @@ main {
 }
 .agent-name h2 {
   font-size: 25px;
-  color: #7A7A7A;
+  color: #7a7a7a;
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 10px;
@@ -34,12 +34,12 @@ main {
 }
 /* エージェント企業の特徴 */
 .agent-feature {
-  background-color: #F8DC97;
+  background-color: #f8dc97;
   height: 440px;
   width: 100%;
 }
 .agent-feature-title {
-  color: #2E79BA;
+  color: #2e79ba;
   font-size: 22px;
   text-align: center;
   font-weight: 600;
@@ -62,12 +62,12 @@ main {
 }
 .feature-background tbody tr th {
   text-align: left;
-  color: #7A7A7A;
+  color: #7a7a7a;
   font-size: 14px;
 }
 .feature-background tbody tr td {
   text-align: left;
-  color: #ED9630;
+  color: #ed9630;
 }
 #chart {
   width: 320px;
@@ -86,12 +86,12 @@ main {
 }
 .agent-info-details-title {
   height: 60px;
-  background-color: #FAE17E;
+  background-color: #fae17e;
   padding-left: 30px;
 }
 .agent-info-details-title h3 {
   font-size: 18px;
-  color: #2E79BA;
+  color: #2e79ba;
   font-weight: 600;
   line-height: 3;
 }
@@ -108,7 +108,7 @@ main {
 .each-info th {
   text-align: left;
   font-size: 15px;
-  color: #7A7A7A;
+  color: #7a7a7a;
   padding: 15px 20px 15px 40px;
   width: 45%;
 }
@@ -120,7 +120,7 @@ main {
 }
 /* 詳細説明 */
 .agent-details-explanation {
-  background-color: #E3F2FB;
+  background-color: #e3f2fb;
   width: 700px;
   color: #707070;
   font-family: 游ゴシック体;
@@ -140,7 +140,7 @@ main {
 /* サクセスストーリー */
 .success-story-contents {
   height: 780px;
-  background-color: #C3E5F8;
+  background-color: #c3e5f8;
   margin-bottom: 40px;
 }
 .success-story-title {
@@ -149,7 +149,7 @@ main {
 .success-story-title-text {
   width: 750px;
   height: 60px;
-  color: #2E79BA;
+  color: #2e79ba;
   margin-left: calc(50% - 375px);
   font-weight: 600;
   font-size: 18px;
@@ -164,14 +164,14 @@ main {
   position: absolute;
   top: 15px;
   left: 40px;
-  color: #FBA82C;
+  color: #fba82c;
 }
 .success-story-title-text p {
   padding-left: 100px;
 }
 .swiper {
   height: 600px;
-  background-color: #C3E5F8;
+  background-color: #c3e5f8;
 }
 .swiper-wrapper {
   height: 600px;
@@ -179,7 +179,7 @@ main {
 .swiper-slide {
   height: 600px;
   width: 80%;
-  background-color: #C3E5F8;
+  background-color: #c3e5f8;
 }
 .user-1-contents {
   width: 560px;
@@ -202,7 +202,7 @@ main {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: #FBA82C;
+  background-color: #fba82c;
   color: #fff;
   width: 50%;
   height: 30px;
@@ -212,7 +212,7 @@ main {
 }
 .user-1-comment h4 {
   width: 80%;
-  color: #2E79BA;
+  color: #2e79ba;
   padding-left: 40px;
   font-size: 20px;
   font-weight: 700;
@@ -246,7 +246,7 @@ main {
 .access-btn {
   width: 100px;
   height: 100px;
-  background-color: #2E79BA;
+  background-color: #2e79ba;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
@@ -279,7 +279,7 @@ main {
 .official-site-btn {
   width: 300px;
   height: 50px;
-  background-color: #3B93C5;
+  background-color: #3b93c5;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
@@ -360,12 +360,12 @@ main {
   }
   .feature-background tbody tr th {
     text-align: left;
-    color: #7A7A7A;
+    color: #7a7a7a;
     font-size: 10px;
   }
   .feature-background tbody tr td {
     text-align: left;
-    color: #ED9630;
+    color: #ed9630;
     font-size: 10px;
   }
   #chart {
@@ -437,7 +437,7 @@ main {
   }
   .swiper {
     height: 520px;
-    background-color: #C3E5F8;
+    background-color: #c3e5f8;
   }
   .swiper-wrapper {
     height: 520px;
@@ -445,7 +445,7 @@ main {
   .swiper-slide {
     height: 520px;
     width: 80%;
-    background-color: #C3E5F8;
+    background-color: #c3e5f8;
   }
   /* サクセスストーリー1人目 */
   .user-1-contents {
@@ -474,7 +474,7 @@ main {
     font-size: 12px;
     line-height: 2;
     gap: 50px;
-    border-bottom: #000000 .6px solid;
+    border-bottom: #000000 0.6px solid;
     margin-bottom: 12px;
   }
   .user-1-comments {

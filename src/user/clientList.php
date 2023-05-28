@@ -389,7 +389,7 @@
 
     <form action="./register.php" method="POST">
       <div class="clientlist-wrapper" id='client-list'>
-              <!-- 企業ごとに情報出力 -->
+        <!-- 企業ごとに情報出力 -->
       </div>
 
       <div class="btn-wrapper">

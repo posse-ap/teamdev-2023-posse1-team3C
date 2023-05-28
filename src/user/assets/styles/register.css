@@ -58,13 +58,13 @@ main {
   width: 20%;
   margin-left: 40%;
   margin-bottom: 80px;
-  background-color: #9CAEDC;
+  background-color: #9caedc;
 }
 .submit-button:hover {
-  background-color: #9CAEDC;
+  background-color: #9caedc;
 }
 .submit-button.active {
-  background-color: #2E79BA;
+  background-color: #2e79ba;
   cursor: pointer;
 }
 .submit-button.active:hover {

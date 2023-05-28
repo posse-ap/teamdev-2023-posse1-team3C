@@ -5,8 +5,8 @@
   margin-bottom: 40px;
   position: relative;
 }
-.page-title::before{
-  content: '';
+.page-title::before {
+  content: "";
   position: absolute;
   bottom: -10px;
   left: calc(50% - 50px);
@@ -58,7 +58,7 @@
   margin-bottom: 40px;
 }
 .client-info-title {
-  background-color: #DEECEF;
+  background-color: #deecef;
 }
 /* パスワード設定 */
 .password-container {
@@ -94,7 +94,7 @@
 }
 #month-btn {
   margin-left: 40px;
-  background-color: #1A56DB;
+  background-color: #1a56db;
   color: #fff;
 }
 .student-info-container form {
@@ -118,7 +118,7 @@
   margin-left: calc(50% - 360px);
 }
 .student-table-title {
-  background-color: #DEECEF;
+  background-color: #deecef;
 }
 .student-table {
   width: 800px;

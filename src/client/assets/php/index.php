@@ -2,7 +2,7 @@
 
   include_once('../dbconnect.php');
   $company_id = $_SESSION['unique_id'];
-  
+
   // 学生情報取得
   $stmt = $dbh->prepare("SELECT name, stu.id, stu.registered_at, link.company_id, status, sta.id as status_id FROM `CompaniesStudentsLink` as link
   join Students as stu on link.Student_id = stu.id 
@@ -40,6 +40,3 @@
     ':id' => $company_id
   ]);
   $company = $stmt->fetch(PDO::FETCH_COLUMN);
-?>
-
-
