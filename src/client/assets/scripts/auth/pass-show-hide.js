@@ -14,6 +14,7 @@ function showPassword(togglebutton , pswrdField) {
   }
 };
 
+
 togglebuttonNow = document.querySelector(".toggle-password-now");
 nowPassword = document.querySelector(".nowPassword");
 togglebuttonNow.addEventListener("click", function () {
