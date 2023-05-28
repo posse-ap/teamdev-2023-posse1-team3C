@@ -1,7 +1,6 @@
 /*===========================================================*/
 /*パスワードの目隠し*/
 /*===========================================================*/
-// const pswrdField = document.querySelectorAll(".form .field input[type='password']");
 // .formの中の.fieldのinputのtype=がpasswordになってるやつ
 
 function showPassword(togglebutton , pswrdField) {
