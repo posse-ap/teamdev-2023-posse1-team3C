@@ -241,7 +241,7 @@
           <div class="swiper-slide">
             <div class="user-1-contents">
               <div class="user-1-img">
-                <img src="./assets/img/S__354615303.jpg" alt="">
+                <img src="./assets/img/user-1.jpg" alt="">
               </div>
               <div class="user-1-comment">
                 <h4>
@@ -256,14 +256,14 @@
           <div class="swiper-slide">
             <div class="user-2-contents">
               <div class="user-2-img">
-                <img src="./assets/img/S__354615303.jpg" alt="">
+                <img src="./assets/img/user-2.jpg" alt="">
               </div>
               <div class="user-2-comment">
                 <h4>
-                  A.Uさん
+                  K.Iさん
                 </h4>
                 <p>
-                エージェントとの相性が本当に自分に合っているかわからなかったので、CRAFTでいろんなエージェントの方とお話しして自分に合うエージェントを選びました。<span>実際に会って話すことができ、事前にエージェントやアドバイザーの方の雰囲気がわかった</span>ので、自分にあったアドバイザーの人と二人三脚で無事就活を乗り越えることができました！
+                就活がうまくいかなかった私は、時間の制約もある中、CRAFTを利用して<span>内定のスピードや面接対策に重点</span>を置いた最適な就活エージェントを見つけることができました。さらに、エージェント企業の対応時間も比較することができたため、<span>平日の日中が忙しい私にも合ったエージェント</span>を見つけることができました。就活においては、エージェント企業に相談してからわずか3週間で内定を得ることができました。
                 </p>
               </div>
             </div>
@@ -271,14 +271,14 @@
           <div class="swiper-slide">
             <div class="user-3-contents">
               <div class="user-3-img">
-                <img src="./assets/img/S__354615303.jpg" alt="">
+                <img src="./assets/img/user-3.jpg" alt="">
               </div>
               <div class="user-3-comment">
                 <h4>
-                  K.Iさん
+                  A.Uさん
                 </h4>
                 <p>
-                エージェントとの相性が本当に自分に合っているかわからなかったので、CRAFTでいろんなエージェントの方とお話しして自分に合うエージェントを選びました。<span>実際に会って話すことができ、事前にエージェントやアドバイザーの方の雰囲気がわかった</span>ので、自分にあったアドバイザーの人と二人三脚で無事就活を乗り越えることができました！
+                元々<span>コミュニケーションや言語化が苦手</span>な私はES添削や面接対策などのサポートが手厚い企業を探していました。CRAFTではさまざまな項目を比較した上、<span>実際に話をする</span>ことで、本当に自分に合ったエージェントを選ぶことができました。その結果、苦手意識のあった面接でも手応えを感じ、第一志望の企業から内定をいただくことができました！
                 </p>
               </div>
             </div>
