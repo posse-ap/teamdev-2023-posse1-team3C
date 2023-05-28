@@ -20,7 +20,7 @@
   <div class="container px-3 py-12 mx-auto">
     <div class="flex flex-col text-center w-full mb-2">
       <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">学生詳細情報</h1>
-      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">無効申請は下のボタンをおしてgoogleformから行ってください</p>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">無効申請を行うには、以下のボタンをクリックし、表示されるフォームから行ってください。</p>
     </div>
     <div class="lg:w-1/2 md:w-2/3 mx-auto">
       <div class="flex flex-wrap -m-2">
@@ -118,7 +118,9 @@
 
         <div class="p-2 w-full flex">
         <a href="../client/index.php"><button class="my-12  mx-4 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">戻る</button></a>
-        <button class="my-12  ml-44 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">無効申請フォームはこちら</button>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScK_Y69STQGpeKfAcHh1zNIb6tiVVO-2ryhKq2UdzpDbIihJw/viewform" target="_blank">
+          <button class="my-12  ml-44 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">無効申請フォームはこちら</button>
+        </a>
           
         </div>
         </div>
