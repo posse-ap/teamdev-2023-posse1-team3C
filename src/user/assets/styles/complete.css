@@ -1,0 +1,60 @@
+/* メイン */
+main {
+  margin-top: 60px;
+}
+.complete {
+  height: calc(100vh - 60px);
+}
+.complete h2 {
+  font-size: 20px;
+  color: #699bf7;
+  text-align: center;
+  padding-top: 140px;
+}
+.complete-mark {
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+}
+.complete-mark i {
+  font-size: 100px;
+  color: #699bf7;
+  margin-left: calc(50% - 50px);
+}
+.complete h3 {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 40px;
+}
+.recommend {
+  text-align: center;
+  margin-top: 100px;
+  color: #699bf7;
+}
+.complete button {
+  width: 240px;
+  height: 40px;
+  background-color: #fff;
+  margin-left: calc(50% - 120px);
+  margin-top: 20px;
+  border-radius: 5px;
+  border-color: #2b7aba;
+  cursor: pointer;
+}
+.complete button p {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: calc(50% - 7.5px);
+  color: #2b7aba;
+  text-align: center;
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  main {
+    margin-top: 0;
+  }
+  .recommend {
+    margin-top: 80px;
+    font-size: 14px;
+  }
+}

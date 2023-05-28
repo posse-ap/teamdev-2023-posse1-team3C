@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="">
-<link rel="stylesheet" href="">
 <link rel="stylesheet" href="../assets/styles/normalize.css">
+<link rel="stylesheet" href="../../dist/output.css">
+
 
 <!-- fontawesome読み込み -->
 <script src="https://kit.fontawesome.com/b4c9445cdc.js" crossorigin="anonymous" defer></script>

@@ -1,0 +1,112 @@
+/* メイン */
+main {
+  margin-top: 60px;
+  height: calc(100vh - 60px);
+}
+.register-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 80px;
+  text-align: center;
+}
+.register-title-decoration {
+  width: 80px;
+  height: 1px;
+  background-color: #000;
+  margin-left: calc(50% - 40px);
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.name-input {
+  width: 50%;
+  margin-left: 25%;
+}
+.sex {
+  width: 16%;
+  margin-left: 25%;
+}
+.graduate {
+  width: 16%;
+  margin-left: 25%;
+}
+.university-input {
+  width: 25%;
+  margin-left: 25%;
+}
+.major-input {
+  width: 50%;
+  margin-left: 25%;
+}
+.prefecture {
+  width: 20%;
+  margin-left: 25%;
+}
+.phone-number {
+  width: 20%;
+  margin-left: 25%;
+}
+.email-input {
+  width: 25%;
+  margin-left: 25%;
+}
+.confirmation {
+  margin-left: calc(50% - 158.797px);
+  margin-top: 60px;
+}
+.submit-button {
+  margin-top: 40px;
+  width: 20%;
+  margin-left: 40%;
+  margin-bottom: 80px;
+  background-color: #9caedc;
+}
+.submit-button:hover {
+  background-color: #9caedc;
+}
+.submit-button.active {
+  background-color: #2e79ba;
+  cursor: pointer;
+}
+.submit-button.active:hover {
+  background-color: #0061b0;
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 768px) {
+  .name-input {
+    width: 300px;
+    margin-left: calc(50% - 150px);
+  }
+  .sex {
+    width: 100px;
+    margin-left: calc(50% - 150px);
+  }
+  .graduate {
+    width: 100px;
+    margin-left: calc(50% - 150px);
+  }
+  .university-input {
+    width: 200px;
+    margin-left: calc(50% - 150px);
+  }
+  .major-input {
+    width: 180px;
+    margin-left: calc(50% - 150px);
+  }
+  .prefecture {
+    width: 160px;
+    margin-left: calc(50% - 150px);
+  }
+  .phone-number {
+    width: 180px;
+    margin-left: calc(50% - 150px);
+  }
+  .email-input {
+    width: 200px;
+    margin-left: calc(50% - 150px);
+  }
+  .submit-button {
+    width: 200px;
+    margin-left: calc(50% - 100px);
+  }
+}

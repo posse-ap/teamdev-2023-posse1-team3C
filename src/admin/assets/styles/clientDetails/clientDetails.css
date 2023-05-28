@@ -1,0 +1,130 @@
+.page-title {
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 20px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.page-title::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 50px);
+  width: 100px;
+  height: 2px;
+  background-color: black;
+}
+.status-container {
+  width: 720px;
+  gap: 20px;
+  margin-left: calc(50% - 360px);
+  align-items: center;
+  margin-bottom: 40px;
+}
+.status-title {
+  font-size: 16px;
+  font-weight: 550;
+  width: 100px;
+}
+.status-now {
+  width: 200px;
+}
+.status-now span {
+  font-size: 14px;
+  font-weight: 550;
+  display: block;
+  width: 130px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+.status-container form {
+  width: 340px;
+}
+.status-container button {
+  margin-bottom: 0;
+  margin-left: 40px;
+}
+/* 企業基本情報テーブル */
+.client-info-table-title {
+  font-size: 16px;
+  font-weight: 550;
+  margin-bottom: 40px;
+  margin-left: calc(50% - 360px);
+}
+.client-info-table {
+  width: 720px;
+  margin-left: calc(50% - 360px);
+  margin-bottom: 40px;
+}
+.client-info-title {
+  background-color: #deecef;
+}
+/* パスワード設定 */
+.password-container {
+  width: 720px;
+  margin-left: calc(50% - 360px);
+  align-items: center;
+  margin-bottom: 40px;
+}
+.password-container h3 {
+  font-size: 16px;
+  font-weight: 550;
+  width: 200px;
+}
+/* 登録学生情報 */
+.student-info-container {
+  width: 720px;
+  margin-left: calc(50% - 360px);
+  align-items: center;
+  margin-bottom: 40px;
+}
+.student-info-container h3 {
+  font-size: 16px;
+  font-weight: 550;
+  width: 400px;
+  margin-bottom: 20px;
+}
+.student-info-title {
+  padding-top: 15px;
+  font-size: 14px;
+}
+.month-select {
+  margin-left: 40px;
+}
+#month-btn {
+  margin-left: 40px;
+  background-color: #1a56db;
+  color: #fff;
+}
+.student-info-container form {
+  margin-bottom: 40px;
+}
+.student-number {
+  font-size: 30px;
+  color: red;
+  font-weight: 550;
+  margin-bottom: 10px;
+}
+.invalid-student-number {
+  font-size: 24px;
+  font-weight: 550;
+  margin-bottom: 10px;
+}
+.student-info-table-title {
+  font-size: 16px;
+  font-weight: 550;
+  margin-bottom: 40px;
+  margin-left: calc(50% - 360px);
+}
+.student-table-title {
+  background-color: #deecef;
+}
+.student-table {
+  width: 800px;
+  margin-left: calc(50% - 360px);
+}
+.list-btn {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
