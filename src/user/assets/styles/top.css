@@ -884,6 +884,23 @@ a{
   background-color: #FAE17E;
   z-index: 200;
 }
+.modal-close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #f5f5f8;
+}
+.modal-close-button i {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 36px;
+  margin-left: 12px;
+  color: #5b5b5a;
+}
 .pop-3-number {
   font-size: 16px;
   margin-left: 80px;

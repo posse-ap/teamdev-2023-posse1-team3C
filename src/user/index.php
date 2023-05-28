@@ -501,6 +501,9 @@
     <!-- ポップ(3ページ目) -->
     <div class="pop-3">
       <div class="pop-area-3">
+        <div class="modal-close-button">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
         <h3 class="pop-3-number">3/3</h3>
         <h2 class="pop-3-title">就活エージェントを利用する前に一度話してみよう！</h2>
         <div class="pop-3-img">
