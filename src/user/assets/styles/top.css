@@ -58,7 +58,7 @@ form {
 .search {
   width: 720px;
   height: 450px;
-  background-color: #6798c0;
+  background-color: #4993cf;
   margin-left: calc(50% - 360px);
   margin-top: 0;
   margin-bottom: 20px;
@@ -437,14 +437,17 @@ label {
   margin-top: 50px;
   margin-left: calc(50% - 280px);
   background-color: #fff;
+  border-radius: 10px;
 }
 .user-1-img {
+  border-radius: 10px 10px 0 0;
   width: 100%;
-  height: 250px;
+  height: 260px;
 }
 .user-1-img img {
+  border-radius: 10px 10px 0 0;
   width: 100%;
-  height: 250px;
+  height: 260px;
 }
 .user-1-comment h4 {
   font-size: 16px;
@@ -471,14 +474,17 @@ label {
   margin-top: 50px;
   margin-left: calc(50% - 280px);
   background-color: #fff;
+  border-radius: 10px;
 }
 .user-2-img {
+  border-radius: 10px 10px 0 0;
   width: 100%;
-  height: 250px;
+  height: 260px;
 }
 .user-2-img img {
+  border-radius: 10px 10px 0 0;
   width: 100%;
-  height: 250px;
+  height: 260px;
 }
 .user-2-comment h4 {
   font-size: 16px;
@@ -505,14 +511,17 @@ label {
   margin-top: 50px;
   margin-left: calc(50% - 280px);
   background-color: #fff;
+  border-radius: 10px;
 }
 .user-3-img {
+  border-radius: 10px 10px 0 0;
   width: 100%;
-  height: 250px;
+  height: 260px;
 }
 .user-3-img img {
+  border-radius: 10px 10px 0 0;
   width: 100%;
-  height: 250px;
+  height: 260px;
 }
 .user-3-comment h4 {
   font-size: 16px;
@@ -553,7 +562,7 @@ label {
 }
 .question-title {
   width: 60%;
-  margin-top: 60px;
+  margin-top: 20px;
   margin-left: 20%;
   background-color: #E2DFDD;
   position: relative;
@@ -1127,6 +1136,7 @@ label {
   }
   .step-1 {
     padding-top: 20px;
+    height: 390px;
   }
   .step-1-img {
     width: 80%;
@@ -1248,7 +1258,7 @@ label {
   }
   .user-1-contents {
     width: 300px;
-    height: 400px;
+    height: 415px;
     margin-top: 20px;
     margin-left: calc(50% - 150px);
     background-color: #fff;
@@ -1270,7 +1280,7 @@ label {
   }
   .user-2-contents {
     width: 300px;
-    height: 400px;
+    height: 415px;
     margin-top: 20px;
     margin-left: calc(50% - 150px);
     background-color: #fff;
@@ -1292,7 +1302,7 @@ label {
   }
   .user-3-contents {
     width: 300px;
-    height: 400px;
+    height: 415px;
     margin-top: 20px;
     margin-left: calc(50% - 150px);
     background-color: #fff;
@@ -1326,7 +1336,7 @@ label {
   }
   .question-title {
     width: 80%;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-left: 10%;
   }
   .question-title i {
