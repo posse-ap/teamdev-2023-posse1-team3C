@@ -1,5 +1,8 @@
 ## teamdev-2023-posse1-team3C
 
+#### 2024/3/21追記
+- private→publicにあたり、一部の名称を***に変更しています。
+
 ## docker のインストール
 [macにdockerをインストール](https://matsuand.github.io/docs.docker.jp.onthefly/desktop/mac/install/)
 
@@ -149,12 +152,12 @@ email: irodas@gmail.com
 password: root
 
 企業名: パーソルキャリア
-サービス名: doda新卒エージェント
+サービス名: doda新卒*****
 email: doda@gmail.com
 password: root
 
 企業名: リクナビ
-サービス名: リクナビ就職エージェント
+サービス名: リクナビ就職*****
 email: rikunabi@gmail.com
 password: root
 
@@ -164,7 +167,7 @@ email: jobstring@gmail.com
 password: root
 
 企業名: ネオキャリア
-サービス名: 就職エージェントneo
+サービス名: 就職*****neo
 email: neo@gmail.com
 password: root
 
@@ -178,8 +181,8 @@ password: root
 email: syn@gmail.com
 password: root
 
-企業名: シンクエージェント
-サービス名: キャリセン就活エージェント
+企業名: シンク*****
+サービス名: キャリセン就活*****
 email: careecen@gmail.com
 password: root
 
