@@ -170,7 +170,7 @@ if (isset($_POST["registerButton"])) {
 
   // 生成したパスワードをメールで送信
   $to = $_POST["email"];
-  $subject = "【株式会社CRAFT】企業情報登録完了のお知らせ";
+  $subject = "【株式会社babgu】企業情報登録完了のお知らせ";
   $from = "admin@example.com";
   $message = "
   <html>
@@ -201,7 +201,7 @@ if (isset($_POST["registerButton"])) {
     <p>ログインID：" . $_POST["email"]. "</p>
     <p>パスワード：" . $password . "</p>
     <p>再設定画面は<a href='http://localhost:8080/client/auth/pwchanges.php'>こちら</a>です。</p>
-    <p>引き続き、【株式会社CRAFT】をよろしくお願いいたします。</p>
+    <p>引き続き、【株式会社babgu】をよろしくお願いいたします。</p>
   </body>
   </html>";
   $headers = "MIME-Version: 1.0\r\n";

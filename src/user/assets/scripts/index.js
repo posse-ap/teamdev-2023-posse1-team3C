@@ -29,7 +29,7 @@ const pop2SkipBtn = document.querySelector(".pop-2-skip-btn button");
 pop2SkipBtn.addEventListener("click", () => {
   pop2.classList.remove("active");
 });
-// ポップ3ページ目→(エージェントを探す)→ポップを閉じる
+// ポップ3ページ目→(*****を探す)→ポップを閉じる
 const pop3btn = document.querySelector(".pop-3-btn button");
 pop3btn.addEventListener("click", () => {
   pop3.classList.remove("active");

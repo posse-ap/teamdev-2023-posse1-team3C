@@ -25,9 +25,9 @@ if (isset($_POST["resetSubmit"])) {
 
   // 生成したパスワードをメールで送信
   $to = $company_mail;
-  $subject = "【株式会社CRAFT】パスワード再設定のお知らせ";
+  $subject = "【株式会社babgu】パスワード再設定のお知らせ";
   $from = "sender@example.com";
-  $message = "<html><body><h2>". $_POST["company_name"]. "様</h2><p>株式会社boozerです。いつもお世話になっております。</p><p>パスワード再設定の連絡を受け、パスワードを初期化しました。</p><p>初期化後のパスワードは <b>" . $password . '</b> です。<br><a href="http://localhost:8080/client/auth/pwChanges.php">こちらのリンク</a>からパスワードの再設定を行ってください。</p><br><p>今度ともよろしくお願いします。</p><p>株式会社CRAFT</p></body></html>' ;
+  $message = "<html><body><h2>". $_POST["company_name"]. "様</h2><p>株式会社boozerです。いつもお世話になっております。</p><p>パスワード再設定の連絡を受け、パスワードを初期化しました。</p><p>初期化後のパスワードは <b>" . $password . '</b> です。<br><a href="http://localhost:8080/client/auth/pwChanges.php">こちらのリンク</a>からパスワードの再設定を行ってください。</p><br><p>今度ともよろしくお願いします。</p><p>株式会社babgu</p></body></html>' ;
   $headers = "MIME-Version: 1.0\r\n";
   $headers .= "From: $from  \r\n";
   $headers .= "Content-Type: text/html; charset=UTF-8" ."\r\n". "Content-Transfer-Encoding: base64\r\n";

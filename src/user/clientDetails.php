@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CRAFT 企業詳細ページ</title>
+  <title>babgu 企業詳細ページ</title>
   <link rel="stylesheet" href="./assets/styles/normalize.css">
   <link rel="stylesheet" href="./assets/styles/common.css">
   <link rel="stylesheet" href="./assets/styles/clientDetails.css">
@@ -26,7 +26,7 @@
   <?php include_once('components/menubar.php') ?>
   <!-- メイン -->
   <main>
-    <!-- エージェント企業名と画像 -->
+    <!-- *****企業名と画像 -->
     <div class="agent-name">
       <h2>
         <?php echo $company_details["service"]; ?>
@@ -35,7 +35,7 @@
     <div class="agent-img">
       <img src="./assets/img/heroes/<?php echo $company_details["service"] ?>/<?php echo $company_details["photo"] ?>" alt="carrier-img">
     </div>
-    <!-- エージェント企業の特徴 -->
+    <!-- *****企業の特徴 -->
     <div class="agent-feature">
       <h3 class="agent-feature-title">
         <?php echo $company_details["service"] ?>の特徴

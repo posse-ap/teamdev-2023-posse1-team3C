@@ -32,7 +32,7 @@ main {
   height: auto;
   object-fit: contain;
 }
-/* エージェント企業の特徴 */
+/* *****企業の特徴 */
 .agent-feature {
   background-color: #f8dc97;
   height: 440px;
@@ -338,7 +338,7 @@ main {
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  /* エージェント企業の特徴 */
+  /* *****企業の特徴 */
   .agent-feature {
     height: 540px;
   }

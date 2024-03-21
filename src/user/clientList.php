@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CRAFT 企業一覧ページ</title>
+  <title>babgu 企業一覧ページ</title>
   <link rel="stylesheet" href="./assets/styles/normalize.css">
   <link rel="stylesheet" href="./assets/styles/common.css">
   <link rel="stylesheet" href="../dist/output.css">
@@ -30,7 +30,7 @@
       <div class="cl-mainvisual-contents">
         <div class="title">
           <i class="fa-solid fa-magnifying-glass"></i>
-          <h3 class="cl-h3">あなたにぴったりのエージェントを探す</h3>
+          <h3 class="cl-h3">あなたにぴったりの*****を探す</h3>
         </div>
         <p class="cl-p">自分に合った企業を探してみよう！</p>
         <p class="cl-p">ポイントや評価を見て気になったら詳細ページに飛んでみよう</p>
@@ -385,7 +385,7 @@
       </div>
     </div>
     <!-- 一覧 -->
-    <h2>エージェント一覧</h2>
+    <h2>*****一覧</h2>
 
     <form action="./register.php" method="POST">
       <div class="clientlist-wrapper" id='client-list'>

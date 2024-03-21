@@ -24,7 +24,7 @@ include(dirname(__FILE__) . '/components/head.php');
             <input type="text" id="company" name="company" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="required">
           </div>
           <div class="mb-6">
-            <label for="service" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">エージェントサービス名</label>
+            <label for="service" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">*****サービス名</label>
             <input type="text" id="service" name="service" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="required">
           </div>
           <div class="mb-6">

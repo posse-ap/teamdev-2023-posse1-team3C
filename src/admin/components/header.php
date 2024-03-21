@@ -1,7 +1,7 @@
 <header class=" fixed w-screen z-30">
   <div class="flex bg-white text-center align-middle h-20 relative">
     <div class="text-center align-middle pr-5 flex absolute top-7 header-title">
-      <div class="mt-auto mb-auto">CRAFT管理者画面</div>
+      <div class="mt-auto mb-auto">babgu管理者画面</div>
     </div>
     <div class="mt-5 mb-3 ml-auto signout-btn">
       <form action="./assets/php/auth/signout.php" method="POST">

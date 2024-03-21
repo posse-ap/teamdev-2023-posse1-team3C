@@ -16,7 +16,7 @@
       プライバシーポリシー
     </li>
   </ul>
-  <div class="footer-craft">
-    © 2023 CRAFT
+  <div class="footer-babgu">
+    © 2023 babgu
   </div>
 </footer>

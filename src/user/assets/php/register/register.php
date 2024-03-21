@@ -52,7 +52,7 @@ if (isset($_POST["registerButton"])) {
 
   // 学生に登録内容、登録企業をメールで送信
   $to = $_POST["email"];
-  $subject = "【株式会社CRAFT】個人登録完了のお知らせ";
+  $subject = "【株式会社babgu】個人登録完了のお知らせ";
   $from = "admin@example.com";
   $message = "<html>
   <head>
